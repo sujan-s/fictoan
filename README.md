@@ -5,7 +5,7 @@ As a designer just starting to learn basic web development, I found large framew
 
 And thus FICTOAN was born. It aims to be an intuitive and straightforward HTML and CSS framework for designers and newbie developers working on small projects or websites. It uses simple and descriptive class names, and yet generic enough to be understood easily.
 
-You can check more details and documentation here: https://sujansundareswaran.com/fictoan/
+You can check more details and documentation here: http://sujansundareswaran.com/fictoan/
 
 ### Installation
 
@@ -16,8 +16,10 @@ Just [download the zip file](http://sujansundareswaran.com/fictoan/fictoan-dist.
 Please do. Just keep in mind to include short, helpful comments too, as this project is aimed at absolute
 newbies.
 
+`Current version is 1.2.2`
+
 The versioning logic is simple:
-Versions are written as major.minor.patch. <br>
+Versions are written as `major.minor.patch`. <br>
 1. `0.0.INCREMENT THIS NUMBER` — for grammatical errors, typos and image corrections. Essentially, polishing the look and feel. <br>
 2. `0.INCREMENT THIS NUMBER.0` — for changes in layout, changes to the code and other minor feature and functionality tweaks. <br>
 3. `INCREMENT THIS NUMBER.0.0` — for new major feature additions and overhauls of current functionality.  <br>
