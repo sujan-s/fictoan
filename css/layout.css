@@ -1,0 +1,136 @@
+/*
+	FICTOAN
+	An intuitive, minimalist responsive HTML+CSS setup
+	for designers just starting to code — just like me.
+	by Sujan Sundareswaran
+	Current version: 1.1.2
+
+	https://github.com/sujan-s/fictoan/
+	http://sujansundareswaran.com/
+*/
+
+
+/* Basics for the row */
+.row {
+	display: block;
+	margin: 0 0 50px 0 ; /* This will push the succeeding row a little below */
+	clear: both;
+}
+
+.row .portion {
+	float: left;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.row .portion:first-child { padding-left: 0; }
+.row .portion:last-child { padding-right: 0; }
+
+/* Removing padding for portions within portions */
+.portion .portion:first-child { padding-left: 0; }
+.portion .portion:last-child { padding-right: 0; }
+
+/* Remove the gap between elements in the same row */
+.no-gaps .portion,
+.portion.no-gaps { padding: 0 !important; }
+
+/* Now the actual grid layout */
+.row .whole            { width: 100%; }
+
+.row .half             { width: 50%; }
+
+.row .one-third        { width: 33.3332%; }
+.row .two-thirds       { width: 66.6665%; }
+
+.row .one-fourth       { width: 25%; }
+.row .three-fourths    { width: 75%; }
+
+.row .one-fifth        { width: 20%; }
+.row .two-fifths       { width: 40%; }
+.row .three-fifths     { width: 60%; }
+.row .four-fifths      { width: 80%; }
+
+.row .one-sixth        { width: 16.6666%; }
+.row .two-sixths       { width: 33.3332%; }
+.row .three-sixths     { width: 50.0000%; }
+.row .four-sixths      { width: 66.6665%; }
+.row .five-sixths      { width: 83.3332%; }
+
+.row .one-seventh      { width: 14.2856%; }
+.row .two-sevenths     { width: 28.5714%; }
+.row .three-sevenths   { width: 42.8571%; }
+.row .four-sevenths    { width: 57.1428%; }
+.row .five-sevenths    { width: 71.4285%; }
+.row .six-sevenths     { width: 85.7142%; }
+
+.row .one-eighth       { width: 12.5%; }
+.row .two-eighths      { width: 25.0%; }
+.row .three-eighths    { width: 37.5%; }
+.row .four-eighths     { width: 50.0%; }
+.row .five-eighths     { width: 62.5%; }
+.row .six-eighths      { width: 75.0%; }
+.row .seven-eighths    { width: 87.5%; }
+
+/* Clearfix for the rows */
+.row:before, .row:after {
+	display: block;
+	content: "";
+}
+.row:after { clear: both; }
+
+
+/* Fixing images for better responsive behaviour */
+.portion img { max-width: 100%; }
+
+
+/* Responsiveness classes */
+@media screen and (max-width: 568px) {
+  /* Use the "retain-layout" if you want your elements to
+     use the same layout across all screens. The class below
+     makes all elements into a full-width layout */
+	.row:not(.retain-layout) > .portion {
+		width: 100% !important;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.portion .row .portion {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+/* Side margins for all your content — increase or decrease at will,
+   or simply add the 'no-padding' class to get full-width */
+@media all and (min-width: 320px){
+	.all-content { padding: 0 4vw; }
+}
+
+@media all and (min-width: 568px){
+	.all-content { padding: 0 3vw; }
+}
+
+@media all and (min-width: 768px){
+	.all-content { padding: 0 6vw; }
+}
+
+@media all and (min-width: 992px){
+	.all-content { padding: 0 8vw; }
+}
+
+@media all and (min-width: 1200px){
+	.all-content { padding: 0 10vw; }
+}
+
+@media all and (min-width: 1440px){
+	.all-content { padding: 0 10vw; }
+}
+
+@media all and (min-width: 1620px){
+	.all-content { padding: 0 10vw; }
+}
+
+@media all and (min-width: 1900px){
+	.all-content { padding: 0 10vw; }
+}
