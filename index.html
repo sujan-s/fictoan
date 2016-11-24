@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.5.0
+	Current version: 1.5.1
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -45,20 +45,9 @@
 		<div class="empty-spacer"></div>
 
 		<div class="row">
-			<div class="portion half">
+			<div class="portion whole">
 				<p class="text-huge no-margin centre-on-mobiles">FICTOAN</p>
 				<p class="text-white text-tiny centre-on-mobiles no-margin">(F*ck, I Couldn't Think Of A Name)</p>
-			</div>
-
-
-			<div class="portion half">
-				<a id="download-link" target="_blank" href="fictoan-dist.zip">
-					<button class="large bg-red shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">DOWNLOAD</button>
-				</a>
-				<div class="text-centre">
-					<a class="show-inline text-centre text-red margin-top-2x" href="https://github.com/sujan-s/fictoan" target="_blank">
-					<strong>Or check it out on GitHub</strong></a>
-				</div>
 			</div>
 		</div>
 
@@ -84,7 +73,26 @@
 			</div>
 
 			<div class="portion one-third">
-				<p>Right now it’s got grids, buttons, typography, colours and code. More modules coming soon.</p>
+				<p>Right now it’s got a grid, buttons, typography, icons, colours and code. More modules coming soon.</p>
+			</div>
+		</div>
+
+
+		<hr>
+
+
+
+		<!-- == NOMENCLATURE ============================================== -->
+
+		<div class="row no-margin-bottom">
+			<div class="portion whole">
+				<p class="text-big no-margin-bottom"><b>Installing</b></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="portion whole">
+				<p>You can <a class="button shape-rounded bg-red text-red" id="download-link" target="_blank" href="fictoan-dist.zip"><strong>DOWNLOAD</strong></a> the source files directly and get right to work&mdash; there’s a template HTML file where you just have fill content. Or, you can <a class="show-inline text-red" href="https://github.com/sujan-s/fictoan" target="_blank">check it out on GitHub</a>.</p>
 			</div>
 		</div>
 
@@ -163,7 +171,7 @@
 		<div class="row no-margin-bottom">
 			<div class="portion whole">
 				<p class="text-big no-margin-bottom"><b>Typography</b></p>
-				<p>FICTOAN uses <b class="text-sans">Cormorant Garamond</b> for a serif typeface,<b class="text-sans">Work Sans</b> for sans, and <b class="text-sans">Fira Mono</b> for monospace. They’re all from Google Fonts, and thus, free.</p>
+				<p>FICTOAN uses <b class="text-sans">Cormorant Garamond</b> for a serif typeface, <b class="text-sans">Work Sans</b> for sans, and <b class="text-sans">Fira Mono</b> for monospace. They’re all from Google Fonts, and thus, free.</p>
 			</div>
 		</div>
 
@@ -212,7 +220,7 @@
 			<div class="portion whole margin-bottom-2x">
 				<p class="text-big no-margin-bottom"><b>Icons</b></p>
 
-				<p>There’s also a sweet set of custom-made, pixel-perfect SVG icons that are completely free to use. They’re all drawn on a 24px grid, and will scale nicely at its multiples. You can even scale them with CSS, just use <code class="inline">.icon-24</code> or <code class="inline">.icon-48</code> to resize as you need. More icons will be added regularly.
+				<p>There’s also a sweet set of 16 custom-made, pixel-perfect SVG icons that are completely free to  use. They’re all drawn on a 24px grid, and will scale nicely at its multiples. You can even scale them with CSS, just use <code class="inline">.icon-24</code> or <code class="inline">.icon-48</code> to resize as you need. More icons will be added regularly.
 				</p>
 			</div>
 		</div>
@@ -560,50 +568,62 @@
 
 		<!-- == TYPOGRAPHY ================================================ -->
 
-		<div class="row no-margin-bottom">
+		<div class="row">
 			<div class="portion whole">
-				<p class="text-big no-margin-bottom"><b>Buttons</b></p>
-				<p>Adding buttons is a cinch with FICTOAN. Use the default <code class="inline">button</code> tag and add classes to style it.</p>
+				<p class="text-big"><b>Buttons</b></p>
+				<p>Buttons are a cinch with FICTOAN. First add the <code class="inline">.button</code> class, and then any combination of the styling such as <code class="inline">.shape-circular</code>, <code class="inline">.button-large</code>, <code class="inline">.no-shadow</code> and so on.</p>
 			</div>
 
 		<div class="row">
 			<div class="portion one-third">
-				<button class="bg-green shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">DEFAULT</button>
+				<div class="text-centre">
+					<a class="button bg-green shape-rounded">DEFAULT</a>
+				</div>
 			</div>
 
 			<div class="portion one-third">
-				<button class="large bg-brown shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">LARGE</button>
+				<div class="text-centre">
+					<a class="button button-large bg-brown shape-rounded">LARGE</a>
+				</div>
 			</div>
 
 			<div class="portion one-third">
-				<button class="disabled shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">DISABLED</button>
+				<div class="text-centre">
+					<a class="button button-disabled shape-rounded">DISABLED</a>
+				</div>
 			</div>
-
 		</div>
 
 		<div class="row">
 			<div class="portion one-third">
-				<button class="shape-circular bg-orange shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">
-					<svg class="icon-24 icon-purple horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-					<g>
-						<path class="st0" d="M20,4H4C2.9,4,2,4.9,2,6v14l3-3h15c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M21,15c0,0.6-0.4,1-1,1H5
-							c-0.3,0-0.5,0.1-0.7,0.3L3,17.6V6c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1V15z"/>
-						<path class="st0" d="M18,7H6C5.7,7,5.5,7.2,5.5,7.5S5.7,8,6,8h12c0.3,0,0.5-0.2,0.5-0.5S18.3,7,18,7z"/>
-						<path class="st0" d="M18,10H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,11,6,11h12c0.3,0,0.5-0.2,0.5-0.5S18.3,10,18,10z"/>
-						<path class="st0" d="M14,13H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,14,6,14h8c0.3,0,0.5-0.2,0.5-0.5S14.3,13,14,13z"/>
-					</g>
-				</svg>
-				</button>
+				<div class="text-centre">
+					<a class="button shape-circular bg-orange shape-rounded">
+						<svg class="icon-24 icon-purple horizontal-centre-this" version="1.1" id="Layer_1"
+							 </xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+							<g>
+								<path class="st0" d="M20,4H4C2.9,4,2,4.9,2,6v14l3-3h15c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M21,15c0,0.6-0.4,1-1,1H5
+									c-0.3,0-0.5,0.1-0.7,0.3L3,17.6V6c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1V15z"/>
+								<path class="st0" d="M18,7H6C5.7,7,5.5,7.2,5.5,7.5S5.7,8,6,8h12c0.3,0,0.5-0.2,0.5-0.5S18.3,7,18,7z"/>
+								<path class="st0" d="M18,10H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,11,6,11h12c0.3,0,0.5-0.2,0.5-0.5S18.3,10,18,10z"/>
+								<path class="st0" d="M14,13H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,14,6,14h8c0.3,0,0.5-0.2,0.5-0.5S14.3,13,14,13z"/>
+							</g>
+						</svg>
+					</a>
+				</div>
 			</div>
 
 			<div class="portion one-third">
-				<button class="large bg-light shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">
-					<img class="icon-24 horizontal-centre-this" src="icons/icon-home.svg">
-				</button>
+				<div class="text-centre">
+					<a class="button button-large bg-light shape-rounded no-shadow">
+						<img class="icon-24 horizontal-centre-this" src="icons/icon-home.svg">
+					</a>
+				</div>
 			</div>
 
 			<div class="portion one-third">
-				<button class="no-bg bg-green shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">SIMPLE</button>
+				<div class="text-centre">
+					<a class="button no-bg">SIMPLE</a>
+				</div>
 			</div>
 		</div>
 

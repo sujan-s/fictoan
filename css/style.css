@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.5.0
+	Current version: 1.5.1
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -32,7 +32,7 @@ a { text-decoration: none; }
 
 input { outline: none; }
 
-button { vertical-align: text-top; }
+button { vertical-align: baseline; }
 
 
 /* == UTILITY ============================================================== */
@@ -73,7 +73,7 @@ button { vertical-align: text-top; }
 	height: 100vh;
 	top: 0;
 	left: 0;
-	background: url("../images/photo.jpg") center top; /*  Add the filename here  */
+	background: url("../images/") center top; /*  Add the filename here  */
 	background-size: cover;
 	z-index:-5;
 }
@@ -196,8 +196,10 @@ a {
 	cursor: pointer;
 	color: #ff5855;
 	border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+	transition: all 2s;
 }
-a:hover { border-bottom: 1px solid rgba(0, 0, 0, 0.85); }
+a:hover { border-bottom: 1px solid rgba(0, 0, 0, 0.35); }
+a.button { border: none; }
 
 b, strong { font-weight: bold; }
 i, em { font-style: italic; }
@@ -269,7 +271,7 @@ i, em { font-style: italic; }
 /* == BUTTONS ==================================================== */
 
 /*  Basics  */
-button {
+.button {
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
@@ -286,7 +288,7 @@ button {
 }
 
 /*  Button when you click on it  */
-button:active {
+.button:active {
 	top: 0;
 	-webkit-box-shadow: none;
 	   -moz-box-shadow: none;
@@ -294,33 +296,39 @@ button:active {
 }
 
 /*  Big button  */
-button.large { padding: 15px 30px; }
+.button.button-large { padding: 15px 30px; }
 
 /*  Button that’s just text  */
-button.no-bg {
+.button.no-bg {
 	background: none;
 	box-shadow: none;
 	color: rgba(0,0,0,1);
 	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
 }
 
-button.no-bg:hover {
+.button.no-bg:hover {
 	background: none;
 	box-shadow: none;
 	color: rgba(0,0,0,0.75);
 	text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-button.no-bg:active {
+.button.no-bg:active {
 	color: rgba(0, 0, 0, 1);
 	text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
 }
 
-button.shape-circular { padding: 15px; }
+.button.no-shadow {
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
 
-button path { fill: #fff; }
+.button.shape-circular { padding: 15px; }
 
-button.disabled {
+.button path { fill: #fff; }
+
+.button.button-disabled {
 	cursor: not-allowed;
 	background: #000;
 	opacity: 0.2;
@@ -343,7 +351,6 @@ code {
 code.inline {
 	margin: 0 2px;
 	padding: 3px 6px;
-	line-height: 35px;
 }
 
 pre > code {

@@ -16,7 +16,7 @@ Just [download the zip file](http://sujansundareswaran.com/fictoan/fictoan-dist.
 Please do. Just keep in mind to include short, helpful comments too, as this project is aimed at absolute
 newbies.
 
-`Current version is 1.5.0`
+`Current version is 1.5.1`
 
 The versioning logic is simple:
 Versions are written as `major.minor.patch`. <br>
