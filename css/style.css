@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.4.2
+	Current version: 1.5.2
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -280,9 +280,9 @@ button {
 	color: #fff;
 	border: none;
 	transition: all 0.05s;
-	-webkit-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4);
-	   -moz-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4);
-			box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+	   -moz-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+			box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
 }
 
 /*  Button when you click on it  */
@@ -314,6 +314,17 @@ button.no-bg:hover {
 button.no-bg:active {
 	color: rgba(0, 0, 0, 1);
 	text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+}
+
+button.shape-circular { padding: 15px; }
+
+button path { fill: #fff; }
+
+button.disabled {
+	cursor: not-allowed;
+	background: #000;
+	opacity: 0.2;
+	box-shadow: none;
 }
 
 
