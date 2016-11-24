@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.2.2
+	Current version: 1.4.2
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -85,10 +85,10 @@
 
 /* Responsiveness classes */
 @media screen and (max-width: 568px) {
-  /* Use the "retain-layout" if you want your elements to
-     use the same layout across all screens. The class below
-     makes all elements into a full-width layout */
-	.row:not(.retain-layout) > .portion {
+  /* Use the "retain-layout-on-mobiles" if you want your
+     elements to use the same layout across all screens.
+     The rule below causes a single-column layout */
+	.row:not(.retain-layout-on-mobiles) > .portion {
 		width: 100% !important;
 		padding-left: 20px;
 		padding-right: 20px;

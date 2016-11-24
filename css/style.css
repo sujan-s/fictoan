@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.2.2
+	Current version: 1.4.2
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -148,6 +148,9 @@ hr {
 
 
 /* -- SMALL SCREEN UTILITIES --------------------------- */
+
+/*  Hide on large screens  */
+.only-on-mobiles { display: none !important; }
 
 @media screen and (max-width: 568px) {
 	.center-on-mobiles,

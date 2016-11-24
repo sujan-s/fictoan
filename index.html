@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.2.2
+	Current version: 1.4.2
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -50,8 +50,9 @@
 				<p class="text-white text-tiny centre-on-mobiles no-margin">(F*ck, I Couldn't Think Of A Name)</p>
 			</div>
 
+
 			<div class="portion half">
-				<a onclick="ga('send', 'event', 'Downloads', 'Click', 'Fictoan downloads', '0');" href="http://sujansundareswaran.com/fictoan/fictoan-dist.zip" target="_blank">
+				<a id="download-link" target="_blank" href="fictoan-dist.zip">
 					<button class="large bg-red shape-rounded margin-top-2x margin-bottom-1x horizontal-centre-this">DOWNLOAD</button>
 				</a>
 				<div class="text-centre">
@@ -214,7 +215,9 @@
 				<p>There’s also a sweet set of custom-made, pixel-perfect SVG icons that is completely free to use. They’re all drawn on a 24px grid, and will scale nicely at its multiples. You can even scale them with CSS, just use <code class="inline">.icon-24</code> or <code class="inline">.icon-48</code> to resize as you need. More icons will be added regularly.
 				</p>
 			</div>
+		</div>
 
+		<div class="hide-on-mobiles">
 			<div class="row">
 				<div class="portion one-eighth">
 					<img class="icon-48 horizontal-centre-this" src="icons/icon-user.svg">
@@ -283,6 +286,82 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div class="only-on-mobiles">
+			<div class="row retain-layout-on-mobiles retain-layout-on-mobiles">
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-user.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-compass.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-home.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-bell.svg">
+				</div>
+			</div>
+
+			<div class="row retain-layout-on-mobiles">
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-location.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-chat.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-group.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-mail.svg">
+				</div>
+			</div>
+
+			<div class="row retain-layout-on-mobiles">
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-search.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-camera.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-photo.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-tag.svg">
+				</div>
+			</div>
+
+			<div class="row retain-layout-on-mobiles">
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-pin.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-clock.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-book.svg">
+				</div>
+
+				<div class="portion one-fourth">
+					<img class="icon-48 horizontal-centre-this" src="icons/icon-share.svg">
+				</div>
+			</div>
+		</div>
+
 
 
 		<hr>
@@ -501,12 +580,35 @@
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 		ga('create', 'UA-87045454-1', 'auto');
 		ga('send', 'pageview');
+
+		var downloadButton = document.getElementById('download-link');
+
+		downloadButton.addEventListener('click', function(e){
+			// prevent default click event
+			e.preventDefault();
+
+			//send data to Google Analytics
+			ga('send', 'event', 'Files', 'Click', 'Fictoan downloads', '0');
+
+			//get href and put it inside a variable
+			var link = downloadButton.href;
+
+			// the function that does the redirection
+			function startDownload(link){
+				window.open(link);
+			}
+
+			//now start download after 1s
+			setTimeout(function(){
+				startDownload(link);
+			}, 1000);
+		});
 	</script>
 
 </body>
