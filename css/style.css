@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.5.1
+	Current version: 1.6.0
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -48,6 +48,7 @@ button { vertical-align: baseline; }
 
 .clear-both { clear: both; }
 
+.vertical-middle { vertical-align: middle; }
 
 /*  Parent div needs a set height  */
 .vertical-centre-this,
@@ -329,7 +330,7 @@ i, em { font-style: italic; }
 .button path { fill: #fff; }
 
 .button.button-disabled {
-	cursor: not-allowed;
+	pointer-events: none;
 	background: #000;
 	opacity: 0.2;
 	box-shadow: none;
@@ -364,3 +365,107 @@ pre > code {
 
 .icon-24 { width: 24px; }
 .icon-48 { width: 48px; }
+
+
+/* == TOGGLES ============================================================== */
+
+input[type=checkbox] + label { /*  The grey background  */
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	width: 60px;
+	background: #ddd;
+	border-radius: 15px; /*  Basically half of the height  */
+	cursor: pointer;
+	transition: all 0.1s ease-out;
+}
+
+input[type=checkbox] + label:after { /*  The white switch inside  */
+	position: absolute;
+	display: block;
+	left: 2px;
+	top: 2px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 100px;
+	content: '';
+	transition: all 0.1s ease-out;
+	-webkit-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+	   -moz-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+			box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+}
+
+input[type=checkbox]:checked + label { background: #28bb6b; }
+
+input[type=checkbox]:checked + label:after { left: 32px; }
+
+input[type=checkbox]:disabled + label {
+	background: #f2f2f2;
+	pointer-events: none;
+}
+
+input[type=checkbox]:disabled:checked + label {
+	/*  Same value as the above bg, but with opacity  */
+	background: rgba(40,187,107,0.2);
+	pointer-events: none;
+}
+
+input[type=checkbox]:disabled + label:after {
+	background: #f8f8f8;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+
+/* == RADIO BUTTONS ======================================================== */
+
+input[type=radio] + label { /*  The grey background  */
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	width: 60px;
+	background: #ddd;
+	border-radius: 15px; /*  Basically half of the height  */
+	cursor: pointer;
+	transition: all 0.1s ease-out;
+}
+
+input[type=radio] + label:after { /*  The white switch inside  */
+	position: absolute;
+	display: block;
+	left: 2px;
+	top: 2px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 100px;
+	content: '';
+	transition: all 0.1s ease-out;
+	-webkit-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+	box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+}
+
+input[type=radio]:checked + label { background: #28bb6b; }
+
+input[type=radio]:checked + label:after { left: 32px; }
+
+input[type=radio]:disabled + label {
+	background: #f2f2f2;
+	pointer-events: none;
+}
+
+input[type=radio]:disabled:checked + label {
+	/*  Same value as the above bg, but with opacity  */
+	background: rgba(40,187,107,0.2);
+	pointer-events: none;
+}
+
+input[type=radio]:disabled + label:after {
+	background: #f8f8f8;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}

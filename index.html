@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.5.1
+	Current version: 1.6.0
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -86,7 +86,7 @@
 
 		<div class="row no-margin-bottom">
 			<div class="portion whole">
-				<p class="text-big no-margin-bottom"><b>Installing</b></p>
+				<p class="text-big no-margin-bottom"><strong>Installing</strong></p>
 			</div>
 		</div>
 
@@ -105,7 +105,7 @@
 
 		<div class="row no-margin-bottom">
 			<div class="portion whole">
-				<p class="text-big no-margin-bottom"><b>The naming system</b></p>
+				<p class="text-big no-margin-bottom"><strong>The naming system</strong></p>
 			</div>
 		</div>
 
@@ -140,7 +140,7 @@
 
 		<div class="row no-margin-bottom">
 			<div class="portion whole">
-				<p class="text-big no-margin-bottom"><b>The Grid</b></p>
+				<p class="text-big no-margin-bottom"><strong>The Grid</strong></p>
 
 				<p>A digital frontier...I tried to picture clusters of infor&mdash; oh. Right. Sorry.<br>
 				The grid is made up of full-width <code class="inline">.row</code> classes that can contain one or many <code class="inline">.portion</code> elements. These portions is where you put your content. All the rows put together form one big box called <code class="inline">.all-content</code>.
@@ -170,7 +170,7 @@
 
 		<div class="row no-margin-bottom">
 			<div class="portion whole">
-				<p class="text-big no-margin-bottom"><b>Typography</b></p>
+				<p class="text-big no-margin-bottom"><strong>Typography</strong></p>
 				<p>FICTOAN uses <b class="text-sans">Cormorant Garamond</b> for a serif typeface, <b class="text-sans">Work Sans</b> for sans, and <b class="text-sans">Fira Mono</b> for monospace. They’re all from Google Fonts, and thus, free.</p>
 			</div>
 		</div>
@@ -218,7 +218,7 @@
 
 		<div class="row margin-bottom-1x">
 			<div class="portion whole margin-bottom-2x">
-				<p class="text-big no-margin-bottom"><b>Icons</b></p>
+				<p class="text-big no-margin-bottom"><strong>Icons</strong></p>
 
 				<p>There’s also a sweet set of 16 custom-made, pixel-perfect SVG icons that are completely free to  use. They’re all drawn on a 24px grid, and will scale nicely at its multiples. You can even scale them with CSS, just use <code class="inline">.icon-24</code> or <code class="inline">.icon-48</code> to resize as you need. More icons will be added regularly.
 				</p>
@@ -380,11 +380,9 @@
 
 		<div class="row margin-bottom-1x">
 			<div class="portion whole">
-				<p class="text-big no-margin-bottom"><b>Colour</b></p>
+				<p class="text-big no-margin-bottom"><strong>Colour</strong></p>
 
-				<p>FICTOAN comes with a bright and vivid scheme of eight colours. You can apply them to pretty much any element as
-					a background colour, or to text too. Plus, there’s also a tint and a shade&mdash; 5% black and 85% black, which
-					you can customise as necessary.
+				<p>FICTOAN comes with a bright and vivid scheme of eight colours. You can apply them to pretty much any element as a background colour, or to text too. Plus, there’s also a tint and a shade&mdash; 5% black and 85% black, which you can customise as necessary.
 				</p>
 			</div>
 		</div>
@@ -570,9 +568,10 @@
 
 		<div class="row">
 			<div class="portion whole">
-				<p class="text-big"><b>Buttons</b></p>
+				<p class="text-big no-margin-bottom"><strong>Buttons</strong></p>
 				<p>Buttons are a cinch with FICTOAN. First add the <code class="inline">.button</code> class, and then any combination of the styling such as <code class="inline">.shape-circular</code>, <code class="inline">.button-large</code>, <code class="inline">.no-shadow</code> and so on.</p>
 			</div>
+		</div>
 
 		<div class="row">
 			<div class="portion one-third">
@@ -627,6 +626,104 @@
 			</div>
 		</div>
 
+
+		<hr>
+
+
+
+		<!-- == TOGGLES AND RADIO BUTTONS ================================= -->
+
+		<div class="row">
+			<div class="portion whole">
+				<p class="text-big no-margin-bottom"><strong>Toggles &amp; Radio buttons</strong></p>
+				<p>Toggle switches are just restyled checkboxes. The radio buttons are also styled similarly, but the code is separate, which means you can customise either one individually. Just use a <code class="inline">p</code> tag after the toggle for the label.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="checkbox" id="toggle-1" class="show-nothing"/>
+						<label for="toggle-1"></label>
+					</div>
+					<p class="show-inline">Toggle me!</p>
+				</div>
+			</div>
+
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="checkbox" id="toggle-2" class="show-nothing"/>
+						<label for="toggle-2"></label>
+					</div>
+					<p class="show-inline">Toggle me too!</p>
+				</div>
+			</div>
+
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="checkbox" disabled id="toggle-3" class="show-nothing"/>
+						<label for="toggle-3"></label>
+					</div>
+					<p class="show-inline">I’m disabled</p>
+				</div>
+			</div>
+
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="checkbox" checked disabled id="toggle-4" class="show-nothing"/>
+						<label for="toggle-4"></label>
+					</div>
+					<p class="show-inline">I’m both! :`(</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="radio" name="group-1" id="radio-1" class="show-nothing"/>
+						<label for="radio-1"></label>
+					</div>
+					<p class="show-inline">Select me!</p>
+				</div>
+			</div>
+
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="radio" name="group-1" id="radio-2" class="show-nothing"/>
+						<label for="radio-2"></label>
+					</div>
+					<p class="show-inline">No, select me!</p>
+				</div>
+			</div>
+
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="radio" disabled name="group-1" id="radio-3" class="show-nothing"/>
+						<label for="radio-3"></label>
+					</div>
+					<p class="show-inline">I’m disabled</p>
+				</div>
+			</div>
+
+			<div class="portion one-fourth">
+				<div class="text-center">
+					<div class="show-inline vertical-middle margin-right-1x">
+						<input type="radio" checked disabled name="group-1" id="radio-4" class="show-nothing"/>
+						<label for="radio-4"></label>
+					</div>
+					<p class="show-inline">I’m both! :`(</p>
+				</div>
+			</div>
+		</div>
 
 		<hr>
 
