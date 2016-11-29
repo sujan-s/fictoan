@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.7.0
+	Current version: 1.7.1
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -45,7 +45,6 @@ button { vertical-align: baseline; }
 
 .pull-left  { float: left; }
 .pull-right { float: right; }
-
 .clear-both { clear: both; }
 
 .vertical-middle { vertical-align: middle; }
@@ -424,8 +423,8 @@ input[type=checkbox]:disabled:checked + label {
 input[type=checkbox]:disabled + label:after {
 	background: #f8f8f8;
 	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
 }
 
 
@@ -454,8 +453,8 @@ input[type=radio] + label:after { /*  The white switch inside  */
 	content: '';
 	transition: all 0.1s ease-out;
 	-webkit-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
-	-moz-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
-	box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+	   -moz-box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
+			box-shadow: 0 4px 8px -4px rgba(0,0,0,0.6);
 }
 
 input[type=radio]:checked + label { background: #28bb6b; }
@@ -476,6 +475,6 @@ input[type=radio]:disabled:checked + label {
 input[type=radio]:disabled + label:after {
 	background: #f8f8f8;
 	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
 }

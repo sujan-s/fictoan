@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.7.0
+	Current version: 1.7.1
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -23,8 +23,6 @@
 	padding: 0 20px;
 }
 
-.row .portion:first-child { padding-left: 0; }
-.row .portion:last-child { padding-right: 0; }
 
 /*  Removing padding for portions within portions  */
 .portion .portion:first-child { padding-left: 0; }
