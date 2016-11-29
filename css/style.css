@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.6.0
+	Current version: 1.7.0
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -148,18 +148,28 @@ hr {
 }
 
 
-/* -- SMALL SCREEN UTILITIES --------------------------- */
+/* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
 
 /*  Hide on large screens  */
-.only-on-mobiles { display: none !important; }
+.show-only-on-mobiles { display: none !important; }
+.show-only-on-tablets { display: none !important; }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 800px) {
+	.center-on-tablets,
+	.centre-on-tablets { text-align: center !important; }
+
+	.hide-on-tablets { display: none !important; }
+
+	.show-only-on-tablets { display: block !important; }
+}
+
+@media screen and (max-width: 550px) {
 	.center-on-mobiles,
 	.centre-on-mobiles { text-align: center !important; }
 
 	.hide-on-mobiles { display: none !important; }
 
-	.only-on-mobiles { display: block !important; }
+	.show-only-on-mobiles { display: block !important; }
 }
 
 
@@ -169,7 +179,7 @@ body {
 	background-color: #fff;
 	font-family: 'Work Sans', sans-serif;
 	color: #000;
-	word-wrap: break-word;
+	word-wrap: normal;
 	text-rendering: geometricPrecision;
 }
 

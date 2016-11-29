@@ -3,20 +3,20 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.6.0
+	Current version: 1.7.0
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
 */
 
 
-/* Basics for the row */
+/*  Basics for the row  */
 .row {
 	display: block;
-	margin: 0 0 50px 0 ; /* This will push the succeeding row a little below */
+	margin: 0 0 50px 0 ; /* This will push the next row a little below */
 	clear: both;
 }
-
+/*  Basics for the portions  */
 .row .portion {
 	float: left;
 	width: 100%;
@@ -26,15 +26,15 @@
 .row .portion:first-child { padding-left: 0; }
 .row .portion:last-child { padding-right: 0; }
 
-/* Removing padding for portions within portions */
+/*  Removing padding for portions within portions  */
 .portion .portion:first-child { padding-left: 0; }
 .portion .portion:last-child { padding-right: 0; }
 
-/* Remove the gap between elements in the same row */
+/*  Remove the gap between elements in the same row  */
 .no-gaps .portion,
 .portion.no-gaps { padding: 0 !important; }
 
-/* Now the actual grid layout */
+/*  Now the actual grid layout  */
 .row .whole            { width: 100%; }
 
 .row .half             { width: 50%; }
@@ -71,7 +71,8 @@
 .row .six-eighths      { width: 75.0%; }
 .row .seven-eighths    { width: 87.5%; }
 
-/* Clearfix for the rows */
+
+/*  Clearfix for the rows  */
 .row:before, .row:after {
 	display: block;
 	content: "";
@@ -79,20 +80,27 @@
 .row:after { clear: both; }
 
 
-/* Fixing images for better responsive behaviour */
+/*  Fixing images for better responsive behaviour  */
 .portion img { max-width: 100%; }
 
 
-/* Responsiveness classes */
-@media screen and (max-width: 568px) {
-  /* Use the "retain-layout-on-mobiles" if you want your
-     elements to use the same layout across all screens.
-     The rule below causes a single-column layout */
-	.row:not(.retain-layout-on-mobiles) > .portion {
-		width: 100% !important;
-		padding-left: 20px;
-		padding-right: 20px;
+/*  Use the "retain-layout-on-mobiles" and
+	"retain-layout-on-tablets" if you want your
+	elements to use the same layout across all screens.
+	The rule below causes a single-column layout */
+@media screen and (max-width: 800px) {
+
+	.row:not(.retain-layout-on-tablets) > .portion { width: 100% !important; }
+
+	.portion .row .portion {
+		padding-left: 0;
+		padding-right: 0;
 	}
+}
+
+@media screen and (max-width: 550px) {
+
+	.row:not(.retain-layout-on-mobiles) > .portion { width: 100% !important; }
 
 	.portion .row .portion {
 		padding-left: 0;
@@ -101,36 +109,35 @@
 }
 
 
-/* Side margins for all your content — increase or decrease at will,
-   or simply add the 'no-padding' class to get full-width */
-@media all and (min-width: 320px){
+/*  Side margins for all your content — increase or decrease at will,
+	or simply add the 'no-padding' class to get full-width  */
+
+/*  For small screens UP TO 599px width  */
+@media all and (max-width: 599px) {
 	.all-content { padding: 0 4vw; }
 }
 
-@media all and (min-width: 568px){
-	.all-content { padding: 0 3vw; }
-}
-
-@media all and (min-width: 768px){
+/*  For screens FROM 600px width and UPWARD  */
+@media all and (min-width: 600px) {
 	.all-content { padding: 0 6vw; }
 }
 
-@media all and (min-width: 992px){
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) {
 	.all-content { padding: 0 8vw; }
 }
 
-@media all and (min-width: 1200px){
+/*  For screens FROM 1200px width and UPWARD  */
+@media all and (min-width: 1200px) {
 	.all-content { padding: 0 10vw; }
 }
 
-@media all and (min-width: 1440px){
-	.all-content { padding: 0 10vw; }
+/*  For big screens FROM 1800px width and UPWARD  */
+@media all and (min-width: 1800px) {
+	.all-content { padding: 0 12vw; }
 }
 
-@media all and (min-width: 1620px){
-	.all-content { padding: 0 10vw; }
-}
-
-@media all and (min-width: 1900px){
-	.all-content { padding: 0 10vw; }
+/*  For large screens FROM 2400px width and UPWARD  */
+@media all and (min-width: 2400px) {
+	.all-content { padding: 0 30vw; }
 }
