@@ -1,0 +1,488 @@
+/*
+	FICTOAN
+	An intuitive, minimalist responsive HTML+CSS setup
+	for designers just starting to code — just like me.
+	by Sujan Sundareswaran
+	Current version: 1.7.2
+
+	https://github.com/sujan-s/fictoan/
+	http://sujansundareswaran.com/
+*/
+
+/* == RESET ================================================================ */
+
+/*  Consider removing this if you have
+    a zillion elements in your page  */
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+*:focus { outline: 0; }
+
+img { display: block; }
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	 -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; }
+
+input { outline: none; }
+
+button { vertical-align: baseline; }
+
+
+/* == UTILITY ============================================================== */
+
+.show-inline  { display: inline-block; }
+.show-nothing { display: none; }
+.show-empty   { visibility: hidden; }
+
+.full-width { width: 100% !important; }
+
+.pull-left  { float: left; }
+.pull-right { float: right; }
+.clear-both { clear: both; }
+
+.vertical-middle { vertical-align: middle; }
+
+/*  Parent div needs a set height  */
+.vertical-centre-this,
+.vertical-center-this {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/*  Parent div needs a set width  */
+.horizontal-centre-this,
+.horizontal-center-this {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.fullsize-bg {
+	position: absolute;
+	/*position: fixed; */ /*  Use 'fixed' to not scroll the BG  */
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: url("../images/") center top; /*  Add the filename here  */
+	background-size: cover;
+	z-index:-5;
+}
+
+
+/* BOX MODEL HELPERS ----------------------------------- */
+
+.no-margin  { margin: 0 !important; }
+.no-padding { padding: 0 !important; }
+
+.no-margin-top      { margin-top: 0; }
+.margin-top-1x      { margin-top: 10px; }
+.margin-top-2x      { margin-top: 20px; }
+.margin-top-3x      { margin-top: 30px; }
+
+.no-margin-right    { margin-right: 0; }
+.margin-right-1x    { margin-right: 10px; }
+.margin-right-2x    { margin-right: 20px; }
+.margin-right-3x    { margin-right: 30px; }
+
+.no-margin-bottom   { margin-bottom: 0; }
+.margin-bottom-1x   { margin-bottom: 10px; }
+.margin-bottom-2x   { margin-bottom: 20px; }
+.margin-bottom-3x   { margin-bottom: 30px; }
+
+.no-margin-left     { margin-left: 0; }
+.margin-left-1x     { margin-left: 10px; }
+.margin-left-2x     { margin-left: 20px; }
+.margin-left-3x     { margin-left: 30px; }
+
+.no-padding-top     { padding-top: 0; }
+.padding-top-1x     { padding-top: 10px; }
+.padding-top-2x     { padding-top: 20px; }
+.padding-top-3x     { padding-top: 30px; }
+
+.no-padding-right   { padding-right: 0; }
+.padding-right-1x   { padding-right: 10px; }
+.padding-right-2x   { padding-right: 20px; }
+.padding-right-3x   { padding-right: 30px; }
+
+.no-padding-bottom  { padding-bottom: 0; }
+.padding-bottom-1x  { padding-bottom: 10px; }
+.padding-bottom-2x  { padding-bottom: 20px; }
+.padding-bottom-3x  { padding-bottom: 30px; }
+
+.no-padding-left    { padding-left: 0; }
+.padding-left-1x    { padding-left: 10px; }
+.padding-left-2x    { padding-left: 20px; }
+.padding-left-3x    { padding-left: 30px; }
+
+/*  This will render an empty space of
+    20% screen height where you add it  */
+.empty-spacer {
+	display: block;
+	height: 20vh;
+	clear: both;
+}
+
+
+/*  For images and tiles  */
+.shape-rounded { border-radius: 3px; }
+.shape-circular { border-radius: 50%; }
+
+
+/*  A thin separator line that is black at 10% opacity  */
+hr {
+	border: 0;
+	height: 1px;
+	margin: 0;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+
+/* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
+
+/*  Hide on large screens  */
+.show-only-on-mobiles { display: none !important; }
+.show-only-on-tablets { display: none !important; }
+
+@media screen and (max-width: 800px) {
+	.center-on-tablets,
+	.centre-on-tablets { text-align: center !important; }
+
+	.hide-on-tablets { display: none !important; }
+
+	.show-only-on-tablets { display: block !important; }
+}
+
+@media screen and (max-width: 550px) {
+	.center-on-mobiles,
+	.centre-on-mobiles { text-align: center !important; }
+
+	.hide-on-mobiles { display: none !important; }
+
+	.show-only-on-mobiles { display: block !important; }
+}
+
+
+/* == TYPOGRAPHY =========================================================== */
+
+body {
+	background-color: #fff;
+	font-family: 'Work Sans', sans-serif;
+	color: #000;
+	word-wrap: normal;
+	text-rendering: geometricPrecision;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+
+h1 { font-size: 4.0em; }
+h2 { font-size: 3.0em; }
+h3 { font-size: 2.4em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.0em; }
+
+p {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.1em;
+	line-height: 1.6em;
+}
+p .text-serif {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.3em;
+	line-height: 1.6em;
+}
+
+a {
+	cursor: pointer;
+	color: #ff5855;
+	border-bottom: 1px dotted rgba(0,  0,  0,  0.5);
+	transition: all 2s;
+}
+a:hover { border-bottom: 1px solid rgba(0,  0,  0,  0.35); }
+a.button { border: none; }
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+
+.text-sans  { font-family: 'Work Sans', sans-serif; }
+.text-serif { font-family: 'Cormorant Garamond', serif; }
+.text-mono  { font-family: 'Fira Mono', monospace; }
+
+.text-huge   { font-size: 3.60em; }
+.text-large  { font-size: 2.40em; }
+.text-big    { font-size: 1.78em; }
+.text-normal { font-size: 1.00em; }
+.text-tiny   { font-size: 0.75em; }
+
+.text-centre,
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-left   { text-align: left; }
+
+
+/* == COLOURS ============================================================== */
+
+.bg-red      { background-color: #ff5855; }
+.bg-green    { background-color: #28bb6b; }
+.bg-blue     { background-color: #3bc9db; }
+.bg-yellow   { background-color: #febe42; }
+.bg-teal     { background-color: #65d9b4; }
+.bg-purple   { background-color: #9651c6; }
+.bg-orange   { background-color: #ff9201; }
+.bg-brown    { background-color: #a25e37; }
+.bg-light    { background-color: rgba(0, 0, 0, 0.05); }
+.bg-dark     { background-color: rgba(0, 0, 0, 0.85); }
+
+.text-red      { color: #ff5855; }
+.text-green    { color: #28bb6b; }
+.text-blue     { color: #3bc9db; }
+.text-yellow   { color: #febe42; }
+.text-teal     { color: #65d9b4; }
+.text-purple   { color: #9651c6; }
+.text-orange   { color: #ff9201; }
+.text-brown    { color: #a25e37; }
+
+.text-black  { color: #000 !important; }
+.text-white  { color: #fff !important; }
+
+.icon-red      { fill: #ff5855; }
+.icon-green    { fill: #28bb6b; }
+.icon-blue     { fill: #3bc9db; }
+.icon-yellow   { fill: #febe42; }
+.icon-teal     { fill: #65d9b4; }
+.icon-purple   { fill: #9651c6; }
+.icon-orange   { fill: #ff9201; }
+.icon-brown    { fill: #a25e37; }
+
+
+/*  Colour of highlight and text colour
+    — for Mozilla browsers  */
+::-moz-selection {
+	background: #212529;
+	color: #fff;
+}
+/*  Same thing — for Webkit browsers  */
+::selection {
+	background: #212529;
+	color: #fff;
+}
+
+
+/* == BUTTONS ==================================================== */
+
+/*  Basics  */
+.button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	margin: 5px;
+	padding: 6px 20px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 700;
+	color: #fff;
+	border: none;
+	transition: all 0.05s;
+	-webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+	   -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+}
+
+/*  Button when you click on it  */
+.button:active {
+	top: 0;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+
+/*  Big button  */
+.button.button-large { padding: 15px 30px; }
+
+/*  Button that’s just text  */
+.button.no-bg {
+	background: none;
+	box-shadow: none;
+	color: rgba(0, 0, 0, 1);
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.button.no-bg:hover {
+	background: none;
+	box-shadow: none;
+	color: rgba(0, 0, 0, 0.75);
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button.no-bg:active {
+	color: rgba(0, 0, 0, 1);
+	text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+}
+
+.button.no-shadow {
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+
+.button.shape-circular { padding: 15px; }
+
+.button path { fill: #fff; }
+
+.button.button-disabled {
+	pointer-events: none;
+	background: #000;
+	opacity: 0.2;
+	box-shadow: none;
+}
+
+
+/* == CODE ================================================================= */
+
+code {
+	padding: 20px 30px;
+	background-color: rgba(0, 0, 0, 0.05);
+	font-family: 'Fira Mono', monospace;
+	font-size: 80%;
+	color: #f55e53;
+	white-space: pre;
+	border-radius: 4px;
+}
+
+code.inline {
+	margin: 0 2px;
+	padding: 3px 6px;
+}
+
+pre > code {
+	display: block;
+	padding: 20px 30px;
+	white-space: pre;
+}
+
+
+/* == ICONS ================================================================ */
+
+.icon-24 { width: 24px; }
+.icon-48 { width: 48px; }
+
+
+/* == TOGGLES ============================================================== */
+
+/*  The grey background  */
+input[type=checkbox] + label {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	width: 60px;
+	background: #ddd;
+	border-radius: 15px; /*  Basically half of the height  */
+	cursor: pointer;
+	transition: all 0.1s ease-out;
+}
+
+/*  The white switch inside  */
+input[type=checkbox] + label:after {
+	position: absolute;
+	display: block;
+	left: 2px;
+	top: 2px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 100px;
+	content: '';
+	transition: all 0.1s ease-out;
+	-webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+	   -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+}
+
+/*  The bg when checked  */
+input[type=checkbox]:checked + label { background: #28bb6b; }
+
+/*  The switch's movement  */
+input[type=checkbox]:checked + label:after { left: 32px; }
+
+input[type=checkbox]:disabled + label {
+	background: #f2f2f2;
+	pointer-events: none;
+}
+
+input[type=checkbox]:disabled:checked + label {
+	background: rgba(40, 187, 107, 0.2); /*  Same bg value, but with opacity  */
+	pointer-events: none;
+}
+
+/*  The switch when disabled  */
+input[type=checkbox]:disabled + label:after {
+	background: #f8f8f8;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+
+
+/* == RADIO BUTTONS ======================================================== */
+
+/*  The grey background  */
+input[type=radio] + label {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	width: 60px;
+	background: #ddd;
+	border-radius: 15px; /*  Basically half of the height  */
+	cursor: pointer;
+	transition: all 0.1s ease-out;
+}
+
+/*  The white switch inside  */
+input[type=radio] + label:after {
+	position: absolute;
+	display: block;
+	left: 2px;
+	top: 2px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 100px;
+	content: '';
+	transition: all 0.1s ease-out;
+	-webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+	   -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+}
+
+/*  The bg when checked  */
+input[type=radio]:checked + label { background: #9651c6; }
+
+/*  The switch's movement  */
+input[type=radio]:checked + label:after { left: 32px; }
+
+input[type=radio]:disabled + label {
+	background: #f2f2f2;
+	pointer-events: none;
+}
+
+input[type=radio]:disabled:checked + label {
+	background: rgba(150, 81, 198, 0.2); /*  Same bg value, but with opacity  */
+	pointer-events: none;
+}
+
+/*  The switch when disabled  */
+input[type=radio]:disabled + label:after {
+	background: #f8f8f8;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
