@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.7.2
+	Current version: 1.7.3
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -48,6 +48,13 @@ button { vertical-align: baseline; }
 .clear-both { clear: both; }
 
 .vertical-middle { vertical-align: middle; }
+
+/*  For when you want things right in the middle  */
+.vertical-centre-items,
+.vertical-center-items {
+	display: flex;
+	align-items: center;
+}
 
 /*  Parent div needs a set height  */
 .vertical-centre-this,
