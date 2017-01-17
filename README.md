@@ -1,7 +1,7 @@
 # FICTOAN
 FICTOAN is an intuitive, minimalist, responsive HTML+CSS boilerplate. 
 
-As a designer just starting to learn basic web development, I found large frameworks such as Bootstrap and Foundation too complex and cumbersome to implement and maintain. I need something more basic and easy to use.
+As a designer just starting to learn basic web development, I found large frameworks such as Bootstrap and Foundation too complex and cumbersome to implement and maintain. I needed something more basic and easy to use.
 
 And thus FICTOAN was born. It aims to be an intuitive and straightforward HTML and CSS framework for designers and newbie developers working on small projects or websites. It uses simple and descriptive class names, and yet generic enough to be understood easily.
 
@@ -16,7 +16,7 @@ Just [download the zip file](http://sujansundareswaran.com/fictoan/fictoan-dist.
 Please do. Just keep in mind to include short, helpful comments too, as this project is aimed at absolute
 newbies.
 
-`Current version is 1.7.3`
+`Current version is 1.7.4`
 
 The versioning logic is simple:
 Versions are written as `major.minor.patch`. <br>
