@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.9.0
+	Current version: 1.9.2
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -85,6 +85,7 @@ button { vertical-align: baseline; }
 	background-size: cover;
 	z-index:-5;
 }
+	
 
 
 /* BOX MODEL HELPERS ----------------------------------- */
