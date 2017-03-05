@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.7.4
+	Current version: 1.7.5
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -23,14 +23,19 @@
 	padding: 0 20px;
 }
 
-
-/*  Removing padding for portions within portions  */
-.portion .portion:first-child { padding-left: 0; }
-.portion .portion:last-child { padding-right: 0; }
+/*  Remove the padding for nested portions  */
+.portion > .row {
+	margin-left: -20px;
+	margin-right: -20px;
+}
 
 /*  Remove the gap between elements in the same row  */
 .no-gaps .portion,
 .portion.no-gaps { padding: 0 !important; }
+
+/*  Lessen the gap between elements in the same row  */
+.lesser-gaps .portion,
+.portion.lesser-gaps { padding: 0 10px; }
 
 /*  Now the actual grid layout  */
 .row .whole            { width: 100%; }
