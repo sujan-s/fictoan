@@ -87,31 +87,6 @@
 .portion img { max-width: 100%; }
 
 
-/*  Use the "retain-layout-on-mobiles" and
-	"retain-layout-on-tablets" if you want your
-	elements to use the same layout across all screens.
-	The rule below causes a single-column layout */
-@media screen and (max-width: 800px) {
-
-	.row:not(.retain-layout-on-tablets) > .portion { width: 100% !important; }
-
-	.portion .row .portion {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
-
-@media screen and (max-width: 550px) {
-
-	.row:not(.retain-layout-on-mobiles) > .portion { width: 100% !important; }
-
-	.portion .row .portion {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
-
-
 /*  Side margins for all your content — increase or decrease at will,
 	or simply add the 'no-padding' class to get full-width  */
 
@@ -144,3 +119,130 @@
 @media all and (min-width: 2400px) {
 	.all-content { padding: 0 30vw; }
 }
+
+/*	Device-specific portion widths —
+	the naming convention is: .{portion-width}-on-{device}-{orientation} */
+/*	For small screens UP TO 599px */
+@media all and (max-width: 599px) {
+	
+	.row .whole-on-mobile { width: 100%; }
+
+	.row .half-on-mobile { width: 50%; }
+	
+	.row .one-third-on-mobile 	{ width: 33.3332%; }
+	.row .two-thirds-on-mobile 	{ width: 66.6665%; }
+
+	.row .one-fourth-on-mobile 		{ width: 25%; }
+	.row .two-fourths-on-mobile 	{ width: 50%; }
+	.row .three-fourths-on-mobile 	{ width: 75%; }
+
+	.row .one-fifth-on-mobile 		{ width: 20%; }
+	.row .two-fifths-on-mobile 		{ width: 40%; }
+	.row .three-fifths-on-mobile 	{ width: 60%; }
+	.row .four-fifths-on-mobile 	{ width: 80%; }
+	
+	.row .one-sixth-on-mobile       { width: 16.6666%; }
+	.row .two-sixths-on-mobile      { width: 33.3332%; }
+	.row .three-sixths-on-mobile    { width: 50.0000%; }
+	.row .four-sixths-on-mobile     { width: 66.6665%; }
+	.row .five-sixths-on-mobile     { width: 83.3332%; }
+
+	.row .one-seventh-on-mobile     { width: 14.2856%; }
+	.row .two-sevenths-on-mobile    { width: 28.5714%; }
+	.row .three-sevenths-on-mobile  { width: 42.8571%; }
+	.row .four-sevenths-on-mobile   { width: 57.1428%; }
+	.row .five-sevenths-on-mobile   { width: 71.4285%; }
+	.row .six-sevenths-on-mobile    { width: 85.7142%; }
+
+	.row .one-eighth-on-mobile      { width: 12.5%; }
+	.row .two-eighths-on-mobile     { width: 25.0%; }
+	.row .three-eighths-on-mobile   { width: 37.5%; }
+	.row .four-eighths-on-mobile    { width: 50.0%; }
+	.row .five-eighths-on-mobile    { width: 62.5%; }
+	.row .six-eighths-on-mobile     { width: 75.0%; }
+	.row .seven-eighths-on-mobile   { width: 87.5%; }
+}
+
+/*  For screens FROM 600px width and UPWARD  */
+@media all and (min-width: 600px) and (max-width: 899px) {
+
+	.row .whole-on-tablet-portrait { width: 100%; }
+
+	.row .half-on-tablet-portrait { width: 50%; }
+	
+	.row .one-third-on-tablet-portrait 		{ width: 33.3332%; }
+	.row .two-thirds-on-tablet-portrait 	{ width: 66.6665%; }
+
+	.row .one-fourth-on-tablet-portrait 	{ width: 25%; }
+	.row .two-fourths-on-tablet-portrait 	{ width: 50%; }
+	.row .three-fourths-on-tablet-portrait 	{ width: 75%; }
+
+	.row .one-fifth-on-tablet-portrait 		{ width: 20%; }
+	.row .two-fifths-on-tablet-portrait 	{ width: 40%; }
+	.row .three-fifths-on-tablet-portrait 	{ width: 60%; }
+	.row .four-fifths-on-tablet-portrait 	{ width: 80%; }
+	
+	.row .one-sixth-on-tablet-portrait       { width: 16.6666%; }
+	.row .two-sixths-on-tablet-portrait      { width: 33.3332%; }
+	.row .three-sixths-on-tablet-portrait    { width: 50.0000%; }
+	.row .four-sixths-on-tablet-portrait     { width: 66.6665%; }
+	.row .five-sixths-on-tablet-portrait     { width: 83.3332%; }
+
+	.row .one-seventh-on-tablet-portrait     { width: 14.2856%; }
+	.row .two-sevenths-on-tablet-portrait    { width: 28.5714%; }
+	.row .three-sevenths-on-tablet-portrait  { width: 42.8571%; }
+	.row .four-sevenths-on-tablet-portrait   { width: 57.1428%; }
+	.row .five-sevenths-on-tablet-portrait   { width: 71.4285%; }
+	.row .six-sevenths-on-tablet-portrait    { width: 85.7142%; }
+
+	.row .one-eighth-on-tablet-portrait      { width: 12.5%; }
+	.row .two-eighths-on-tablet-portrait     { width: 25.0%; }
+	.row .three-eighths-on-tablet-portrait   { width: 37.5%; }
+	.row .four-eighths-on-tablet-portrait    { width: 50.0%; }
+	.row .five-eighths-on-tablet-portrait    { width: 62.5%; }
+	.row .six-eighths-on-tablet-portrait     { width: 75.0%; }
+	.row .seven-eighths-on-tablet-portrait   { width: 87.5%; }
+
+}
+
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) and (max-width: 1199px) {
+
+	.row .whole-on-tablet-landscape { width: 100%; }
+
+	.row .half-on-tablet-landscape { width: 50%; }
+	
+	.row .one-third-on-tablet-landscape 	{ width: 33.3332%; }
+	.row .two-thirds-on-tablet-landscape 	{ width: 66.6665%; }
+
+	.row .one-fourth-on-tablet-landscape 	{ width: 25%; }
+	.row .two-fourths-on-tablet-landscape 	{ width: 50%; }
+	.row .three-fourths-on-tablet-landscape { width: 75%; }
+
+	.row .one-fifth-on-tablet-landscape 	{ width: 20%; }
+	.row .two-fifths-on-tablet-landscape 	{ width: 40%; }
+	.row .three-fifths-on-tablet-landscape 	{ width: 60%; }
+	.row .four-fifths-on-tablet-landscape 	{ width: 80%; }
+	
+	.row .one-sixth-on-tablet-landscape     { width: 16.6666%; }
+	.row .two-sixths-on-tablet-landscape    { width: 33.3332%; }
+	.row .three-sixths-on-tablet-landscape  { width: 50.0000%; }
+	.row .four-sixths-on-tablet-landscape   { width: 66.6665%; }
+	.row .five-sixths-on-tablet-landscape   { width: 83.3332%; }
+
+	.row .one-seventh-on-tablet-landscape     { width: 14.2856%; }
+	.row .two-sevenths-on-tablet-landscape    { width: 28.5714%; }
+	.row .three-sevenths-on-tablet-landscape  { width: 42.8571%; }
+	.row .four-sevenths-on-tablet-landscape   { width: 57.1428%; }
+	.row .five-sevenths-on-tablet-landscape   { width: 71.4285%; }
+	.row .six-sevenths-on-tablet-landscape    { width: 85.7142%; }
+
+	.row .one-eighth-on-tablet-landscape      { width: 12.5%; }
+	.row .two-eighths-on-tablet-landscape     { width: 25.0%; }
+	.row .three-eighths-on-tablet-landscape   { width: 37.5%; }
+	.row .four-eighths-on-tablet-landscape    { width: 50.0%; }
+	.row .five-eighths-on-tablet-landscape    { width: 62.5%; }
+	.row .six-eighths-on-tablet-landscape     { width: 75.0%; }
+	.row .seven-eighths-on-tablet-landscape   { width: 87.5%; }
+}
+
