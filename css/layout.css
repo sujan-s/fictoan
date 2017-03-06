@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.9.0
+	Current version: 1.9.2
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -172,95 +172,95 @@
 /*  For screens FROM 600px width and UPWARD  */
 @media all and (min-width: 600px) and (max-width: 899px) {
 
-	.row:not(.retain-layout-on-tablet-portrait) .portion:not([class*='tablet-portrait']) {
+	.row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-pt']) {
 		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	.row .whole-on-tablet-portrait { width: 100%; }
+	.row .whole-on-tab-pt { width: 100%; }
 
-	.row .half-on-tablet-portrait { width: 50%; }
+	.row .half-on-tab-pt { width: 50%; }
 	
-	.row .one-third-on-tablet-portrait 		{ width: 33.3332%; }
-	.row .two-thirds-on-tablet-portrait 	{ width: 66.6665%; }
+	.row .one-third-on-tab-pt 	{ width: 33.3332%; }
+	.row .two-thirds-on-tab-pt 	{ width: 66.6665%; }
 
-	.row .one-fourth-on-tablet-portrait 	{ width: 25%; }
-	.row .two-fourths-on-tablet-portrait 	{ width: 50%; }
-	.row .three-fourths-on-tablet-portrait 	{ width: 75%; }
+	.row .one-fourth-on-tab-pt 		{ width: 25%; }
+	.row .two-fourths-on-tab-pt 	{ width: 50%; }
+	.row .three-fourths-on-tab-pt 	{ width: 75%; }
 
-	.row .one-fifth-on-tablet-portrait 		{ width: 20%; }
-	.row .two-fifths-on-tablet-portrait 	{ width: 40%; }
-	.row .three-fifths-on-tablet-portrait 	{ width: 60%; }
-	.row .four-fifths-on-tablet-portrait 	{ width: 80%; }
+	.row .one-fifth-on-tab-pt 		{ width: 20%; }
+	.row .two-fifths-on-tab-pt 		{ width: 40%; }
+	.row .three-fifths-on-tab-pt 	{ width: 60%; }
+	.row .four-fifths-on-tab-pt 	{ width: 80%; }
 	
-	.row .one-sixth-on-tablet-portrait       { width: 16.6666%; }
-	.row .two-sixths-on-tablet-portrait      { width: 33.3332%; }
-	.row .three-sixths-on-tablet-portrait    { width: 50.0000%; }
-	.row .four-sixths-on-tablet-portrait     { width: 66.6665%; }
-	.row .five-sixths-on-tablet-portrait     { width: 83.3332%; }
+	.row .one-sixth-on-tab-pt       { width: 16.6666%; }
+	.row .two-sixths-on-tab-pt      { width: 33.3332%; }
+	.row .three-sixths-on-tab-pt    { width: 50.0000%; }
+	.row .four-sixths-on-tab-pt     { width: 66.6665%; }
+	.row .five-sixths-on-tab-pt     { width: 83.3332%; }
 
-	.row .one-seventh-on-tablet-portrait     { width: 14.2856%; }
-	.row .two-sevenths-on-tablet-portrait    { width: 28.5714%; }
-	.row .three-sevenths-on-tablet-portrait  { width: 42.8571%; }
-	.row .four-sevenths-on-tablet-portrait   { width: 57.1428%; }
-	.row .five-sevenths-on-tablet-portrait   { width: 71.4285%; }
-	.row .six-sevenths-on-tablet-portrait    { width: 85.7142%; }
+	.row .one-seventh-on-tab-pt     { width: 14.2856%; }
+	.row .two-sevenths-on-tab-pt    { width: 28.5714%; }
+	.row .three-sevenths-on-tab-pt  { width: 42.8571%; }
+	.row .four-sevenths-on-tab-pt   { width: 57.1428%; }
+	.row .five-sevenths-on-tab-pt   { width: 71.4285%; }
+	.row .six-sevenths-on-tab-pt    { width: 85.7142%; }
 
-	.row .one-eighth-on-tablet-portrait      { width: 12.5%; }
-	.row .two-eighths-on-tablet-portrait     { width: 25.0%; }
-	.row .three-eighths-on-tablet-portrait   { width: 37.5%; }
-	.row .four-eighths-on-tablet-portrait    { width: 50.0%; }
-	.row .five-eighths-on-tablet-portrait    { width: 62.5%; }
-	.row .six-eighths-on-tablet-portrait     { width: 75.0%; }
-	.row .seven-eighths-on-tablet-portrait   { width: 87.5%; }
+	.row .one-eighth-on-tab-pt      { width: 12.5%; }
+	.row .two-eighths-on-tab-pt     { width: 25.0%; }
+	.row .three-eighths-on-tab-pt   { width: 37.5%; }
+	.row .four-eighths-on-tab-pt    { width: 50.0%; }
+	.row .five-eighths-on-tab-pt    { width: 62.5%; }
+	.row .six-eighths-on-tab-pt     { width: 75.0%; }
+	.row .seven-eighths-on-tab-pt   { width: 87.5%; }
 
 }
 
 /*  For screens FROM 900px width and UPWARD  */
 @media all and (min-width: 900px) and (max-width: 1199px) {
 
-	.row:not(.retain-layout-on-tablet-portrait) .portion:not([class*='tablet-landscape']) {
+	.row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-ls']) {
 		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	.row .whole-on-tablet-landscape { width: 100%; }
+	.row .whole-on-tab-ls { width: 100%; }
 
-	.row .half-on-tablet-landscape { width: 50%; }
+	.row .half-on-tab-ls { width: 50%; }
 	
-	.row .one-third-on-tablet-landscape 	{ width: 33.3332%; }
-	.row .two-thirds-on-tablet-landscape 	{ width: 66.6665%; }
+	.row .one-third-on-tab-ls 	{ width: 33.3332%; }
+	.row .two-thirds-on-tab-ls 	{ width: 66.6665%; }
 
-	.row .one-fourth-on-tablet-landscape 	{ width: 25%; }
-	.row .two-fourths-on-tablet-landscape 	{ width: 50%; }
-	.row .three-fourths-on-tablet-landscape { width: 75%; }
+	.row .one-fourth-on-tab-ls 	  { width: 25%; }
+	.row .two-fourths-on-tab-ls   { width: 50%; }
+	.row .three-fourths-on-tab-ls { width: 75%; }
 
-	.row .one-fifth-on-tablet-landscape 	{ width: 20%; }
-	.row .two-fifths-on-tablet-landscape 	{ width: 40%; }
-	.row .three-fifths-on-tablet-landscape 	{ width: 60%; }
-	.row .four-fifths-on-tablet-landscape 	{ width: 80%; }
+	.row .one-fifth-on-tab-ls 		{ width: 20%; }
+	.row .two-fifths-on-tab-ls 		{ width: 40%; }
+	.row .three-fifths-on-tab-ls 	{ width: 60%; }
+	.row .four-fifths-on-tab-ls 	{ width: 80%; }
 	
-	.row .one-sixth-on-tablet-landscape     { width: 16.6666%; }
-	.row .two-sixths-on-tablet-landscape    { width: 33.3332%; }
-	.row .three-sixths-on-tablet-landscape  { width: 50.0000%; }
-	.row .four-sixths-on-tablet-landscape   { width: 66.6665%; }
-	.row .five-sixths-on-tablet-landscape   { width: 83.3332%; }
+	.row .one-sixth-on-tab-ls     { width: 16.6666%; }
+	.row .two-sixths-on-tab-ls    { width: 33.3332%; }
+	.row .three-sixths-on-tab-ls  { width: 50.0000%; }
+	.row .four-sixths-on-tab-ls   { width: 66.6665%; }
+	.row .five-sixths-on-tab-ls   { width: 83.3332%; }
 
-	.row .one-seventh-on-tablet-landscape     { width: 14.2856%; }
-	.row .two-sevenths-on-tablet-landscape    { width: 28.5714%; }
-	.row .three-sevenths-on-tablet-landscape  { width: 42.8571%; }
-	.row .four-sevenths-on-tablet-landscape   { width: 57.1428%; }
-	.row .five-sevenths-on-tablet-landscape   { width: 71.4285%; }
-	.row .six-sevenths-on-tablet-landscape    { width: 85.7142%; }
+	.row .one-seventh-on-tab-ls     { width: 14.2856%; }
+	.row .two-sevenths-on-tab-ls    { width: 28.5714%; }
+	.row .three-sevenths-on-tab-ls  { width: 42.8571%; }
+	.row .four-sevenths-on-tab-ls   { width: 57.1428%; }
+	.row .five-sevenths-on-tab-ls   { width: 71.4285%; }
+	.row .six-sevenths-on-tab-ls    { width: 85.7142%; }
 
-	.row .one-eighth-on-tablet-landscape      { width: 12.5%; }
-	.row .two-eighths-on-tablet-landscape     { width: 25.0%; }
-	.row .three-eighths-on-tablet-landscape   { width: 37.5%; }
-	.row .four-eighths-on-tablet-landscape    { width: 50.0%; }
-	.row .five-eighths-on-tablet-landscape    { width: 62.5%; }
-	.row .six-eighths-on-tablet-landscape     { width: 75.0%; }
-	.row .seven-eighths-on-tablet-landscape   { width: 87.5%; }
+	.row .one-eighth-on-tab-ls      { width: 12.5%; }
+	.row .two-eighths-on-tab-ls     { width: 25.0%; }
+	.row .three-eighths-on-tab-ls   { width: 37.5%; }
+	.row .four-eighths-on-tab-ls    { width: 50.0%; }
+	.row .five-eighths-on-tab-ls    { width: 62.5%; }
+	.row .six-eighths-on-tab-ls     { width: 75.0%; }
+	.row .seven-eighths-on-tab-ls   { width: 87.5%; }
 }
 
