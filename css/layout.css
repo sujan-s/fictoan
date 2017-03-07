@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.9.2
+	Current version: 1.10.0
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -124,11 +124,7 @@
 /*	For small screens UP TO 599px */
 @media all and (max-width: 599px) {
 
-	.row:not(.retain-layout-on-mobile) .portion:not([class*='on-mobile']) {
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
-	}
+	.row:not(.retain-layout-on-mobile) .portion:not([class*='on-mobile']) { width: 100%; }
 
 	.row .whole-on-mobile { width: 100%; }
 
@@ -172,11 +168,7 @@
 /*  For screens FROM 600px width and UPWARD  */
 @media all and (min-width: 600px) and (max-width: 899px) {
 
-	.row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-pt']) {
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
-	}
+	.row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-pt']) { width: 100%; }
 
 	.row .whole-on-tab-pt { width: 100%; }
 
@@ -220,11 +212,7 @@
 /*  For screens FROM 900px width and UPWARD  */
 @media all and (min-width: 900px) and (max-width: 1199px) {
 
-	.row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-ls']) {
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
-	}
+	.row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-ls']) { width: 100%; }
 
 	.row .whole-on-tab-ls { width: 100%; }
 
@@ -262,5 +250,6 @@
 	.row .five-eighths-on-tab-ls    { width: 62.5%; }
 	.row .six-eighths-on-tab-ls     { width: 75.0%; }
 	.row .seven-eighths-on-tab-ls   { width: 87.5%; }
+    
 }
 
