@@ -3,7 +3,7 @@
 	An intuitive, minimalist responsive HTML+CSS setup
 	for designers just starting to code — just like me.
 	by Sujan Sundareswaran
-	Current version: 1.10.0
+	Current version: 1.11.0
 
 	https://github.com/sujan-s/fictoan/
 	http://sujansundareswaran.com/
@@ -193,25 +193,35 @@ hr {
 /* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
 
 /*  Hide on large screens  */
-.show-only-on-mobiles { display: none !important; }
-.show-only-on-tablets { display: none !important; }
+.show-only-on-mobile { display: none !important; }
+.show-only-on-tab-pt { display: none !important; }
+.show-only-on-tab-ls { display: none !important; }
 
-@media screen and (max-width: 800px) {
-	.center-on-tablets,
-	.centre-on-tablets { text-align: center !important; }
+@media all and (max-width: 599px) {
+	.center-on-mobile,
+	.centre-on-mobile { text-align: center !important; }
 
-	.hide-on-tablets { display: none !important; }
+	.hide-on-mobile { display: none !important; }
 
-	.show-only-on-tablets { display: block !important; }
+	.show-only-on-mobile { display: block !important; }
 }
 
-@media screen and (max-width: 550px) {
-	.center-on-mobiles,
-	.centre-on-mobiles { text-align: center !important; }
+@media all and (min-width: 600px) and (max-width: 899px) {
+	.center-on-tab-pt,
+	.centre-on-tab-pt { text-align: center !important; }
 
-	.hide-on-mobiles { display: none !important; }
+	.hide-on-tab-pt { display: none !important; }
 
-	.show-only-on-mobiles { display: block !important; }
+	.show-only-on-tab-pt { display: block !important; }
+}
+
+@media all and (min-width: 900px) and (max-width: 1199px) {
+	.center-on-tab-ls,
+	.centre-on-tab-ls { text-align: center !important; }
+
+	.hide-on-tab-ls { display: none !important; }
+
+	.show-only-on-tab-ls { display: block !important; }
 }
 
 
