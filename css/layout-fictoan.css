@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.13.1
+    Current version: 1.14.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -44,41 +44,83 @@
 .portion.lesser-gaps { padding: 0 10px; }
 
 /*  Now the actual grid layout  */
-.portion.whole            { width: 100%; }
+.portion.whole                        { width: 100%; }
 
-.portion.half             { width: 50%; }
+.portion.half                         { width: 50%; }
 
-.portion.one-third        { width: 33.3332%; }
-.portion.two-thirds       { width: 66.6665%; }
+.portion.one-third                    { width: 33.3332%; }
+.portion.two-thirds                   { width: 66.6665%; }
 
-.portion.one-fourth       { width: 25%; }
-.portion.three-fourths    { width: 75%; }
+.portion.one-fourth                   { width: 25%; }
+.portion.three-fourths                { width: 75%; }
 
-.portion.one-fifth        { width: 20%; }
-.portion.two-fifths       { width: 40%; }
-.portion.three-fifths     { width: 60%; }
-.portion.four-fifths      { width: 80%; }
+.portion.one-fifth                    { width: 20%; }
+.portion.two-fifths                   { width: 40%; }
+.portion.three-fifths                 { width: 60%; }
+.portion.four-fifths                  { width: 80%; }
 
-.portion.one-sixth        { width: 16.6666%; }
-.portion.two-sixths       { width: 33.3332%; }
-.portion.three-sixths     { width: 50.0000%; }
-.portion.four-sixths      { width: 66.6665%; }
-.portion.five-sixths      { width: 83.3332%; }
+.portion.one-sixth                    { width: 16.6666%; }
+.portion.two-sixths                   { width: 33.3332%; }
+.portion.three-sixths                 { width: 50.0000%; }
+.portion.four-sixths                  { width: 66.6665%; }
+.portion.five-sixths                  { width: 83.3332%; }
 
-.portion.one-seventh      { width: 14.2856%; }
-.portion.two-sevenths     { width: 28.5714%; }
-.portion.three-sevenths   { width: 42.8571%; }
-.portion.four-sevenths    { width: 57.1428%; }
-.portion.five-sevenths    { width: 71.4285%; }
-.portion.six-sevenths     { width: 85.7142%; }
+.portion.one-seventh                  { width: 14.2856%; }
+.portion.two-sevenths                 { width: 28.5714%; }
+.portion.three-sevenths               { width: 42.8571%; }
+.portion.four-sevenths                { width: 57.1428%; }
+.portion.five-sevenths                { width: 71.4285%; }
+.portion.six-sevenths                 { width: 85.7142%; }
 
-.portion.one-eighth       { width: 12.5%; }
-.portion.two-eighths      { width: 25.0%; }
-.portion.three-eighths    { width: 37.5%; }
-.portion.four-eighths     { width: 50.0%; }
-.portion.five-eighths     { width: 62.5%; }
-.portion.six-eighths      { width: 75.0%; }
-.portion.seven-eighths    { width: 87.5%; }
+.portion.one-eighth                   { width: 12.5%; }
+.portion.two-eighths                  { width: 25.0%; }
+.portion.three-eighths                { width: 37.5%; }
+.portion.four-eighths                 { width: 50.0%; }
+.portion.five-eighths                 { width: 62.5%; }
+.portion.six-eighths                  { width: 75.0%; }
+.portion.seven-eighths                { width: 87.5%; }
+
+.portion.one-ninth-on-mobile          { width: 11.1111%; }
+.portion.two-ninths-on-mobile         { width: 22.2222%; }
+.portion.three-ninths-on-mobile       { width: 33.3333%; }
+.portion.four-ninths-on-mobile        { width: 44.4444%; }
+.portion.five-ninths-on-mobile        { width: 55.5555%; }
+.portion.six-ninths-on-mobile         { width: 66.6665%; }
+.portion.seven-ninths-on-mobile       { width: 77.7778%; }
+.portion.eight-ninths-on-mobile       { width: 88.8889%; }
+
+.portion.one-tenth-on-mobile          { width: 10%; }
+.portion.two-tenths-on-mobile         { width: 20%; }
+.portion.three-tenths-on-mobile       { width: 30%; }
+.portion.four-tenths-on-mobile        { width: 40%; }
+.portion.five-tenths-on-mobile        { width: 50%; }
+.portion.six-tenths-on-mobile         { width: 60%; }
+.portion.seven-tenths-on-mobile       { width: 70%; }
+.portion.eight-tenths-on-mobile       { width: 80%; }
+.portion.nine-tenths-on-mobile        { width: 90%; }
+
+.portion.one-eleventh-on-mobile       { width:  9.0909%; }
+.portion.two-elevenths-on-mobile      { width: 18.1818%; }
+.portion.three-elevenths-on-mobile    { width: 27.2727%; }
+.portion.four-elevenths-on-mobile     { width: 36.3636%; }
+.portion.five-elevenths-on-mobile     { width: 45.4545%; }
+.portion.six-elevenths-on-mobile      { width: 54.5454%; }
+.portion.seven-elevenths-on-mobile    { width: 63.6363%; }
+.portion.eight-elevenths-on-mobile    { width: 72.7272%; }
+.portion.nine-elevenths-on-mobile     { width: 81.8181%; }
+.portion.ten-elevenths-on-mobile      { width: 90.9090%; }
+
+.portion.one-twelfth-on-mobile        { width:  8.3333%; }
+.portion.two-twelfths-on-mobile       { width: 16.6667%; }
+.portion.three-twelfths-on-mobile     { width: 25.0000%; }
+.portion.four-twelfths-on-mobile      { width: 36.3333%; }
+.portion.five-twelfths-on-mobile      { width: 41.6667%; }
+.portion.six-twelfths-on-mobile       { width: 50.0000%; }
+.portion.seven-twelfths-on-mobile     { width: 58.3333%; }
+.portion.eight-twelfths-on-mobile     { width: 66.6667%; }
+.portion.nine-twelfths-on-mobile      { width: 75.0000%; }
+.portion.ten-twelfths-on-mobile       { width: 83.3333%; }
+.portion.eleven-twelfths-on-mobile    { width: 91.6667%; }
 
 
 /*  Clearfix for the rows  */
@@ -133,42 +175,84 @@
     .row:not(.retain-layout-on-mobile) .portion:not([class*='on-mobile']),
     .box:not(.retain-layout-on-tab-pt) .portion:not([class*='on-mobile']) { width: 100%; }
 
-    .portion.whole-on-mobile           { width: 100%; }
+    .portion.whole-on-mobile              { width: 100%; }
 
-    .portion.half-on-mobile            { width: 50%; }
+    .portion.half-on-mobile               { width: 50%; }
 
-    .portion.one-third-on-mobile       { width: 33.3332%; }
-    .portion.two-thirds-on-mobile      { width: 66.6665%; }
+    .portion.one-third-on-mobile          { width: 33.3332%; }
+    .portion.two-thirds-on-mobile         { width: 66.6665%; }
 
-    .portion.one-fourth-on-mobile 	   { width: 25%; }
-    .portion.two-fourths-on-mobile 	   { width: 50%; }
-    .portion.three-fourths-on-mobile   { width: 75%; }
+    .portion.one-fourth-on-mobile         { width: 25%; }
+    .portion.two-fourths-on-mobile        { width: 50%; }
+    .portion.three-fourths-on-mobile      { width: 75%; }
 
-    .portion.one-fifth-on-mobile 	   { width: 20%; }
-    .portion.two-fifths-on-mobile 	   { width: 40%; }
-    .portion.three-fifths-on-mobile    { width: 60%; }
-    .portion.four-fifths-on-mobile 	   { width: 80%; }
+    .portion.one-fifth-on-mobile          { width: 20%; }
+    .portion.two-fifths-on-mobile         { width: 40%; }
+    .portion.three-fifths-on-mobile       { width: 60%; }
+    .portion.four-fifths-on-mobile        { width: 80%; }
 
-    .portion.one-sixth-on-mobile       { width: 16.6666%; }
-    .portion.two-sixths-on-mobile      { width: 33.3332%; }
-    .portion.three-sixths-on-mobile    { width: 50.0000%; }
-    .portion.four-sixths-on-mobile     { width: 66.6665%; }
-    .portion.five-sixths-on-mobile     { width: 83.3332%; }
+    .portion.one-sixth-on-mobile          { width: 16.6666%; }
+    .portion.two-sixths-on-mobile         { width: 33.3332%; }
+    .portion.three-sixths-on-mobile       { width: 50.0000%; }
+    .portion.four-sixths-on-mobile        { width: 66.6665%; }
+    .portion.five-sixths-on-mobile        { width: 83.3332%; }
 
-    .portion.one-seventh-on-mobile     { width: 14.2856%; }
-    .portion.two-sevenths-on-mobile    { width: 28.5714%; }
-    .portion.three-sevenths-on-mobile  { width: 42.8571%; }
-    .portion.four-sevenths-on-mobile   { width: 57.1428%; }
-    .portion.five-sevenths-on-mobile   { width: 71.4285%; }
-    .portion.six-sevenths-on-mobile    { width: 85.7142%; }
+    .portion.one-seventh-on-mobile        { width: 14.2856%; }
+    .portion.two-sevenths-on-mobile       { width: 28.5714%; }
+    .portion.three-sevenths-on-mobile     { width: 42.8571%; }
+    .portion.four-sevenths-on-mobile      { width: 57.1428%; }
+    .portion.five-sevenths-on-mobile      { width: 71.4285%; }
+    .portion.six-sevenths-on-mobile       { width: 85.7142%; }
 
-    .portion.one-eighth-on-mobile      { width: 12.5%; }
-    .portion.two-eighths-on-mobile     { width: 25.0%; }
-    .portion.three-eighths-on-mobile   { width: 37.5%; }
-    .portion.four-eighths-on-mobile    { width: 50.0%; }
-    .portion.five-eighths-on-mobile    { width: 62.5%; }
-    .portion.six-eighths-on-mobile     { width: 75.0%; }
-    .portion.seven-eighths-on-mobile   { width: 87.5%; }
+    .portion.one-eighth-on-mobile         { width: 12.5%; }
+    .portion.two-eighths-on-mobile        { width: 25.0%; }
+    .portion.three-eighths-on-mobile      { width: 37.5%; }
+    .portion.four-eighths-on-mobile       { width: 50.0%; }
+    .portion.five-eighths-on-mobile       { width: 62.5%; }
+    .portion.six-eighths-on-mobile        { width: 75.0%; }
+    .portion.seven-eighths-on-mobile      { width: 87.5%; }
+
+    .portion.one-ninth-on-mobile          { width: 11.1111%; }
+    .portion.two-ninths-on-mobile         { width: 22.2222%; }
+    .portion.three-ninths-on-mobile       { width: 33.3333%; }
+    .portion.four-ninths-on-mobile        { width: 44.4444%; }
+    .portion.five-ninths-on-mobile        { width: 55.5555%; }
+    .portion.six-ninths-on-mobile         { width: 66.6665%; }
+    .portion.seven-ninths-on-mobile       { width: 77.7778%; }
+    .portion.eight-ninths-on-mobile       { width: 88.8889%; }
+
+    .portion.one-tenth-on-mobile          { width: 10%; }
+    .portion.two-tenths-on-mobile         { width: 20%; }
+    .portion.three-tenths-on-mobile       { width: 30%; }
+    .portion.four-tenths-on-mobile        { width: 40%; }
+    .portion.five-tenths-on-mobile        { width: 50%; }
+    .portion.six-tenths-on-mobile         { width: 60%; }
+    .portion.seven-tenths-on-mobile       { width: 70%; }
+    .portion.eight-tenths-on-mobile       { width: 80%; }
+    .portion.nine-tenths-on-mobile        { width: 90%; }
+
+    .portion.one-eleventh-on-mobile       { width:  9.0909%; }
+    .portion.two-elevenths-on-mobile      { width: 18.1818%; }
+    .portion.three-elevenths-on-mobile    { width: 27.2727%; }
+    .portion.four-elevenths-on-mobile     { width: 36.3636%; }
+    .portion.five-elevenths-on-mobile     { width: 45.4545%; }
+    .portion.six-elevenths-on-mobile      { width: 54.5454%; }
+    .portion.seven-elevenths-on-mobile    { width: 63.6363%; }
+    .portion.eight-elevenths-on-mobile    { width: 72.7272%; }
+    .portion.nine-elevenths-on-mobile     { width: 81.8181%; }
+    .portion.ten-elevenths-on-mobile      { width: 90.9090%; }
+
+    .portion.one-twelfth-on-mobile        { width:  8.3333%; }
+    .portion.two-twelfths-on-mobile       { width: 16.6667%; }
+    .portion.three-twelfths-on-mobile     { width: 25.0000%; }
+    .portion.four-twelfths-on-mobile      { width: 36.3333%; }
+    .portion.five-twelfths-on-mobile      { width: 41.6667%; }
+    .portion.six-twelfths-on-mobile       { width: 50.0000%; }
+    .portion.seven-twelfths-on-mobile     { width: 58.3333%; }
+    .portion.eight-twelfths-on-mobile     { width: 66.6667%; }
+    .portion.nine-twelfths-on-mobile      { width: 75.0000%; }
+    .portion.ten-twelfths-on-mobile       { width: 83.3333%; }
+    .portion.eleven-twelfths-on-mobile    { width: 91.6667%; }
 
 }
 
@@ -178,42 +262,84 @@
     .row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-pt']),
     .box:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-pt']) { width: 100%; }
 
-    .portion.whole-on-tab-pt           { width: 100%; }
+    .portion.whole-on-tab-pt              { width: 100%; }
 
-    .portion.half-on-tab-pt            { width: 50%; }
+    .portion.half-on-tab-pt               { width: 50%; }
 
-    .portion.one-third-on-tab-pt 	   { width: 33.3332%; }
-    .portion.two-thirds-on-tab-pt 	   { width: 66.6665%; }
+    .portion.one-third-on-tab-pt          { width: 33.3332%; }
+    .portion.two-thirds-on-tab-pt         { width: 66.6665%; }
 
-    .portion.one-fourth-on-tab-pt 	   { width: 25%; }
-    .portion.two-fourths-on-tab-pt 	   { width: 50%; }
-    .portion.three-fourths-on-tab-pt   { width: 75%; }
+    .portion.one-fourth-on-tab-pt         { width: 25%; }
+    .portion.two-fourths-on-tab-pt        { width: 50%; }
+    .portion.three-fourths-on-tab-pt      { width: 75%; }
 
-    .portion.one-fifth-on-tab-pt 	   { width: 20%; }
-    .portion.two-fifths-on-tab-pt 	   { width: 40%; }
-    .portion.three-fifths-on-tab-pt    { width: 60%; }
-    .portion.four-fifths-on-tab-pt 	   { width: 80%; }
+    .portion.one-fifth-on-tab-pt          { width: 20%; }
+    .portion.two-fifths-on-tab-pt         { width: 40%; }
+    .portion.three-fifths-on-tab-pt       { width: 60%; }
+    .portion.four-fifths-on-tab-pt        { width: 80%; }
 
-    .portion.one-sixth-on-tab-pt       { width: 16.6666%; }
-    .portion.two-sixths-on-tab-pt      { width: 33.3332%; }
-    .portion.three-sixths-on-tab-pt    { width: 50.0000%; }
-    .portion.four-sixths-on-tab-pt     { width: 66.6665%; }
-    .portion.five-sixths-on-tab-pt     { width: 83.3332%; }
+    .portion.one-sixth-on-tab-pt          { width: 16.6666%; }
+    .portion.two-sixths-on-tab-pt         { width: 33.3332%; }
+    .portion.three-sixths-on-tab-pt       { width: 50.0000%; }
+    .portion.four-sixths-on-tab-pt        { width: 66.6665%; }
+    .portion.five-sixths-on-tab-pt        { width: 83.3332%; }
 
-    .portion.one-seventh-on-tab-pt     { width: 14.2856%; }
-    .portion.two-sevenths-on-tab-pt    { width: 28.5714%; }
-    .portion.three-sevenths-on-tab-pt  { width: 42.8571%; }
-    .portion.four-sevenths-on-tab-pt   { width: 57.1428%; }
-    .portion.five-sevenths-on-tab-pt   { width: 71.4285%; }
-    .portion.six-sevenths-on-tab-pt    { width: 85.7142%; }
+    .portion.one-seventh-on-tab-pt        { width: 14.2856%; }
+    .portion.two-sevenths-on-tab-pt       { width: 28.5714%; }
+    .portion.three-sevenths-on-tab-pt     { width: 42.8571%; }
+    .portion.four-sevenths-on-tab-pt      { width: 57.1428%; }
+    .portion.five-sevenths-on-tab-pt      { width: 71.4285%; }
+    .portion.six-sevenths-on-tab-pt       { width: 85.7142%; }
 
-    .portion.one-eighth-on-tab-pt      { width: 12.5%; }
-    .portion.two-eighths-on-tab-pt     { width: 25.0%; }
-    .portion.three-eighths-on-tab-pt   { width: 37.5%; }
-    .portion.four-eighths-on-tab-pt    { width: 50.0%; }
-    .portion.five-eighths-on-tab-pt    { width: 62.5%; }
-    .portion.six-eighths-on-tab-pt     { width: 75.0%; }
-    .portion.seven-eighths-on-tab-pt   { width: 87.5%; }
+    .portion.one-eighth-on-tab-pt         { width: 12.5%; }
+    .portion.two-eighths-on-tab-pt        { width: 25.0%; }
+    .portion.three-eighths-on-tab-pt      { width: 37.5%; }
+    .portion.four-eighths-on-tab-pt       { width: 50.0%; }
+    .portion.five-eighths-on-tab-pt       { width: 62.5%; }
+    .portion.six-eighths-on-tab-pt        { width: 75.0%; }
+    .portion.seven-eighths-on-tab-pt      { width: 87.5%; }
+
+    .portion.one-ninth-on-tab-pt          { width: 11.1111%; }
+    .portion.two-ninths-on-tab-pt         { width: 22.2222%; }
+    .portion.three-ninths-on-tab-pt       { width: 33.3333%; }
+    .portion.four-ninths-on-tab-pt        { width: 44.4444%; }
+    .portion.five-ninths-on-tab-pt        { width: 55.5555%; }
+    .portion.six-ninths-on-tab-pt         { width: 66.6665%; }
+    .portion.seven-ninths-on-tab-pt       { width: 77.7778%; }
+    .portion.eight-ninths-on-tab-pt       { width: 88.8889%; }
+
+    .portion.one-tenth-on-tab-pt          { width: 10%; }
+    .portion.two-tenths-on-tab-pt         { width: 20%; }
+    .portion.three-tenths-on-tab-pt       { width: 30%; }
+    .portion.four-tenths-on-tab-pt        { width: 40%; }
+    .portion.five-tenths-on-tab-pt        { width: 50%; }
+    .portion.six-tenths-on-tab-pt         { width: 60%; }
+    .portion.seven-tenths-on-tab-pt       { width: 70%; }
+    .portion.eight-tenths-on-tab-pt       { width: 80%; }
+    .portion.nine-tenths-on-tab-pt        { width: 90%; }
+
+    .portion.one-eleventh-on-tab-pt       { width:  9.0909%; }
+    .portion.two-elevenths-on-tab-pt      { width: 18.1818%; }
+    .portion.three-elevenths-on-tab-pt    { width: 27.2727%; }
+    .portion.four-elevenths-on-tab-pt     { width: 36.3636%; }
+    .portion.five-elevenths-on-tab-pt     { width: 45.4545%; }
+    .portion.six-elevenths-on-tab-pt      { width: 54.5454%; }
+    .portion.seven-elevenths-on-tab-pt    { width: 63.6363%; }
+    .portion.eight-elevenths-on-tab-pt    { width: 72.7272%; }
+    .portion.nine-elevenths-on-tab-pt     { width: 81.8181%; }
+    .portion.ten-elevenths-on-tab-pt      { width: 90.9090%; }
+
+    .portion.one-twelfth-on-tab-pt        { width:  8.3333%; }
+    .portion.two-twelfths-on-tab-pt       { width: 16.6667%; }
+    .portion.three-twelfths-on-tab-pt     { width: 25.0000%; }
+    .portion.four-twelfths-on-tab-pt      { width: 36.3333%; }
+    .portion.five-twelfths-on-tab-pt      { width: 41.6667%; }
+    .portion.six-twelfths-on-tab-pt       { width: 50.0000%; }
+    .portion.seven-twelfths-on-tab-pt     { width: 58.3333%; }
+    .portion.eight-twelfths-on-tab-pt     { width: 66.6667%; }
+    .portion.nine-twelfths-on-tab-pt      { width: 75.0000%; }
+    .portion.ten-twelfths-on-tab-pt       { width: 83.3333%; }
+    .portion.eleven-twelfths-on-tab-pt    { width: 91.6667%; }
 
 }
 
@@ -223,41 +349,83 @@
     .row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-ls']),
     .box:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-ls']) { width: 100%; }
 
-    .portion.whole-on-tab-ls           { width: 100%; }
+    .portion.whole-on-tab-ls              { width: 100%; }
 
-    .portion.half-on-tab-ls            { width: 50%; }
+    .portion.half-on-tab-ls               { width: 50%; }
 
-    .portion.one-third-on-tab-ls 	   { width: 33.3332%; }
-    .portion.two-thirds-on-tab-ls 	   { width: 66.6665%; }
+    .portion.one-third-on-tab-ls          { width: 33.3332%; }
+    .portion.two-thirds-on-tab-ls         { width: 66.6665%; }
 
-    .portion.one-fourth-on-tab-ls 	   { width: 25%; }
-    .portion.two-fourths-on-tab-ls     { width: 50%; }
-    .portion.three-fourths-on-tab-ls   { width: 75%; }
+    .portion.one-fourth-on-tab-ls         { width: 25%; }
+    .portion.two-fourths-on-tab-ls        { width: 50%; }
+    .portion.three-fourths-on-tab-ls      { width: 75%; }
 
-    .portion.one-fifth-on-tab-ls	   { width: 20%; }
-    .portion.two-fifths-on-tab-ls      { width: 40%; }
-    .portion.three-fifths-on-tab-ls    { width: 60%; }
-    .portion.four-fifths-on-tab-ls 	   { width: 80%; }
+    .portion.one-fifth-on-tab-ls          { width: 20%; }
+    .portion.two-fifths-on-tab-ls         { width: 40%; }
+    .portion.three-fifths-on-tab-ls       { width: 60%; }
+    .portion.four-fifths-on-tab-ls        { width: 80%; }
 
-    .portion.one-sixth-on-tab-ls       { width: 16.6666%; }
-    .portion.two-sixths-on-tab-ls      { width: 33.3332%; }
-    .portion.three-sixths-on-tab-ls    { width: 50.0000%; }
-    .portion.four-sixths-on-tab-ls     { width: 66.6665%; }
-    .portion.five-sixths-on-tab-ls     { width: 83.3332%; }
+    .portion.one-sixth-on-tab-ls          { width: 16.6666%; }
+    .portion.two-sixths-on-tab-ls         { width: 33.3332%; }
+    .portion.three-sixths-on-tab-ls       { width: 50.0000%; }
+    .portion.four-sixths-on-tab-ls        { width: 66.6665%; }
+    .portion.five-sixths-on-tab-ls        { width: 83.3332%; }
 
-    .portion.one-seventh-on-tab-ls     { width: 14.2856%; }
-    .portion.two-sevenths-on-tab-ls    { width: 28.5714%; }
-    .portion.three-sevenths-on-tab-ls  { width: 42.8571%; }
-    .portion.four-sevenths-on-tab-ls   { width: 57.1428%; }
-    .portion.five-sevenths-on-tab-ls   { width: 71.4285%; }
-    .portion.six-sevenths-on-tab-ls    { width: 85.7142%; }
+    .portion.one-seventh-on-tab-ls        { width: 14.2856%; }
+    .portion.two-sevenths-on-tab-ls       { width: 28.5714%; }
+    .portion.three-sevenths-on-tab-ls     { width: 42.8571%; }
+    .portion.four-sevenths-on-tab-ls      { width: 57.1428%; }
+    .portion.five-sevenths-on-tab-ls      { width: 71.4285%; }
+    .portion.six-sevenths-on-tab-ls       { width: 85.7142%; }
 
-    .portion.one-eighth-on-tab-ls      { width: 12.5%; }
-    .portion.two-eighths-on-tab-ls     { width: 25.0%; }
-    .portion.three-eighths-on-tab-ls   { width: 37.5%; }
-    .portion.four-eighths-on-tab-ls    { width: 50.0%; }
-    .portion.five-eighths-on-tab-ls    { width: 62.5%; }
-    .portion.six-eighths-on-tab-ls     { width: 75.0%; }
-    .portion.seven-eighths-on-tab-ls   { width: 87.5%; }
+    .portion.one-eighth-on-tab-ls         { width: 12.5%; }
+    .portion.two-eighths-on-tab-ls        { width: 25.0%; }
+    .portion.three-eighths-on-tab-ls      { width: 37.5%; }
+    .portion.four-eighths-on-tab-ls       { width: 50.0%; }
+    .portion.five-eighths-on-tab-ls       { width: 62.5%; }
+    .portion.six-eighths-on-tab-ls        { width: 75.0%; }
+    .portion.seven-eighths-on-tab-ls      { width: 87.5%; }
+
+    .portion.one-ninth-on-tab-ls          { width: 11.1111%; }
+    .portion.two-ninths-on-tab-ls         { width: 22.2222%; }
+    .portion.three-ninths-on-tab-ls       { width: 33.3333%; }
+    .portion.four-ninths-on-tab-ls        { width: 44.4444%; }
+    .portion.five-ninths-on-tab-ls        { width: 55.5555%; }
+    .portion.six-ninths-on-tab-ls         { width: 66.6665%; }
+    .portion.seven-ninths-on-tab-ls       { width: 77.7778%; }
+    .portion.eight-ninths-on-tab-ls       { width: 88.8889%; }
+
+    .portion.one-tenth-on-tab-ls          { width: 10%; }
+    .portion.two-tenths-on-tab-ls         { width: 20%; }
+    .portion.three-tenths-on-tab-ls       { width: 30%; }
+    .portion.four-tenths-on-tab-ls        { width: 40%; }
+    .portion.five-tenths-on-tab-ls        { width: 50%; }
+    .portion.six-tenths-on-tab-ls         { width: 60%; }
+    .portion.seven-tenths-on-tab-ls       { width: 70%; }
+    .portion.eight-tenths-on-tab-ls       { width: 80%; }
+    .portion.nine-tenths-on-tab-ls        { width: 90%; }
+
+    .portion.one-eleventh-on-tab-ls       { width:  9.0909%; }
+    .portion.two-elevenths-on-tab-ls      { width: 18.1818%; }
+    .portion.three-elevenths-on-tab-ls    { width: 27.2727%; }
+    .portion.four-elevenths-on-tab-ls     { width: 36.3636%; }
+    .portion.five-elevenths-on-tab-ls     { width: 45.4545%; }
+    .portion.six-elevenths-on-tab-ls      { width: 54.5454%; }
+    .portion.seven-elevenths-on-tab-ls    { width: 63.6363%; }
+    .portion.eight-elevenths-on-tab-ls    { width: 72.7272%; }
+    .portion.nine-elevenths-on-tab-ls     { width: 81.8181%; }
+    .portion.ten-elevenths-on-tab-ls      { width: 90.9090%; }
+
+    .portion.one-twelfth-on-tab-ls        { width:  8.3333%; }
+    .portion.two-twelfths-on-tab-ls       { width: 16.6667%; }
+    .portion.three-twelfths-on-tab-ls     { width: 25.0000%; }
+    .portion.four-twelfths-on-tab-ls      { width: 36.3333%; }
+    .portion.five-twelfths-on-tab-ls      { width: 41.6667%; }
+    .portion.six-twelfths-on-tab-ls       { width: 50.0000%; }
+    .portion.seven-twelfths-on-tab-ls     { width: 58.3333%; }
+    .portion.eight-twelfths-on-tab-ls     { width: 66.6667%; }
+    .portion.nine-twelfths-on-tab-ls      { width: 75.0000%; }
+    .portion.ten-twelfths-on-tab-ls       { width: 83.3333%; }
+    .portion.eleven-twelfths-on-tab-ls    { width: 91.6667%; }
 
 }
