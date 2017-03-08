@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.12.1
+    Current version: 1.13.1
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -92,77 +92,88 @@ button { vertical-align: baseline; }
 /*  Margins for all occasions  */
 .no-margin  { margin: 0 !important; }
 
-.margin-all-tiny 	    { margin-top:  2vmax; }
-.margin-all-small 	    { margin-top:  4vmax; }
-.margin-all-medium 	    { margin-top:  8vmax; }
-.margin-all-large 	    { margin-top: 14vmax; }
-.margin-all-huge 	    { margin-top: 22vmax; }
+.margin-all-fixed       { margin:  10px; }
+.margin-all-tiny        { margin:  2vmax; }
+.margin-all-small       { margin:  4vmax; }
+.margin-all-medium      { margin:  8vmax; }
+.margin-all-large       { margin: 14vmax; }
+.margin-all-huge        { margin: 22vmax; }
 
-.no-margin-top 			{ margin-top: 0; }
-.margin-top-tiny 		{ margin-top:  2vmax; }
-.margin-top-small 		{ margin-top:  4vmax; }
-.margin-top-medium 		{ margin-top:  8vmax; }
-.margin-top-large 		{ margin-top: 14vmax; }
-.margin-top-huge 		{ margin-top: 22vmax; }
+.no-margin-top          { margin-top: 0; }
+.margin-top-fixed       { margin-top:  10px; }
+.margin-top-tiny        { margin-top:  2vmax; }
+.margin-top-small       { margin-top:  4vmax; }
+.margin-top-medium      { margin-top:  8vmax; }
+.margin-top-large       { margin-top: 14vmax; }
+.margin-top-huge        { margin-top: 22vmax; }
 
-.no-margin-right 		{ margin-right: 0; }
-.margin-right-tiny 		{ margin-right:  2vmax; }
-.margin-right-small 	{ margin-right:  4vmax; }
-.margin-right-medium 	{ margin-right:  8vmax; }
-.margin-right-large 	{ margin-right: 14vmax; }
-.margin-right-huge 		{ margin-right: 22vmax; }
+.no-margin-right        { margin-right: 0; }
+.margin-right-fixed     { margin-right:  10px; }
+.margin-right-tiny      { margin-right:  2vmax; }
+.margin-right-small     { margin-right:  4vmax; }
+.margin-right-medium    { margin-right:  8vmax; }
+.margin-right-large     { margin-right: 14vmax; }
+.margin-right-huge      { margin-right: 22vmax; }
 
-.no-margin-bottom 		{ margin-bottom: 0; }
-.margin-bottom-tiny 	{ margin-bottom:  2vmax; }
-.margin-bottom-small 	{ margin-bottom:  4vmax; }
-.margin-bottom-medium 	{ margin-bottom:  8vmax; }
-.margin-bottom-large 	{ margin-bottom: 14vmax; }
-.margin-bottom-huge 	{ margin-bottom: 22vmax; }
+.no-margin-bottom       { margin-bottom: 0; }
+.margin-bottom-fixed    { margin-bottom:  10px; }
+.margin-bottom-tiny     { margin-bottom:  2vmax; }
+.margin-bottom-small    { margin-bottom:  4vmax; }
+.margin-bottom-medium   { margin-bottom:  8vmax; }
+.margin-bottom-large    { margin-bottom: 14vmax; }
+.margin-bottom-huge     { margin-bottom: 22vmax; }
 
-.no-margin-left 		{ margin-left: 0; }
-.margin-left-tiny 		{ margin-left:  2vmax; }
-.margin-left-small 		{ margin-left:  4vmax; }
-.margin-left-medium 	{ margin-left:  8vmax; }
-.margin-left-large 		{ margin-left: 14vmax; }
-.margin-left-huge 		{ margin-left: 22vmax; }
+.no-margin-left         { margin-left: 0; }
+.margin-left-fixed      { margin-left:  10px; }
+.margin-left-tiny       { margin-left:  2vmax; }
+.margin-left-small      { margin-left:  4vmax; }
+.margin-left-medium     { margin-left:  8vmax; }
+.margin-left-large      { margin-left: 14vmax; }
+.margin-left-huge       { margin-left: 22vmax; }
 
 
 /*  Paddings for all occasions  */
 .no-padding { padding: 0 !important; }
 
-.padding-all-tiny 	    { padding-top:  2vmax; }
-.padding-all-small 	    { padding-top:  4vmax; }
-.padding-all-medium     { padding-top:  8vmax; }
-.padding-all-large 	    { padding-top: 14vmax; }
-.padding-all-huge 	    { padding-top: 22vmax; }
 
-.no-padding-top 		{ padding-top: 0; }
-.padding-top-tiny 	 	{ padding-top:  2vmax; }
-.padding-top-small 		{ padding-top:  4vmax; }
-.padding-top-medium 	{ padding-top:  8vmax; }
-.padding-top-large 		{ padding-top: 14vmax; }
-.padding-top-huge 		{ padding-top: 22vmax; }
+.padding-all-fixed      { padding:  10px; }
+.padding-all-tiny       { padding:  2vmax; }
+.padding-all-small      { padding:  4vmax; }
+.padding-all-medium     { padding:  8vmax; }
+.padding-all-large      { padding: 14vmax; }
+.padding-all-huge       { padding: 22vmax; }
 
-.no-padding-right 		{ padding-right: 0; }
-.padding-right-tiny 	{ padding-right:  2vmax; }
-.padding-right-small 	{ padding-right:  4vmax; }
-.padding-right-medium 	{ padding-right:  8vmax; }
-.padding-right-large 	{ padding-right: 14vmax; }
-.padding-right-huge 	{ padding-right: 22vmax; }
+.no-padding-top         { padding-top: 0; }
+.padding-top-fixed      { padding-top:  10px; }
+.padding-top-tiny       { padding-top:  2vmax; }
+.padding-top-small      { padding-top:  4vmax; }
+.padding-top-medium     { padding-top:  8vmax; }
+.padding-top-large      { padding-top: 14vmax; }
+.padding-top-huge       { padding-top: 22vmax; }
 
-.no-padding-bottom 		{ padding-bottom: 0; }
-.padding-bottom-tiny 	{ padding-bottom:  2vmax; }
-.padding-bottom-small 	{ padding-bottom:  4vmax; }
-.padding-bottom-medium 	{ padding-bottom:  8vmax; }
-.padding-bottom-large 	{ padding-bottom: 14vmax; }
-.padding-bottom-huge 	{ padding-bottom: 22vmax; }
+.no-padding-right       { padding-right: 0; }
+.padding-right-fixed    { padding-right:  10px; }
+.padding-right-tiny     { padding-right:  2vmax; }
+.padding-right-small    { padding-right:  4vmax; }
+.padding-right-medium   { padding-right:  8vmax; }
+.padding-right-large    { padding-right: 14vmax; }
+.padding-right-huge     { padding-right: 22vmax; }
 
-.no-padding-left 		{ padding-left: 0; }
-.padding-left-tiny 		{ padding-left:  2vmax; }
-.padding-left-small 	{ padding-left:  4vmax; }
-.padding-left-medium 	{ padding-left:  8vmax; }
-.padding-left-large 	{ padding-left: 14vmax; }
-.padding-left-huge 		{ padding-left: 22vmax; }
+.no-padding-bottom      { padding-bottom: 0; }
+.padding-bottom-fixed   { padding-bottom:  10px; }
+.padding-bottom-tiny    { padding-bottom:  2vmax; }
+.padding-bottom-small   { padding-bottom:  4vmax; }
+.padding-bottom-medium  { padding-bottom:  8vmax; }
+.padding-bottom-large   { padding-bottom: 14vmax; }
+.padding-bottom-huge    { padding-bottom: 22vmax; }
+
+.no-padding-left        { padding-left: 0; }
+.padding-left-fixed     { padding-left:  10px; }
+.padding-left-tiny      { padding-left:  2vmax; }
+.padding-left-small     { padding-left:  4vmax; }
+.padding-left-medium    { padding-left:  8vmax; }
+.padding-left-large     { padding-left: 14vmax; }
+.padding-left-huge      { padding-left: 22vmax; }
 
 
 /*  This will render an empty space of
