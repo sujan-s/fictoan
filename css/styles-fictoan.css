@@ -1,12 +1,12 @@
 /*
-	FICTOAN
-	An intuitive, minimalist responsive HTML+CSS setup
-	for designers just starting to code — just like me.
-	by Sujan Sundareswaran
-	Current version: 1.11.0
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.12.1
 
-	https://github.com/sujan-s/fictoan/
-	http://sujansundareswaran.com/
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
 */
 
 /* == RESET ================================================================ */
@@ -14,9 +14,9 @@
 /*  Consider removing this if you have
     a zillion elements in your page  */
 *, *:before, *:after {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 *:focus { outline: 0; }
@@ -24,8 +24,8 @@
 img { display: block; }
 
 body {
-	-moz-osx-font-smoothing: grayscale;
-	 -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
 }
 
 a { text-decoration: none; }
@@ -52,16 +52,16 @@ button { vertical-align: baseline; }
 /*  For when you want things right in the middle  */
 .vertical-centre-items,
 .vertical-center-items {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 /*  Parent div needs a set height  */
 .vertical-centre-this,
 .vertical-center-this {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /*  Parent div needs a set width  */
@@ -74,31 +74,29 @@ button { vertical-align: baseline; }
 
 
 .full-size-bg {
-	position: absolute;
-	/*  Use 'fixed' to not scroll the BG  */
-	/*position: fixed; */
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	background: url("../images/") center top; /*  Add the filename here  */
-	background-size: cover;
-	z-index:-5;
+    position: absolute;
+    /*  Use 'fixed' to not scroll the BG  */
+    /*position: fixed; */
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url("../images/") center top; /*  Add the filename here  */
+    background-size: cover;
+    z-index:-5;
 }
-	
 
 
 /* BOX MODEL HELPERS ----------------------------------- */
 
-
 /*  Margins for all occasions  */
 .no-margin  { margin: 0 !important; }
 
-.margin-all-tiny 	{ margin-top:  2vmax; }
-.margin-all-small 	{ margin-top:  4vmax; }
-.margin-all-medium 	{ margin-top:  8vmax; }
-.margin-all-large 	{ margin-top: 14vmax; }
-.margin-all-huge 	{ margin-top: 22vmax; }
+.margin-all-tiny 	    { margin-top:  2vmax; }
+.margin-all-small 	    { margin-top:  4vmax; }
+.margin-all-medium 	    { margin-top:  8vmax; }
+.margin-all-large 	    { margin-top: 14vmax; }
+.margin-all-huge 	    { margin-top: 22vmax; }
 
 .no-margin-top 			{ margin-top: 0; }
 .margin-top-tiny 		{ margin-top:  2vmax; }
@@ -132,11 +130,11 @@ button { vertical-align: baseline; }
 /*  Paddings for all occasions  */
 .no-padding { padding: 0 !important; }
 
-.padding-all-tiny 	{ padding-top:  2vmax; }
-.padding-all-small 	{ padding-top:  4vmax; }
-.padding-all-medium { padding-top:  8vmax; }
-.padding-all-large 	{ padding-top: 14vmax; }
-.padding-all-huge 	{ padding-top: 22vmax; }
+.padding-all-tiny 	    { padding-top:  2vmax; }
+.padding-all-small 	    { padding-top:  4vmax; }
+.padding-all-medium     { padding-top:  8vmax; }
+.padding-all-large 	    { padding-top: 14vmax; }
+.padding-all-huge 	    { padding-top: 22vmax; }
 
 .no-padding-top 		{ padding-top: 0; }
 .padding-top-tiny 	 	{ padding-top:  2vmax; }
@@ -170,23 +168,21 @@ button { vertical-align: baseline; }
 /*  This will render an empty space of
     20% screen height where you add it  */
 .empty-spacer {
-	display: block;
-	height: 20vmin;
-	clear: both;
+    display: block;
+    height: 20vmin;
+    clear: both;
 }
-
 
 /*  For images and tiles  */
 .shape-rounded { border-radius: 3px; }
 .shape-circular { border-radius: 50%; }
 
-
 /*  A thin separator line that is black at 10% opacity  */
 hr {
-	border: 0;
-	height: 1px;
-	margin: 0;
-	background: rgba(0, 0, 0, 0.1);
+    border: 0;
+    height: 1px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -198,41 +194,41 @@ hr {
 .show-only-on-tab-ls { display: none !important; }
 
 @media all and (max-width: 599px) {
-	.center-on-mobile,
-	.centre-on-mobile { text-align: center !important; }
+    .center-on-mobile,
+    .centre-on-mobile { text-align: center !important; }
 
-	.hide-on-mobile { display: none !important; }
+    .hide-on-mobile { display: none !important; }
 
-	.show-only-on-mobile { display: block !important; }
+    .show-only-on-mobile { display: block !important; }
 }
 
 @media all and (min-width: 600px) and (max-width: 899px) {
-	.center-on-tab-pt,
-	.centre-on-tab-pt { text-align: center !important; }
+    .center-on-tab-pt,
+    .centre-on-tab-pt { text-align: center !important; }
 
-	.hide-on-tab-pt { display: none !important; }
+    .hide-on-tab-pt { display: none !important; }
 
-	.show-only-on-tab-pt { display: block !important; }
+    .show-only-on-tab-pt { display: block !important; }
 }
 
 @media all and (min-width: 900px) and (max-width: 1199px) {
-	.center-on-tab-ls,
-	.centre-on-tab-ls { text-align: center !important; }
+    .center-on-tab-ls,
+    .centre-on-tab-ls { text-align: center !important; }
 
-	.hide-on-tab-ls { display: none !important; }
+    .hide-on-tab-ls { display: none !important; }
 
-	.show-only-on-tab-ls { display: block !important; }
+    .show-only-on-tab-ls { display: block !important; }
 }
 
 
 /* == TYPOGRAPHY =========================================================== */
 
 body {
-	background-color: #fff;
-	font-family: 'Work Sans', sans-serif;
-	color: #000;
-	word-wrap: normal;
-	text-rendering: geometricPrecision;
+    background-color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    color: #000;
+    word-wrap: normal;
+    text-rendering: geometricPrecision;
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
@@ -245,21 +241,21 @@ h5 { font-size: 1.4em; }
 h6 { font-size: 1.0em; }
 
 p {
-	font-family: 'Work Sans', sans-serif;
-	font-size: 1.1em;
-	line-height: 1.6em;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6em;
 }
 p .text-serif {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 1.3em;
-	line-height: 1.6em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3em;
+    line-height: 1.6em;
 }
 
 a {
-	cursor: pointer;
-	color: #ff5855;
-	border-bottom: 1px dotted rgba(0,  0,  0,  0.5);
-	transition: all 2s;
+    cursor: pointer;
+    color: #ff5855;
+    border-bottom: 1px dotted rgba(0,  0,  0,  0.5);
+    transition: all 2s;
 }
 a:hover { border-bottom: 1px solid rgba(0,  0,  0,  0.35); }
 a.button { border: none; }
@@ -305,8 +301,8 @@ i, em { font-style: italic; }
 .text-orange   { color: #ff9201; }
 .text-brown    { color: #a25e37; }
 
-.text-black  { color: #000 !important; }
-.text-white  { color: #fff !important; }
+.text-black    { color: #000 !important; }
+.text-white    { color: #fff !important; }
 
 .icon-red      { fill: #ff5855; }
 .icon-green    { fill: #28bb6b; }
@@ -321,13 +317,13 @@ i, em { font-style: italic; }
 /*  Colour of highlight and text colour
     — for Mozilla browsers  */
 ::-moz-selection {
-	background: #212529;
-	color: #fff;
+    background: #212529;
+    color: #fff;
 }
 /*  Same thing — for Webkit browsers  */
 ::selection {
-	background: #212529;
-	color: #fff;
+    background: #212529;
+    color: #fff;
 }
 
 
@@ -335,27 +331,27 @@ i, em { font-style: italic; }
 
 /*  Basics  */
 .button {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	margin: 5px;
-	padding: 6px 20px;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 700;
-	color: #fff;
-	border: none;
-	transition: all 0.05s;
-	-webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-	   -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-			box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+    padding: 6px 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    transition: all 0.05s;
+    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
 /*  Button when you click on it  */
 .button:active {
-	top: 0;
-	-webkit-box-shadow: none;
-	   -moz-box-shadow: none;
-			box-shadow: none;
+    top: 0;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
 }
 
 /*  Big button  */
@@ -363,28 +359,28 @@ i, em { font-style: italic; }
 
 /*  Button that’s just text  */
 .button.no-bg {
-	background: none;
-	box-shadow: none;
-	color: rgba(0, 0, 0, 1);
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    background: none;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .button.no-bg:hover {
-	background: none;
-	box-shadow: none;
-	color: rgba(0, 0, 0, 0.75);
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    background: none;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.75);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .button.no-bg:active {
-	color: rgba(0, 0, 0, 1);
-	text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
 }
 
 .button.no-shadow {
-	-webkit-box-shadow: none;
-	   -moz-box-shadow: none;
-			box-shadow: none;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
 }
 
 .button.shape-circular { padding: 15px; }
@@ -392,34 +388,34 @@ i, em { font-style: italic; }
 .button path { fill: #fff; }
 
 .button.button-disabled {
-	pointer-events: none;
-	background: #000;
-	opacity: 0.2;
-	box-shadow: none;
+    pointer-events: none;
+    background: #000;
+    opacity: 0.2;
+    box-shadow: none;
 }
 
 
 /* == CODE ================================================================= */
 
 code {
-	padding: 20px 30px;
-	background-color: rgba(0, 0, 0, 0.05);
-	font-family: 'Fira Mono', monospace;
-	font-size: 80%;
-	color: #f55e53;
-	white-space: pre;
-	border-radius: 4px;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-family: 'Fira Mono', monospace;
+    font-size: 80%;
+    color: #f55e53;
+    white-space: pre;
+    border-radius: 4px;
 }
 
 code.inline {
-	margin: 0 2px;
-	padding: 3px 6px;
+    margin: 0 2px;
+    padding: 3px 6px;
 }
 
 pre > code {
-	display: block;
-	padding: 20px 30px;
-	white-space: pre;
+    display: block;
+    padding: 20px 30px;
+    white-space: pre;
 }
 
 
@@ -433,31 +429,31 @@ pre > code {
 
 /*  The grey background  */
 input[type=checkbox] + label {
-	position: relative;
-	display: inline-block;
-	height: 30px;
-	width: 60px;
-	background: #ddd;
-	border-radius: 15px; /*  Basically half of the height  */
-	cursor: pointer;
-	transition: all 0.1s ease-out;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 60px;
+    background: #ddd;
+    border-radius: 15px; /*  Basically half of the height  */
+    cursor: pointer;
+    transition: all 0.1s ease-out;
 }
 
 /*  The white switch inside  */
 input[type=checkbox] + label:after {
-	position: absolute;
-	display: block;
-	left: 2px;
-	top: 2px;
-	width: 26px;
-	height: 26px;
-	background: #fff;
-	border-radius: 100px;
-	content: '';
-	transition: all 0.1s ease-out;
-	-webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-	   -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-			box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: 2px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 100px;
+    content: '';
+    transition: all 0.1s ease-out;
+    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
 /*  The bg when checked  */
@@ -467,21 +463,21 @@ input[type=checkbox]:checked + label { background: #28bb6b; }
 input[type=checkbox]:checked + label:after { left: 32px; }
 
 input[type=checkbox]:disabled + label {
-	background: #f2f2f2;
-	pointer-events: none;
+    background: #f2f2f2;
+    pointer-events: none;
 }
 
 input[type=checkbox]:disabled:checked + label {
-	background: rgba(40, 187, 107, 0.2); /*  Same bg value, but with opacity  */
-	pointer-events: none;
+    background: rgba(40, 187, 107, 0.2); /*  Same bg value, but with opacity  */
+    pointer-events: none;
 }
 
 /*  The switch when disabled  */
 input[type=checkbox]:disabled + label:after {
-	background: #f8f8f8;
-	-webkit-box-shadow: none;
-	   -moz-box-shadow: none;
-			box-shadow: none;
+    background: #f8f8f8;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
 }
 
 
@@ -489,31 +485,31 @@ input[type=checkbox]:disabled + label:after {
 
 /*  The grey background  */
 input[type=radio] + label {
-	position: relative;
-	display: inline-block;
-	height: 30px;
-	width: 60px;
-	background: #ddd;
-	border-radius: 15px; /*  Basically half of the height  */
-	cursor: pointer;
-	transition: all 0.1s ease-out;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 60px;
+    background: #ddd;
+    border-radius: 15px; /*  Basically half of the height  */
+    cursor: pointer;
+    transition: all 0.1s ease-out;
 }
 
 /*  The white switch inside  */
 input[type=radio] + label:after {
-	position: absolute;
-	display: block;
-	left: 2px;
-	top: 2px;
-	width: 26px;
-	height: 26px;
-	background: #fff;
-	border-radius: 100px;
-	content: '';
-	transition: all 0.1s ease-out;
-	-webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-	   -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-			box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: 2px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 100px;
+    content: '';
+    transition: all 0.1s ease-out;
+    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
 /*  The bg when checked  */
@@ -523,19 +519,19 @@ input[type=radio]:checked + label { background: #9651c6; }
 input[type=radio]:checked + label:after { left: 32px; }
 
 input[type=radio]:disabled + label {
-	background: #f2f2f2;
-	pointer-events: none;
+    background: #f2f2f2;
+    pointer-events: none;
 }
 
 input[type=radio]:disabled:checked + label {
-	background: rgba(150, 81, 198, 0.2); /*  Same bg value, but with opacity  */
-	pointer-events: none;
+    background: rgba(150, 81, 198, 0.2); /*  Same bg value, but with opacity  */
+    pointer-events: none;
 }
 
 /*  The switch when disabled  */
 input[type=radio]:disabled + label:after {
-	background: #f8f8f8;
-	-webkit-box-shadow: none;
-	   -moz-box-shadow: none;
-			box-shadow: none;
+    background: #f8f8f8;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
 }

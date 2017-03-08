@@ -1,0 +1,263 @@
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.12.1
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+
+
+/*  Basics for the row  */
+.row {
+    display: block;
+    margin: 0 0 2vmax 0 ; /* This will push the next row a little below */
+    clear: both;
+}
+/*  Basics for the portions  */
+.row .portion,
+.box .portion {
+    float: left;
+    padding: 0 20px;
+}
+
+/*  Fallback width for lone portion divs  */
+.portion { width: 100%; }
+
+/*  Use 'box' class to dump many divs of varied widths  */
+.box .portion { margin-bottom: 2vmax; }
+
+/*  Remove the padding for nested portions  */
+.portion > .row {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+/*  Remove the gap between elements in the same row  */
+.no-gaps .portion,
+.portion.no-gaps { padding: 0 !important; }
+
+/*  Lessen the gap between elements in the same row  */
+.lesser-gaps .portion,
+.portion.lesser-gaps { padding: 0 10px; }
+
+/*  Now the actual grid layout  */
+.portion.whole            { width: 100%; }
+
+.portion.half             { width: 50%; }
+
+.portion.one-third        { width: 33.3332%; }
+.portion.two-thirds       { width: 66.6665%; }
+
+.portion.one-fourth       { width: 25%; }
+.portion.three-fourths    { width: 75%; }
+
+.portion.one-fifth        { width: 20%; }
+.portion.two-fifths       { width: 40%; }
+.portion.three-fifths     { width: 60%; }
+.portion.four-fifths      { width: 80%; }
+
+.portion.one-sixth        { width: 16.6666%; }
+.portion.two-sixths       { width: 33.3332%; }
+.portion.three-sixths     { width: 50.0000%; }
+.portion.four-sixths      { width: 66.6665%; }
+.portion.five-sixths      { width: 83.3332%; }
+
+.portion.one-seventh      { width: 14.2856%; }
+.portion.two-sevenths     { width: 28.5714%; }
+.portion.three-sevenths   { width: 42.8571%; }
+.portion.four-sevenths    { width: 57.1428%; }
+.portion.five-sevenths    { width: 71.4285%; }
+.portion.six-sevenths     { width: 85.7142%; }
+
+.portion.one-eighth       { width: 12.5%; }
+.portion.two-eighths      { width: 25.0%; }
+.portion.three-eighths    { width: 37.5%; }
+.portion.four-eighths     { width: 50.0%; }
+.portion.five-eighths     { width: 62.5%; }
+.portion.six-eighths      { width: 75.0%; }
+.portion.seven-eighths    { width: 87.5%; }
+
+
+/*  Clearfix for the rows  */
+.row:before, .row:after {
+    display: block;
+    content: "";
+}
+.row:after { clear: both; }
+
+/*  Fixing images for better responsive behaviour  */
+.portion img { max-width: 100%; }
+
+
+/*  Side margins for all your content — increase or decrease at will,
+    or simply add the 'no-padding' class to get full-width  */
+
+/*  For small screens UP TO 599px width  */
+@media all and (max-width: 599px) {
+    .all-content { padding: 0 4vw; }
+}
+
+/*  For screens FROM 600px width and UPWARD  */
+@media all and (min-width: 600px) {
+    .all-content { padding: 0 6vw; }
+}
+
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) {
+    .all-content { padding: 0 8vw; }
+}
+
+/*  For screens FROM 1200px width and UPWARD  */
+@media all and (min-width: 1200px) {
+    .all-content { padding: 0 10vw; }
+}
+
+/*  For big screens FROM 1800px width and UPWARD  */
+@media all and (min-width: 1800px) {
+    .all-content { padding: 0 12vw; }
+}
+
+/*  For large screens FROM 2400px width and UPWARD  */
+@media all and (min-width: 2400px) {
+    .all-content { padding: 0 30vw; }
+}
+
+/*	Device-specific portion widths —
+    the naming convention is: .{portion-width}-on-{device}-{orientation} */
+/*	For small screens UP TO 599px */
+@media all and (max-width: 599px) {
+
+    .row:not(.retain-layout-on-mobile) .portion:not([class*='on-mobile']),
+    .box:not(.retain-layout-on-tab-pt) .portion:not([class*='on-mobile']) { width: 100%; }
+
+    .portion.whole-on-mobile           { width: 100%; }
+
+    .portion.half-on-mobile            { width: 50%; }
+
+    .portion.one-third-on-mobile       { width: 33.3332%; }
+    .portion.two-thirds-on-mobile      { width: 66.6665%; }
+
+    .portion.one-fourth-on-mobile 	   { width: 25%; }
+    .portion.two-fourths-on-mobile 	   { width: 50%; }
+    .portion.three-fourths-on-mobile   { width: 75%; }
+
+    .portion.one-fifth-on-mobile 	   { width: 20%; }
+    .portion.two-fifths-on-mobile 	   { width: 40%; }
+    .portion.three-fifths-on-mobile    { width: 60%; }
+    .portion.four-fifths-on-mobile 	   { width: 80%; }
+
+    .portion.one-sixth-on-mobile       { width: 16.6666%; }
+    .portion.two-sixths-on-mobile      { width: 33.3332%; }
+    .portion.three-sixths-on-mobile    { width: 50.0000%; }
+    .portion.four-sixths-on-mobile     { width: 66.6665%; }
+    .portion.five-sixths-on-mobile     { width: 83.3332%; }
+
+    .portion.one-seventh-on-mobile     { width: 14.2856%; }
+    .portion.two-sevenths-on-mobile    { width: 28.5714%; }
+    .portion.three-sevenths-on-mobile  { width: 42.8571%; }
+    .portion.four-sevenths-on-mobile   { width: 57.1428%; }
+    .portion.five-sevenths-on-mobile   { width: 71.4285%; }
+    .portion.six-sevenths-on-mobile    { width: 85.7142%; }
+
+    .portion.one-eighth-on-mobile      { width: 12.5%; }
+    .portion.two-eighths-on-mobile     { width: 25.0%; }
+    .portion.three-eighths-on-mobile   { width: 37.5%; }
+    .portion.four-eighths-on-mobile    { width: 50.0%; }
+    .portion.five-eighths-on-mobile    { width: 62.5%; }
+    .portion.six-eighths-on-mobile     { width: 75.0%; }
+    .portion.seven-eighths-on-mobile   { width: 87.5%; }
+
+}
+
+/*  For screens FROM 600px width and UPWARD  */
+@media all and (min-width: 600px) and (max-width: 899px) {
+
+    .row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-pt']),
+    .box:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-pt']) { width: 100%; }
+
+    .portion.whole-on-tab-pt           { width: 100%; }
+
+    .portion.half-on-tab-pt            { width: 50%; }
+
+    .portion.one-third-on-tab-pt 	   { width: 33.3332%; }
+    .portion.two-thirds-on-tab-pt 	   { width: 66.6665%; }
+
+    .portion.one-fourth-on-tab-pt 	   { width: 25%; }
+    .portion.two-fourths-on-tab-pt 	   { width: 50%; }
+    .portion.three-fourths-on-tab-pt   { width: 75%; }
+
+    .portion.one-fifth-on-tab-pt 	   { width: 20%; }
+    .portion.two-fifths-on-tab-pt 	   { width: 40%; }
+    .portion.three-fifths-on-tab-pt    { width: 60%; }
+    .portion.four-fifths-on-tab-pt 	   { width: 80%; }
+
+    .portion.one-sixth-on-tab-pt       { width: 16.6666%; }
+    .portion.two-sixths-on-tab-pt      { width: 33.3332%; }
+    .portion.three-sixths-on-tab-pt    { width: 50.0000%; }
+    .portion.four-sixths-on-tab-pt     { width: 66.6665%; }
+    .portion.five-sixths-on-tab-pt     { width: 83.3332%; }
+
+    .portion.one-seventh-on-tab-pt     { width: 14.2856%; }
+    .portion.two-sevenths-on-tab-pt    { width: 28.5714%; }
+    .portion.three-sevenths-on-tab-pt  { width: 42.8571%; }
+    .portion.four-sevenths-on-tab-pt   { width: 57.1428%; }
+    .portion.five-sevenths-on-tab-pt   { width: 71.4285%; }
+    .portion.six-sevenths-on-tab-pt    { width: 85.7142%; }
+
+    .portion.one-eighth-on-tab-pt      { width: 12.5%; }
+    .portion.two-eighths-on-tab-pt     { width: 25.0%; }
+    .portion.three-eighths-on-tab-pt   { width: 37.5%; }
+    .portion.four-eighths-on-tab-pt    { width: 50.0%; }
+    .portion.five-eighths-on-tab-pt    { width: 62.5%; }
+    .portion.six-eighths-on-tab-pt     { width: 75.0%; }
+    .portion.seven-eighths-on-tab-pt   { width: 87.5%; }
+
+}
+
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) and (max-width: 1199px) {
+
+    .row:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-ls']),
+    .box:not(.retain-layout-on-tab-pt) .portion:not([class*='tab-ls']) { width: 100%; }
+
+    .portion.whole-on-tab-ls           { width: 100%; }
+
+    .portion.half-on-tab-ls            { width: 50%; }
+
+    .portion.one-third-on-tab-ls 	   { width: 33.3332%; }
+    .portion.two-thirds-on-tab-ls 	   { width: 66.6665%; }
+
+    .portion.one-fourth-on-tab-ls 	   { width: 25%; }
+    .portion.two-fourths-on-tab-ls     { width: 50%; }
+    .portion.three-fourths-on-tab-ls   { width: 75%; }
+
+    .portion.one-fifth-on-tab-ls	   { width: 20%; }
+    .portion.two-fifths-on-tab-ls      { width: 40%; }
+    .portion.three-fifths-on-tab-ls    { width: 60%; }
+    .portion.four-fifths-on-tab-ls 	   { width: 80%; }
+
+    .portion.one-sixth-on-tab-ls       { width: 16.6666%; }
+    .portion.two-sixths-on-tab-ls      { width: 33.3332%; }
+    .portion.three-sixths-on-tab-ls    { width: 50.0000%; }
+    .portion.four-sixths-on-tab-ls     { width: 66.6665%; }
+    .portion.five-sixths-on-tab-ls     { width: 83.3332%; }
+
+    .portion.one-seventh-on-tab-ls     { width: 14.2856%; }
+    .portion.two-sevenths-on-tab-ls    { width: 28.5714%; }
+    .portion.three-sevenths-on-tab-ls  { width: 42.8571%; }
+    .portion.four-sevenths-on-tab-ls   { width: 57.1428%; }
+    .portion.five-sevenths-on-tab-ls   { width: 71.4285%; }
+    .portion.six-sevenths-on-tab-ls    { width: 85.7142%; }
+
+    .portion.one-eighth-on-tab-ls      { width: 12.5%; }
+    .portion.two-eighths-on-tab-ls     { width: 25.0%; }
+    .portion.three-eighths-on-tab-ls   { width: 37.5%; }
+    .portion.four-eighths-on-tab-ls    { width: 50.0%; }
+    .portion.five-eighths-on-tab-ls    { width: 62.5%; }
+    .portion.six-eighths-on-tab-ls     { width: 75.0%; }
+    .portion.seven-eighths-on-tab-ls   { width: 87.5%; }
+
+}
