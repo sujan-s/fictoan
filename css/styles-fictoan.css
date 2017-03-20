@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.16.0
+    Current version: 1.17.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -233,8 +233,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
 
-h1, h2, h3, h4 {
-    margin: 1.414em 0 0.5em;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
     font-weight: inherit;
     line-height: 1.2;
 }
@@ -243,6 +243,7 @@ h1 { font-size: 6.854em; }
 h2 { font-size: 4.236em; }
 h3 { font-size: 2.618em; }
 h4 { font-size: 1.618em; }
+h5 { font-size: 1.236em; }
 
 p {
     font-family: 'Work Sans', sans-serif;
