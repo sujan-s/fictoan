@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.17.0
+    Current version: 1.18.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -36,6 +36,17 @@ a { text-decoration: none; }
 input { outline: none; }
 
 button { vertical-align: baseline; }
+
+input[type="number"] { -moz-appearance: textfield; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+[type="date"]::-webkit-inner-spin-button { display: none; }
+[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; }
 
 
 /* == UTILITY ============================================================== */
@@ -181,7 +192,7 @@ hr {
 }
 
 /*  For images and tiles  */
-.shape-rounded { border-radius: 3px; }
+.shape-rounded { border-radius: 4px; }
 .shape-circular { border-radius: 50%; }
 
 
@@ -354,7 +365,7 @@ i, em { font-style: italic; }
 
 /*  Button when you click on it  */
 .button:active {
-    top: 0;
+    transform: translateY(2px);
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;
@@ -432,16 +443,36 @@ pre > code {
 .icon-48 { width: 48px; }
 
 
+/* == INPUT FIELDS ========================================================= */
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=date] {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+input:focus { border-bottom: 1px solid #ff4611; }
+
+::-webkit-input-placeholder { opacity: 0.5; }
+::-moz-placeholder { opacity: 0.5; }
+
+
 /* == TOGGLES ============================================================== */
 
 /*  The grey background  */
 input[type=checkbox] + label {
     position: relative;
     display: inline-block;
-    height: 30px;
-    width: 60px;
+    width: 40px;
+    height: 20px;
     background: #ddd;
-    border-radius: 15px; /*  Basically half of the height  */
+    border-radius: 10px; /*  Basically half of the height  */
     cursor: pointer;
     transition: all 0.1s ease-out;
 }
@@ -452,10 +483,10 @@ input[type=checkbox] + label:after {
     display: block;
     left: 2px;
     top: 2px;
-    width: 26px;
-    height: 26px;
+    width: 16px;
+    height: 16px;
     background: #fff;
-    border-radius: 100px;
+    border-radius: 50%;
     content: '';
     transition: all 0.1s ease-out;
     -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
@@ -467,7 +498,7 @@ input[type=checkbox] + label:after {
 input[type=checkbox]:checked + label { background: #28bb6b; }
 
 /*  The switch's movement  */
-input[type=checkbox]:checked + label:after { left: 32px; }
+input[type=checkbox]:checked + label:after { left: 22px; }
 
 input[type=checkbox]:disabled + label {
     background: #f2f2f2;
@@ -494,10 +525,10 @@ input[type=checkbox]:disabled + label:after {
 input[type=radio] + label {
     position: relative;
     display: inline-block;
-    height: 30px;
-    width: 60px;
+    width: 40px;
+    height: 20px;
     background: #ddd;
-    border-radius: 15px; /*  Basically half of the height  */
+    border-radius: 10px; /*  Basically half of the height  */
     cursor: pointer;
     transition: all 0.1s ease-out;
 }
@@ -508,10 +539,10 @@ input[type=radio] + label:after {
     display: block;
     left: 2px;
     top: 2px;
-    width: 26px;
-    height: 26px;
+    width: 16px;
+    height: 16px;
     background: #fff;
-    border-radius: 100px;
+    border-radius: 50%;
     content: '';
     transition: all 0.1s ease-out;
     -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
@@ -523,7 +554,7 @@ input[type=radio] + label:after {
 input[type=radio]:checked + label { background: #9651c6; }
 
 /*  The switch's movement  */
-input[type=radio]:checked + label:after { left: 32px; }
+input[type=radio]:checked + label:after { left: 22px; }
 
 input[type=radio]:disabled + label {
     background: #f2f2f2;
@@ -551,7 +582,7 @@ input[type=radio]:disabled + label:after {
     height: auto;
     padding: 32px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 .card-smaller { padding: 16px 24px; }
 
@@ -568,9 +599,7 @@ input[type=radio]:disabled + label:after {
 }
 
 .full-size-bg {
-    position: absolute;
-    /*  Use 'fixed' to not scroll the BG  */
-    /*position: fixed; */
+    position: absolute; /*  Use 'fixed' to not scroll the BG  */
     width: 100vw;
     height: 100vh;
     top: 0;
