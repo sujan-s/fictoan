@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.18.0
+    Current version: 1.18.1
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -294,6 +294,8 @@ i, em { font-style: italic; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 .text-left   { text-align: left; }
+
+.no-line-height { line-height: 0; }
 
 
 /* == COLOURS ============================================================== */
