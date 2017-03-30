@@ -467,10 +467,13 @@ input:focus { border-bottom: 1px solid #ff4611; }
 
 /* == TOGGLES ============================================================== */
 
+input[type=checkbox] { display: none; }
+
 /*  The grey background  */
 input[type=checkbox] + label {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     width: 40px;
     height: 20px;
     background: #ddd;
@@ -503,77 +506,27 @@ input[type=checkbox]:checked + label { background: #28bb6b; }
 input[type=checkbox]:checked + label:after { left: 22px; }
 
 input[type=checkbox]:disabled + label {
-    background: #f2f2f2;
-    pointer-events: none;
-}
-
-input[type=checkbox]:disabled:checked + label {
-    background: rgba(40, 187, 107, 0.2); /*  Same bg value, but with opacity  */
+    opacity: 0.3;
     pointer-events: none;
 }
 
 /*  The switch when disabled  */
 input[type=checkbox]:disabled + label:after {
-    background: #f8f8f8;
+    opacity: 0.3;
+    pointer-events: none;
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;
 }
 
-
-/* == RADIO BUTTONS ======================================================== */
-
-/*  The grey background  */
-input[type=radio] + label {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-    background: #ddd;
-    border-radius: 10px; /*  Basically half of the height  */
-    cursor: pointer;
-    transition: all 0.1s ease-out;
-}
-
-/*  The white switch inside  */
-input[type=radio] + label:after {
-    position: absolute;
-    display: block;
-    left: 2px;
-    top: 2px;
-    width: 16px;
-    height: 16px;
-    background: #fff;
-    border-radius: 50%;
-    content: '';
-    transition: all 0.1s ease-out;
-    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-}
-
-/*  The bg when checked  */
-input[type=radio]:checked + label { background: #9651c6; }
-
-/*  The switch's movement  */
-input[type=radio]:checked + label:after { left: 22px; }
-
-input[type=radio]:disabled + label {
-    background: #f2f2f2;
+input[type=checkbox]:disabled:checked + label {
+    opacity: 0.3;
     pointer-events: none;
 }
 
-input[type=radio]:disabled:checked + label {
-    background: rgba(150, 81, 198, 0.2); /*  Same bg value, but with opacity  */
+input[type=checkbox]:disabled:checked + label:after {
+    opacity: 0.8;
     pointer-events: none;
-}
-
-/*  The switch when disabled  */
-input[type=radio]:disabled + label:after {
-    background: #f8f8f8;
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
 }
 
 
