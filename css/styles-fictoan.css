@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.18.1
+    Current version: 1.18.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -15,8 +15,8 @@
     a zillion elements in your page  */
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *:focus { outline: 0; }
@@ -250,16 +250,17 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-h1 { font-size: 6.854em; }
-h2 { font-size: 4.236em; }
-h3 { font-size: 2.618em; }
-h4 { font-size: 1.618em; }
-h5 { font-size: 1.236em; }
+h1 { font-size: 6.968em; }
+h2 { font-size: 4.488em; }
+h3 { font-size: 2.074em; }
+h4 { font-size: 1.728em; }
+h5 { font-size: 1.440em; }
+h6 { font-size: 1.200em; }
 
 p {
     font-family: 'Work Sans', sans-serif;
     line-height: 1.6em;
-    margin-bottom: 1em;
+    margin: 0;
 }
 p .text-serif {
     font-family: 'Cormorant Garamond', serif;
@@ -271,7 +272,7 @@ a {
     cursor: pointer;
     color: #ff5855;
     border-bottom: 1px dotted rgba(0,  0,  0,  0.5);
-    transition: all 2s;
+    transition: all 0.2s;
 }
 a:hover { border-bottom: 1px solid rgba(0,  0,  0,  0.35); }
 a.button { border: none; }
@@ -294,8 +295,6 @@ i, em { font-style: italic; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 .text-left   { text-align: left; }
-
-.no-line-height { line-height: 0; }
 
 
 /* == COLOURS ============================================================== */
@@ -361,16 +360,16 @@ i, em { font-style: italic; }
     border: none;
     transition: all 0.05s;
     -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
 /*  Button when you click on it  */
 .button:active {
     transform: translateY(2px);
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 /*  Big button  */
@@ -398,8 +397,8 @@ i, em { font-style: italic; }
 
 .button.no-shadow {
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .button.shape-circular { padding: 15px; }
@@ -467,13 +466,10 @@ input:focus { border-bottom: 1px solid #ff4611; }
 
 /* == TOGGLES ============================================================== */
 
-input[type=checkbox] { display: none; }
-
 /*  The grey background  */
 input[type=checkbox] + label {
     position: relative;
     display: inline-block;
-    vertical-align: middle;
     width: 40px;
     height: 20px;
     background: #ddd;
@@ -495,8 +491,8 @@ input[type=checkbox] + label:after {
     content: '';
     transition: all 0.1s ease-out;
     -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
 /*  The bg when checked  */
@@ -506,27 +502,21 @@ input[type=checkbox]:checked + label { background: #28bb6b; }
 input[type=checkbox]:checked + label:after { left: 22px; }
 
 input[type=checkbox]:disabled + label {
-    opacity: 0.3;
+    background: #f2f2f2;
+    pointer-events: none;
+}
+
+input[type=checkbox]:disabled:checked + label {
+    background: rgba(40, 187, 107, 0.2); /*  Same bg value, but with opacity  */
     pointer-events: none;
 }
 
 /*  The switch when disabled  */
 input[type=checkbox]:disabled + label:after {
-    opacity: 0.3;
-    pointer-events: none;
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
-}
-
-input[type=checkbox]:disabled:checked + label {
-    opacity: 0.3;
-    pointer-events: none;
-}
-
-input[type=checkbox]:disabled:checked + label:after {
-    opacity: 0.8;
-    pointer-events: none;
+    background         : #f8f8f8;
+    -webkit-box-shadow : none;
+    -moz-box-shadow    : none;
+    box-shadow         : none;
 }
 
 
@@ -543,14 +533,14 @@ input[type=checkbox]:disabled:checked + label:after {
 
 .shadow-soft {
     -webkit-box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
 }
 .shadow-hard {
     border: 1px solid hsla(228, 40%, 20%, 0.05);
     -webkit-box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
 }
 
 .full-size-bg {
