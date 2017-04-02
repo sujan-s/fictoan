@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.19.2
+    Current version: 1.20.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -281,12 +281,11 @@ i, em { font-style: italic; }
 .text-serif { font-family: 'Cormorant Garamond', serif; }
 .text-mono  { font-family: 'Fira Mono', monospace; }
 
-.text-micro  { font-size: 0.236em; }
-.text-tiny   { font-size: 0.382em; }
-.text-small  { font-size: 0.618em; }
-.text-medium { font-size: 1.000em; }
-.text-large  { font-size: 2.618em; }
-.text-huge   { font-size: 6.854em; }
+.text-tiny   { font-size: 0.694em; }
+.text-small  { font-size: 0.833em; }
+.text-normal { font-size: 1.000em; }
+.text-large  { font-size: 2.074em; }
+.text-huge   { font-size: 3.583em; }
 
 .text-centre,
 .text-center { text-align: center; }
@@ -315,7 +314,6 @@ i, em { font-style: italic; }
 .text-purple   { color: #9651c6; }
 .text-orange   { color: #ff9201; }
 .text-brown    { color: #a25e37; }
-
 .text-black    { color: #000 !important; }
 .text-white    { color: #fff !important; }
 
@@ -464,20 +462,34 @@ input:focus { border-bottom: 1px solid #ff4611; }
 
 /* == TOGGLES ============================================================== */
 
+input[type=checkbox] { display: none; }
+
+.ff-checkbox {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.ff-checkbox label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
 /*  The grey background  */
-input[type=checkbox] + label {
+.ff-checkbox input[type=checkbox] + label {
     position: relative;
     display: inline-block;
     width: 40px;
     height: 20px;
+    margin-right: 10px;
     background: #ddd;
     border-radius: 10px; /*  Basically half of the height  */
     cursor: pointer;
     transition: all 0.1s ease-out;
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset;
 }
 
 /*  The white switch inside  */
-input[type=checkbox] + label:after {
+.ff-checkbox input[type=checkbox] + label:after {
     position: absolute;
     display: block;
     left: 2px;
@@ -494,23 +506,77 @@ input[type=checkbox] + label:after {
 }
 
 /*  The bg when checked  */
-input[type=checkbox]:checked + label { background: #28bb6b; }
+.ff-checkbox input[type=checkbox]:checked + label { background: #28bb6b; }
 
-/*  The switch's movement  */
-input[type=checkbox]:checked + label:after { left: 22px; }
+.ff-checkbox input[type=checkbox]:disabled + label,
+.ff-checkbox input[type=checkbox]:disabled:checked + label { pointer-events: none; }
 
-input[type=checkbox]:disabled + label {
-    background: #f2f2f2;
-    pointer-events: none;
-}
-
-input[type=checkbox]:disabled:checked + label {
-    background: rgba(40, 187, 107, 0.2); /*  Same bg value, but with opacity  */
-    pointer-events: none;
+.ff-checkbox input[type=checkbox]:disabled ~ label {
+    cursor: default;
+    opacity: 0.3;
 }
 
 /*  The switch when disabled  */
-input[type=checkbox]:disabled + label:after {
+.ff-checkbox input[type=checkbox]:checked + label:after {
+    display: block;
+    background : #f8f8f8;
+    -webkit-box-shadow : none;
+       -moz-box-shadow : none;
+            box-shadow : none;
+}
+
+
+/* == TOGGLES ============================================================== */
+
+input[type=radio] { display: none; }
+
+.ff-radio label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/*  The grey background  */
+.ff-radio input[type=radio] + label {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #ddd;
+    border-radius: 10px; /*  Basically half of the height  */
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset;
+}
+
+/*  The white circle inside  */
+.ff-radio input[type=radio] + label:after {
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    content: '';
+    transition: all 0.1s ease-out;
+}
+
+/*  The bg when checked  */
+.ff-radio input[type=radio]:checked + label { background: #28bb6b; }
+
+.ff-radio input[type=radio]:disabled + label,
+.ff-radio input[type=radio]:disabled:checked + label { pointer-events: none; }
+
+.ff-radio input[type=radio]:disabled ~ label {
+    cursor: default;
+    opacity: 0.3;
+}
+
+/*  The switch when disabled  */
+.ff-radio input[type=radio]:checked + label:after {
+    display: block;
     background : #f8f8f8;
     -webkit-box-shadow : none;
        -moz-box-shadow : none;
@@ -551,3 +617,50 @@ input[type=checkbox]:disabled + label:after {
     background-size: cover;
     z-index:-5;
 }
+
+
+
+
+
+
+/* The CSS */
+select {
+    /*display: inline-block;*/
+    /*width: 250px;*/
+    /*margin: 0;*/
+    /*padding: 8px;*/
+    /*background: #f8f8f8;*/
+    /*color: #888;*/
+    /*border: none;*/
+    /*outline: none;*/
+    /*cursor: pointer;*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*-webkit-border-radius: 4px;*/
+       /*-moz-border-radius: 4px;*/
+            /*border-radius: 4px;*/
+/*}*/
+
+/*label { position: relative }*/
+/*label:before {*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*content: '';*/
+    /*pointer-events: none;*/
+/*}*/
+/*label:after {*/
+    /*position: absolute;*/
+    /*right: 8px;*/
+    /*top: 2px;*/
+    /*content: '‣';*/
+    /*padding: 0 0 2px;*/
+    /*pointer-events: none;*/
+    /*font: 11px "Atlas Typewriter", monospace;*/
+    /*-webkit-transform: rotate(90deg);*/
+       /*-moz-transform: rotate(90deg);*/
+            /*transform: rotate(90deg);*/
+/*}*/
