@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.20.0
+    Current version: 1.20.1
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -507,6 +507,8 @@ input[type=checkbox] { display: none; }
 
 /*  The bg when checked  */
 .ff-checkbox input[type=checkbox]:checked + label { background: #28bb6b; }
+
+.ff-checkbox input[type=checkbox]:checked + label:after { left: 22px; }
 
 .ff-checkbox input[type=checkbox]:disabled + label,
 .ff-checkbox input[type=checkbox]:disabled:checked + label { pointer-events: none; }
