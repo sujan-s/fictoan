@@ -1,0 +1,61 @@
+$baseFontSize: 1em;
+$scaleFactor: 1.2;
+
+// margins
+$marginFixed: 10px;
+$marginUnit: 2vmax;
+
+// paddings
+$paddingFixed: 10px;
+$paddingUnit: 2vmax;
+
+// border-radius mixin
+@mixin borderRadius($radius: 100px) {
+	border-radius: $radius;
+}
+
+// typography
+$fontSans: 'Work Sans', sans-serif;
+$fontSerif: 'Cormorant Garamond', serif;
+$fontMono: 'Fira Mono', monospace;
+
+// body-specific variabls
+$bodyFontColor: #333;
+$bodyBgColor: #fff;
+$linkColor: #f7a66e;
+$linkBorder: 1px dotted rgba($linkColor,  0.8);
+$linkHoverBorder: 1px solid rgba($linkColor,  0.35);
+
+// para-specific variables
+$paragraphLineHeight: 1.6em;
+$paragraphSerifFontSize: 1.3em;
+$paragraphSerifLineHeight: 1.6em;
+
+// text highlight variables
+$textHighlightBg: #212529;
+$textHighlightColor: #fff;
+
+// code area styles
+$codeBgColor: rgba(0, 0, 0, 0.05);
+$codeColor: $linkColor;
+
+// checkbox and radio button background color
+$checkboxBgColor: $linkColor;
+$radioBgColor: $linkColor;
+
+// power function (for scaleFactor usage)
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}

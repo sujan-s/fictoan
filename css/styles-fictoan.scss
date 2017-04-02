@@ -1,0 +1,679 @@
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.1
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+
+/* == IMPORTS ===================================================== */
+@import 'normalize.css';
+@import 'variables.scss';
+
+/* == RESET ================================================================ */
+
+/*  Consider removing this if you have
+    a zillion elements in your page  */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*:focus { outline: 0; }
+
+/*  This affects all type scale values  */
+html { font-size: 1em; }
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; }
+
+a { text-decoration: none; }
+
+input { outline: none; }
+
+button { vertical-align: baseline; }
+
+input[type="number"] { -moz-appearance: textfield; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+[type="date"]::-webkit-inner-spin-button { display: none; }
+[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; }
+
+
+/* == UTILITY ============================================================== */
+
+.show-inline  { display: inline-block; }
+.show-nothing { display: none; }
+.show-empty   { visibility: hidden; }
+
+.full-width { width: 100% !important; }
+
+.pull-left  { float: left; }
+.pull-right { float: right; }
+.clear-both { clear: both; }
+
+.vertical-middle { vertical-align: middle; }
+
+/*  For when you want things right in the middle  */
+.vertical-centre-items,
+.vertical-center-items {
+    display: flex;
+    align-items: center;
+}
+
+/*  Parent div needs a set height  */
+.vertical-centre-this,
+.vertical-center-this {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*  Parent div needs a set width  */
+.horizontal-centre-this,
+.horizontal-center-this {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+/*  A thin separator line that is black at 10% opacity  */
+hr {
+    border: 0;
+    height: 1px;
+    margin: 2vh 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+/* BOX MODEL HELPERS ----------------------------------- */
+
+/*  Margins for all occasions  */
+.no-margin  { margin: 0 !important; }
+
+.margin-all-fixed       { margin: $marginFixed; } /* css-variable $marginFixed $ */
+.margin-all-tiny        { margin:  $marginUnit; } /* css-variable $marginUnit */
+.margin-all-small       { margin:  $marginUnit*2; } /* css-variable */
+.margin-all-medium      { margin:  $marginUnit*4; } /* css-variable */
+.margin-all-large       { margin: $marginUnit*7; } /* css-variable */
+.margin-all-huge        { margin: $marginUnit*11; } /* css-variable */
+
+.no-margin-top          { margin-top:  0 !important; }
+.margin-top-fixed       { margin-top: $marginFixed; } /* css-variable $marginFixed */
+.margin-top-tiny        { margin-top:  $marginUnit; } /* css-variable $marginUnit */
+.margin-top-small       { margin-top:  $marginUnit*2; } /* css-variable */
+.margin-top-medium      { margin-top:  $marginUnit*4; } /* css-variable */
+.margin-top-large       { margin-top: $marginUnit*7; } /* css-variable */
+.margin-top-huge        { margin-top: $marginUnit*11; } /* css-variable */
+
+.no-margin-right        { margin-right:  0 !important; }
+.margin-right-fixed     { margin-right: $marginFixed; } /* css-variable $marginFixed */
+.margin-right-tiny      { margin-right:  $marginUnit; } /* css-variable $marginUnit */
+.margin-right-small     { margin-right:  $marginUnit*2; } /* css-variable */
+.margin-right-medium    { margin-right:  $marginUnit*4; } /* css-variable */
+.margin-right-large     { margin-right: $marginUnit*7; } /* css-variable */
+.margin-right-huge      { margin-right: $marginUnit*11; } /* css-variable */
+
+.no-margin-bottom       { margin-bottom:  0 !important; }
+.margin-bottom-fixed    { margin-bottom: $marginFixed; } /* css-variable $marginFixed */
+.margin-bottom-tiny     { margin-bottom:  $marginUnit; } /* css-variable $marginUnit */
+.margin-bottom-small    { margin-bottom:  $marginUnit*2; } /* css-variable */
+.margin-bottom-medium   { margin-bottom:  $marginUnit*4; } /* css-variable */
+.margin-bottom-large    { margin-bottom: $marginUnit*7; } /* css-variable */
+.margin-bottom-huge     { margin-bottom: $marginUnit*11; } /* css-variable */
+
+.no-margin-left         { margin-left:  0 !important; }
+.margin-left-fixed      { margin-left: $marginFixed; } /* css-variable $marginFixed */
+.margin-left-tiny       { margin-left:  $marginUnit; } /* css-variable $marginUnit */
+.margin-left-small      { margin-left:  $marginUnit*2; } /* css-variable */
+.margin-left-medium     { margin-left:  $marginUnit*4; } /* css-variable */
+.margin-left-large      { margin-left: $marginUnit*7; } /* css-variable */
+.margin-left-huge       { margin-left: $marginUnit*11; } /* css-variable */
+
+
+/*  Paddings for all occasions  */
+.no-padding { padding: 0 !important; }
+
+.padding-all-fixed      { padding: $paddingFixed; } /* css-variable $paddingFixed */
+.padding-all-tiny       { padding:  $paddingUnit; } /* css-variable $paddingUnit */
+.padding-all-small      { padding: $paddingUnit*2; } /* css-variable */
+.padding-all-medium     { padding: $paddingUnit*4; } /* css-variable */
+.padding-all-large      { padding: $paddingUnit*7; } /* css-variable */
+.padding-all-huge       { padding: $paddingUnit*11; } /* css-variable */
+
+.no-padding-top         { padding-top:  0 !important; }
+.padding-top-fixed      { padding-top: $paddingFixed; } /* css-variable $paddingFixed */
+.padding-top-tiny       { padding-top:  $paddingUnit; } /* css-variable $paddingUnit */
+.padding-top-small      { padding-top: $paddingUnit*2; } /* css-variable */
+.padding-top-medium     { padding-top: $paddingUnit*4; } /* css-variable */
+.padding-top-large      { padding-top: $paddingUnit*7; } /* css-variable */
+.padding-top-huge       { padding-top: $paddingUnit*11; } /* css-variable */
+
+.no-padding-right       { padding-right:  0 !important; }
+.padding-right-fixed    { padding-right: $paddingFixed; } /* css-variable */
+.padding-right-tiny     { padding-right:  $paddingUnit; } /* css-variable */
+.padding-right-small    { padding-right: $paddingUnit*2; } /* css-variable */
+.padding-right-medium   { padding-right: $paddingUnit*4; } /* css-variable */
+.padding-right-large    { padding-right: $paddingUnit*7; } /* css-variable */
+.padding-right-huge     { padding-right: $paddingUnit*11; } /* css-variable */
+
+.no-padding-bottom      { padding-bottom:  0 !important; }
+.padding-bottom-fixed   { padding-bottom: $paddingFixed; } /* css-variable */
+.padding-bottom-tiny    { padding-bottom:  $paddingUnit; } /* css-variable */
+.padding-bottom-small   { padding-bottom: $paddingUnit*2; } /* css-variable */
+.padding-bottom-medium  { padding-bottom: $paddingUnit*4; } /* css-variable */
+.padding-bottom-large   { padding-bottom: $paddingUnit*7; } /* css-variable */
+.padding-bottom-huge    { padding-bottom: $paddingUnit*11; } /* css-variable */
+
+.no-padding-left        { padding-left:  0 !important; }
+.padding-left-fixed     { padding-left: $paddingFixed; } /* css-variable */
+.padding-left-tiny      { padding-left:  $paddingUnit; } /* css-variable */
+.padding-left-small     { padding-left: $paddingUnit*2; } /* css-variable */
+.padding-left-medium    { padding-left: $paddingUnit*4; } /* css-variable */
+.padding-left-large     { padding-left: $paddingUnit*7; } /* css-variable */
+.padding-left-huge      { padding-left: $paddingUnit*11; } /* css-variable */
+
+
+/*  This will render an empty space of
+    20% screen height where you add it  */
+.empty-spacer {
+    display: block;
+    height: 20vmin;
+    clear: both;
+}
+
+/*  For images and tiles  */
+.shape-rounded { @include borderRadius(4px); } /* css-variable */
+.shape-circular { border-radius: 50%; }
+
+
+/* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
+
+/*  Hide on large screens  */
+.show-only-on-mobile { display: none !important; }
+.show-only-on-tab-pt { display: none !important; }
+.show-only-on-tab-ls { display: none !important; }
+
+@media all and (max-width: 599px) {
+    .center-on-mobile,
+    .centre-on-mobile { text-align: center !important; }
+
+    .hide-on-mobile      { display: none !important; }
+    .show-only-on-mobile { display: block !important; }
+}
+
+@media all and (min-width: 600px) and (max-width: 899px) {
+    .center-on-tab-pt,
+    .centre-on-tab-pt { text-align: center !important; }
+
+    .hide-on-tab-pt      { display: none !important; }
+    .show-only-on-tab-pt { display: block !important; }
+}
+
+@media all and (min-width: 900px) and (max-width: 1199px) {
+    .center-on-tab-ls,
+    .centre-on-tab-ls { text-align: center !important; }
+
+    .hide-on-tab-ls      { display: none !important; }
+    .show-only-on-tab-ls { display: block !important; }
+}
+
+
+/* == TYPOGRAPHY =========================================================== */
+
+body {
+    background-color: $bodyBgColor; /* css-variable */
+    font-family: $fontSans; /* css-variable */
+    color: $bodyFontColor; /* css-variable */
+    line-height: 1.45;
+    word-wrap: normal;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: $fontSerif; } /* css-variable */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 { font-size: $baseFontSize*pow($scaleFactor,10);; } /* css-variable $baseFontSize*($scaleFactor^10) */
+h2 { font-size: $baseFontSize*pow($scaleFactor,8);; } /* css-variable $baseFontSize*($scaleFactor^8) */
+h3 { font-size: $baseFontSize*pow($scaleFactor,4); } /* css-variable $baseFontSize*($scaleFactor^4) */
+h4 { font-size: $baseFontSize*pow($scaleFactor,3); } /* css-variable $baseFontSize*($scaleFactor^3) */
+h5 { font-size: $baseFontSize*pow($scaleFactor,2); } /* css-variable $baseFontSize*($scaleFactor^2) */
+h6 { font-size: $baseFontSize*pow($scaleFactor,1); } /* css-variable $baseFontSize*($scaleFactor^1) */
+
+p {
+    font-family: $fontSans; /* css-variable */
+    line-height: $paragraphLineHeight; /* css-variable $paragraphlineHeight */
+    margin: 0;
+}
+p .text-serif {
+    font-size: $paragraphSerifFontSize; /* css-variable $paragraphSerifFontSize */
+    line-height: $paragraphSerifLineHeight; /* css-variable $paragraphSerifLineHeight */
+}
+
+a {
+    cursor: pointer;
+    color: $linkColor; /* css-variable $linkColor */
+    border-bottom: $linkBorder; /* css-variable $linkBorder */
+    transition: all 0.2s;
+}
+a:hover { border-bottom: $linkHoverBorder; } /* css-variable $linkHoverBorder */
+a.button { border: none; }
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+
+.text-sans  { font-family: $fontSans; } /* css-variable $fontSans */
+.text-serif { font-family: $fontSerif; } /* css-variable $fontSerif */
+.text-mono  { font-family: $fontMono; } /* css-variable $fontMono */
+
+.text-tiny   { font-size: $baseFontSize*pow($scaleFactor,-2); } /* css-variable $baseFontSize*($scaleFactor^-2) */
+.text-small  { font-size: $baseFontSize*pow($scaleFactor,-1); } /* css-variable $baseFontSize*($scaleFactor^-1) */
+.text-normal { font-size: $baseFontSize*pow($scaleFactor,0); } /* css-variable $baseFontSize*($scaleFactor^0) */
+.text-large  { font-size: $baseFontSize*pow($scaleFactor,4); } /* css-variable $baseFontSize*($scaleFactor^4) */
+.text-huge   { font-size: $baseFontSize*pow($scaleFactor,7); } /* css-variable $baseFont*($scaleFactor^7) */
+
+.text-centre,
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-left   { text-align: left; }
+
+
+/* == COLOURS ============================================================== */
+
+.bg-red      { background-color: #ff5855; }
+.bg-green    { background-color: #28bb6b; }
+.bg-blue     { background-color: #3bc9db; }
+.bg-yellow   { background-color: #febe42; }
+.bg-teal     { background-color: #65d9b4; }
+.bg-purple   { background-color: #9651c6; }
+.bg-orange   { background-color: #ff9201; }
+.bg-brown    { background-color: #a25e37; }
+.bg-light    { background-color: rgba(0, 0, 0, 0.05); }
+.bg-dark     { background-color: rgba(0, 0, 0, 0.85); }
+
+.text-red      { color: #ff5855; }
+.text-green    { color: #28bb6b; }
+.text-blue     { color: #3bc9db; }
+.text-yellow   { color: #febe42; }
+.text-teal     { color: #65d9b4; }
+.text-purple   { color: #9651c6; }
+.text-orange   { color: #ff9201; }
+.text-brown    { color: #a25e37; }
+.text-black    { color: #000 !important; }
+.text-white    { color: #fff !important; }
+
+.icon-red      { fill: #ff5855; }
+.icon-green    { fill: #28bb6b; }
+.icon-blue     { fill: #3bc9db; }
+.icon-yellow   { fill: #febe42; }
+.icon-teal     { fill: #65d9b4; }
+.icon-purple   { fill: #9651c6; }
+.icon-orange   { fill: #ff9201; }
+.icon-brown    { fill: #a25e37; }
+
+
+/*  Colour of highlight and text colour
+    — for Mozilla browsers  */
+::-moz-selection {
+    background: $textHighlightBg; /* css-variable $textHighlightBg */
+    color: $textHighlightColor; /* css-variable $textHighlightColor */
+}
+/*  Same thing — for Webkit browsers  */
+::selection {
+    background: $textHighlightBg; /* css-variable $textHighlightBg */
+    color: $textHighlightColor; /* css-variable $textHighlightColor */
+}
+
+
+/* == BUTTONS ==================================================== */
+
+/*  Basics  */
+.button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+    padding: 6px 20px;
+    font-family: $fontSans; /* css-variable $fontSans */
+    font-weight: 700;
+    color: #fff;
+    background: $linkColor;
+    background: -webkit-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
+    background: -moz-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
+    background: linear-gradient(135deg, #f7a66e 0%, #a5623d 100%);
+    border: none;
+    transition: all 0.05s;
+    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+}
+
+/*  Button when you click on it  */
+.button:active {
+    transform: translateY(2px);
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+/*  Big button  */
+.button.button-large { padding: 15px 30px; }
+
+/*  Button that’s just text  */
+.button.no-bg {
+    background: none;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.button.no-bg:hover {
+    background: none;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.75);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button.no-bg:active {
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+}
+
+.button.no-shadow {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+.button.shape-circular { padding: 15px; }
+
+.button path { fill: #fff; }
+
+.button.button-disabled {
+    pointer-events: none;
+    background: #000;
+    opacity: 0.2;
+    box-shadow: none;
+}
+
+
+/* == CODE ================================================================= */
+
+code {
+    padding: 20px 30px;
+    background-color: $codeBgColor; /* css-variable $codeBgColor */
+    font-family: $fontMono; /* css-variable $fontMono */
+    font-size: 80%;
+    color: $codeColor; /* css-variable $codeColor */
+    white-space: pre;
+    @include borderRadius(4px); /* css-variable @include border-radius(4px) */
+}
+
+code.inline {
+    margin: 0 2px;
+    padding: 3px 6px;
+}
+
+pre > code {
+    display: block;
+    padding: 20px 30px;
+    white-space: pre;
+}
+
+
+/* == ICONS ================================================================ */
+
+.icon-16 { width: 16px; }
+.icon-24 { width: 24px; }
+.icon-32 { width: 32px; }
+.icon-48 { width: 48px; }
+
+
+/* == INPUT FIELDS ========================================================= */
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=date] {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+input:focus { border-bottom: 1px solid #ff4611; } 
+
+::-webkit-input-placeholder { opacity: 0.5; }
+         ::-moz-placeholder { opacity: 0.5; }
+
+
+/* == TOGGLES ============================================================== */
+
+input[type=checkbox] { display: none; }
+
+.ff-checkbox {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.ff-checkbox label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/*  The grey background  */
+.ff-checkbox input[type=checkbox] + label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+    background: #ddd;
+    border-radius: 10px; /*  Basically half of the height  */
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset;
+}
+
+/*  The white switch inside  */
+.ff-checkbox input[type=checkbox] + label:after {
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    content: '';
+    transition: all 0.1s ease-out;
+    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+}
+
+/*  The bg when checked  */
+.ff-checkbox input[type=checkbox]:checked + label { background: $checkboxBgColor; } /* css-variable $checkboxBgColor */
+
+.ff-checkbox input[type=checkbox]:checked + label:after { left: 22px; }
+
+.ff-checkbox input[type=checkbox]:disabled + label,
+.ff-checkbox input[type=checkbox]:disabled:checked + label { pointer-events: none; }
+
+.ff-checkbox input[type=checkbox]:disabled ~ label {
+    cursor: default;
+    opacity: 0.3;
+}
+
+/*  The switch when disabled  */
+.ff-checkbox input[type=checkbox]:checked + label:after {
+    display: block;
+    background : #f8f8f8;
+    -webkit-box-shadow : none;
+       -moz-box-shadow : none;
+            box-shadow : none;
+}
+
+
+/* == TOGGLES ============================================================== */
+
+input[type=radio] { display: none; }
+
+.ff-radio label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/*  The grey background  */
+.ff-radio input[type=radio] + label {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #ddd;
+    border-radius: 10px; /*  Basically half of the height  */
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset;
+}
+
+/*  The white circle inside  */
+.ff-radio input[type=radio] + label:after {
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    content: '';
+    transition: all 0.1s ease-out;
+}
+
+/*  The bg when checked  */
+.ff-radio input[type=radio]:checked + label { background: $radioBgColor; } /* css-variable $radioBgColor */
+
+.ff-radio input[type=radio]:disabled + label,
+.ff-radio input[type=radio]:disabled:checked + label { pointer-events: none; }
+
+.ff-radio input[type=radio]:disabled ~ label {
+    cursor: default;
+    opacity: 0.3;
+}
+
+/*  The switch when disabled  */
+.ff-radio input[type=radio]:checked + label:after {
+    display: block;
+    background : #f8f8f8;
+    -webkit-box-shadow : none;
+       -moz-box-shadow : none;
+            box-shadow : none;
+}
+
+
+/* == CUSTOM INTERFACE ELEMENTS =========================================== */
+
+.card {
+    width: 100%;
+    height: auto;
+    padding: 32px;
+    background: #fff;
+    @include borderRadius(4px); /* css-variable @include border-radius(4px) */
+}
+.card-smaller { padding: 16px 24px; }
+
+.shadow-soft {
+    -webkit-box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+}
+.shadow-hard {
+    border: 1px solid hsla(228, 40%, 20%, 0.05);
+    -webkit-box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+.full-size-bg {
+    position: absolute; /*  Use 'fixed' to not scroll the BG  */
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url("../images/") center top; /*  Add the filename here  */
+    background-size: cover;
+    z-index:-5;
+}
+/* css-variable + extend full-size-bg but for full-size-bg-fixed (with just `position:fixed` being different) */
+.full-size-bg-fixed {
+    @extend .full-size-bg;
+    position: fixed !important;
+}
+
+
+
+
+
+/* The CSS */
+select {
+    /*display: inline-block;*/
+    /*width: 250px;*/
+    /*margin: 0;*/
+    /*padding: 8px;*/
+    /*background: #f8f8f8;*/
+    /*color: #888;*/
+    /*border: none;*/
+    /*outline: none;*/
+    /*cursor: pointer;*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*-webkit-border-radius: 4px;*/
+       /*-moz-border-radius: 4px;*/
+            /*border-radius: 4px;*/
+}
+
+/*label { position: relative }*/
+/*label:before {*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*content: '';*/
+    /*pointer-events: none;*/
+/*}*/
+/*label:after {*/
+    /*position: absolute;*/
+    /*right: 8px;*/
+    /*top: 2px;*/
+    /*content: '‣';*/
+    /*padding: 0 0 2px;*/
+    /*pointer-events: none;*/
+    /*font: 11px "Atlas Typewriter", monospace;*/
+    /*-webkit-transform: rotate(90deg);*/
+       /*-moz-transform: rotate(90deg);*/
+            /*transform: rotate(90deg);*/
+/*}*/
