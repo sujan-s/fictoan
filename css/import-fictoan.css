@@ -1,0 +1,2134 @@
+@charset "UTF-8";
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.2
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+/*  Basics for the row  */
+.row {
+  display: block;
+  margin: 0 0 2vmax 0;
+  /* This will push the next row a little below */
+  clear: both; }
+
+/*  Basics for the portions  */
+.row .portion,
+.box .portion {
+  float: left;
+  padding: 0 20px; }
+
+/*  Fallback width for lone portion divs  */
+.portion {
+  width: 100%; }
+
+/*  Use 'box' class to dump many divs of varied widths  */
+.box .portion {
+  margin-bottom: 2vmax; }
+
+/*  Remove the padding for nested portions  */
+.portion > .row {
+  margin-left: -20px;
+  margin-right: -20px; }
+
+/*  Remove the gap between elements in the same row  */
+.no-gaps .portion,
+.portion.no-gaps {
+  padding: 0 !important; }
+
+/*  Lessen the gap between elements in the same row  */
+.lesser-gaps .portion,
+.portion.lesser-gaps {
+  padding: 0 10px; }
+
+/*  Now the actual grid layout  */
+.portion.whole {
+  width: 100%; }
+
+.portion.half {
+  width: 50%; }
+
+.portion.one-third {
+  width: 33.3332%; }
+
+.portion.two-thirds {
+  width: 66.6665%; }
+
+.portion.one-fourth {
+  width: 25%; }
+
+.portion.three-fourths {
+  width: 75%; }
+
+.portion.one-fifth {
+  width: 20%; }
+
+.portion.two-fifths {
+  width: 40%; }
+
+.portion.three-fifths {
+  width: 60%; }
+
+.portion.four-fifths {
+  width: 80%; }
+
+.portion.one-sixth {
+  width: 16.6666%; }
+
+.portion.two-sixths {
+  width: 33.3332%; }
+
+.portion.three-sixths {
+  width: 50.0000%; }
+
+.portion.four-sixths {
+  width: 66.6665%; }
+
+.portion.five-sixths {
+  width: 83.3332%; }
+
+.portion.one-seventh {
+  width: 14.2856%; }
+
+.portion.two-sevenths {
+  width: 28.5714%; }
+
+.portion.three-sevenths {
+  width: 42.8571%; }
+
+.portion.four-sevenths {
+  width: 57.1428%; }
+
+.portion.five-sevenths {
+  width: 71.4285%; }
+
+.portion.six-sevenths {
+  width: 85.7142%; }
+
+.portion.one-eighth {
+  width: 12.5%; }
+
+.portion.two-eighths {
+  width: 25.0%; }
+
+.portion.three-eighths {
+  width: 37.5%; }
+
+.portion.four-eighths {
+  width: 50.0%; }
+
+.portion.five-eighths {
+  width: 62.5%; }
+
+.portion.six-eighths {
+  width: 75.0%; }
+
+.portion.seven-eighths {
+  width: 87.5%; }
+
+.portion.one-ninth {
+  width: 11.1111%; }
+
+.portion.two-ninths {
+  width: 22.2222%; }
+
+.portion.three-ninths {
+  width: 33.3333%; }
+
+.portion.four-ninths {
+  width: 44.4444%; }
+
+.portion.five-ninths {
+  width: 55.5555%; }
+
+.portion.six-ninths {
+  width: 66.6665%; }
+
+.portion.seven-ninths {
+  width: 77.7778%; }
+
+.portion.eight-ninths {
+  width: 88.8889%; }
+
+.portion.one-tenth {
+  width: 10%; }
+
+.portion.two-tenths {
+  width: 20%; }
+
+.portion.three-tenths {
+  width: 30%; }
+
+.portion.four-tenths {
+  width: 40%; }
+
+.portion.five-tenths {
+  width: 50%; }
+
+.portion.six-tenths {
+  width: 60%; }
+
+.portion.seven-tenths {
+  width: 70%; }
+
+.portion.eight-tenths {
+  width: 80%; }
+
+.portion.nine-tenths {
+  width: 90%; }
+
+.portion.one-eleventh {
+  width: 9.0909%; }
+
+.portion.two-elevenths {
+  width: 18.1818%; }
+
+.portion.three-elevenths {
+  width: 27.2727%; }
+
+.portion.four-elevenths {
+  width: 36.3636%; }
+
+.portion.five-elevenths {
+  width: 45.4545%; }
+
+.portion.six-elevenths {
+  width: 54.5454%; }
+
+.portion.seven-elevenths {
+  width: 63.6363%; }
+
+.portion.eight-elevenths {
+  width: 72.7272%; }
+
+.portion.nine-elevenths {
+  width: 81.8181%; }
+
+.portion.ten-elevenths {
+  width: 90.9090%; }
+
+.portion.one-twelfth {
+  width: 8.3333%; }
+
+.portion.two-twelfths {
+  width: 16.6667%; }
+
+.portion.three-twelfths {
+  width: 25.0000%; }
+
+.portion.four-twelfths {
+  width: 36.3333%; }
+
+.portion.five-twelfths {
+  width: 41.6667%; }
+
+.portion.six-twelfths {
+  width: 50.0000%; }
+
+.portion.seven-twelfths {
+  width: 58.3333%; }
+
+.portion.eight-twelfths {
+  width: 66.6667%; }
+
+.portion.nine-twelfths {
+  width: 75.0000%; }
+
+.portion.ten-twelfths {
+  width: 83.3333%; }
+
+.portion.eleven-twelfths {
+  width: 91.6667%; }
+
+/*  Clearfix for the rows  */
+.row:before, .row:after {
+  display: block;
+  content: ""; }
+
+.row:after {
+  clear: both; }
+
+/*  Fixing images for better responsive behaviour  */
+.portion img {
+  max-width: 100%; }
+
+/*  Side margins for all your content — increase or decrease at will,
+    or simply add the 'no-padding' class to get full-width  */
+/*  For small screens UP TO 599px width  */
+@media all and (max-width: 599px) {
+  .all-content {
+    padding: 0 2vw; } }
+/*  For screens FROM 600px width and UPWARD  */
+@media all and (min-width: 600px) {
+  .all-content {
+    padding: 0 4vw; } }
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) {
+  .all-content {
+    padding: 0 8vw; } }
+/*  For screens FROM 1200px width and UPWARD  */
+@media all and (min-width: 1200px) {
+  .all-content {
+    padding: 0 10vw; } }
+/*  For big screens FROM 1800px width and UPWARD  */
+@media all and (min-width: 1800px) {
+  .all-content {
+    padding: 0 12vw; } }
+/*  For large screens FROM 2400px width and UPWARD  */
+@media all and (min-width: 2400px) {
+  .all-content {
+    padding: 0 30vw; } }
+/*	Device-specific portion widths —
+    the naming convention is: .{portion-width}-on-{device}-{orientation} */
+/*	For small screens UP TO 599px */
+@media all and (max-width: 599px) {
+  .row:not(.retain-layout-on-mobile) > .portion:not([class*='on-mobile']),
+  .box:not(.retain-layout-on-mobile) > .portion:not([class*='on-mobile']) {
+    width: 100%; }
+
+  .portion.whole-on-mobile {
+    width: 100%; }
+
+  .portion.half-on-mobile {
+    width: 50%; }
+
+  .portion.one-third-on-mobile {
+    width: 33.3332%; }
+
+  .portion.two-thirds-on-mobile {
+    width: 66.6665%; }
+
+  .portion.one-fourth-on-mobile {
+    width: 25%; }
+
+  .portion.two-fourths-on-mobile {
+    width: 50%; }
+
+  .portion.three-fourths-on-mobile {
+    width: 75%; }
+
+  .portion.one-fifth-on-mobile {
+    width: 20%; }
+
+  .portion.two-fifths-on-mobile {
+    width: 40%; }
+
+  .portion.three-fifths-on-mobile {
+    width: 60%; }
+
+  .portion.four-fifths-on-mobile {
+    width: 80%; }
+
+  .portion.one-sixth-on-mobile {
+    width: 16.6666%; }
+
+  .portion.two-sixths-on-mobile {
+    width: 33.3332%; }
+
+  .portion.three-sixths-on-mobile {
+    width: 50.0000%; }
+
+  .portion.four-sixths-on-mobile {
+    width: 66.6665%; }
+
+  .portion.five-sixths-on-mobile {
+    width: 83.3332%; }
+
+  .portion.one-seventh-on-mobile {
+    width: 14.2856%; }
+
+  .portion.two-sevenths-on-mobile {
+    width: 28.5714%; }
+
+  .portion.three-sevenths-on-mobile {
+    width: 42.8571%; }
+
+  .portion.four-sevenths-on-mobile {
+    width: 57.1428%; }
+
+  .portion.five-sevenths-on-mobile {
+    width: 71.4285%; }
+
+  .portion.six-sevenths-on-mobile {
+    width: 85.7142%; }
+
+  .portion.one-eighth-on-mobile {
+    width: 12.5%; }
+
+  .portion.two-eighths-on-mobile {
+    width: 25.0%; }
+
+  .portion.three-eighths-on-mobile {
+    width: 37.5%; }
+
+  .portion.four-eighths-on-mobile {
+    width: 50.0%; }
+
+  .portion.five-eighths-on-mobile {
+    width: 62.5%; }
+
+  .portion.six-eighths-on-mobile {
+    width: 75.0%; }
+
+  .portion.seven-eighths-on-mobile {
+    width: 87.5%; }
+
+  .portion.one-ninth-on-mobile {
+    width: 11.1111%; }
+
+  .portion.two-ninths-on-mobile {
+    width: 22.2222%; }
+
+  .portion.three-ninths-on-mobile {
+    width: 33.3333%; }
+
+  .portion.four-ninths-on-mobile {
+    width: 44.4444%; }
+
+  .portion.five-ninths-on-mobile {
+    width: 55.5555%; }
+
+  .portion.six-ninths-on-mobile {
+    width: 66.6665%; }
+
+  .portion.seven-ninths-on-mobile {
+    width: 77.7778%; }
+
+  .portion.eight-ninths-on-mobile {
+    width: 88.8889%; }
+
+  .portion.one-tenth-on-mobile {
+    width: 10%; }
+
+  .portion.two-tenths-on-mobile {
+    width: 20%; }
+
+  .portion.three-tenths-on-mobile {
+    width: 30%; }
+
+  .portion.four-tenths-on-mobile {
+    width: 40%; }
+
+  .portion.five-tenths-on-mobile {
+    width: 50%; }
+
+  .portion.six-tenths-on-mobile {
+    width: 60%; }
+
+  .portion.seven-tenths-on-mobile {
+    width: 70%; }
+
+  .portion.eight-tenths-on-mobile {
+    width: 80%; }
+
+  .portion.nine-tenths-on-mobile {
+    width: 90%; }
+
+  .portion.one-eleventh-on-mobile {
+    width: 9.0909%; }
+
+  .portion.two-elevenths-on-mobile {
+    width: 18.1818%; }
+
+  .portion.three-elevenths-on-mobile {
+    width: 27.2727%; }
+
+  .portion.four-elevenths-on-mobile {
+    width: 36.3636%; }
+
+  .portion.five-elevenths-on-mobile {
+    width: 45.4545%; }
+
+  .portion.six-elevenths-on-mobile {
+    width: 54.5454%; }
+
+  .portion.seven-elevenths-on-mobile {
+    width: 63.6363%; }
+
+  .portion.eight-elevenths-on-mobile {
+    width: 72.7272%; }
+
+  .portion.nine-elevenths-on-mobile {
+    width: 81.8181%; }
+
+  .portion.ten-elevenths-on-mobile {
+    width: 90.9090%; }
+
+  .portion.one-twelfth-on-mobile {
+    width: 8.3333%; }
+
+  .portion.two-twelfths-on-mobile {
+    width: 16.6667%; }
+
+  .portion.three-twelfths-on-mobile {
+    width: 25.0000%; }
+
+  .portion.four-twelfths-on-mobile {
+    width: 36.3333%; }
+
+  .portion.five-twelfths-on-mobile {
+    width: 41.6667%; }
+
+  .portion.six-twelfths-on-mobile {
+    width: 50.0000%; }
+
+  .portion.seven-twelfths-on-mobile {
+    width: 58.3333%; }
+
+  .portion.eight-twelfths-on-mobile {
+    width: 66.6667%; }
+
+  .portion.nine-twelfths-on-mobile {
+    width: 75.0000%; }
+
+  .portion.ten-twelfths-on-mobile {
+    width: 83.3333%; }
+
+  .portion.eleven-twelfths-on-mobile {
+    width: 91.6667%; } }
+/*  For screens FROM 600px width and UPWARD  */
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .row:not(.retain-layout-on-tab-pt) > .portion:not([class*='tab-pt']),
+  .box:not(.retain-layout-on-tab-pt) > .portion:not([class*='tab-pt']) {
+    width: 100%; }
+
+  .portion.whole-on-tab-pt {
+    width: 100%; }
+
+  .portion.half-on-tab-pt {
+    width: 50%; }
+
+  .portion.one-third-on-tab-pt {
+    width: 33.3332%; }
+
+  .portion.two-thirds-on-tab-pt {
+    width: 66.6665%; }
+
+  .portion.one-fourth-on-tab-pt {
+    width: 25%; }
+
+  .portion.two-fourths-on-tab-pt {
+    width: 50%; }
+
+  .portion.three-fourths-on-tab-pt {
+    width: 75%; }
+
+  .portion.one-fifth-on-tab-pt {
+    width: 20%; }
+
+  .portion.two-fifths-on-tab-pt {
+    width: 40%; }
+
+  .portion.three-fifths-on-tab-pt {
+    width: 60%; }
+
+  .portion.four-fifths-on-tab-pt {
+    width: 80%; }
+
+  .portion.one-sixth-on-tab-pt {
+    width: 16.6666%; }
+
+  .portion.two-sixths-on-tab-pt {
+    width: 33.3332%; }
+
+  .portion.three-sixths-on-tab-pt {
+    width: 50.0000%; }
+
+  .portion.four-sixths-on-tab-pt {
+    width: 66.6665%; }
+
+  .portion.five-sixths-on-tab-pt {
+    width: 83.3332%; }
+
+  .portion.one-seventh-on-tab-pt {
+    width: 14.2856%; }
+
+  .portion.two-sevenths-on-tab-pt {
+    width: 28.5714%; }
+
+  .portion.three-sevenths-on-tab-pt {
+    width: 42.8571%; }
+
+  .portion.four-sevenths-on-tab-pt {
+    width: 57.1428%; }
+
+  .portion.five-sevenths-on-tab-pt {
+    width: 71.4285%; }
+
+  .portion.six-sevenths-on-tab-pt {
+    width: 85.7142%; }
+
+  .portion.one-eighth-on-tab-pt {
+    width: 12.5%; }
+
+  .portion.two-eighths-on-tab-pt {
+    width: 25.0%; }
+
+  .portion.three-eighths-on-tab-pt {
+    width: 37.5%; }
+
+  .portion.four-eighths-on-tab-pt {
+    width: 50.0%; }
+
+  .portion.five-eighths-on-tab-pt {
+    width: 62.5%; }
+
+  .portion.six-eighths-on-tab-pt {
+    width: 75.0%; }
+
+  .portion.seven-eighths-on-tab-pt {
+    width: 87.5%; }
+
+  .portion.one-ninth-on-tab-pt {
+    width: 11.1111%; }
+
+  .portion.two-ninths-on-tab-pt {
+    width: 22.2222%; }
+
+  .portion.three-ninths-on-tab-pt {
+    width: 33.3333%; }
+
+  .portion.four-ninths-on-tab-pt {
+    width: 44.4444%; }
+
+  .portion.five-ninths-on-tab-pt {
+    width: 55.5555%; }
+
+  .portion.six-ninths-on-tab-pt {
+    width: 66.6665%; }
+
+  .portion.seven-ninths-on-tab-pt {
+    width: 77.7778%; }
+
+  .portion.eight-ninths-on-tab-pt {
+    width: 88.8889%; }
+
+  .portion.one-tenth-on-tab-pt {
+    width: 10%; }
+
+  .portion.two-tenths-on-tab-pt {
+    width: 20%; }
+
+  .portion.three-tenths-on-tab-pt {
+    width: 30%; }
+
+  .portion.four-tenths-on-tab-pt {
+    width: 40%; }
+
+  .portion.five-tenths-on-tab-pt {
+    width: 50%; }
+
+  .portion.six-tenths-on-tab-pt {
+    width: 60%; }
+
+  .portion.seven-tenths-on-tab-pt {
+    width: 70%; }
+
+  .portion.eight-tenths-on-tab-pt {
+    width: 80%; }
+
+  .portion.nine-tenths-on-tab-pt {
+    width: 90%; }
+
+  .portion.one-eleventh-on-tab-pt {
+    width: 9.0909%; }
+
+  .portion.two-elevenths-on-tab-pt {
+    width: 18.1818%; }
+
+  .portion.three-elevenths-on-tab-pt {
+    width: 27.2727%; }
+
+  .portion.four-elevenths-on-tab-pt {
+    width: 36.3636%; }
+
+  .portion.five-elevenths-on-tab-pt {
+    width: 45.4545%; }
+
+  .portion.six-elevenths-on-tab-pt {
+    width: 54.5454%; }
+
+  .portion.seven-elevenths-on-tab-pt {
+    width: 63.6363%; }
+
+  .portion.eight-elevenths-on-tab-pt {
+    width: 72.7272%; }
+
+  .portion.nine-elevenths-on-tab-pt {
+    width: 81.8181%; }
+
+  .portion.ten-elevenths-on-tab-pt {
+    width: 90.9090%; }
+
+  .portion.one-twelfth-on-tab-pt {
+    width: 8.3333%; }
+
+  .portion.two-twelfths-on-tab-pt {
+    width: 16.6667%; }
+
+  .portion.three-twelfths-on-tab-pt {
+    width: 25.0000%; }
+
+  .portion.four-twelfths-on-tab-pt {
+    width: 36.3333%; }
+
+  .portion.five-twelfths-on-tab-pt {
+    width: 41.6667%; }
+
+  .portion.six-twelfths-on-tab-pt {
+    width: 50.0000%; }
+
+  .portion.seven-twelfths-on-tab-pt {
+    width: 58.3333%; }
+
+  .portion.eight-twelfths-on-tab-pt {
+    width: 66.6667%; }
+
+  .portion.nine-twelfths-on-tab-pt {
+    width: 75.0000%; }
+
+  .portion.ten-twelfths-on-tab-pt {
+    width: 83.3333%; }
+
+  .portion.eleven-twelfths-on-tab-pt {
+    width: 91.6667%; } }
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) and (max-width: 1199px) {
+  .row:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']),
+  .box:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']) {
+    width: 100%; }
+
+  .portion.whole-on-tab-ls {
+    width: 100%; }
+
+  .portion.half-on-tab-ls {
+    width: 50%; }
+
+  .portion.one-third-on-tab-ls {
+    width: 33.3332%; }
+
+  .portion.two-thirds-on-tab-ls {
+    width: 66.6665%; }
+
+  .portion.one-fourth-on-tab-ls {
+    width: 25%; }
+
+  .portion.two-fourths-on-tab-ls {
+    width: 50%; }
+
+  .portion.three-fourths-on-tab-ls {
+    width: 75%; }
+
+  .portion.one-fifth-on-tab-ls {
+    width: 20%; }
+
+  .portion.two-fifths-on-tab-ls {
+    width: 40%; }
+
+  .portion.three-fifths-on-tab-ls {
+    width: 60%; }
+
+  .portion.four-fifths-on-tab-ls {
+    width: 80%; }
+
+  .portion.one-sixth-on-tab-ls {
+    width: 16.6666%; }
+
+  .portion.two-sixths-on-tab-ls {
+    width: 33.3332%; }
+
+  .portion.three-sixths-on-tab-ls {
+    width: 50.0000%; }
+
+  .portion.four-sixths-on-tab-ls {
+    width: 66.6665%; }
+
+  .portion.five-sixths-on-tab-ls {
+    width: 83.3332%; }
+
+  .portion.one-seventh-on-tab-ls {
+    width: 14.2856%; }
+
+  .portion.two-sevenths-on-tab-ls {
+    width: 28.5714%; }
+
+  .portion.three-sevenths-on-tab-ls {
+    width: 42.8571%; }
+
+  .portion.four-sevenths-on-tab-ls {
+    width: 57.1428%; }
+
+  .portion.five-sevenths-on-tab-ls {
+    width: 71.4285%; }
+
+  .portion.six-sevenths-on-tab-ls {
+    width: 85.7142%; }
+
+  .portion.one-eighth-on-tab-ls {
+    width: 12.5%; }
+
+  .portion.two-eighths-on-tab-ls {
+    width: 25.0%; }
+
+  .portion.three-eighths-on-tab-ls {
+    width: 37.5%; }
+
+  .portion.four-eighths-on-tab-ls {
+    width: 50.0%; }
+
+  .portion.five-eighths-on-tab-ls {
+    width: 62.5%; }
+
+  .portion.six-eighths-on-tab-ls {
+    width: 75.0%; }
+
+  .portion.seven-eighths-on-tab-ls {
+    width: 87.5%; }
+
+  .portion.one-ninth-on-tab-ls {
+    width: 11.1111%; }
+
+  .portion.two-ninths-on-tab-ls {
+    width: 22.2222%; }
+
+  .portion.three-ninths-on-tab-ls {
+    width: 33.3333%; }
+
+  .portion.four-ninths-on-tab-ls {
+    width: 44.4444%; }
+
+  .portion.five-ninths-on-tab-ls {
+    width: 55.5555%; }
+
+  .portion.six-ninths-on-tab-ls {
+    width: 66.6665%; }
+
+  .portion.seven-ninths-on-tab-ls {
+    width: 77.7778%; }
+
+  .portion.eight-ninths-on-tab-ls {
+    width: 88.8889%; }
+
+  .portion.one-tenth-on-tab-ls {
+    width: 10%; }
+
+  .portion.two-tenths-on-tab-ls {
+    width: 20%; }
+
+  .portion.three-tenths-on-tab-ls {
+    width: 30%; }
+
+  .portion.four-tenths-on-tab-ls {
+    width: 40%; }
+
+  .portion.five-tenths-on-tab-ls {
+    width: 50%; }
+
+  .portion.six-tenths-on-tab-ls {
+    width: 60%; }
+
+  .portion.seven-tenths-on-tab-ls {
+    width: 70%; }
+
+  .portion.eight-tenths-on-tab-ls {
+    width: 80%; }
+
+  .portion.nine-tenths-on-tab-ls {
+    width: 90%; }
+
+  .portion.one-eleventh-on-tab-ls {
+    width: 9.0909%; }
+
+  .portion.two-elevenths-on-tab-ls {
+    width: 18.1818%; }
+
+  .portion.three-elevenths-on-tab-ls {
+    width: 27.2727%; }
+
+  .portion.four-elevenths-on-tab-ls {
+    width: 36.3636%; }
+
+  .portion.five-elevenths-on-tab-ls {
+    width: 45.4545%; }
+
+  .portion.six-elevenths-on-tab-ls {
+    width: 54.5454%; }
+
+  .portion.seven-elevenths-on-tab-ls {
+    width: 63.6363%; }
+
+  .portion.eight-elevenths-on-tab-ls {
+    width: 72.7272%; }
+
+  .portion.nine-elevenths-on-tab-ls {
+    width: 81.8181%; }
+
+  .portion.ten-elevenths-on-tab-ls {
+    width: 90.9090%; }
+
+  .portion.one-twelfth-on-tab-ls {
+    width: 8.3333%; }
+
+  .portion.two-twelfths-on-tab-ls {
+    width: 16.6667%; }
+
+  .portion.three-twelfths-on-tab-ls {
+    width: 25.0000%; }
+
+  .portion.four-twelfths-on-tab-ls {
+    width: 36.3333%; }
+
+  .portion.five-twelfths-on-tab-ls {
+    width: 41.6667%; }
+
+  .portion.six-twelfths-on-tab-ls {
+    width: 50.0000%; }
+
+  .portion.seven-twelfths-on-tab-ls {
+    width: 58.3333%; }
+
+  .portion.eight-twelfths-on-tab-ls {
+    width: 66.6667%; }
+
+  .portion.nine-twelfths-on-tab-ls {
+    width: 75.0000%; }
+
+  .portion.ten-twelfths-on-tab-ls {
+    width: 83.3333%; }
+
+  .portion.eleven-twelfths-on-tab-ls {
+    width: 91.6667%; } }
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.1
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+/* == IMPORTS ============================================================== */
+/* == RESET ================================================================ */
+/*  Consider removing this if you have
+    a zillion elements in your page  */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+*:focus {
+  outline: 0; }
+
+/*  This affects all type scale values  */
+html {
+  font-size: 1em; }
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+input {
+  outline: none; }
+
+button {
+  vertical-align: baseline; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none; }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0; }
+
+/* == UTILITY ============================================================== */
+.show-inline {
+  display: inline-block; }
+
+.show-nothing {
+  display: none; }
+
+.show-empty {
+  visibility: hidden; }
+
+.full-width {
+  width: 100% !important; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clear-both {
+  clear: both; }
+
+/*  For when you want things right in the middle  */
+.vertical-centre-items,
+.vertical-center-items {
+  display: flex;
+  align-items: center; }
+
+/*  Parent div needs a set height  */
+.vertical-centre-this,
+.vertical-center-this {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+/*  Parent div needs a set width  */
+.horizontal-centre-this,
+.horizontal-center-this {
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+
+/*  A thin separator line that is black at 10% opacity  */
+hr {
+  border: 0;
+  height: 1px;
+  margin: 2vh 0;
+  background: rgba(0, 0, 0, 0.1); }
+
+/* BOX MODEL HELPERS ----------------------------------- */
+/*  Margins for all occasions  */
+.no-margin {
+  margin: 0 !important; }
+
+.margin-all-fixed {
+  margin: 10px; }
+
+.margin-all-tiny {
+  margin: 2vmax; }
+
+.margin-all-small {
+  margin: 4vmax; }
+
+.margin-all-medium {
+  margin: 8vmax; }
+
+.margin-all-large {
+  margin: 14vmax; }
+
+.margin-all-huge {
+  margin: 22vmax; }
+
+.no-margin-top {
+  margin-top: 0 !important; }
+
+.margin-top-fixed {
+  margin-top: 10px; }
+
+.margin-top-tiny {
+  margin-top: 2vmax; }
+
+.margin-top-small {
+  margin-top: 4vmax; }
+
+.margin-top-medium {
+  margin-top: 8vmax; }
+
+.margin-top-large {
+  margin-top: 14vmax; }
+
+.margin-top-huge {
+  margin-top: 22vmax; }
+
+.no-margin-right {
+  margin-right: 0 !important; }
+
+.margin-right-fixed {
+  margin-right: 10px; }
+
+.margin-right-tiny {
+  margin-right: 2vmax; }
+
+.margin-right-small {
+  margin-right: 4vmax; }
+
+.margin-right-medium {
+  margin-right: 8vmax; }
+
+.margin-right-large {
+  margin-right: 14vmax; }
+
+.margin-right-huge {
+  margin-right: 22vmax; }
+
+.no-margin-bottom {
+  margin-bottom: 0 !important; }
+
+.margin-bottom-fixed {
+  margin-bottom: 10px; }
+
+.margin-bottom-tiny {
+  margin-bottom: 2vmax; }
+
+.margin-bottom-small {
+  margin-bottom: 4vmax; }
+
+.margin-bottom-medium {
+  margin-bottom: 8vmax; }
+
+.margin-bottom-large {
+  margin-bottom: 14vmax; }
+
+.margin-bottom-huge {
+  margin-bottom: 22vmax; }
+
+.no-margin-left {
+  margin-left: 0 !important; }
+
+.margin-left-fixed {
+  margin-left: 10px; }
+
+.margin-left-tiny {
+  margin-left: 2vmax; }
+
+.margin-left-small {
+  margin-left: 4vmax; }
+
+.margin-left-medium {
+  margin-left: 8vmax; }
+
+.margin-left-large {
+  margin-left: 14vmax; }
+
+.margin-left-huge {
+  margin-left: 22vmax; }
+
+/*  Paddings for all occasions  */
+.no-padding {
+  padding: 0  !important; }
+
+.padding-all-fixed {
+  padding: 10px; }
+
+.padding-all-tiny {
+  padding: 2vmax; }
+
+.padding-all-small {
+  padding: 4vmax; }
+
+.padding-all-medium {
+  padding: 8vmax; }
+
+.padding-all-large {
+  padding: 14vmax; }
+
+.padding-all-huge {
+  padding: 22vmax; }
+
+.no-padding-top {
+  padding-top: 0  !important; }
+
+.padding-top-fixed {
+  padding-top: 10px; }
+
+.padding-top-tiny {
+  padding-top: 2vmax; }
+
+.padding-top-small {
+  padding-top: 4vmax; }
+
+.padding-top-medium {
+  padding-top: 8vmax; }
+
+.padding-top-large {
+  padding-top: 14vmax; }
+
+.padding-top-huge {
+  padding-top: 22vmax; }
+
+.no-padding-right {
+  padding-right: 0  !important; }
+
+.padding-right-fixed {
+  padding-right: 10px; }
+
+.padding-right-tiny {
+  padding-right: 2vmax; }
+
+.padding-right-small {
+  padding-right: 4vmax; }
+
+.padding-right-medium {
+  padding-right: 8vmax; }
+
+.padding-right-large {
+  padding-right: 14vmax; }
+
+.padding-right-huge {
+  padding-right: 22vmax; }
+
+.no-padding-bottom {
+  padding-bottom: 0  !important; }
+
+.padding-bottom-fixed {
+  padding-bottom: 10px; }
+
+.padding-bottom-tiny {
+  padding-bottom: 2vmax; }
+
+.padding-bottom-small {
+  padding-bottom: 4vmax; }
+
+.padding-bottom-medium {
+  padding-bottom: 8vmax; }
+
+.padding-bottom-large {
+  padding-bottom: 14vmax; }
+
+.padding-bottom-huge {
+  padding-bottom: 22vmax; }
+
+.no-padding-left {
+  padding-left: 0  !important; }
+
+.padding-left-fixed {
+  padding-left: 10px; }
+
+.padding-left-tiny {
+  padding-left: 2vmax; }
+
+.padding-left-small {
+  padding-left: 4vmax; }
+
+.padding-left-medium {
+  padding-left: 8vmax; }
+
+.padding-left-large {
+  padding-left: 14vmax; }
+
+.padding-left-huge {
+  padding-left: 22vmax; }
+
+/*  This will render an empty space of
+    20% screen height where you add it  */
+.empty-spacer {
+  display: block;
+  height: 20vmin;
+  clear: both; }
+
+/*  For images and tiles  */
+.shape-rounded {
+  border-radius: 4px; }
+
+.shape-circular {
+  border-radius: 50%; }
+
+/* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
+/*  Hide on large screens  */
+.show-only-on-mobile {
+  display: none !important; }
+
+.show-only-on-tab-pt {
+  display: none !important; }
+
+.show-only-on-tab-ls {
+  display: none !important; }
+
+@media all and (max-width: 599px) {
+  .center-on-mobile,
+  .centre-on-mobile {
+    text-align: center !important; }
+
+  .hide-on-mobile {
+    display: none !important; }
+
+  .show-only-on-mobile {
+    display: block !important; } }
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .center-on-tab-pt,
+  .centre-on-tab-pt {
+    text-align: center !important; }
+
+  .hide-on-tab-pt {
+    display: none !important; }
+
+  .show-only-on-tab-pt {
+    display: block !important; } }
+@media all and (min-width: 900px) and (max-width: 1199px) {
+  .center-on-tab-ls,
+  .centre-on-tab-ls {
+    text-align: center !important; }
+
+  .hide-on-tab-ls {
+    display: none !important; }
+
+  .show-only-on-tab-ls {
+    display: block !important; } }
+/* == TYPOGRAPHY =========================================================== */
+body {
+  background-color: #fff;
+  font-family: "Work Sans", sans-serif;
+  color: #333;
+  line-height: 1.45;
+  word-wrap: normal;
+  text-rendering: optimizeLegibility; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 6.19174em; }
+
+h2 {
+  font-size: 4.29982em; }
+
+h3 {
+  font-size: 2.0736em; }
+
+h4 {
+  font-size: 1.728em; }
+
+h5 {
+  font-size: 1.44em; }
+
+h6 {
+  font-size: 1.2em; }
+
+p {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.6em;
+  margin: 0; }
+
+p .text-serif {
+  font-size: 1.3em;
+  line-height: 1.6em; }
+
+a {
+  cursor: pointer;
+  color: #f7a66e;
+  border-bottom: 1px dotted rgba(247, 166, 110, 0.8);
+  transition: all 0.2s; }
+
+a:hover {
+  border-bottom: 1px solid rgba(247, 166, 110, 0.35); }
+
+a.button {
+  border: none; }
+
+b, strong {
+  font-weight: bold; }
+
+i, em {
+  font-style: italic; }
+
+.text-sans {
+  font-family: "Work Sans", sans-serif; }
+
+.text-serif {
+  font-family: "Cormorant Garamond", serif; }
+
+.text-mono {
+  font-family: "Fira Mono", monospace; }
+
+.text-tiny {
+  font-size: 0.69444em; }
+
+.text-small {
+  font-size: 0.83333em; }
+
+.text-normal {
+  font-size: 1em; }
+
+.text-large {
+  font-size: 2.0736em; }
+
+.text-huge {
+  font-size: 3.58318em; }
+
+.text-centre,
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+/* == COLOURS ============================================================== */
+.bg-red {
+  background-color: #ff5855; }
+
+.bg-green {
+  background-color: #28bb6b; }
+
+.bg-blue {
+  background-color: #3bc9db; }
+
+.bg-yellow {
+  background-color: #febe42; }
+
+.bg-teal {
+  background-color: #65d9b4; }
+
+.bg-purple {
+  background-color: #9651c6; }
+
+.bg-orange {
+  background-color: #ff9201; }
+
+.bg-brown {
+  background-color: #a25e37; }
+
+.bg-light {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.85); }
+
+.text-red {
+  color: #ff5855; }
+
+.text-green {
+  color: #28bb6b; }
+
+.text-blue {
+  color: #3bc9db; }
+
+.text-yellow {
+  color: #febe42; }
+
+.text-teal {
+  color: #65d9b4; }
+
+.text-purple {
+  color: #9651c6; }
+
+.text-orange {
+  color: #ff9201; }
+
+.text-brown {
+  color: #a25e37; }
+
+.text-black {
+  color: #000 !important; }
+
+.text-white {
+  color: #fff !important; }
+
+/*  Works only for inline icons  */
+.icon-red {
+  fill: #ff5855; }
+
+.icon-green {
+  fill: #28bb6b; }
+
+.icon-blue {
+  fill: #3bc9db; }
+
+.icon-yellow {
+  fill: #febe42; }
+
+.icon-teal {
+  fill: #65d9b4; }
+
+.icon-purple {
+  fill: #9651c6; }
+
+.icon-orange {
+  fill: #ff9201; }
+
+.icon-brown {
+  fill: #a25e37; }
+
+/*  Colour of highlight and text colour
+    — for Mozilla browsers  */
+::-moz-selection {
+  background: #212529;
+  color: #fff; }
+
+/*  Same thing — for Webkit browsers  */
+::selection {
+  background: #212529;
+  color: #fff; }
+
+/* == BUTTONS ==================================================== */
+/*  Basics  */
+.button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+  padding: 6px 20px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background: #f7a66e;
+  background: -webkit-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
+  background: -moz-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
+  background: linear-gradient(135deg, #f7a66e 0%, #a5623d 100%);
+  border: none;
+  transition: all 0.05s;
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6); }
+
+/*  Button when you click on it  */
+.button:active {
+  transform: translateY(2px);
+  box-shadow: none; }
+
+/*  Big button  */
+.button.button-large {
+  padding: 15px 30px; }
+
+/*  Button that’s just text  */
+.button.no-bg {
+  background: none;
+  box-shadow: none;
+  color: black;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+
+.button.no-bg:hover {
+  background: none;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.75);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+
+.button.no-bg:active {
+  color: black;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.4); }
+
+.button.no-shadow {
+  box-shadow: none; }
+
+.button.shape-circular {
+  padding: 16px; }
+
+.button path {
+  fill: #fff; }
+
+.button.button-disabled {
+  pointer-events: none;
+  background: #000;
+  opacity: 0.2;
+  box-shadow: none; }
+
+/* == CODE ================================================================= */
+code {
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: "Fira Mono", monospace;
+  font-size: 80%;
+  color: #f7a66e;
+  white-space: pre;
+  border-radius: 4px; }
+
+code.inline {
+  margin: 0 2px;
+  padding: 3px 6px; }
+
+pre > code {
+  display: block;
+  padding: 20px 30px;
+  white-space: pre; }
+
+/* == ICONS ================================================================ */
+.icon-16 {
+  width: 16px; }
+
+.icon-24 {
+  width: 24px; }
+
+.icon-32 {
+  width: 32px; }
+
+.icon-48 {
+  width: 48px; }
+
+/* == INPUT FIELDS ========================================================= */
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=date] {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 4px;
+  border-bottom: 1px solid #ccc; }
+
+input:focus {
+  border-bottom: 1px solid #ff4611; }
+
+::-webkit-input-placeholder {
+  opacity: 0.5; }
+
+::-moz-placeholder {
+  opacity: 0.5; }
+
+/* == TOGGLES ============================================================== */
+input[type=checkbox] {
+  display: none; }
+
+.ff-checkbox {
+  display: inline-block;
+  margin-right: 10px; }
+
+.ff-checkbox label {
+  cursor: pointer;
+  vertical-align: middle; }
+
+/*  The grey background  */
+.ff-checkbox input[type=checkbox] + label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  /*  Basically half of the height  */
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset; }
+
+/*  The white switch inside  */
+.ff-checkbox input[type=checkbox] + label:after {
+  position: absolute;
+  display: block;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  content: '';
+  transition: all 0.1s ease-out;
+  -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6); }
+
+/*  The bg when checked  */
+.ff-checkbox input[type=checkbox]:checked + label {
+  background: #f7a66e; }
+
+.ff-checkbox input[type=checkbox]:checked + label:after {
+  left: 22px; }
+
+.ff-checkbox input[type=checkbox]:disabled + label,
+.ff-checkbox input[type=checkbox]:disabled:checked + label {
+  pointer-events: none; }
+
+.ff-checkbox input[type=checkbox]:disabled ~ label {
+  cursor: default;
+  opacity: 0.3; }
+
+/*  The switch when disabled  */
+.ff-checkbox input[type=checkbox]:checked + label:after {
+  display: block;
+  background: #f8f8f8;
+  box-shadow: none; }
+
+/* == TOGGLES ============================================================== */
+input[type=radio] {
+  display: none; }
+
+.ff-radio label {
+  cursor: pointer;
+  vertical-align: middle; }
+
+/*  The grey background  */
+.ff-radio input[type=radio] + label {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: #ddd;
+  border-radius: 10px;
+  /*  Basically half of the height  */
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset; }
+
+/*  The white circle inside  */
+.ff-radio input[type=radio] + label:after {
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  content: '';
+  transition: all 0.1s ease-out; }
+
+/*  The bg when checked  */
+.ff-radio input[type=radio]:checked + label {
+  background: #f7a66e; }
+
+.ff-radio input[type=radio]:disabled + label,
+.ff-radio input[type=radio]:disabled:checked + label {
+  pointer-events: none; }
+
+.ff-radio input[type=radio]:disabled ~ label {
+  cursor: default;
+  opacity: 0.3; }
+
+/*  The switch when disabled  */
+.ff-radio input[type=radio]:checked + label:after {
+  display: block;
+  background: #f8f8f8;
+  box-shadow: none; }
+
+/* == CUSTOM INTERFACE ELEMENTS =========================================== */
+.card {
+  width: 100%;
+  height: auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 4px; }
+
+.card-smaller {
+  padding: 16px 24px; }
+
+.shadow-soft {
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2); }
+
+.shadow-hard {
+  border: 1px solid rgba(31, 39, 71, 0.05);
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); }
+
+.full-size-bg, .full-size-bg-fixed {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: url("../images/") center top;
+  /*  Add the filename here  */
+  background-size: cover;
+  z-index: -5; }
+
+.full-size-bg-fixed {
+  position: fixed !important; }
+
+/*# sourceMappingURL=import-fictoan.css.map */
