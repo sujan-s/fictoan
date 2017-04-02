@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.20.1
+    Current version: 1.20.2
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -13,11 +13,7 @@
 
 /*  Consider removing this if you have
     a zillion elements in your page  */
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
+*, *:before, *:after { box-sizing: border-box; }
 
 *:focus { outline: 0; }
 
@@ -26,7 +22,7 @@ html { font-size: 1em; }
 
 body {
     -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+     -webkit-font-smoothing: antialiased;
 }
 
 img { display: block; }
@@ -60,8 +56,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .pull-left  { float: left; }
 .pull-right { float: right; }
 .clear-both { clear: both; }
-
-.vertical-middle { vertical-align: middle; }
 
 /*  For when you want things right in the middle  */
 .vertical-centre-items,
@@ -354,17 +348,13 @@ i, em { font-style: italic; }
     color: #fff;
     border: none;
     transition: all 0.05s;
-    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
 /*  Button when you click on it  */
 .button:active {
     transform: translateY(2px);
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
 /*  Big button  */
@@ -390,11 +380,7 @@ i, em { font-style: italic; }
     text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
 }
 
-.button.no-shadow {
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
-}
+.button.no-shadow { box-shadow: none; }
 
 .button.shape-circular { padding: 15px; }
 
@@ -500,9 +486,7 @@ input[type=checkbox] { display: none; }
     border-radius: 50%;
     content: '';
     transition: all 0.1s ease-out;
-    -webkit-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-       -moz-box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
 /*  The bg when checked  */
@@ -522,9 +506,7 @@ input[type=checkbox] { display: none; }
 .ff-checkbox input[type=checkbox]:checked + label:after {
     display: block;
     background : #f8f8f8;
-    -webkit-box-shadow : none;
-       -moz-box-shadow : none;
-            box-shadow : none;
+    box-shadow : none;
 }
 
 
@@ -580,9 +562,7 @@ input[type=radio] { display: none; }
 .ff-radio input[type=radio]:checked + label:after {
     display: block;
     background : #f8f8f8;
-    -webkit-box-shadow : none;
-       -moz-box-shadow : none;
-            box-shadow : none;
+    box-shadow : none;
 }
 
 
@@ -597,17 +577,8 @@ input[type=radio] { display: none; }
 }
 .card-smaller { padding: 16px 24px; }
 
-.shadow-soft {
-    -webkit-box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
-}
-.shadow-hard {
-    border: 1px solid hsla(228, 40%, 20%, 0.05);
-    -webkit-box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2);
-}
+.shadow-soft { box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2); }
+.shadow-hard { box-shadow: 0  4px  8px  -2px rgba(0, 0, 0, 0.2); }
 
 .full-size-bg {
     position: absolute; /*  Use 'fixed' to not scroll the BG  */
@@ -619,50 +590,3 @@ input[type=radio] { display: none; }
     background-size: cover;
     z-index:-5;
 }
-
-
-
-
-
-
-/* The CSS */
-select {
-    /*display: inline-block;*/
-    /*width: 250px;*/
-    /*margin: 0;*/
-    /*padding: 8px;*/
-    /*background: #f8f8f8;*/
-    /*color: #888;*/
-    /*border: none;*/
-    /*outline: none;*/
-    /*cursor: pointer;*/
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    /*-webkit-border-radius: 4px;*/
-       /*-moz-border-radius: 4px;*/
-            /*border-radius: 4px;*/
-/*}*/
-
-/*label { position: relative }*/
-/*label:before {*/
-    /*display: block;*/
-    /*position: absolute;*/
-    /*width: 20px;*/
-    /*height: 20px;*/
-    /*right: 0;*/
-    /*top: 0;*/
-    /*content: '';*/
-    /*pointer-events: none;*/
-/*}*/
-/*label:after {*/
-    /*position: absolute;*/
-    /*right: 8px;*/
-    /*top: 2px;*/
-    /*content: '‣';*/
-    /*padding: 0 0 2px;*/
-    /*pointer-events: none;*/
-    /*font: 11px "Atlas Typewriter", monospace;*/
-    /*-webkit-transform: rotate(90deg);*/
-       /*-moz-transform: rotate(90deg);*/
-            /*transform: rotate(90deg);*/
-/*}*/
