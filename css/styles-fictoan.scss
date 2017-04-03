@@ -226,7 +226,7 @@ body {
     background-color : $bodyBgColor;
     font-family      : $fontSans;
     color            : $bodyFontColor;
-    line-height      : 1.45;
+    line-height      : 1.6;
     word-wrap        : normal;
     text-rendering   : optimizeLegibility;
 }
@@ -248,13 +248,13 @@ h6 { font-size : $baseFontSize*pow($scaleFactor, 1); }
 
 p {
     font-family : $fontSans;
-    line-height : $paragraphLineHeight;
+    line-height : $paraLineHeight;
     margin      : 0;
 }
 
 p .text-serif {
-    font-size   : $paragraphSerifFontSize;
-    line-height : $paragraphSerifLineHeight;
+    font-size   : $paraSerifFontSize;
+    line-height : $paraSerifLineHeight;
 }
 
 a {
@@ -347,10 +347,10 @@ i, em { font-style : italic; }
     font-family : $fontSans;
     font-weight : 700;
     color       : #fff;
-    background  : $linkColor;
-    background  : -webkit-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
-    background  : -moz-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
-    background  : linear-gradient(135deg, #f7a66e 0%, #a5623d 100%);
+    background  : $colorHue;
+    background  : -webkit-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
+    background  :    -moz-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
+    background  :         linear-gradient(135deg, $colorHue 0%, $colorShade 100%);
     border      : none;
     transition  : all 0.05s;
     box-shadow  : 0 4px 8px -4px rgba(0, 0, 0, 0.6);
@@ -605,4 +605,9 @@ input[type=radio] { display : none; }
 
 
 
+.bg-hue { background-color: $colorHue }
 
+.bg-mild { background-color: $colorMild }
+.bg-shade { background-color: $colorShade }
+.bg-dark { background-color: $colorDark }
+.bg-accent { background-color: $colorAccent }

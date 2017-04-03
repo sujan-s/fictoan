@@ -1317,6 +1317,14 @@ template {
     http://sujansundareswaran.com/
 */
 /* == IMPORTS ============================================================== */
+/*  Colours — Currently using a complementary scheme */
+/*  Selection highlight  */
+/*  Margin  */
+/*  Padding  */
+/*  Variables for the page body  */
+/*  Border-radius mixin  */
+/*  Typography  */
+/*  Paragraph-specific variables  */
 /* == RESET ================================================================ */
 /*  Consider removing this if you have
     a zillion elements in your page  */
@@ -1415,7 +1423,7 @@ hr {
   margin: 0 !important; }
 
 .margin-all-fixed {
-  margin: 10px; }
+  margin: 12px; }
 
 .margin-all-tiny {
   margin: 2vmax; }
@@ -1436,7 +1444,7 @@ hr {
   margin-top: 0 !important; }
 
 .margin-top-fixed {
-  margin-top: 10px; }
+  margin-top: 12px; }
 
 .margin-top-tiny {
   margin-top: 2vmax; }
@@ -1457,7 +1465,7 @@ hr {
   margin-right: 0 !important; }
 
 .margin-right-fixed {
-  margin-right: 10px; }
+  margin-right: 12px; }
 
 .margin-right-tiny {
   margin-right: 2vmax; }
@@ -1478,7 +1486,7 @@ hr {
   margin-bottom: 0 !important; }
 
 .margin-bottom-fixed {
-  margin-bottom: 10px; }
+  margin-bottom: 12px; }
 
 .margin-bottom-tiny {
   margin-bottom: 2vmax; }
@@ -1499,7 +1507,7 @@ hr {
   margin-left: 0 !important; }
 
 .margin-left-fixed {
-  margin-left: 10px; }
+  margin-left: 12px; }
 
 .margin-left-tiny {
   margin-left: 2vmax; }
@@ -1521,7 +1529,7 @@ hr {
   padding: 0  !important; }
 
 .padding-all-fixed {
-  padding: 10px; }
+  padding: 12px; }
 
 .padding-all-tiny {
   padding: 2vmax; }
@@ -1542,7 +1550,7 @@ hr {
   padding-top: 0  !important; }
 
 .padding-top-fixed {
-  padding-top: 10px; }
+  padding-top: 12px; }
 
 .padding-top-tiny {
   padding-top: 2vmax; }
@@ -1563,7 +1571,7 @@ hr {
   padding-right: 0  !important; }
 
 .padding-right-fixed {
-  padding-right: 10px; }
+  padding-right: 12px; }
 
 .padding-right-tiny {
   padding-right: 2vmax; }
@@ -1584,7 +1592,7 @@ hr {
   padding-bottom: 0  !important; }
 
 .padding-bottom-fixed {
-  padding-bottom: 10px; }
+  padding-bottom: 12px; }
 
 .padding-bottom-tiny {
   padding-bottom: 2vmax; }
@@ -1605,7 +1613,7 @@ hr {
   padding-left: 0  !important; }
 
 .padding-left-fixed {
-  padding-left: 10px; }
+  padding-left: 12px; }
 
 .padding-left-tiny {
   padding-left: 2vmax; }
@@ -1679,10 +1687,10 @@ hr {
     display: block !important; } }
 /* == TYPOGRAPHY =========================================================== */
 body {
-  background-color: #fff;
+  background-color: lighten #fec577, 30%;
   font-family: "Work Sans", sans-serif;
-  color: #333;
-  line-height: 1.45;
+  color: #281800;
+  line-height: 1.6;
   word-wrap: normal;
   text-rendering: optimizeLegibility; }
 
@@ -1723,12 +1731,12 @@ p .text-serif {
 
 a {
   cursor: pointer;
-  color: #f7a66e;
-  border-bottom: 1px dotted rgba(247, 166, 110, 0.8);
+  color: #fdb044;
+  border-bottom: 1px dotted #fdb044;
   transition: all 0.2s; }
 
 a:hover {
-  border-bottom: 1px solid rgba(247, 166, 110, 0.35); }
+  border-bottom: 1px solid #fdb044; }
 
 a.button {
   border: none; }
@@ -1746,7 +1754,7 @@ i, em {
   font-family: "Cormorant Garamond", serif; }
 
 .text-mono {
-  font-family: "Fira Mono", monospace; }
+  font-family: "Space Mono", monospace; }
 
 .text-tiny {
   font-size: 0.69444em; }
@@ -1862,13 +1870,13 @@ i, em {
 /*  Colour of highlight and text colour
     — for Mozilla browsers  */
 ::-moz-selection {
-  background: #212529;
-  color: #fff; }
+  background: #fec577;
+  color: #fffbf5; }
 
 /*  Same thing — for Webkit browsers  */
 ::selection {
-  background: #212529;
-  color: #fff; }
+  background: #fec577;
+  color: #fffbf5; }
 
 /* == BUTTONS ==================================================== */
 /*  Basics  */
@@ -1881,10 +1889,10 @@ i, em {
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
   color: #fff;
-  background: #f7a66e;
-  background: -webkit-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
-  background: -moz-linear-gradient(-45deg, #f7a66e 0%, #a5623d 100%);
-  background: linear-gradient(135deg, #f7a66e 0%, #a5623d 100%);
+  background: #fec577;
+  background: -webkit-linear-gradient(-45deg, #fec577 0%, #fdb044 100%);
+  background: -moz-linear-gradient(-45deg, #fec577 0%, #fdb044 100%);
+  background: linear-gradient(135deg, #fec577 0%, #fdb044 100%);
   border: none;
   transition: all 0.05s;
   box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6); }
@@ -1933,10 +1941,10 @@ i, em {
 /* == CODE ================================================================= */
 code {
   padding: 20px 30px;
-  background-color: rgba(0, 0, 0, 0.05);
-  font-family: "Fira Mono", monospace;
+  background-color: #fec577;
+  font-family: "Space Mono", monospace;
   font-size: 80%;
-  color: #f7a66e;
+  color: #281800;
   white-space: pre;
   border-radius: 4px; }
 
@@ -2027,7 +2035,7 @@ input[type=checkbox] {
 
 /*  The bg when checked  */
 .ff-checkbox input[type=checkbox]:checked + label {
-  background: #f7a66e; }
+  background: #fec577; }
 
 .ff-checkbox input[type=checkbox]:checked + label:after {
   left: 22px; }
@@ -2083,7 +2091,7 @@ input[type=radio] {
 
 /*  The bg when checked  */
 .ff-radio input[type=radio]:checked + label {
-  background: #f7a66e; }
+  background: #fec577; }
 
 .ff-radio input[type=radio]:disabled + label,
 .ff-radio input[type=radio]:disabled:checked + label {
@@ -2130,5 +2138,20 @@ input[type=radio] {
 
 .full-size-bg-fixed {
   position: fixed !important; }
+
+.bg-hue {
+  background-color: #fec577; }
+
+.bg-mild {
+  background-color: #fffbf5; }
+
+.bg-shade {
+  background-color: #fdb044; }
+
+.bg-dark {
+  background-color: #281800; }
+
+.bg-accent {
+  background-color: complement #fec577; }
 
 /*# sourceMappingURL=import-fictoan.css.map */

@@ -1,47 +1,56 @@
-$baseFontSize: 1em;
-$scaleFactor: 1.2;
+$baseFontSize : 1em;
+$scaleFactor  : 1.2;
 
-// Margins
-$marginFixed: 10px;
+/*  Colours — Currently using a complementary scheme */
+$colorHue     : hsl( 35, 98%, 73%); //This is the main colour
+$colorMild    : lighten($colorHue, 25%);
+$colorShade   : darken($colorHue, 10%);
+$colorDark    : darken($colorHue, 65%);
+$colorAccent  : complement ($colorHue);
+
+/*  Selection highlight  */
+$textHighlightBg    : $colorHue;
+$textHighlightColor : $colorMild;
+
+
+/*  Margin  */
+$marginFixed: 12px;
 $marginUnit: 2vmax;
 
-// Paddings
-$paddingFixed: 10px;
-$paddingUnit: 2vmax;
+/*  Padding  */
+$paddingFixed: 12px;
+$paddingUnit  : 2vmax;
 
-// border-radius mixin
-@mixin borderRadius($radius: 100px) {
-    border-radius: $radius;
-}
+/*  Variables for the page body  */
+$bodyBgColor     : lighten ($colorHue, 30%);
+$bodyFontColor   : $colorDark;
+$linkColor       : $colorShade;
+$linkBorder      : 1px dotted $colorShade;
+$linkHoverBorder : 1px  solid $colorShade;
 
-// typography
-$fontSans: 'Work Sans', sans-serif;
-$fontSerif: 'Cormorant Garamond', serif;
-$fontMono: 'Fira Mono', monospace;
 
-// body-specific variables
-$bodyFontColor: #333;
-$bodyBgColor: #fff;
-$linkColor: #f7a66e;
-$linkBorder: 1px dotted rgba($linkColor,  0.8);
-$linkHoverBorder: 1px solid rgba($linkColor,  0.35);
+/*  Border-radius mixin  */
+@mixin borderRadius($radius: 100px) { border-radius: $radius; }
 
-// para-specific variables
-$paragraphLineHeight: 1.6em;
-$paragraphSerifFontSize: 1.3em;
-$paragraphSerifLineHeight: 1.6em;
+/*  Typography  */
+$fontSans  : 'Work Sans', sans-serif;
+$fontSerif : 'Cormorant Garamond', serif;
+$fontMono  : 'Space Mono', monospace;
 
-// text highlight variables
-$textHighlightBg: #212529;
-$textHighlightColor: #fff;
+
+/*  Paragraph-specific variables  */
+$paraLineHeight      : 1.6em;
+$paraSerifFontSize   : 1.3em;
+$paraSerifLineHeight : 1.6em;
+
 
 // code area styles
-$codeBgColor: rgba(0, 0, 0, 0.05);
-$codeColor: $linkColor;
+$codeBgColor : $colorHue;
+$codeColor   : $colorDark;
 
 // checkbox and radio button background color
-$checkboxBgColor: $linkColor;
-$radioBgColor: $linkColor;
+$checkboxBgColor : $colorHue;
+$radioBgColor    : $colorHue;
 
 // power function (for scaleFactor usage)
 @function pow($number, $exponent) {
