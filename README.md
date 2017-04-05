@@ -27,4 +27,4 @@ Versions are written as `major.minor.patch`. <br>
 
 ### Credits
 
-At its heart, FICTOAN uses a modified version of Coby Chapple's excellent [Gridism](https://github.com/cobyism/gridism) layout system. The serif typeface is Cormorant Garamond, designed by Christian Thalmann, Works Sans by Wei Huang and the monospace is Mozilla's open source typeface which you can find [here](https://github.com/mozilla/Fira) on GitHub itself. Also uses Nicolas Gallagher and Jonathan Neal's [NormalizeCSS](https://github.com/necolas/normalize.css/).
+<sub><sup>At its heart, FICTOAN uses a modified version of Coby Chapple's excellent [Gridism](https://github.com/cobyism/gridism) layout system. The serif typeface is Cormorant Garamond, designed by Christian Thalmann, Works Sans by Wei Huang and the monospace is Mozilla's open source typeface which you can find [here](https://github.com/mozilla/Fira) on GitHub itself. Also uses Nicolas Gallagher and Jonathan Neal's [NormalizeCSS](https://github.com/necolas/normalize.css/).</sub></sup>

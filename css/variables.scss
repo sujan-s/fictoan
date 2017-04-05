@@ -2,11 +2,25 @@ $baseFontSize : 1em;
 $scaleFactor  : 1.2;
 
 /*  Colours — Currently using a complementary scheme */
-$colorHue     : hsl( 35, 98%, 73%); //This is the main colour
-$colorMild    : lighten($colorHue, 25%);
-$colorShade   : darken($colorHue, 10%);
-$colorDark    : darken($colorHue, 65%);
-$colorAccent  : complement ($colorHue);
+$colorHue     : hsl(  35,  98%,  73%); // Yellowish Orange — this is the main colour
+$colorAccent  : hsl( 256,  99%,  65%); // Purple — Complementary-ish colour
+$colorMild    : lighten($colorHue, 20%);
+$colorShade   :  darken($colorHue, 10%);
+$colorDark    :  darken($colorHue, 57%);
+
+$colorRed        : hsl(   1, 100%,  67% );
+$colorGreen      : hsl( 147,  65%,  45% );
+$colorBlue       : hsl( 187,  69%,  55% );
+$colorYellow     : hsl(  40,  99%,  63% );
+$colorTeal       : hsl( 161,  60%,  62% );
+$colorPurple     : hsl( 275,  51%,  55% );
+$colorOrange     : hsl(  34, 100%,  50% );
+$colorBrown      : hsl(  22,  49%,  43% );
+$colorMildGrey   : hsl(  35,   0%,  95% );
+$colorDarkGrey   : hsl(  35,   0%,  60% );
+$colorBlack      :  darken($colorHue, 100%);
+$colorWhite      : lighten($colorHue, 100%);
+
 
 /*  Selection highlight  */
 $textHighlightBg    : $colorHue;
@@ -28,7 +42,6 @@ $linkColor       : $colorShade;
 $linkBorder      : 1px dotted $colorShade;
 $linkHoverBorder : 1px  solid $colorShade;
 
-
 /*  Border-radius mixin  */
 @mixin borderRadius($radius: 100px) { border-radius: $radius; }
 
@@ -41,12 +54,12 @@ $fontMono  : 'Space Mono', monospace;
 /*  Paragraph-specific variables  */
 $paraLineHeight      : 1.6em;
 $paraSerifFontSize   : 1.3em;
-$paraSerifLineHeight : 1.6em;
+$paraSerifLineHeight : 1.8em;
 
 
 // code area styles
-$codeBgColor : $colorHue;
-$codeColor   : $colorDark;
+$codeBgColor : $colorMildGrey;
+$codeColor   : $colorAccent;
 
 // checkbox and radio button background color
 $checkboxBgColor : $colorHue;

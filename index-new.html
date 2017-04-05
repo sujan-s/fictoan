@@ -1,0 +1,243 @@
+<!--
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.2
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+-->
+
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
+    <!--A nice, sober serif typeface-->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,700,700i" rel="stylesheet">
+    <!--And a clean, simple sans typeface-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+    <!-- Also a classy monospace typeface for all you nerds -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+    <!--  This will import all the necessary files in one go  -->
+    <link rel="stylesheet" href="css/import-fictoan.css" type="text/css" >
+
+    <!--Put your page name here-->
+    <title>FICTOAN &bull; Intuitive, minimalist responsive HTML+CSS boilerplate</title>
+</head>
+
+<body>
+
+    <div class="all-content">
+
+        <!-- == INTRO  ====================================================== -->
+        <div class="row margin-top-large margin-bottom-large">
+            <div class="portion half margin-top-small margin-bottom-small">
+                <img class="intro-logo margin-bottom-fixed" src="images/logo.svg">
+                <p class="text-white text-small">F*ck I couldn't think of a name</p>
+
+                <a class="ff-button shape-rounded shadow-soft" href="">DOWNLOAD v1.20.2</a>
+                <p class="show-inline">or, check it out on</p>
+                <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a>.
+            </div>
+
+            <div class="portion half">
+                <p class="text-large margin-bottom-tiny">FICTOAN is a simple HTML+CSS boilerplate that’s intuitive, modular, and responsive.</p>
+                <p class="text-large margin-bottom-tiny">Most sites be like, “For devs, by devs”. So, to restore balance in the Universe, this framework is for web newbies and designers starting to code.</p>
+
+                <p><strong>But hey, don’t run away if you’re a pro dev. Try it, you might just fall in love.</strong></p>
+            </div>
+        </div>
+
+
+        <!-- == SUB-INTRO  ================================================== -->
+
+        <div class="row">
+            <div class="portion whole">
+                <h3 class="text-mono">The sell</h3>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-tiny">
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>It’s intuitive.</strong></h6>
+                <p>FICTOAN uses straight-forward and intuitive class names such as <code class="inline">.horizontal-center-this</code>, <code class="inline">.no-margin-top</code>, <code class="inline">.center-on-mobile</code> and so on. Simple and easy to recollect.</p>
+            </div>
+
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>It’s modular.</strong></h6>
+                <p>Styling for elements are like a jigsaw puzzle&mdash; take a <code class="inline">.button</code>, simply add <code class="inline">.bg-red</code>, <code class="inline">.shape-circular</code> and <code class="inline">.no-shadow</code> to get a red, round button without a shadow. It’s like playing with Lego.</p>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-tiny">
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>It’s responsive.</strong></h6>
+                <p>The grid is completely responsive, and uses the popular 12-column layout. They’re all named like <code class="inline">.one-third</code>, <code class="inline">.five-eights</code> and such, all the way to <code class="inline">.eleven-twelfths</code>.</p>
+            </div>
+
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>It’s awesome.</strong></h6>
+                <p>FICTOAN cures cancer, and is capable of faster-than-light travel, and runs on nuclear fusion energy. But all that is for the next version. Right now it’s great for building web pages that look nice out of the box.</p>
+            </div>
+        </div>
+
+        <hr>
+
+
+        <!-- == SUB-INTRO  ================================================== -->
+
+        <div class="row">
+            <div class="portion whole">
+                <h3 class="text-mono">Getting started</h3>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-small">
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>Download</strong></h6>
+                <p class="margin-bottom-fixed">Hit that fancy button to get the zip file of the latest version. Comes with a nice empty <code class="inline">template.html</code> that’s just waiting for your content.</p>
+                <a class="ff-button shape-curved" href="https://github.com/sujan-s/fictoan/archive/master.zip">DOWNLOAD v1.20.2</a>
+            </div>
+
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>Source</strong></h6>
+                <p>If you’re the nerdier type, head to <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a>, where you can look at the code and have a good laugh. Or contribute. Your call.</p>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-small">
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>Do you have SASS?</strong></h6>
+                <p class="margin-bottom-fixed">FICTOAN uses SCSS, which is basically CSS on steroids. It’s a preprocessor for regular CSS, and adds a lot of extra features such as variables, nested style rules, mixins and what not. But keep in mind, browsers can’t read SASS code, so we will need to transpile to CSS everytime we make changes.</p>
+            </div>
+
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>No? Install it.</strong></h6>
+                <p class="margin-bottom-fixed">Worry not. Just head <a href="http://sass-lang.com/install">here</a> and install the preprocessor on your machine. I recommend the command-line method, its painless, and it’s time we all started using CLI anyway. You’ll find everything you need on that site. We’ll be using SCSS, because it’s easier to understand than the SASS syntax.</p>
+            </div>
+        </div>
+
+        <hr>
+
+
+        <!-- == SUB-INTRO  ================================================== -->
+
+        <div class="row">
+            <div class="portion whole">
+                <h3 class="text-mono">Setup</h3>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="portion half">
+                <h6 class="text-mono margin-bottom-fixed"><strong>The folder structure</strong></h6>
+                <p>This is the folder structure you should see after you extract the zip file locally. Inside the main folder, there’re separate folders for CSS/SCSS, icons, and images. The HTML files&mdash; where you’d put in your content&mdash; are all in the root folder itself. Inside the <code class="inline">CSS</code> folder, there are six files&mdash;</p>
+
+                <p><code class="inline">normalize.scss</code> is a nifty little file that has a bunch of rules to force elements to render consistently across different browsers and platforms. Think of it as a standardised baseline for elements to follow.</p>
+
+                <p><code class="inline">_variables.scss</code>contains all the styling variables used in FICTOAN.</p>
+
+                <p><code class="inline">import-fictoan.scss</code>loads all the other SCSS files in a particular order, so that styling is properly cascaded.</p>
+
+                <p><code class="inline">layout-fictoan.scss</code>has all the rules for grid and general layout behaviour. Also has media-queries for various screen sizes.</p>
+
+                <p><code class="inline">styles-fictoan.scss</code>is what makes the elements look awesome.</p>
+
+                <p><code class="inline">styles-custom.scss</code>is for you to add your own styling. Having it on a separate file makes it easier to update FICTOAN (which you do by replacing old files with newer ones).</p>
+            </div>
+
+            <div class="portion half">
+<pre><code class="text-black">
+
+    <span class="text-orange"><strong>fictoan</strong></span>
+    |
+    |—— <span class="text-orange"><strong>css</strong></span>
+    |    |—— <span class="text-green">normalize.scss</span>
+    |    |—— <span class="text-green">_variables.scss</span>
+    |    |—— <span class="text-green">import-fictoan.scss</span>
+    |    |—— <span class="text-green">layout-fictoan.scss</span>
+    |    |—— <span class="text-green">styles-fictoan.scss</span>
+    |    |—— <span class="text-green">styles-custom.scss</span>
+    |
+    |
+    |—— <span class="text-orange"><strong>icons</strong></span>
+    |    |—— <span class="text-grey">all icon files in svg</span>
+    |
+    |—— <span class="text-orange"><strong>images</strong></span>
+    |    |—— <span class="text-grey">all image files (jpg, png and svg)</span>
+    |
+    |
+    |—— <span class="text-blue"><strong>index.html</strong></span>
+    |
+    |—— <span class="text-blue"><strong>template.html</strong></span>
+    |
+    |—— <span class="text-blue"><strong>README.md</strong></span>
+    |
+    |—— <span class="text-blue"><strong>LICENSE</strong></span>
+
+
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row no-margin-bottom">
+            <div class="portion whole">
+                <h6 class="text-mono margin-bottom-fixed"><strong>HTML setup</strong></h6>
+                <p>Now, for the HTML setup. You can either jump right to the <code class="inline">template.html</code>, which is an empty file with the basic <code class="inline">.row</code> and <code class="inline">.portion</code> blocks already set up for you. All you have to do is fill in your content as you want it. Feel free to add and remove blocks as you see fit.
+
+                <p>But if you’d like to start afresh, make sure you include the necessary files at the top of your HTML file. Like so&mdash;</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <pre><code class="text-dark-grey">
+    &lt;!doctype html>
+    &lt;html xmlns="http://www.w3.org/1999/xhtml">
+    &lt;head>
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+        &lt;link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+        <span class="text-green">&lt;link rel="stylesheet" href="css/import-fictoan.css" type="text/css"></span>
+
+        &lt;title>Your page name &lt; /title>
+    &lt; /head>
+
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row no-margin-bottom">
+            <div class="portion whole">
+                <h6 class="text-mono margin-bottom-fixed"><strong>HTML setup</strong></h6>
+                <p>Now, for the HTML setup. You can either jump right to the <code class="inline">template.html</code>, which is an empty file with the basic <code class="inline">.row</code> and <code class="inline">.portion</code> blocks already set up for you. All you have to do is fill in your content as you want it. Feel free to add and remove blocks as you see fit.
+
+                <p>But if you’d like to start afresh, make sure you include the necessary files at the top of your HTML file. Like so&mdash;</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> <!-- All-content ends here -->
+
+</body>

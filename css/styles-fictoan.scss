@@ -8,14 +8,18 @@
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
 */
-/* == IMPORTS ============================================================== */
-@import 'variables.scss';
+
+@import "variables";
+
+
 
 /* == RESET ================================================================ */
 
 /*  Consider removing this if you have
     a zillion elements in your page  */
-*, *:before, *:after { box-sizing : border-box; }
+*,
+*:before,
+*:after { box-sizing : border-box; }
 
 *:focus { outline : 0; }
 
@@ -37,6 +41,9 @@ button { vertical-align : baseline; }
 
 input[type="number"] { -moz-appearance : textfield; }
 
+::-webkit-input-placeholder { opacity : 0.5; }
+         ::-moz-placeholder { opacity : 0.5; }
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance : none;
@@ -46,15 +53,17 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="date"]::-webkit-inner-spin-button { display : none; }
 input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
 
+
+
 /* == UTILITY ============================================================== */
 
-.show-inline { display : inline-block; }
-.show-nothing { display : none; }
-.show-empty { visibility : hidden; }
+.show-inline  { display : inline-block; }
+.show-nothing { display : none; } /* Element isn't rendered at all */
+.show-empty   { visibility : hidden; } /* Element is merely invisible */
 
 .full-width { width : 100% !important; }
 
-.pull-left { float : left; }
+.pull-left  { float : left; }
 .pull-right { float : right; }
 .clear-both { clear : both; }
 
@@ -85,8 +94,8 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
 hr {
     border     : 0;
     height     : 1px;
-    margin     : 2vh 0;
-    background : rgba(0, 0, 0, 0.1);
+    margin     : 4vmax 0;
+    background : $colorMildGrey;
 }
 
 /* BOX MODEL HELPERS ----------------------------------- */
@@ -185,8 +194,13 @@ hr {
 }
 
 /*  For images and tiles  */
-.shape-rounded { @include borderRadius(4px); }
+.shape-rounded  { border-radius : 4px; }
 .shape-circular { border-radius : 50%; }
+.shape-curved   { border-radius : 50000px; }
+
+/*  Shadows for any element  */
+.shadow-hard { box-shadow : 0  4px  8px  -2px hsla(0, 0, 0, 0.2); }
+.shadow-soft { box-shadow : 0 24px 32px -12px hsla(0, 0, 0, 0.2); }
 
 /* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
 
@@ -220,6 +234,8 @@ hr {
     .show-only-on-tab-ls { display : block !important; }
 }
 
+
+
 /* == TYPOGRAPHY =========================================================== */
 
 body {
@@ -234,13 +250,13 @@ body {
 h1, h2, h3, h4, h5, h6 { font-family : $fontSerif; }
 
 h1, h2, h3, h4, h5, h6 {
-    margin      : 0;
     font-weight : inherit;
     line-height : 1.2;
+    margin      : 0;
 }
 
-h1 { font-size : $baseFontSize*pow($scaleFactor,10); }
-h2 { font-size : $baseFontSize*pow($scaleFactor, 8); }
+h1 { font-size : $baseFontSize*pow($scaleFactor, 8); }
+h2 { font-size : $baseFontSize*pow($scaleFactor, 6); }
 h3 { font-size : $baseFontSize*pow($scaleFactor, 4); }
 h4 { font-size : $baseFontSize*pow($scaleFactor, 3); }
 h5 { font-size : $baseFontSize*pow($scaleFactor, 2); }
@@ -249,9 +265,8 @@ h6 { font-size : $baseFontSize*pow($scaleFactor, 1); }
 p {
     font-family : $fontSans;
     line-height : $paraLineHeight;
-    margin      : 0;
+    margin      : 0 0 1.5vmax 0;
 }
-
 p .text-serif {
     font-size   : $paraSerifFontSize;
     line-height : $paraSerifLineHeight;
@@ -260,16 +275,14 @@ p .text-serif {
 a {
     cursor        : pointer;
     color         : $linkColor;
+    font-weight   : 700;
     border-bottom : $linkBorder;
     transition    : all 0.2s;
 }
-
 a:hover { border-bottom : $linkHoverBorder; }
+a.ff-button { border : none; }
 
-a.button { border : none; }
-
-b, strong { font-weight : bold; }
-
+b, strong { font-weight : 700; }
 i, em { font-style : italic; }
 
 .text-sans  { font-family : $fontSans; }
@@ -280,50 +293,69 @@ i, em { font-style : italic; }
 .text-small  { font-size : $baseFontSize*pow($scaleFactor,-1); }
 .text-normal { font-size : $baseFontSize*pow($scaleFactor, 0); }
 .text-large  { font-size : $baseFontSize*pow($scaleFactor, 4); }
-.text-huge   { font-size : $baseFontSize*pow($scaleFactor, 7); }
+.text-huge   { font-size : $baseFontSize*pow($scaleFactor, 8); }
 
 .text-centre,
 .text-center { text-align : center; }
 .text-right  { text-align : right; }
 .text-left   { text-align : left; }
 
+.no-line-height { line-height: 0; }
+
+
+
 /* == COLOURS ============================================================== */
 
-.bg-red    { background-color : #ff5855; }
-.bg-green  { background-color : #28bb6b; }
-.bg-blue   { background-color : #3bc9db; }
-.bg-yellow { background-color : #febe42; }
-.bg-teal   { background-color : #65d9b4; }
-.bg-purple { background-color : #9651c6; }
-.bg-orange { background-color : #ff9201; }
-.bg-brown  { background-color : #a25e37; }
-.bg-light  { background-color : rgba(0, 0, 0, 0.05); }
-.bg-dark   { background-color : rgba(0, 0, 0, 0.85); }
+.bg-hue          { background-color: $colorHue }
+.bg-mild         { background-color: $colorMild }
+.bg-shade        { background-color: $colorShade }
+.bg-dark         { background-color: $colorDark }
+.bg-accent       { background-color: $colorAccent }
 
-.text-red    { color : #ff5855; }
-.text-green  { color : #28bb6b; }
-.text-blue   { color : #3bc9db; }
-.text-yellow { color : #febe42; }
-.text-teal   { color : #65d9b4; }
-.text-purple { color : #9651c6; }
-.text-orange { color : #ff9201; }
-.text-brown  { color : #a25e37; }
-.text-black  { color : #000 !important; }
-.text-white  { color : #fff !important; }
+/* Standardized presets for backgrounds */
+.bg-red          { background-color : $colorRed; }
+.bg-green        { background-color : $colorGreen; }
+.bg-blue         { background-color : $colorBlue; }
+.bg-yellow       { background-color : $colorYellow; }
+.bg-teal         { background-color : $colorTeal; }
+.bg-purple       { background-color : $colorPurple; }
+.bg-orange       { background-color : $colorOrange; }
+.bg-brown        { background-color : $colorBrown; }
+.bg-white        { background-color : $colorWhite; }
+.bg-black        { background-color : $colorBlack; }
+.bg-mild-grey    { background-color : $colorMildGrey; }
+.bg-dark-grey    { background-color : $colorDarkGrey; }
 
+/* Standardized presets for text */
+.text-red        { color : $colorRed; }
+.text-green      { color : $colorGreen; }
+.text-blue       { color : $colorBlue; }
+.text-yellow     { color : $colorYellow; }
+.text-teal       { color : $colorTeal; }
+.text-purple     { color : $colorPurple; }
+.text-orange     { color : $colorOrange; }
+.text-brown      { color : $colorBrown; }
+.text-white      { color : $colorWhite; }
+.text-black      { color : $colorBlack; }
+.text-mild-grey  { color : $colorMildGrey; }
+.text-dark-grey  { color : $colorDarkGrey; }
 
-/*  Works only for inline icons  */
-.icon-red    { fill : #ff5855; }
-.icon-green  { fill : #28bb6b; }
-.icon-blue   { fill : #3bc9db; }
-.icon-yellow { fill : #febe42; }
-.icon-teal   { fill : #65d9b4; }
-.icon-purple { fill : #9651c6; }
-.icon-orange { fill : #ff9201; }
-.icon-brown  { fill : #a25e37; }
+/*  Standardized presets — works only for inline icons  */
+.icon-red        { fill : $colorRed; }
+.icon-green      { fill : $colorGreen; }
+.icon-blue       { fill : $colorBlue; }
+.icon-yellow     { fill : $colorYellow; }
+.icon-teal       { fill : $colorTeal; }
+.icon-purple     { fill : $colorPurple; }
+.icon-orange     { fill : $colorOrange; }
+.icon-brown      { fill : $colorBrown; }
+.icon-white      { fill : $colorWhite; }
+.icon-black      { fill : $colorBlack; }
+.icon-mild-grey  { fill : $colorMildGrey; }
+.icon-dark-grey  { fill : $colorDarkGrey; }
 
 /*  Colour of highlight and text colour
-    — for Mozilla browsers  */
+    — for Firefox browsers  */
 ::-moz-selection {
     background : $textHighlightBg;
     color      : $textHighlightColor;
@@ -335,98 +367,113 @@ i, em { font-style : italic; }
     color      : $textHighlightColor;
 }
 
-/* == BUTTONS ==================================================== */
 
-/*  Basics  */
-.button {
-    position    : relative;
-    display     : inline-block;
-    cursor      : pointer;
-    margin      : 5px;
-    padding     : 6px 20px;
-    font-family : $fontSans;
-    font-weight : 700;
-    color       : #fff;
-    background  : $colorHue;
-    background  : -webkit-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
-    background  :    -moz-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
-    background  :         linear-gradient(135deg, $colorHue 0%, $colorShade 100%);
-    border      : none;
-    transition  : all 0.05s;
-    box-shadow  : 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-}
 
-/*  Button when you click on it  */
-.button:active {
-    transform  : translateY(2px);
-    box-shadow : none;
-}
+/* == CODE ==================================================== */
 
-/*  Big button  */
-.button.button-large { padding : 15px 30px; }
-
-/*  Button that’s just text  */
-.button.no-bg {
-    background  : none;
-    box-shadow  : none;
-    color       : rgba(0, 0, 0, 1);
-    text-shadow : 0 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.button.no-bg:hover {
-    background  : none;
-    box-shadow  : none;
-    color       : rgba(0, 0, 0, 0.75);
-    text-shadow : 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-.button.no-bg:active {
-    color       : rgba(0, 0, 0, 1);
-    text-shadow : 0 0 0 rgba(0, 0, 0, 0.4);
-}
-
-.button.no-shadow { box-shadow : none; }
-
-.button.shape-circular { padding : 16px; }
-
-.button path { fill : #fff; }
-
-.button.button-disabled {
-    pointer-events : none;
-    background     : #000;
-    opacity        : 0.2;
-    box-shadow     : none;
-}
-
-/* == CODE ================================================================= */
+pre { margin : 0; }
 
 code {
-    padding          : 20px 30px;
     background-color : $codeBgColor;
     font-family      : $fontMono;
-    font-size        : 80%;
+    font-size        : 94%;
     color            : $codeColor;
     white-space      : pre;
+    margin           : 0;
     @include borderRadius(4px);
 }
 
 code.inline {
     margin  : 0 2px;
-    padding : 3px 6px;
+    padding : 0 6px;
 }
 
 pre > code {
-    display     : block;
-    padding     : 20px 30px;
-    white-space : pre;
+    display        : block;
+    white-space    : pre;
+    letter-spacing : -0.5px;
+    line-height    : 1.2em;
 }
 
-/* == ICONS ================================================================ */
+
+
+/* == ICONS ====================================================== */
 
 .icon-16 { width : 16px; }
 .icon-24 { width : 24px; }
 .icon-32 { width : 32px; }
 .icon-48 { width : 48px; }
+
+
+
+/* == BUTTONS ==================================================== */
+
+/*  Basics  */
+.ff-button {
+    position    : relative;
+    display     : inline-block;
+    cursor      : pointer;
+    margin      : 4px;
+    padding     : 8px 24px;
+    font-family : $fontSans;
+    font-weight : 700;
+    color       : $colorWhite;
+    background  : $colorHue;
+    background  : -webkit-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
+    background  :    -moz-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
+    background  :         linear-gradient(135deg, $colorHue 0%, $colorShade 100%);
+    border      : none;
+    transition  : all 0.1s;
+    box-shadow  : 0 4px 24px -4px $colorShade;
+}
+
+/*  Button when you click on it  */
+.ff-button:active {
+    transform  : translateY(2px);
+    box-shadow : none;
+}
+
+/*  Big button  */
+.ff-button.large { padding : 16px 32px; }
+
+/*  Button that’s just text  */
+.ff-button.no-bg {
+    background  : none;
+    box-shadow  : none;
+    color       : rgba(0, 0, 0, 1);
+    text-shadow : 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.ff-button.no-bg:hover {
+    background  : none;
+    box-shadow  : none;
+    color       : rgba(0, 0, 0, 0.75);
+    text-shadow : 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.ff-button.no-bg:active {
+    color       : rgba(0, 0, 0, 1);
+    text-shadow : 0 0 0 rgba(0, 0, 0, 0.4);
+}
+
+.ff-button.no-shadow { box-shadow : none; }
+
+.ff-button.shape-circular { padding : 16px; }
+
+.ff-button.bordered {
+    background: none;
+    border: 2px solid $colorHue;
+    color: $colorHue;
+}
+
+.ff-button path { fill : $colorWhite; }
+.ff-button.no-bg path { fill : $colorShade; }
+
+.ff-button.disabled {
+    pointer-events : none;
+    background     : $colorMildGrey;
+    box-shadow     : none;
+}
+
+
 
 /* == INPUT FIELDS ========================================================= */
 
@@ -439,13 +486,16 @@ input[type=date] {
     outline       : none;
     background    : none;
     padding       : 4px;
-    border-bottom : 1px solid #ccc;
+    border-bottom : 1px solid rgba($colorBlack, 0.4);
 }
 
-input:focus { border-bottom : 1px solid #ff4611; }
+input:focus,
+input:active {
+    padding-bottom : 3px;
+    border-bottom  : 2px solid $colorHue;
+}
 
-::-webkit-input-placeholder { opacity : 0.5; }
-         ::-moz-placeholder { opacity : 0.5; }
+
 
 /* == TOGGLES ============================================================== */
 
@@ -468,7 +518,7 @@ input[type=checkbox] { display : none; }
     width         : 40px;
     height        : 20px;
     margin-right  : 10px;
-    background    : #ddd;
+    background    : $colorMildGrey;
     border-radius : 10px; /*  Basically half of the height  */
     cursor        : pointer;
     transition    : all 0.1s ease-out;
@@ -567,24 +617,19 @@ input[type=radio] { display : none; }
     box-shadow : none;
 }
 
+
+
 /* == CUSTOM INTERFACE ELEMENTS =========================================== */
 
 .card {
-    width      : 100%;
-    height     : auto;
-    padding    : 32px;
-    background : #fff;
-    @include borderRadius(4px);
+    width         : 100%;
+    height        : auto;
+    padding       : 32px;
+    background    : #fff;
+    border-radius : 4px;
+    border        : 1px solid hsla(0, 0%, 0%, 0.05);
 }
-
 .card-smaller { padding : 16px 24px; }
-
-.shadow-soft { box-shadow : 0 20px 30px -10px rgba(0, 0, 0, 0.2); }
-
-.shadow-hard {
-    border     : 1px solid hsla(228, 40%, 20%, 0.05);
-    box-shadow : 0 4px 8px -2px rgba(0, 0, 0, 0.2);
-}
 
 .full-size-bg {
     position        : absolute;
@@ -596,18 +641,7 @@ input[type=radio] { display : none; }
     background-size : cover;
     z-index         : -5;
 }
-
 .full-size-bg-fixed {
     @extend .full-size-bg;
     position : fixed !important;
 }
-
-
-
-
-.bg-hue { background-color: $colorHue }
-
-.bg-mild { background-color: $colorMild }
-.bg-shade { background-color: $colorShade }
-.bg-dark { background-color: $colorDark }
-.bg-accent { background-color: $colorAccent }

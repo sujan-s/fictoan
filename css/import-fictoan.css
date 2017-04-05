@@ -1316,7 +1316,6 @@ template {
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
 */
-/* == IMPORTS ============================================================== */
 /*  Colours — Currently using a complementary scheme */
 /*  Selection highlight  */
 /*  Margin  */
@@ -1328,7 +1327,9 @@ template {
 /* == RESET ================================================================ */
 /*  Consider removing this if you have
     a zillion elements in your page  */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
 *:focus {
@@ -1357,6 +1358,12 @@ button {
 input[type="number"] {
   -moz-appearance: textfield; }
 
+::-webkit-input-placeholder {
+  opacity: 0.5; }
+
+::-moz-placeholder {
+  opacity: 0.5; }
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1375,9 +1382,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .show-nothing {
   display: none; }
 
+/* Element isn't rendered at all */
 .show-empty {
   visibility: hidden; }
 
+/* Element is merely invisible */
 .full-width {
   width: 100% !important; }
 
@@ -1414,8 +1423,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 hr {
   border: 0;
   height: 1px;
-  margin: 2vh 0;
-  background: rgba(0, 0, 0, 0.1); }
+  margin: 4vmax 0;
+  background: #f2f2f2; }
 
 /* BOX MODEL HELPERS ----------------------------------- */
 /*  Margins for all occasions  */
@@ -1644,6 +1653,16 @@ hr {
 .shape-circular {
   border-radius: 50%; }
 
+.shape-curved {
+  border-radius: 50000px; }
+
+/*  Shadows for any element  */
+.shadow-hard {
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); }
+
+.shadow-soft {
+  box-shadow: 0 24px 32px -12px rgba(0, 0, 0, 0.2); }
+
 /* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
 /*  Hide on large screens  */
 .show-only-on-mobile {
@@ -1689,7 +1708,7 @@ hr {
 body {
   background-color: lighten #fec577, 30%;
   font-family: "Work Sans", sans-serif;
-  color: #281800;
+  color: #512f01;
   line-height: 1.6;
   word-wrap: normal;
   text-rendering: optimizeLegibility; }
@@ -1698,15 +1717,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Cormorant Garamond", serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
   font-weight: inherit;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin: 0; }
 
 h1 {
-  font-size: 6.19174em; }
+  font-size: 4.29982em; }
 
 h2 {
-  font-size: 4.29982em; }
+  font-size: 2.98598em; }
 
 h3 {
   font-size: 2.0736em; }
@@ -1723,26 +1742,27 @@ h6 {
 p {
   font-family: "Work Sans", sans-serif;
   line-height: 1.6em;
-  margin: 0; }
+  margin: 0 0 1.5vmax 0; }
 
 p .text-serif {
   font-size: 1.3em;
-  line-height: 1.6em; }
+  line-height: 1.8em; }
 
 a {
   cursor: pointer;
   color: #fdb044;
+  font-weight: 700;
   border-bottom: 1px dotted #fdb044;
   transition: all 0.2s; }
 
 a:hover {
   border-bottom: 1px solid #fdb044; }
 
-a.button {
+a.ff-button {
   border: none; }
 
 b, strong {
-  font-weight: bold; }
+  font-weight: 700; }
 
 i, em {
   font-style: italic; }
@@ -1769,7 +1789,7 @@ i, em {
   font-size: 2.0736em; }
 
 .text-huge {
-  font-size: 3.58318em; }
+  font-size: 4.29982em; }
 
 .text-centre,
 .text-center {
@@ -1781,183 +1801,171 @@ i, em {
 .text-left {
   text-align: left; }
 
+.no-line-height {
+  line-height: 0; }
+
 /* == COLOURS ============================================================== */
-.bg-red {
-  background-color: #ff5855; }
+.bg-hue {
+  background-color: #fec577; }
 
-.bg-green {
-  background-color: #28bb6b; }
+.bg-mild {
+  background-color: #fff0dc; }
 
-.bg-blue {
-  background-color: #3bc9db; }
-
-.bg-yellow {
-  background-color: #febe42; }
-
-.bg-teal {
-  background-color: #65d9b4; }
-
-.bg-purple {
-  background-color: #9651c6; }
-
-.bg-orange {
-  background-color: #ff9201; }
-
-.bg-brown {
-  background-color: #a25e37; }
-
-.bg-light {
-  background-color: rgba(0, 0, 0, 0.05); }
+.bg-shade {
+  background-color: #fdb044; }
 
 .bg-dark {
-  background-color: rgba(0, 0, 0, 0.85); }
+  background-color: #512f01; }
 
+.bg-accent {
+  background-color: #7d4dfe; }
+
+/* Standardized presets for backgrounds */
+.bg-red {
+  background-color: #ff5a57; }
+
+.bg-green {
+  background-color: #28bd6b; }
+
+.bg-blue {
+  background-color: #3dc9db; }
+
+.bg-yellow {
+  background-color: #fec043; }
+
+.bg-teal {
+  background-color: #64d8b3; }
+
+.bg-purple {
+  background-color: #9652c7; }
+
+.bg-orange {
+  background-color: #ff9100; }
+
+.bg-brown {
+  background-color: #a35f38; }
+
+.bg-white {
+  background-color: white; }
+
+.bg-black {
+  background-color: black; }
+
+.bg-mild-grey {
+  background-color: #f2f2f2; }
+
+.bg-dark-grey {
+  background-color: #999999; }
+
+/* Standardized presets for text */
 .text-red {
-  color: #ff5855; }
+  color: #ff5a57; }
 
 .text-green {
-  color: #28bb6b; }
+  color: #28bd6b; }
 
 .text-blue {
-  color: #3bc9db; }
+  color: #3dc9db; }
 
 .text-yellow {
-  color: #febe42; }
+  color: #fec043; }
 
 .text-teal {
-  color: #65d9b4; }
+  color: #64d8b3; }
 
 .text-purple {
-  color: #9651c6; }
+  color: #9652c7; }
 
 .text-orange {
-  color: #ff9201; }
+  color: #ff9100; }
 
 .text-brown {
-  color: #a25e37; }
-
-.text-black {
-  color: #000 !important; }
+  color: #a35f38; }
 
 .text-white {
-  color: #fff !important; }
+  color: white; }
 
-/*  Works only for inline icons  */
+.text-black {
+  color: black; }
+
+.text-mild-grey {
+  color: #f2f2f2; }
+
+.text-dark-grey {
+  color: #999999; }
+
+/*  Standardized presets — works only for inline icons  */
 .icon-red {
-  fill: #ff5855; }
+  fill: #ff5a57; }
 
 .icon-green {
-  fill: #28bb6b; }
+  fill: #28bd6b; }
 
 .icon-blue {
-  fill: #3bc9db; }
+  fill: #3dc9db; }
 
 .icon-yellow {
-  fill: #febe42; }
+  fill: #fec043; }
 
 .icon-teal {
-  fill: #65d9b4; }
+  fill: #64d8b3; }
 
 .icon-purple {
-  fill: #9651c6; }
+  fill: #9652c7; }
 
 .icon-orange {
-  fill: #ff9201; }
+  fill: #ff9100; }
 
 .icon-brown {
-  fill: #a25e37; }
+  fill: #a35f38; }
+
+.icon-white {
+  fill: white; }
+
+.icon-black {
+  fill: black; }
+
+.icon-mild-grey {
+  fill: #f2f2f2; }
+
+.icon-dark-grey {
+  fill: #999999; }
 
 /*  Colour of highlight and text colour
-    — for Mozilla browsers  */
+    — for Firefox browsers  */
 ::-moz-selection {
   background: #fec577;
-  color: #fffbf5; }
+  color: #fff0dc; }
 
 /*  Same thing — for Webkit browsers  */
 ::selection {
   background: #fec577;
-  color: #fffbf5; }
+  color: #fff0dc; }
 
-/* == BUTTONS ==================================================== */
-/*  Basics  */
-.button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  margin: 5px;
-  padding: 6px 20px;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 700;
-  color: #fff;
-  background: #fec577;
-  background: -webkit-linear-gradient(-45deg, #fec577 0%, #fdb044 100%);
-  background: -moz-linear-gradient(-45deg, #fec577 0%, #fdb044 100%);
-  background: linear-gradient(135deg, #fec577 0%, #fdb044 100%);
-  border: none;
-  transition: all 0.05s;
-  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6); }
+/* == CODE ==================================================== */
+pre {
+  margin: 0; }
 
-/*  Button when you click on it  */
-.button:active {
-  transform: translateY(2px);
-  box-shadow: none; }
-
-/*  Big button  */
-.button.button-large {
-  padding: 15px 30px; }
-
-/*  Button that’s just text  */
-.button.no-bg {
-  background: none;
-  box-shadow: none;
-  color: black;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
-
-.button.no-bg:hover {
-  background: none;
-  box-shadow: none;
-  color: rgba(0, 0, 0, 0.75);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
-
-.button.no-bg:active {
-  color: black;
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0.4); }
-
-.button.no-shadow {
-  box-shadow: none; }
-
-.button.shape-circular {
-  padding: 16px; }
-
-.button path {
-  fill: #fff; }
-
-.button.button-disabled {
-  pointer-events: none;
-  background: #000;
-  opacity: 0.2;
-  box-shadow: none; }
-
-/* == CODE ================================================================= */
 code {
-  padding: 20px 30px;
-  background-color: #fec577;
+  background-color: #f2f2f2;
   font-family: "Space Mono", monospace;
-  font-size: 80%;
-  color: #281800;
+  font-size: 94%;
+  color: #7d4dfe;
   white-space: pre;
+  margin: 0;
   border-radius: 4px; }
 
 code.inline {
   margin: 0 2px;
-  padding: 3px 6px; }
+  padding: 0 6px; }
 
 pre > code {
   display: block;
-  padding: 20px 30px;
-  white-space: pre; }
+  white-space: pre;
+  letter-spacing: -0.5px;
+  line-height: 1.2em; }
 
-/* == ICONS ================================================================ */
+/* == ICONS ====================================================== */
 .icon-16 {
   width: 16px; }
 
@@ -1970,6 +1978,73 @@ pre > code {
 .icon-48 {
   width: 48px; }
 
+/* == BUTTONS ==================================================== */
+/*  Basics  */
+.ff-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 4px;
+  padding: 8px 24px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  color: white;
+  background: #fec577;
+  background: -webkit-linear-gradient(-45deg, #fec577 0%, #fdb044 100%);
+  background: -moz-linear-gradient(-45deg, #fec577 0%, #fdb044 100%);
+  background: linear-gradient(135deg, #fec577 0%, #fdb044 100%);
+  border: none;
+  transition: all 0.1s;
+  box-shadow: 0 4px 24px -4px #fdb044; }
+
+/*  Button when you click on it  */
+.ff-button:active {
+  transform: translateY(2px);
+  box-shadow: none; }
+
+/*  Big button  */
+.ff-button.large {
+  padding: 16px 32px; }
+
+/*  Button that’s just text  */
+.ff-button.no-bg {
+  background: none;
+  box-shadow: none;
+  color: black;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+
+.ff-button.no-bg:hover {
+  background: none;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.75);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+
+.ff-button.no-bg:active {
+  color: black;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.4); }
+
+.ff-button.no-shadow {
+  box-shadow: none; }
+
+.ff-button.shape-circular {
+  padding: 16px; }
+
+.ff-button.bordered {
+  background: none;
+  border: 2px solid #fec577;
+  color: #fec577; }
+
+.ff-button path {
+  fill: white; }
+
+.ff-button.no-bg path {
+  fill: #fdb044; }
+
+.ff-button.disabled {
+  pointer-events: none;
+  background: #f2f2f2;
+  box-shadow: none; }
+
 /* == INPUT FIELDS ========================================================= */
 input[type=text],
 input[type=password],
@@ -1980,16 +2055,12 @@ input[type=date] {
   outline: none;
   background: none;
   padding: 4px;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
 
-input:focus {
-  border-bottom: 1px solid #ff4611; }
-
-::-webkit-input-placeholder {
-  opacity: 0.5; }
-
-::-moz-placeholder {
-  opacity: 0.5; }
+input:focus,
+input:active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #fec577; }
 
 /* == TOGGLES ============================================================== */
 input[type=checkbox] {
@@ -2010,7 +2081,7 @@ input[type=checkbox] {
   width: 40px;
   height: 20px;
   margin-right: 10px;
-  background: #ddd;
+  background: #f2f2f2;
   border-radius: 10px;
   /*  Basically half of the height  */
   cursor: pointer;
@@ -2113,17 +2184,11 @@ input[type=radio] {
   height: auto;
   padding: 32px;
   background: #fff;
-  border-radius: 4px; }
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05); }
 
 .card-smaller {
   padding: 16px 24px; }
-
-.shadow-soft {
-  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2); }
-
-.shadow-hard {
-  border: 1px solid rgba(31, 39, 71, 0.05);
-  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); }
 
 .full-size-bg, .full-size-bg-fixed {
   position: absolute;
@@ -2139,19 +2204,20 @@ input[type=radio] {
 .full-size-bg-fixed {
   position: fixed !important; }
 
-.bg-hue {
-  background-color: #fec577; }
+/*  Colours — Currently using a complementary scheme */
+/*  Selection highlight  */
+/*  Margin  */
+/*  Padding  */
+/*  Variables for the page body  */
+/*  Border-radius mixin  */
+/*  Typography  */
+/*  Paragraph-specific variables  */
+.intro-banner {
+  width: 100vw;
+  height: 80vh;
+  background: #fff0dc; }
 
-.bg-mild {
-  background-color: #fffbf5; }
-
-.bg-shade {
-  background-color: #fdb044; }
-
-.bg-dark {
-  background-color: #281800; }
-
-.bg-accent {
-  background-color: complement #fec577; }
+.intro-logo {
+  height: 128px; }
 
 /*# sourceMappingURL=import-fictoan.css.map */
