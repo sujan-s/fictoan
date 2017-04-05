@@ -619,6 +619,33 @@ input[type=radio] { display : none; }
 
 
 
+/* == MODALS =============================================================== */
+
+.ff-modal {
+    position       : fixed;
+    top            : 0;
+    right          : 0;
+    bottom         : 0;
+    left           : 0;
+    opacity        : 0;
+    background     : rgba(0, 0, 0, 0.8);
+    z-index        : 99999;
+    transition     : opacity 0.4s ease-in;
+    pointer-events : none;
+}
+.ff-modal:target {
+    opacity        : 1;
+    pointer-events : auto;
+}
+
+.ff-modal > div {
+    position : relative;
+    width    : 400px;
+    margin   : 10vmin auto;
+}
+
+
+
 /* == CUSTOM INTERFACE ELEMENTS =========================================== */
 
 .card {
