@@ -424,7 +424,7 @@ template {
 .row .portion,
 .box .portion {
   float: left;
-  padding: 0 20px; }
+  padding: 0 24px; }
 
 /*  Fallback width for lone portion divs  */
 .portion {
@@ -432,12 +432,12 @@ template {
 
 /*  Use 'box' class to dump many divs of varied widths  */
 .box .portion {
-  margin-bottom: 2vmax; }
+  margin-bottom: 1vmax; }
 
 /*  Remove the padding for nested portions  */
 .portion > .row {
-  margin-left: -20px;
-  margin-right: -20px; }
+  margin-left: -24px;
+  margin-right: -24px; }
 
 /*  Remove the gap between elements in the same row  */
 .no-gaps .portion,
@@ -447,7 +447,7 @@ template {
 /*  Lessen the gap between elements in the same row  */
 .lesser-gaps .portion,
 .portion.lesser-gaps {
-  padding: 0 10px; }
+  padding: 0 12px; }
 
 /*  Now the actual grid layout  */
 .portion.whole {
@@ -654,6 +654,14 @@ template {
   content: ""; }
 
 .row:after {
+  clear: both; }
+
+/*  Clearfix for the rows  */
+.box:before, .box:after {
+  display: block;
+  content: ""; }
+
+.box:after {
   clear: both; }
 
 /*  Fixing images for better responsive behaviour  */
@@ -1316,14 +1324,13 @@ template {
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
 */
-/*  Colours — Currently using a complementary scheme */
-/*  Selection highlight  */
-/*  Margin  */
-/*  Padding  */
-/*  Variables for the page body  */
-/*  Border-radius mixin  */
 /*  Typography  */
 /*  Paragraph-specific variables  */
+/*  Margin  */
+/*  Padding  */
+/*  Colours — Currently using a complementary scheme */
+/*  Selection highlight  */
+/*  Variables for the page body  */
 /* == RESET ================================================================ */
 /*  Consider removing this if you have
     a zillion elements in your page  */
@@ -1714,7 +1721,7 @@ body {
   text-rendering: optimizeLegibility; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cormorant Garamond", serif; }
+  font-family: "Space Mono", monospace; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
@@ -1805,6 +1812,7 @@ i, em {
   line-height: 0; }
 
 /* == COLOURS ============================================================== */
+/*  FICTOAN colour scheme  */
 .bg-hue {
   background-color: #fec577; }
 
@@ -1857,7 +1865,7 @@ i, em {
 .bg-dark-grey {
   background-color: #999999; }
 
-/* Standardized presets for text */
+/*  Standardized presets for text  */
 .text-red {
   color: #ff5a57; }
 
@@ -1943,9 +1951,6 @@ i, em {
   color: #fff0dc; }
 
 /* == CODE ==================================================== */
-pre {
-  margin: 0; }
-
 code {
   background-color: #f2f2f2;
   font-family: "Space Mono", monospace;
@@ -1977,6 +1982,9 @@ pre > code {
 
 .icon-48 {
   width: 48px; }
+
+.icon-64 {
+  width: 64px; }
 
 /* == BUTTONS ==================================================== */
 /*  Basics  */
@@ -2045,6 +2053,15 @@ pre > code {
   background: #f2f2f2;
   box-shadow: none; }
 
+.ff-pill {
+  position: relative;
+  display: inline-block;
+  margin: 4px;
+  padding: 4px 16px;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  font-size: 80%; }
+
 /* == INPUT FIELDS ========================================================= */
 input[type=text],
 input[type=password],
@@ -2055,12 +2072,16 @@ input[type=date] {
   outline: none;
   background: none;
   padding: 4px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  font-family: "Work Sans", sans-serif; }
 
 input:focus,
 input:active {
   padding-bottom: 3px;
   border-bottom: 2px solid #fec577; }
+
+input[type=file] {
+  border: none; }
 
 /* == TOGGLES ============================================================== */
 input[type=checkbox] {
@@ -2186,7 +2207,7 @@ input[type=radio] {
   bottom: 0;
   left: 0;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(254, 197, 119, 0.9);
   z-index: 99999;
   transition: opacity 0.4s ease-in;
   pointer-events: none; }
@@ -2199,6 +2220,36 @@ input[type=radio] {
   position: relative;
   width: 400px;
   margin: 10vmin auto; }
+
+/* ==  TAB BAR  =========================================== */
+.ff-tab-bar div {
+  display: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+.ff-tab {
+  display: none; }
+
+.ff-tab-bar label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 16px 24px;
+  text-align: center;
+  color: #999999;
+  border: 1px solid transparent; }
+
+.ff-tab-bar label:hover {
+  cursor: pointer; }
+
+.ff-tab:checked + label {
+  color: #fec577;
+  font-weight: 700;
+  border-bottom: 2px solid #fec577; }
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block; }
 
 /* == CUSTOM INTERFACE ELEMENTS =========================================== */
 .card {
@@ -2226,14 +2277,13 @@ input[type=radio] {
 .full-size-bg-fixed {
   position: fixed !important; }
 
-/*  Colours — Currently using a complementary scheme */
-/*  Selection highlight  */
-/*  Margin  */
-/*  Padding  */
-/*  Variables for the page body  */
-/*  Border-radius mixin  */
 /*  Typography  */
 /*  Paragraph-specific variables  */
+/*  Margin  */
+/*  Padding  */
+/*  Colours — Currently using a complementary scheme */
+/*  Selection highlight  */
+/*  Variables for the page body  */
 .intro-banner {
   width: 100vw;
   height: 80vh;

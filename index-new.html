@@ -17,8 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
 
-    <!--A nice, sober serif typeface-->
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,700,700i" rel="stylesheet">
     <!--And a clean, simple sans typeface-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
     <!-- Also a classy monospace typeface for all you nerds -->
@@ -59,7 +57,7 @@
 
         <div class="row">
             <div class="portion whole">
-                <h3 class="text-mono">The sell</h3>
+                <h3>The sell</h3>
             </div>
         </div>
 
@@ -94,7 +92,7 @@
 
         <div class="row">
             <div class="portion whole">
-                <h3 class="text-mono">Getting started</h3>
+                <h3>Getting started</h3>
             </div>
         </div>
 
@@ -130,7 +128,7 @@
 
         <div class="row">
             <div class="portion whole">
-                <h3 class="text-mono">Setup</h3>
+                <h3>Setup</h3>
             </div>
         </div>
 
@@ -189,7 +187,16 @@
         <div class="row no-margin-bottom">
             <div class="portion whole">
                 <h6 class="text-mono margin-bottom-fixed"><strong>HTML setup</strong></h6>
-                <p>Now, for the HTML setup. You can either jump right to the <code class="inline">template.html</code>, which is an empty file with the basic <code class="inline">.row</code> and <code class="inline">.portion</code> blocks already set up for you. All you have to do is fill in your content as you want it. Feel free to add and remove blocks as you see fit.
+                <p>Now, for the HTML setup. You can either jump right to the <code class="inline">template.html</code>, which is an empty file with the basic <code class="inline">.row</code> and <code class="inline">.portion</code> blocks already set up for you. All you have to do is fill in your content as you want it. Feel free to add and remove blocks as you see fit.</p>
+
+                <a href="#modal01">Open Modal</a>
+
+                <div id="modal01" class="ff-modal">
+                    <div class="card card-smaller shadow-soft">
+                        <h5 class="margin-bottom-tiny">Something</h5>
+                        <a href="#close" class="shape-rounded">OK, Finnnuhh</a>
+                    </div>
+                </div>
 
                 <p>But if you’d like to start afresh, make sure you include the necessary files at the top of your HTML file. Like so&mdash;</p>
             </div>
@@ -214,12 +221,123 @@
             </div>
         </div>
 
-        <div class="row no-margin-bottom">
+        <div class="row">
             <div class="portion whole">
-                <h6 class="text-mono margin-bottom-fixed"><strong>HTML setup</strong></h6>
-                <p>Now, for the HTML setup. You can either jump right to the <code class="inline">template.html</code>, which is an empty file with the basic <code class="inline">.row</code> and <code class="inline">.portion</code> blocks already set up for you. All you have to do is fill in your content as you want it. Feel free to add and remove blocks as you see fit.
+                <div class="ff-tab-bar">
 
-                <p>But if you’d like to start afresh, make sure you include the necessary files at the top of your HTML file. Like so&mdash;</p>
+                    <input id="tab1" class="ff-tab" type="radio" name="tabs" checked>
+                    <label for="tab1">Codepen</label>
+
+                    <input id="tab2" class="ff-tab" type="radio" name="tabs">
+                    <label for="tab2">Dribbble</label>
+
+                    <input id="tab3" class="ff-tab" type="radio" name="tabs">
+                    <label for="tab3">Dropbox</label>
+
+                    <input id="tab4" class="ff-tab" type="radio" name="tabs">
+                    <label for="tab4">Drupal</label>
+
+                    <div id="content1">
+                        <p>Content for Tab 01</p>
+                    </div>
+
+                    <div id="content2">
+                        <p>Content for Tab 02</p>
+                    </div>
+
+                    <div id="content3">
+                        <p>Content for Tab 03</p>
+                    </div>
+
+                    <div id="content4">
+                        <p>Content for Tab 04</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-fourth">
+                <div class="text-center">
+                    <div class="ff-checkbox">
+                        <input type="checkbox" id="toggle-1" />
+                        <label for="toggle-1"></label>
+                        <label for="toggle-1">Toggle me!</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portion one-fourth">
+                <div class="text-center">
+                    <div class="ff-checkbox">
+                        <input type="checkbox" id="toggle-2" />
+                        <label for="toggle-2"></label>
+                        <label for="toggle-2">Toggle me too!</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portion one-fourth">
+                <div class="text-center">
+                    <div class="ff-checkbox">
+                        <input type="checkbox" id="toggle-3" disabled />
+                        <label for="toggle-3"></label>
+                        <label for="toggle-3">I'm disabled</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portion one-fourth">
+                <div class="text-center">
+                    <div class="ff-checkbox">
+                        <input type="checkbox" id="toggle-4" checked disabled />
+                        <label for="toggle-4"></label>
+                        <label for="toggle-4">I'm both!</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-fourth">
+                <div class="text-centre">
+                    <div class="ff-radio">
+                        <input type="radio" id="radio-1" name="radioset-1" />
+                        <label for="radio-1"></label>
+                        <label for="radio-1">Pick me!</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portion one-fourth">
+                <div class="text-centre">
+                    <div class="ff-radio">
+                        <input type="radio" id="radio-2" name="radioset-1" />
+                        <label for="radio-2"></label>
+                        <label for="radio-2">No, pick me!</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portion one-fourth">
+                <div class="text-centre">
+                    <div class="ff-radio">
+                        <input type="radio" id="radio-3" name="radioset-1" disabled />
+                        <label for="radio-3"></label>
+                        <label for="radio-3">I'm disabled!</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portion one-fourth">
+                <div class="text-centre">
+                    <div class="ff-radio">
+                        <input type="radio" id="radio-4" name="radioset-1" checked disabled />
+                        <label for="radio-4"></label>
+                        <label for="radio-4">I'm both!</label>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -243,11 +361,3 @@
 
 
 
-<!--<a href="#modal01">Open Modal</a>-->
-
-<!--<div id="modal01" class="ff-modal">-->
-    <!--<div class="card card-smaller">-->
-        <!--<h5>Something</h5>-->
-        <!--<a href="#close" class="shape-rounded">OK, Finnnuhh</a>-->
-    <!--</div>-->
-<!--</div>-->

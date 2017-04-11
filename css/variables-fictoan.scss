@@ -1,5 +1,24 @@
+
+/*  Typography  */
+$fontSans  : 'Work Sans', sans-serif;
+$fontSerif : 'Cormorant Garamond', serif;
+$fontMono  : 'Space Mono', monospace;
+
+/*  Paragraph-specific variables  */
+$paraLineHeight      : 1.6em;
+$paraSerifFontSize   : 1.3em;
+$paraSerifLineHeight : 1.8em;
+
 $baseFontSize : 1em;
 $scaleFactor  : 1.2;
+
+/*  Margin  */
+$marginFixed: 12px;
+$marginUnit: 2vmax;
+
+/*  Padding  */
+$paddingFixed: 12px;
+$paddingUnit  : 2vmax;
 
 /*  Colours — Currently using a complementary scheme */
 $colorHue     : hsl(  35,  98%,  73%); // Yellowish Orange — this is the main colour
@@ -21,19 +40,14 @@ $colorDarkGrey   : hsl(  35,   0%,  60% );
 $colorBlack      :  darken($colorHue, 100%);
 $colorWhite      : lighten($colorHue, 100%);
 
+// code area styles
+$codeBgColor : $colorMildGrey;
+$codeColor   : $colorAccent;
 
 /*  Selection highlight  */
 $textHighlightBg    : $colorHue;
 $textHighlightColor : $colorMild;
 
-
-/*  Margin  */
-$marginFixed: 12px;
-$marginUnit: 2vmax;
-
-/*  Padding  */
-$paddingFixed: 12px;
-$paddingUnit  : 2vmax;
 
 /*  Variables for the page body  */
 $bodyBgColor     : lighten ($colorHue, 30%);
@@ -42,30 +56,12 @@ $linkColor       : $colorShade;
 $linkBorder      : 1px dotted $colorShade;
 $linkHoverBorder : 1px  solid $colorShade;
 
-/*  Border-radius mixin  */
-@mixin borderRadius($radius: 100px) { border-radius: $radius; }
 
-/*  Typography  */
-$fontSans  : 'Work Sans', sans-serif;
-$fontSerif : 'Cormorant Garamond', serif;
-$fontMono  : 'Space Mono', monospace;
-
-
-/*  Paragraph-specific variables  */
-$paraLineHeight      : 1.6em;
-$paraSerifFontSize   : 1.3em;
-$paraSerifLineHeight : 1.8em;
-
-
-// code area styles
-$codeBgColor : $colorMildGrey;
-$codeColor   : $colorAccent;
-
-// checkbox and radio button background color
+// Checkbox and radio button background color
 $checkboxBgColor : $colorHue;
 $radioBgColor    : $colorHue;
 
-// power function (for scaleFactor usage)
+// Power function — for scaleFactor usage
 @function pow($number, $exponent) {
     $value: 1;
 

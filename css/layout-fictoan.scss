@@ -20,19 +20,19 @@
 .row .portion,
 .box .portion {
     float: left;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 /*  Fallback width for lone portion divs  */
 .portion { width: 100%; }
 
 /*  Use 'box' class to dump many divs of varied widths  */
-.box .portion { margin-bottom: 2vmax; }
+.box .portion { margin-bottom: 1vmax; }
 
 /*  Remove the padding for nested portions  */
 .portion > .row {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -24px;
+    margin-right: -24px;
 }
 
 /*  Remove the gap between elements in the same row  */
@@ -41,7 +41,7 @@
 
 /*  Lessen the gap between elements in the same row  */
 .lesser-gaps .portion,
-.portion.lesser-gaps { padding: 0 10px; }
+.portion.lesser-gaps { padding: 0 12px; }
 
 /*  Now the actual grid layout  */
 .portion.whole            { width: 100%; }
@@ -129,6 +129,13 @@
     content: "";
 }
 .row:after { clear: both; }
+
+/*  Clearfix for the rows  */
+.box:before, .box:after {
+    display: block;
+    content: "";
+}
+.box:after { clear: both; }
 
 /*  Fixing images for better responsive behaviour  */
 .portion img { max-width: 100%; }

@@ -9,7 +9,7 @@
     http://sujansundareswaran.com/
 */
 
-@import "variables";
+@import "variables-fictoan";
 
 
 
@@ -24,7 +24,7 @@
 *:focus { outline : 0; }
 
 /*  This affects all type scale values  */
-html { font-size : 1em; }
+html { font-size : $baseFontSize; }
 
 body {
     -moz-osx-font-smoothing : grayscale;
@@ -42,7 +42,7 @@ button { vertical-align : baseline; }
 input[type="number"] { -moz-appearance : textfield; }
 
 ::-webkit-input-placeholder { opacity : 0.5; }
-         ::-moz-placeholder { opacity : 0.5; }
+::-moz-placeholder { opacity : 0.5; }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -247,7 +247,7 @@ body {
     text-rendering   : optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family : $fontSerif; }
+h1, h2, h3, h4, h5, h6 { font-family : $fontMono; }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight : inherit;
@@ -306,6 +306,7 @@ i, em { font-style : italic; }
 
 /* == COLOURS ============================================================== */
 
+/*  FICTOAN colour scheme  */
 .bg-hue          { background-color: $colorHue }
 .bg-mild         { background-color: $colorMild }
 .bg-shade        { background-color: $colorShade }
@@ -326,7 +327,7 @@ i, em { font-style : italic; }
 .bg-mild-grey    { background-color : $colorMildGrey; }
 .bg-dark-grey    { background-color : $colorDarkGrey; }
 
-/* Standardized presets for text */
+/*  Standardized presets for text  */
 .text-red        { color : $colorRed; }
 .text-green      { color : $colorGreen; }
 .text-blue       { color : $colorBlue; }
@@ -371,8 +372,6 @@ i, em { font-style : italic; }
 
 /* == CODE ==================================================== */
 
-pre { margin : 0; }
-
 code {
     background-color : $codeBgColor;
     font-family      : $fontMono;
@@ -380,7 +379,7 @@ code {
     color            : $codeColor;
     white-space      : pre;
     margin           : 0;
-    @include borderRadius(4px);
+    border-radius    : 4px;
 }
 
 code.inline {
@@ -403,6 +402,7 @@ pre > code {
 .icon-24 { width : 24px; }
 .icon-32 { width : 32px; }
 .icon-48 { width : 48px; }
+.icon-64 { width : 64px; }
 
 
 
@@ -473,7 +473,15 @@ pre > code {
     box-shadow     : none;
 }
 
-
+.ff-pill {
+    position      : relative;
+    display       : inline-block;
+    margin        : 4px;
+    padding       : 4px 16px;
+    font-family   : $fontSans;
+    color         : $colorWhite;
+    font-size     : 80%;
+}
 
 /* == INPUT FIELDS ========================================================= */
 
@@ -486,7 +494,8 @@ input[type=date] {
     outline       : none;
     background    : none;
     padding       : 4px;
-    border-bottom : 1px solid rgba($colorBlack, 0.4);
+    border-bottom : 1px solid rgba($colorBlack, 0.25);
+    font-family   : $fontSans;
 }
 
 input:focus,
@@ -494,6 +503,8 @@ input:active {
     padding-bottom : 3px;
     border-bottom  : 2px solid $colorHue;
 }
+
+input[type=file] { border: none; }
 
 
 
@@ -628,7 +639,7 @@ input[type=radio] { display : none; }
     bottom         : 0;
     left           : 0;
     opacity        : 0;
-    background     : rgba(0, 0, 0, 0.8);
+    background     : rgba($colorHue, 0.9);
     z-index        : 99999;
     transition     : opacity 0.4s ease-in;
     pointer-events : none;
@@ -644,6 +655,38 @@ input[type=radio] { display : none; }
     margin   : 10vmin auto;
 }
 
+
+
+/* ==  TAB BAR  =========================================== */
+
+.ff-tab-bar div {
+    display: none;
+    border-top: 1px solid rgba($colorBlack, 0.1);
+}
+
+.ff-tab { display: none; }
+
+.ff-tab-bar label {
+    display    : inline-block;
+    margin     : 0 0 -1px;
+    padding    : 16px 24px;
+    text-align : center;
+    color      : $colorDarkGrey;
+    border     : 1px solid transparent;
+}
+
+.ff-tab-bar label:hover { cursor: pointer; }
+
+.ff-tab:checked + label {
+    color               : $colorHue;
+    font-weight         : 700;
+    border-bottom       : 2px solid $colorHue;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 { display: block; }
 
 
 /* == CUSTOM INTERFACE ELEMENTS =========================================== */
@@ -672,3 +715,6 @@ input[type=radio] { display : none; }
     @extend .full-size-bg;
     position : fixed !important;
 }
+
+
+
