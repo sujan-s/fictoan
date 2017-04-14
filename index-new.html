@@ -10,6 +10,7 @@
 -->
 
 
+
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,13 +24,58 @@
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
 
     <!--  This will import all the necessary files in one go  -->
-    <link rel="stylesheet" href="css/import-fictoan.css" type="text/css" >
+    <link rel="stylesheet" href="css/main-fictoan.css" type="text/css" >
 
     <!--Put your page name here-->
     <title>FICTOAN &bull; Intuitive, minimalist responsive HTML+CSS boilerplate</title>
 </head>
 
 <body>
+
+<nav>
+    <div class="nav-logo">Your Logo here</div>
+    <label for="drop" class="nav-toggle nav-toggle-main">Menu</label>
+    <input type="checkbox" id="drop" />
+    <ul>
+        <li><a href="#">Link 1</a></li>
+
+        <li class="sub-menu">
+            <label for="drop-1" class="nav-toggle">Service</label>
+            <a href="#">Link 2</a>
+            <input type="checkbox" id="drop-1"/>
+            <ul>
+                <li><a href="#">Sub-link 1</a></li>
+                <li><a href="#">Sub-link 2</a></li>
+                <li><a href="#">Sub-link 3</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <label for="drop-2" class="nav-toggle">Portfolio</label>
+            <a href="#">Link 3</a>
+            <input type="checkbox" id="drop-2"/>
+            <ul>
+                <li><a href="#">Sub-link 1</a></li>
+                <li><a href="#">Sub-link 2</a></li>
+                <li>
+                    <label for="drop-3" class="nav-toggle">Works</label>
+                    <a href="#">Sub-link 3</a>
+                    <input type="checkbox" id="drop-3"/>
+                    <ul>
+                        <li><a href="#">Sub-sub-link 1</a></li>
+                        <li><a href="#">Sub-sub-link 2</a></li>
+                        <li><a href="#">Sub-sub-link 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Link 5</a></li>
+        <li><a href="#">Link 6</a></li>
+        <li><a href="#">Link 7</a></li>
+    </ul>
+</nav>
 
     <div class="all-content">
 

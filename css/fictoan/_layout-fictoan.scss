@@ -10,6 +10,7 @@
 */
 
 
+
 /*  Basics for the row  */
 .row {
     display: block;
@@ -171,7 +172,7 @@
 
 /*  For large screens FROM 2400px width and UPWARD  */
 @media all and (min-width: 2400px) {
-    .all-content { padding: 0 30vw; }
+    .all-content { padding: 0 32vw; }
 }
 
 /*	Device-specific portion widths —

@@ -3,13 +3,11 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.20.1
+    Current version: 1.20.2
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
 */
-
-@import "variables-fictoan";
 
 
 
@@ -23,26 +21,26 @@
 
 *:focus { outline : 0; }
 
-/*  This affects all type scale values  */
+//  This affects all type scale values
 html { font-size : $baseFontSize; }
 
 body {
     -moz-osx-font-smoothing : grayscale;
-    -webkit-font-smoothing  : antialiased;
+     -webkit-font-smoothing : antialiased;
 }
 
 img { display : block; }
 
 a { text-decoration : none; }
 
-input { outline : none; }
-
 button { vertical-align : baseline; }
 
-input[type="number"] { -moz-appearance : textfield; }
-
 ::-webkit-input-placeholder { opacity : 0.5; }
-::-moz-placeholder { opacity : 0.5; }
+         ::-moz-placeholder { opacity : 0.5; }
+
+input { outline : none; }
+
+input[type="number"] { -moz-appearance : textfield; }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -58,8 +56,8 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
 /* == UTILITY ============================================================== */
 
 .show-inline  { display : inline-block; }
-.show-nothing { display : none; } /* Element isn't rendered at all */
-.show-empty   { visibility : hidden; } /* Element is merely invisible */
+.show-nothing { display : none; } // Element isn't rendered at all
+.show-empty   { visibility : hidden; } // Element is merely invisible
 
 .full-width { width : 100% !important; }
 
@@ -67,14 +65,14 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
 .pull-right { float : right; }
 .clear-both { clear : both; }
 
-/*  For when you want things right in the middle  */
+//  For when you want things right in the middle
 .vertical-centre-items,
 .vertical-center-items {
     display     : flex;
     align-items : center;
 }
 
-/*  Parent div needs a set height  */
+//  Parent div needs a set height
 .vertical-centre-this,
 .vertical-center-this {
     position  : relative;
@@ -82,7 +80,7 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
     transform : translateY(-50%);
 }
 
-/*  Parent div needs a set width  */
+//  Parent div needs a set width
 .horizontal-centre-this,
 .horizontal-center-this {
     position : relative;
@@ -90,7 +88,7 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
     margin   : 0 auto;
 }
 
-/*  A thin separator line that is black at 10% opacity  */
+//  A thin separator line that is black at 10% opacity
 hr {
     border     : 0;
     height     : 1px;
@@ -98,113 +96,113 @@ hr {
     background : $colorMildGrey;
 }
 
-/* BOX MODEL HELPERS ----------------------------------- */
+// BOX MODEL HELPERS -----------------------------------
 
-/*  Margins for all occasions  */
+//  Margins for all occasions
 .no-margin              { margin : 0 !important; }
 
 .margin-all-fixed       { margin : $marginFixed; }
 .margin-all-tiny        { margin : $marginUnit*01; }
 .margin-all-small       { margin : $marginUnit*02; }
 .margin-all-medium      { margin : $marginUnit*04; }
-.margin-all-large       { margin : $marginUnit*07; }
-.margin-all-huge        { margin : $marginUnit*11; }
+.margin-all-large       { margin : $marginUnit*08; }
+.margin-all-huge        { margin : $marginUnit*12; }
 
 .no-margin-top          { margin-top : 0 !important; }
 .margin-top-fixed       { margin-top : $marginFixed; }
 .margin-top-tiny        { margin-top : $marginUnit*01; }
 .margin-top-small       { margin-top : $marginUnit*02; }
 .margin-top-medium      { margin-top : $marginUnit*04; }
-.margin-top-large       { margin-top : $marginUnit*07; }
-.margin-top-huge        { margin-top : $marginUnit*11; }
+.margin-top-large       { margin-top : $marginUnit*08; }
+.margin-top-huge        { margin-top : $marginUnit*12; }
 
 .no-margin-right        { margin-right : 0 !important; }
 .margin-right-fixed     { margin-right : $marginFixed; }
 .margin-right-tiny      { margin-right : $marginUnit*01; }
 .margin-right-small     { margin-right : $marginUnit*02; }
 .margin-right-medium    { margin-right : $marginUnit*04; }
-.margin-right-large     { margin-right : $marginUnit*07; }
-.margin-right-huge      { margin-right : $marginUnit*11; }
+.margin-right-large     { margin-right : $marginUnit*08; }
+.margin-right-huge      { margin-right : $marginUnit*12; }
 
 .no-margin-bottom       { margin-bottom : 0 !important; }
 .margin-bottom-fixed    { margin-bottom : $marginFixed; }
 .margin-bottom-tiny     { margin-bottom : $marginUnit*01; }
 .margin-bottom-small    { margin-bottom : $marginUnit*02; }
 .margin-bottom-medium   { margin-bottom : $marginUnit*04; }
-.margin-bottom-large    { margin-bottom : $marginUnit*07; }
-.margin-bottom-huge     { margin-bottom : $marginUnit*11; }
+.margin-bottom-large    { margin-bottom : $marginUnit*08; }
+.margin-bottom-huge     { margin-bottom : $marginUnit*12; }
 
 .no-margin-left         { margin-left : 0 !important; }
 .margin-left-fixed      { margin-left : $marginFixed; }
 .margin-left-tiny       { margin-left : $marginUnit*01; }
 .margin-left-small      { margin-left : $marginUnit*02; }
 .margin-left-medium     { margin-left : $marginUnit*04; }
-.margin-left-large      { margin-left : $marginUnit*07; }
-.margin-left-huge       { margin-left : $marginUnit*11; }
+.margin-left-large      { margin-left : $marginUnit*08; }
+.margin-left-huge       { margin-left : $marginUnit*12; }
 
 
-/*  Paddings for all occasions  */
+//  Paddings for all occasions
 .no-padding              { padding : 0  !important; }
 
 .padding-all-fixed       { padding : $paddingFixed; }
 .padding-all-tiny        { padding : $paddingUnit*01; }
 .padding-all-small       { padding : $paddingUnit*02; }
 .padding-all-medium      { padding : $paddingUnit*04; }
-.padding-all-large       { padding : $paddingUnit*07; }
-.padding-all-huge        { padding : $paddingUnit*11; }
+.padding-all-large       { padding : $paddingUnit*08; }
+.padding-all-huge        { padding : $paddingUnit*12; }
 
 .no-padding-top          { padding-top : 0  !important; }
 .padding-top-fixed       { padding-top : $paddingFixed; }
 .padding-top-tiny        { padding-top : $paddingUnit*01; }
 .padding-top-small       { padding-top : $paddingUnit*02; }
 .padding-top-medium      { padding-top : $paddingUnit*04; }
-.padding-top-large       { padding-top : $paddingUnit*07; }
-.padding-top-huge        { padding-top : $paddingUnit*11; }
+.padding-top-large       { padding-top : $paddingUnit*08; }
+.padding-top-huge        { padding-top : $paddingUnit*12; }
 
 .no-padding-right        { padding-right : 0  !important; }
 .padding-right-fixed     { padding-right : $paddingFixed; }
 .padding-right-tiny      { padding-right : $paddingUnit*01; }
 .padding-right-small     { padding-right : $paddingUnit*02; }
 .padding-right-medium    { padding-right : $paddingUnit*04; }
-.padding-right-large     { padding-right : $paddingUnit*07; }
-.padding-right-huge      { padding-right : $paddingUnit*11; }
+.padding-right-large     { padding-right : $paddingUnit*08; }
+.padding-right-huge      { padding-right : $paddingUnit*12; }
 
 .no-padding-bottom       { padding-bottom : 0  !important; }
 .padding-bottom-fixed    { padding-bottom : $paddingFixed; }
 .padding-bottom-tiny     { padding-bottom : $paddingUnit*01; }
 .padding-bottom-small    { padding-bottom : $paddingUnit*02; }
 .padding-bottom-medium   { padding-bottom : $paddingUnit*04; }
-.padding-bottom-large    { padding-bottom : $paddingUnit*07; }
-.padding-bottom-huge     { padding-bottom : $paddingUnit*11; }
+.padding-bottom-large    { padding-bottom : $paddingUnit*08; }
+.padding-bottom-huge     { padding-bottom : $paddingUnit*12; }
 
 .no-padding-left         { padding-left : 0  !important; }
 .padding-left-fixed      { padding-left : $paddingFixed; }
 .padding-left-tiny       { padding-left : $paddingUnit*01; }
 .padding-left-small      { padding-left : $paddingUnit*02; }
 .padding-left-medium     { padding-left : $paddingUnit*04; }
-.padding-left-large      { padding-left : $paddingUnit*07; }
-.padding-left-huge       { padding-left : $paddingUnit*11; }
+.padding-left-large      { padding-left : $paddingUnit*08; }
+.padding-left-huge       { padding-left : $paddingUnit*12; }
 
 /*  This will render an empty space of
     20% screen height where you add it  */
 .empty-spacer {
     display : block;
-    height  : 20vmin;
+    height  : 24vmin;
     clear   : both;
 }
 
-/*  For images and tiles  */
+//  For images and tiles
 .shape-rounded  { border-radius : 4px; }
 .shape-circular { border-radius : 50%; }
 .shape-curved   { border-radius : 50000px; }
 
-/*  Shadows for any element  */
+//  Shadows for any element
 .shadow-hard { box-shadow : 0  4px  8px  -2px hsla(0, 0, 0, 0.2); }
 .shadow-soft { box-shadow : 0 24px 32px -12px hsla(0, 0, 0, 0.2); }
 
+
 /* -- UTILITIES FOR SMALLER SCREENS  ------------------- */
 
-/*  Hide on large screens  */
 .show-only-on-mobile { display : none !important; }
 
 .show-only-on-tab-pt { display : none !important; }
@@ -247,6 +245,7 @@ body {
     text-rendering   : optimizeLegibility;
 }
 
+//  This is only for this type-scheme, feel free to change
 h1, h2, h3, h4, h5, h6 { font-family : $fontMono; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -265,7 +264,7 @@ h6 { font-size : $baseFontSize*pow($scaleFactor, 1); }
 p {
     font-family : $fontSans;
     line-height : $paraLineHeight;
-    margin      : 0 0 1.5vmax 0;
+    margin      : 0 0 1.48vmax 0;
 }
 p .text-serif {
     font-size   : $paraSerifFontSize;
@@ -306,14 +305,14 @@ i, em { font-style : italic; }
 
 /* == COLOURS ============================================================== */
 
-/*  FICTOAN colour scheme  */
+//  FICTOAN colour scheme
 .bg-hue          { background-color: $colorHue }
 .bg-mild         { background-color: $colorMild }
 .bg-shade        { background-color: $colorShade }
 .bg-dark         { background-color: $colorDark }
 .bg-accent       { background-color: $colorAccent }
 
-/* Standardized presets for backgrounds */
+// Standardized presets for backgrounds
 .bg-red          { background-color : $colorRed; }
 .bg-green        { background-color : $colorGreen; }
 .bg-blue         { background-color : $colorBlue; }
@@ -327,7 +326,7 @@ i, em { font-style : italic; }
 .bg-mild-grey    { background-color : $colorMildGrey; }
 .bg-dark-grey    { background-color : $colorDarkGrey; }
 
-/*  Standardized presets for text  */
+//  Standardized presets for text
 .text-red        { color : $colorRed; }
 .text-green      { color : $colorGreen; }
 .text-blue       { color : $colorBlue; }
@@ -341,7 +340,7 @@ i, em { font-style : italic; }
 .text-mild-grey  { color : $colorMildGrey; }
 .text-dark-grey  { color : $colorDarkGrey; }
 
-/*  Standardized presets — works only for inline icons  */
+//  Standardized presets — works only for inline icons
 .icon-red        { fill : $colorRed; }
 .icon-green      { fill : $colorGreen; }
 .icon-blue       { fill : $colorBlue; }
@@ -362,7 +361,7 @@ i, em { font-style : italic; }
     color      : $textHighlightColor;
 }
 
-/*  Same thing — for Webkit browsers  */
+//  Same thing — for Webkit browsers
 ::selection {
     background : $textHighlightBg;
     color      : $textHighlightColor;
@@ -370,7 +369,7 @@ i, em { font-style : italic; }
 
 
 
-/* == CODE ==================================================== */
+/* == CODE ================================================================= */
 
 code {
     background-color : $codeBgColor;
@@ -396,19 +395,19 @@ pre > code {
 
 
 
-/* == ICONS ====================================================== */
+/* == ICONS ================================================================ */
 
-.icon-16 { width : 16px; }
-.icon-24 { width : 24px; }
-.icon-32 { width : 32px; }
-.icon-48 { width : 48px; }
-.icon-64 { width : 64px; }
+.icon-tiny   { width : 16px; }
+.icon-small  { width : 24px; }
+.icon-medium { width : 32px; }
+.icon-large  { width : 48px; }
+.icon-huge   { width : 64px; }
 
 
 
-/* == BUTTONS ==================================================== */
+/* == BUTTONS ============================================================== */
 
-/*  Basics  */
+//  Basics
 .ff-button {
     position    : relative;
     display     : inline-block;
@@ -418,25 +417,25 @@ pre > code {
     font-family : $fontSans;
     font-weight : 700;
     color       : $colorWhite;
+    border      : none;
+    transition  : all 0.1s;
+    box-shadow  : 0 4px 24px -4px $colorShade;
     background  : $colorHue;
     background  : -webkit-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
     background  :    -moz-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
     background  :         linear-gradient(135deg, $colorHue 0%, $colorShade 100%);
-    border      : none;
-    transition  : all 0.1s;
-    box-shadow  : 0 4px 24px -4px $colorShade;
 }
 
-/*  Button when you click on it  */
+//  Button when you click on it
 .ff-button:active {
     transform  : translateY(2px);
     box-shadow : none;
 }
 
-/*  Big button  */
+//  Big button
 .ff-button.large { padding : 16px 32px; }
 
-/*  Button that’s just text  */
+//  Button that’s just text
 .ff-button.no-bg {
     background  : none;
     box-shadow  : none;
@@ -464,13 +463,14 @@ pre > code {
     color: $colorHue;
 }
 
-.ff-button path { fill : $colorWhite; }
+//  Only for inline icons
+.ff-button path       { fill : $colorWhite; }
 .ff-button.no-bg path { fill : $colorShade; }
 
 .ff-button.disabled {
     pointer-events : none;
-    background     : $colorMildGrey;
     box-shadow     : none;
+    background     : $colorMildGrey;
 }
 
 .ff-pill {
@@ -478,18 +478,23 @@ pre > code {
     display       : inline-block;
     margin        : 4px;
     padding       : 4px 16px;
+    font-size     : 80%;
     font-family   : $fontSans;
     color         : $colorWhite;
-    font-size     : 80%;
 }
 
 /* == INPUT FIELDS ========================================================= */
 
-input[type=text],
-input[type=password],
-input[type=number],
-input[type=date] {
+input,
+input:focus,
+input:active {
+    border  : none;
+    outline : none;
+}
+
+input {
     width         : 100%;
+    height        : 100%;
     border        : none;
     outline       : none;
     background    : none;
@@ -504,7 +509,10 @@ input:active {
     border-bottom  : 2px solid $colorHue;
 }
 
-input[type=file] { border: none; }
+input[type=file] {
+    border: none;
+    outline: none;
+}
 
 
 
@@ -514,7 +522,7 @@ input[type=checkbox] { display : none; }
 
 .ff-checkbox {
     display      : inline-block;
-    margin-right : 10px;
+    margin-right : 12px;
 }
 
 .ff-checkbox label {
@@ -522,54 +530,52 @@ input[type=checkbox] { display : none; }
     vertical-align : middle;
 }
 
-/*  The grey background  */
+//  The grey background
 .ff-checkbox input[type=checkbox] + label {
     position      : relative;
     display       : inline-block;
     width         : 40px;
-    height        : 20px;
-    margin-right  : 10px;
+    height        : 24px;
+    margin-right  : 12px;
     background    : $colorMildGrey;
-    border-radius : 10px; /*  Basically half of the height  */
+    border-radius : 12px; //  Basically half of the height
     cursor        : pointer;
     transition    : all 0.1s ease-out;
-    box-shadow    : 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset;
+    box-shadow    : 0 2px 8px -2px rgba(0, 0, 0, 0.24) inset;
 }
 
-/*  The white switch inside  */
+//  The white switch inside
 .ff-checkbox input[type=checkbox] + label:after {
-    position           : absolute;
-    display            : block;
-    left               : 2px;
-    top                : 2px;
-    width              : 16px;
-    height             : 16px;
-    background         : #fff;
-    border-radius      : 50%;
-    content            : '';
-    transition         : all 0.1s ease-out;
-    -webkit-box-shadow : 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow    : 0 4px 8px -4px rgba(0, 0, 0, 0.6);
-    box-shadow         : 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    position      : absolute;
+    display       : block;
+    left          : 4px;
+    top           : 4px;
+    width         : 16px;
+    height        : 16px;
+    background    : $colorWhite;
+    border-radius : 50%;
+    content       : '';
+    transition    : all 0.1s ease-out;
+    box-shadow    : 0 4px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
-/*  The bg when checked  */
-.ff-checkbox input[type=checkbox]:checked + label { background : $checkboxBgColor; }
+//  The bg when checked
+.ff-checkbox input[type=checkbox]:checked + label { background : $colorHue; }
 
-.ff-checkbox input[type=checkbox]:checked + label:after { left : 22px; }
+.ff-checkbox input[type=checkbox]:checked + label:after { left : 20px; }
 
 .ff-checkbox input[type=checkbox]:disabled + label,
 .ff-checkbox input[type=checkbox]:disabled:checked + label { pointer-events : none; }
 
 .ff-checkbox input[type=checkbox]:disabled ~ label {
     cursor  : default;
-    opacity : 0.3;
+    opacity : 0.4;
 }
 
-/*  The switch when disabled  */
+//  The switch when disabled
 .ff-checkbox input[type=checkbox]:checked + label:after {
     display    : block;
-    background : #f8f8f8;
+    background : $colorWhite;
     box-shadow : none;
 }
 
@@ -582,49 +588,49 @@ input[type=radio] { display : none; }
     vertical-align : middle;
 }
 
-/*  The grey background  */
+//  The grey background
 .ff-radio input[type=radio] + label {
     position      : relative;
     display       : inline-block;
-    width         : 20px;
-    height        : 20px;
-    margin-right  : 10px;
-    background    : #ddd;
-    border-radius : 10px; /*  Basically half of the height  */
+    width         : 24px;
+    height        : 24px;
+    margin-right  : 12px;
+    background    : $colorMildGrey;
+    border-radius : 12px; //  Basically half of the height
     cursor        : pointer;
     transition    : all 0.1s ease-out;
-    box-shadow    : 0 2px 6px -2px rgba(0, 0, 0, 0.25) inset;
+    box-shadow    : 0 2px 8px -2px rgba(0, 0, 0, 0.24) inset;
 }
 
-/*  The white circle inside  */
+//  The white circle inside
 .ff-radio input[type=radio] + label:after {
     position      : absolute;
     display       : none;
-    left          : 5px;
-    top           : 5px;
-    width         : 10px;
-    height        : 10px;
-    background    : #fff;
+    left          : 6px;
+    top           : 6px;
+    width         : 12px;
+    height        : 12px;
+    background    : $colorWhite;
     border-radius : 50%;
-    content       : '';
+    content       : "";
     transition    : all 0.1s ease-out;
 }
 
-/*  The bg when checked  */
-.ff-radio input[type=radio]:checked + label { background : $radioBgColor; }
+//  The bg when checked
+.ff-radio input[type=radio]:checked + label { background : $colorHue; }
 
 .ff-radio input[type=radio]:disabled + label,
 .ff-radio input[type=radio]:disabled:checked + label { pointer-events : none; }
 
 .ff-radio input[type=radio]:disabled ~ label {
     cursor  : default;
-    opacity : 0.3;
+    opacity : 0.24;
 }
 
-/*  The switch when disabled  */
+//  The switch when disabled
 .ff-radio input[type=radio]:checked + label:after {
     display    : block;
-    background : #f8f8f8;
+    background : $colorWhite;
     box-shadow : none;
 }
 
@@ -639,7 +645,7 @@ input[type=radio] { display : none; }
     bottom         : 0;
     left           : 0;
     opacity        : 0;
-    background     : rgba($colorHue, 0.9);
+    background     : rgba($colorHue, 0.88);
     z-index        : 99999;
     transition     : opacity 0.4s ease-in;
     pointer-events : none;
@@ -657,7 +663,7 @@ input[type=radio] { display : none; }
 
 
 
-/* ==  TAB BAR  =========================================== */
+/* ==  TAB BAR  ============================================================ */
 
 .ff-tab-bar div {
     display: none;
@@ -689,13 +695,14 @@ input[type=radio] { display : none; }
 #tab4:checked ~ #content4 { display: block; }
 
 
+
 /* == CUSTOM INTERFACE ELEMENTS =========================================== */
 
 .card {
     width         : 100%;
     height        : auto;
     padding       : 32px;
-    background    : #fff;
+    background    : $colorWhite;
     border-radius : 4px;
     border        : 1px solid hsla(0, 0%, 0%, 0.05);
 }
@@ -707,14 +714,179 @@ input[type=radio] { display : none; }
     height          : 100vh;
     top             : 0;
     left            : 0;
-    background      : url("../images/") center top; /*  Add the filename here  */
+    background      : url("../images/") center top; //  Add the filename here
     background-size : cover;
     z-index         : -5;
 }
-.full-size-bg-fixed {
+.full-size-bg.bg-fixed {
     @extend .full-size-bg;
     position : fixed !important;
 }
 
 
 
+/* == TOP NAV / HEADER ==================================================== */
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: $colorWhite;
+    box-shadow : 0  4px  8px  -2px hsla(0, 0, 0, 0.2);
+}
+
+.nav-logo {
+    display: block;
+    padding: 0 30px;
+    float: left;
+    line-height: 60px;
+}
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    float : right;
+}
+
+nav ul li {
+    margin: 0;
+    display: inline-block;
+    background-color: $colorWhite;
+}
+
+nav a {
+    display: block;
+    padding: 0 20px;
+    color: $colorDark;
+    line-height: 60px;
+    text-decoration: none;
+    border: none;
+}
+
+nav ul li ul li:hover { background: $colorHue; }
+
+nav a:hover {
+    background-color: $colorHue;
+    color: $colorWhite;
+    border-bottom : none;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+
+nav ul li:hover > ul { display: inherit; }
+
+nav ul ul li {
+    width: 180px;
+    float: none;
+    display: list-item;
+    position: relative;
+    box-shadow : 0  4px  8px  -2px hsla(0, 0, 0, 0.2);
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 180px;
+}
+
+nav label { font-weight: 700; }
+
+.nav-toggle, [id^=drop] { display: none; }
+
+li > a:after { content: " ▾"; }
+li > a:only-child:after { content: ""; }
+
+
+
+@media all and (max-width : 768px) {
+
+    .nav-logo {
+        display: block;
+        width: 50%;
+        padding: 0;
+        float: left;
+        margin-left: 24px;
+    }
+
+    nav { margin: 0; }
+
+    .nav-toggle + a,
+    nav ul { display: none; }
+
+    .nav-toggle-main { float: right; }
+
+    .nav-toggle {
+        display: block;
+        background-color: $colorWhite;
+        padding: 0 20px;
+        color: $colorDark;
+        line-height: 60px;
+        text-decoration: none;
+        border: none;
+    }
+
+    .nav-toggle:hover {
+        background-color: $colorHue;
+        //color: $colorWhite;
+    }
+
+    [id^=drop]:checked + ul { display: block; }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+        float : left;
+    }
+
+    nav ul ul .nav-toggle,
+    nav ul ul a { padding: 0 40px; }
+
+    nav ul ul ul a { padding: 0 80px; }
+
+    nav a:hover,
+    nav ul ul ul a { background-color: $colorHue; }
+
+    nav ul li ul li .nav-toggle,
+    nav ul ul a { background-color: $colorWhite; }
+
+    nav ul { float: none; }
+
+    nav ul ul {
+        position: static;
+        color: $colorWhite;
+    }
+
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul { display: none; }
+
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul ul li { position: static; }
+
+    li > a:after { content: " ▾"; }
+    li > a:only-child:after { content: ""; }
+
+}
+
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+
+}
