@@ -727,166 +727,94 @@ input[type=radio] { display : none; }
 
 /* == TOP NAV / HEADER ==================================================== */
 
-nav {
-    margin: 0;
-    padding: 0;
-    background-color: $colorWhite;
-    box-shadow : 0  4px  8px  -2px hsla(0, 0, 0, 0.2);
+header {
+    overflow: hidden;
+    background: $colorWhite;
 }
 
-.nav-logo {
+header a,
+header label {
     display: block;
-    padding: 0 30px;
-    float: left;
-    line-height: 60px;
-}
-
-nav:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    float : right;
-}
-
-nav ul li {
-    margin: 0;
-    display: inline-block;
-    background-color: $colorWhite;
-}
-
-nav a {
-    display: block;
-    padding: 0 20px;
+    padding: 16px;
     color: $colorDark;
-    line-height: 60px;
     text-decoration: none;
+    line-height: 20px;
+    border : none;
+}
+
+header a:hover,
+header label:hover {
+    color: $colorShade;
     border: none;
 }
 
-nav ul li ul li:hover { background: $colorHue; }
+header li.current-page { color: $colorHue; }
 
-nav a:hover {
-    background-color: $colorHue;
-    color: $colorWhite;
-    border-bottom : none;
+header label {
+    float: right;
+    padding: 16px 24px;
+    cursor: pointer;
 }
 
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 60px;
+header label:after {
+    content: "\2261"; //  This is the hamburger menu icon
+    font-size: 2.4em;
 }
 
-nav ul li:hover > ul { display: inherit; }
 
-nav ul ul li {
-    width: 180px;
-    float: none;
-    display: list-item;
-    position: relative;
-    box-shadow : 0  4px  8px  -2px hsla(0, 0, 0, 0.2);
+nav {
+    float: right;
+    max-height: 0;
+    width: 100%;
 }
 
-nav ul ul ul li {
-    position: relative;
-    top: -60px;
-    left: 180px;
+nav ul {
+    margin  : 0;
+    padding : 0 0 16px;
 }
 
-nav label { font-weight: 700; }
-
-.nav-toggle, [id^=drop] { display: none; }
-
-li > a:after { content: " ▾"; }
-li > a:only-child:after { content: ""; }
-
-
-
-@media all and (max-width : 768px) {
-
-    .nav-logo {
-        display: block;
-        width: 50%;
-        padding: 0;
-        float: left;
-        margin-left: 24px;
-    }
-
-    nav { margin: 0; }
-
-    .nav-toggle + a,
-    nav ul { display: none; }
-
-    .nav-toggle-main { float: right; }
-
-    .nav-toggle {
-        display: block;
-        background-color: $colorWhite;
-        padding: 0 20px;
-        color: $colorDark;
-        line-height: 60px;
-        text-decoration: none;
-        border: none;
-    }
-
-    .nav-toggle:hover {
-        background-color: $colorHue;
-        //color: $colorWhite;
-    }
-
-    [id^=drop]:checked + ul { display: block; }
-
-    nav ul li {
-        display: block;
-        width: 100%;
-        float : left;
-    }
-
-    nav ul ul .nav-toggle,
-    nav ul ul a { padding: 0 40px; }
-
-    nav ul ul ul a { padding: 0 80px; }
-
-    nav a:hover,
-    nav ul ul ul a { background-color: $colorHue; }
-
-    nav ul li ul li .nav-toggle,
-    nav ul ul a { background-color: $colorWhite; }
-
-    nav ul { float: none; }
-
-    nav ul ul {
-        position: static;
-        color: $colorWhite;
-    }
-
-    nav ul ul li:hover > ul,
-    nav ul li:hover > ul { display: none; }
-
-    nav ul ul li {
-        display: block;
-        width: 100%;
-    }
-
-    nav ul ul ul li { position: static; }
-
-    li > a:after { content: " ▾"; }
-    li > a:only-child:after { content: ""; }
-
+nav li {
+    display: block;
+    text-align: center;
 }
 
-@media all and (max-width : 330px) {
+nav a {
+    padding: 10px;
+    width: 100%;
+}
 
-    nav ul li {
-        display: block;
-        width: 94%;
+#nav { display: none; }
+
+#nav:checked ~ nav {
+    max-height: 200px; /* This can be anything bigger than your nav height. The transition duration works with this */
+}
+
+.logo {
+    float: left;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+@media only screen and (min-width: 499px) {
+
+    header label { display: none; }
+
+    nav {
+        width: auto;
+        max-height: none;
+    }
+
+    nav ul { padding : 0 8px 0 0; }
+
+    nav li {
+        display: inline-block;
+        text-align: left;
+    }
+
+    header nav a {
+        display: inline-block;
+        padding: 16px 24px;
+        width: auto;
     }
 
 }

@@ -2261,163 +2261,84 @@ input[type=radio] {
   position: fixed !important; }
 
 /* == TOP NAV / HEADER ==================================================== */
-nav {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); }
+header {
+  overflow: hidden;
+  background: white; }
 
-.nav-logo {
+header a,
+header label {
   display: block;
-  padding: 0 30px;
-  float: left;
-  line-height: 60px; }
-
-nav:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  float: right; }
-
-nav ul li {
-  margin: 0;
-  display: inline-block;
-  background-color: white; }
-
-nav a {
-  display: block;
-  padding: 0 20px;
+  padding: 16px;
   color: #512f01;
-  line-height: 60px;
   text-decoration: none;
+  line-height: 20px;
   border: none; }
 
-nav ul li ul li:hover {
-  background: #fec577; }
+header a:hover,
+header label:hover {
+  color: #fdb044;
+  border: none; }
 
-nav a:hover {
-  background-color: #fec577;
-  color: white;
-  border-bottom: none; }
+header li.current-page {
+  color: #fec577; }
 
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 60px; }
+header label {
+  float: right;
+  padding: 16px 24px;
+  cursor: pointer; }
 
-nav ul li:hover > ul {
-  display: inherit; }
+header label:after {
+  content: "\2261";
+  font-size: 2.4em; }
 
-nav ul ul li {
-  width: 180px;
-  float: none;
-  display: list-item;
-  position: relative;
-  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); }
+nav {
+  float: right;
+  max-height: 0;
+  width: 100%; }
 
-nav ul ul ul li {
-  position: relative;
-  top: -60px;
-  left: 180px; }
+nav ul {
+  margin: 0;
+  padding: 0 0 16px; }
 
-nav label {
-  font-weight: 700; }
+nav li {
+  display: block;
+  text-align: center; }
 
-.nav-toggle, [id^=drop] {
+nav a {
+  padding: 10px;
+  width: 100%; }
+
+#nav {
   display: none; }
 
-li > a:after {
-  content: " ▾"; }
+#nav:checked ~ nav {
+  max-height: 200px;
+  /* This can be anything bigger than your nav height. The transition duration works with this */ }
 
-li > a:only-child:after {
-  content: ""; }
+.logo {
+  float: left;
+  font-weight: bold;
+  font-size: 1.5em; }
 
-@media all and (max-width: 768px) {
-  .nav-logo {
-    display: block;
-    width: 50%;
-    padding: 0;
-    float: left;
-    margin-left: 24px; }
+@media only screen and (min-width: 499px) {
+  header label {
+    display: none; }
 
   nav {
-    margin: 0; }
-
-  .nav-toggle + a,
-  nav ul {
-    display: none; }
-
-  .nav-toggle-main {
-    float: right; }
-
-  .nav-toggle {
-    display: block;
-    background-color: white;
-    padding: 0 20px;
-    color: #512f01;
-    line-height: 60px;
-    text-decoration: none;
-    border: none; }
-
-  .nav-toggle:hover {
-    background-color: #fec577; }
-
-  [id^=drop]:checked + ul {
-    display: block; }
-
-  nav ul li {
-    display: block;
-    width: 100%;
-    float: left; }
-
-  nav ul ul .nav-toggle,
-  nav ul ul a {
-    padding: 0 40px; }
-
-  nav ul ul ul a {
-    padding: 0 80px; }
-
-  nav a:hover,
-  nav ul ul ul a {
-    background-color: #fec577; }
-
-  nav ul li ul li .nav-toggle,
-  nav ul ul a {
-    background-color: white; }
+    width: auto;
+    max-height: none; }
 
   nav ul {
-    float: none; }
+    padding: 0 8px 0 0; }
 
-  nav ul ul {
-    position: static;
-    color: white; }
+  nav li {
+    display: inline-block;
+    text-align: left; }
 
-  nav ul ul li:hover > ul,
-  nav ul li:hover > ul {
-    display: none; }
-
-  nav ul ul li {
-    display: block;
-    width: 100%; }
-
-  nav ul ul ul li {
-    position: static; }
-
-  li > a:after {
-    content: " ▾"; }
-
-  li > a:only-child:after {
-    content: ""; } }
-@media all and (max-width: 330px) {
-  nav ul li {
-    display: block;
-    width: 94%; } }
+  header nav a {
+    display: inline-block;
+    padding: 16px 24px;
+    width: auto; } }
 /*
     FICTOAN
     An intuitive, minimalist responsive HTML+CSS setup
