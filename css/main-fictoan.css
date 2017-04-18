@@ -1650,7 +1650,7 @@ hr {
   padding-left: 24vmax; }
 
 /*  This will render an empty space of
-    20% screen height where you add it  */
+    24% screen height where you add it  */
 .empty-spacer {
   display: block;
   height: 24vmin;
@@ -1758,7 +1758,7 @@ p .text-serif {
 a {
   cursor: pointer;
   color: #fdb044;
-  font-weight: 700;
+  font-weight: bold;
   border-bottom: 1px dotted #fdb044;
   transition: all 0.2s; }
 
@@ -1945,6 +1945,84 @@ i, em {
   background: #fec577;
   color: #fff0dc; }
 
+/* == TOP NAV / HEADER ==================================================== */
+header {
+  overflow: hidden;
+  background: white; }
+
+header a,
+header label {
+  display: block;
+  padding: 16px;
+  color: #512f01;
+  text-decoration: none;
+  line-height: 20px;
+  border: none; }
+
+header a:hover,
+header label:hover {
+  color: #fdb044;
+  border: none; }
+
+header li.current-page a {
+  color: #fec577; }
+
+header label {
+  float: right;
+  padding: 16px 24px;
+  cursor: pointer; }
+
+header label:after {
+  content: "\2261";
+  font-size: 2.4em; }
+
+nav {
+  float: right;
+  max-height: 0;
+  width: 100%; }
+
+nav ul {
+  margin: 0;
+  padding: 0 0 16px; }
+
+nav li {
+  display: block;
+  text-align: center; }
+
+nav a {
+  padding: 10px;
+  width: 100%; }
+
+#nav {
+  display: none; }
+
+/*  This can be anything bigger than your nav height.
+    The transition duration works with this  */
+#nav:checked ~ nav {
+  max-height: 200px; }
+
+.nav-logo {
+  float: left; }
+
+@media only screen and (min-width: 499px) {
+  header label {
+    display: none; }
+
+  nav {
+    width: auto;
+    max-height: none; }
+
+  nav ul {
+    padding: 0 8px 0 0; }
+
+  nav li {
+    display: inline-block;
+    text-align: left; }
+
+  header nav a {
+    display: inline-block;
+    padding: 16px 24px;
+    width: auto; } }
 /* == CODE ================================================================= */
 code {
   background-color: #f2f2f2;
@@ -2009,18 +2087,20 @@ pre > code {
 .ff-button.no-bg {
   background: none;
   box-shadow: none;
-  color: black;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+  color: #fdb044;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.16); }
 
 .ff-button.no-bg:hover {
   background: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.75);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+  color: #fec577;
+  transform: translateY(-2px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
 
 .ff-button.no-bg:active {
-  color: black;
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0.4); }
+  color: #fdb044;
+  transform: translateY(0);
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.24); }
 
 .ff-button.no-shadow {
   box-shadow: none; }
@@ -2054,13 +2134,13 @@ pre > code {
   color: white; }
 
 /* == INPUT FIELDS ========================================================= */
-input,
-input:focus,
-input:active {
+.ff-input,
+.ff-input:focus,
+.ff-input:active {
   border: none;
   outline: none; }
 
-input {
+.ff-input {
   width: 100%;
   height: 100%;
   border: none;
@@ -2070,12 +2150,18 @@ input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   font-family: "Work Sans", sans-serif; }
 
-input:focus,
-input:active {
+.ff-input:focus,
+.ff-input:active {
   padding-bottom: 3px;
   border-bottom: 2px solid #fec577; }
 
-input[type=file] {
+.ff-input.border-green {
+  border-bottom: 2px solid #28bd6b; }
+
+.ff-input.border-red {
+  border-bottom: 2px solid #ff5a57; }
+
+.ff-input[type=file] {
   border: none;
   outline: none; }
 
@@ -2128,7 +2214,7 @@ input[type=checkbox] {
 
 .ff-checkbox input[type=checkbox]:disabled ~ label {
   cursor: default;
-  opacity: 0.4; }
+  opacity: 0.24; }
 
 .ff-checkbox input[type=checkbox]:checked + label:after {
   display: block;
@@ -2200,9 +2286,8 @@ input[type=radio] {
   opacity: 1;
   pointer-events: auto; }
 
-.ff-modal > div {
+.ff-modal-box {
   position: relative;
-  width: 400px;
   margin: 10vmin auto; }
 
 /* ==  TAB BAR  ============================================================ */
@@ -2242,7 +2327,7 @@ input[type=radio] {
   padding: 32px;
   background: white;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.05); }
+  border: 1px solid rgba(0, 0, 0, 0.04); }
 
 .card-smaller {
   padding: 16px 24px; }
@@ -2260,85 +2345,6 @@ input[type=radio] {
 .full-size-bg.bg-fixed {
   position: fixed !important; }
 
-/* == TOP NAV / HEADER ==================================================== */
-header {
-  overflow: hidden;
-  background: white; }
-
-header a,
-header label {
-  display: block;
-  padding: 16px;
-  color: #512f01;
-  text-decoration: none;
-  line-height: 20px;
-  border: none; }
-
-header a:hover,
-header label:hover {
-  color: #fdb044;
-  border: none; }
-
-header li.current-page {
-  color: #fec577; }
-
-header label {
-  float: right;
-  padding: 16px 24px;
-  cursor: pointer; }
-
-header label:after {
-  content: "\2261";
-  font-size: 2.4em; }
-
-nav {
-  float: right;
-  max-height: 0;
-  width: 100%; }
-
-nav ul {
-  margin: 0;
-  padding: 0 0 16px; }
-
-nav li {
-  display: block;
-  text-align: center; }
-
-nav a {
-  padding: 10px;
-  width: 100%; }
-
-#nav {
-  display: none; }
-
-#nav:checked ~ nav {
-  max-height: 200px;
-  /* This can be anything bigger than your nav height. The transition duration works with this */ }
-
-.logo {
-  float: left;
-  font-weight: bold;
-  font-size: 1.5em; }
-
-@media only screen and (min-width: 499px) {
-  header label {
-    display: none; }
-
-  nav {
-    width: auto;
-    max-height: none; }
-
-  nav ul {
-    padding: 0 8px 0 0; }
-
-  nav li {
-    display: inline-block;
-    text-align: left; }
-
-  header nav a {
-    display: inline-block;
-    padding: 16px 24px;
-    width: auto; } }
 /*
     FICTOAN
     An intuitive, minimalist responsive HTML+CSS setup

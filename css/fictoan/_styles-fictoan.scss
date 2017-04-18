@@ -184,7 +184,7 @@ hr {
 .padding-left-huge       { padding-left : $paddingUnit*12; }
 
 /*  This will render an empty space of
-    20% screen height where you add it  */
+    24% screen height where you add it  */
 .empty-spacer {
     display : block;
     height  : 24vmin;
@@ -274,7 +274,7 @@ p .text-serif {
 a {
     cursor        : pointer;
     color         : $linkColor;
-    font-weight   : 700;
+    font-weight   : bold;
     border-bottom : $linkBorder;
     transition    : all 0.2s;
 }
@@ -369,6 +369,97 @@ i, em { font-style : italic; }
 
 
 
+/* == TOP NAV / HEADER ==================================================== */
+
+header {
+    overflow   : hidden;
+    background : $colorWhite;
+}
+
+header a,
+header label {
+    display         : block;
+    padding         : 16px;
+    color           : $colorDark;
+    text-decoration : none;
+    line-height     : 20px;
+    border          : none;
+}
+
+header a:hover,
+header label:hover {
+    color  : $colorShade;
+    border : none;
+}
+
+header li.current-page a { color : $colorHue; }
+
+header label {
+    float   : right;
+    padding : 16px 24px;
+    cursor  : pointer;
+}
+
+header label:after {
+    content   : "\2261"; //  This is the hamburger menu icon
+    font-size : 2.4em;
+}
+
+nav {
+    float      : right;
+    max-height : 0;
+    width      : 100%;
+}
+
+nav ul {
+    margin  : 0;
+    padding : 0 0 16px;
+}
+
+nav li {
+    display    : block;
+    text-align : center;
+}
+
+nav a {
+    padding : 10px;
+    width   : 100%;
+}
+
+#nav { display : none; }
+
+/*  This can be anything bigger than your nav height.
+    The transition duration works with this  */
+#nav:checked ~ nav { max-height : 200px; }
+
+.nav-logo { float : left; }
+
+@media only screen and (min-width : 499px) {
+
+    header label { display : none; }
+
+    nav {
+        width      : auto;
+        max-height : none;
+    }
+
+    nav ul { padding : 0 8px 0 0; }
+
+    nav li {
+        display    : inline-block;
+        text-align : left;
+    }
+
+    header nav a {
+        display : inline-block;
+        padding : 16px 24px;
+        width   : auto;
+    }
+
+}
+
+
+
 /* == CODE ================================================================= */
 
 code {
@@ -439,18 +530,20 @@ pre > code {
 .ff-button.no-bg {
     background  : none;
     box-shadow  : none;
-    color       : rgba(0, 0, 0, 1);
-    text-shadow : 0 1px 1px rgba(0, 0, 0, 0.4);
+    color       : $colorShade;
+    text-shadow : 0 1px 1px hsla(0, 0, 0, 0.16);
 }
 .ff-button.no-bg:hover {
     background  : none;
     box-shadow  : none;
-    color       : rgba(0, 0, 0, 0.75);
-    text-shadow : 0 2px 8px rgba(0, 0, 0, 0.4);
+    color       : $colorHue;
+    transform   : translateY(-2px);
+    text-shadow : 0 2px 8px hsla(0, 0, 0, 0.08);
 }
 .ff-button.no-bg:active {
-    color       : rgba(0, 0, 0, 1);
-    text-shadow : 0 0 0 rgba(0, 0, 0, 0.4);
+    color       : $colorShade;
+    transform   : translateY(0);
+    text-shadow : 0 0 0 hsla(0, 0, 0, 0.24);
 }
 
 .ff-button.no-shadow { box-shadow : none; }
@@ -483,16 +576,18 @@ pre > code {
     color         : $colorWhite;
 }
 
+
+
 /* == INPUT FIELDS ========================================================= */
 
-input,
-input:focus,
-input:active {
+.ff-input,
+.ff-input:focus,
+.ff-input:active {
     border  : none;
     outline : none;
 }
 
-input {
+.ff-input {
     width         : 100%;
     height        : 100%;
     border        : none;
@@ -503,13 +598,16 @@ input {
     font-family   : $fontSans;
 }
 
-input:focus,
-input:active {
+.ff-input:focus,
+.ff-input:active {
     padding-bottom : 3px;
     border-bottom  : 2px solid $colorHue;
 }
 
-input[type=file] {
+.ff-input.border-green { border-bottom : 2px solid $colorGreen; }
+.ff-input.border-red   { border-bottom : 2px solid $colorRed; }
+
+.ff-input[type=file] {
     border: none;
     outline: none;
 }
@@ -541,7 +639,7 @@ input[type=checkbox] { display : none; }
     border-radius : 12px; //  Basically half of the height
     cursor        : pointer;
     transition    : all 0.1s ease-out;
-    box-shadow    : 0 2px 8px -2px rgba(0, 0, 0, 0.24) inset;
+    box-shadow    : 0 2px 8px -2px hsla(0, 0, 0, 0.24) inset;
 }
 
 //  The white switch inside
@@ -556,7 +654,7 @@ input[type=checkbox] { display : none; }
     border-radius : 50%;
     content       : '';
     transition    : all 0.1s ease-out;
-    box-shadow    : 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+    box-shadow    : 0 4px 8px -4px hsla(0, 0, 0, 0.6);
 }
 
 //  The bg when checked
@@ -569,7 +667,7 @@ input[type=checkbox] { display : none; }
 
 .ff-checkbox input[type=checkbox]:disabled ~ label {
     cursor  : default;
-    opacity : 0.4;
+    opacity : 0.24;
 }
 
 //  The switch when disabled
@@ -599,7 +697,7 @@ input[type=radio] { display : none; }
     border-radius : 12px; //  Basically half of the height
     cursor        : pointer;
     transition    : all 0.1s ease-out;
-    box-shadow    : 0 2px 8px -2px rgba(0, 0, 0, 0.24) inset;
+    box-shadow    : 0 2px 8px -2px hsla(0, 0, 0, 0.24) inset;
 }
 
 //  The white circle inside
@@ -655,9 +753,8 @@ input[type=radio] { display : none; }
     pointer-events : auto;
 }
 
-.ff-modal > div {
+.ff-modal-box {
     position : relative;
-    width    : 400px;
     margin   : 10vmin auto;
 }
 
@@ -684,9 +781,9 @@ input[type=radio] { display : none; }
 .ff-tab-bar label:hover { cursor: pointer; }
 
 .ff-tab:checked + label {
-    color               : $colorHue;
-    font-weight         : 700;
-    border-bottom       : 2px solid $colorHue;
+    color         : $colorHue;
+    font-weight   : 700;
+    border-bottom : 2px solid $colorHue;
 }
 
 #tab1:checked ~ #content1,
@@ -704,7 +801,7 @@ input[type=radio] { display : none; }
     padding       : 32px;
     background    : $colorWhite;
     border-radius : 4px;
-    border        : 1px solid hsla(0, 0%, 0%, 0.05);
+    border        : 1px solid hsla(0, 0%, 0%, 0.04);
 }
 .card-smaller { padding : 16px 24px; }
 
@@ -721,100 +818,4 @@ input[type=radio] { display : none; }
 .full-size-bg.bg-fixed {
     @extend .full-size-bg;
     position : fixed !important;
-}
-
-
-
-/* == TOP NAV / HEADER ==================================================== */
-
-header {
-    overflow: hidden;
-    background: $colorWhite;
-}
-
-header a,
-header label {
-    display: block;
-    padding: 16px;
-    color: $colorDark;
-    text-decoration: none;
-    line-height: 20px;
-    border : none;
-}
-
-header a:hover,
-header label:hover {
-    color: $colorShade;
-    border: none;
-}
-
-header li.current-page { color: $colorHue; }
-
-header label {
-    float: right;
-    padding: 16px 24px;
-    cursor: pointer;
-}
-
-header label:after {
-    content: "\2261"; //  This is the hamburger menu icon
-    font-size: 2.4em;
-}
-
-
-nav {
-    float: right;
-    max-height: 0;
-    width: 100%;
-}
-
-nav ul {
-    margin  : 0;
-    padding : 0 0 16px;
-}
-
-nav li {
-    display: block;
-    text-align: center;
-}
-
-nav a {
-    padding: 10px;
-    width: 100%;
-}
-
-#nav { display: none; }
-
-#nav:checked ~ nav {
-    max-height: 200px; /* This can be anything bigger than your nav height. The transition duration works with this */
-}
-
-.logo {
-    float: left;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-@media only screen and (min-width: 499px) {
-
-    header label { display: none; }
-
-    nav {
-        width: auto;
-        max-height: none;
-    }
-
-    nav ul { padding : 0 8px 0 0; }
-
-    nav li {
-        display: inline-block;
-        text-align: left;
-    }
-
-    header nav a {
-        display: inline-block;
-        padding: 16px 24px;
-        width: auto;
-    }
-
 }
