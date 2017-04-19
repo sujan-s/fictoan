@@ -713,7 +713,7 @@ template {
 /*  For large screens FROM 2400px width and UPWARD  */
 @media all and (min-width: 2400px) {
   .all-content {
-    padding: 0 32vw; } }
+    padding: 0 16vw; } }
 /*	Device-specific portion widths —
     the naming convention is: .{portion-width}-on-{device}-{orientation} */
 /*	For small screens UP TO 599px */
