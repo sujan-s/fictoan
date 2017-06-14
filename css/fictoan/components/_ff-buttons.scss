@@ -1,0 +1,94 @@
+a.ff-button { border : none; }
+
+//  Basics
+.ff-button {
+    position    : relative;
+    display     : inline-block;
+    cursor      : pointer;
+    margin      : $measureFixed/2;
+    padding     : $measureFixed*1 $measureFixed*3;
+    font-family : $fontSans;
+    font-weight : 700;
+    color       : $colorWhite;
+    border      : none;
+    transition  : all 0.1s;
+}
+
+.ff-button:hover  { transform : translateY(-1px); }
+.ff-button:active {
+    transform  : translateY(1px);
+    box-shadow : none;
+}
+
+//  Big and small buttons
+.button-large {
+    padding   : $measureFixed*2 $measureFixed*4;
+    font-size : 110%;
+}
+.button-small {
+    padding   : $measureFixed/2 $measureFixed*2;
+    font-size : 80%;
+}
+
+//  Button with a multi-colour background
+.ff-button.bg-gradient {
+    background  : -webkit-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
+    background  :    -moz-linear-gradient(-45deg, $colorHue 0%, $colorShade 100%);
+    background  :         linear-gradient(135deg, $colorHue 0%, $colorShade 100%);
+}
+//  Button that’s just text
+.ff-button.bg-none {
+    background  : none;
+    box-shadow  : none;
+    color       : $colorShade;
+    text-shadow : 0 1px 1px hsla(0, 0, 0, 0.16);
+}
+
+.ff-button.bg-none:hover {
+    background  : none;
+    box-shadow  : none;
+    color       : $colorHue;
+    transform   : translateY(-1px);
+    text-shadow : 0 $measureFixed/4 $measureFixed hsla(0, 0, 0, 0.08);
+}
+.ff-button.bg-none:active {
+    color       : $colorShade;
+    transform   : translateY(0);
+    text-shadow : 0 0 0 hsla(0, 0, 0, 0.24);
+}
+
+//  A round button
+.ff-button.shape-circular {
+    border-radius : 50%;
+    padding       : $measureFixed*2;
+}
+
+//  Button with just a border
+.ff-button.bordered {
+    background : none;
+    border     : 2px solid $colorHue;
+    color      : $colorHue;
+}
+
+//  Only for inline icons
+.ff-button path         { fill : $colorWhite; }
+.ff-button.bg-none path { fill : $colorShade; }
+
+.ff-button.disabled {
+    pointer-events : none;
+    box-shadow     : none;
+    opacity        : 0.4;
+}
+
+//  A smaller button for tags
+.ff-pill {
+    position    : relative;
+    display     : inline-block;
+    margin      : $measureFixed/2;
+    padding     : $measureFixed/2 $measureFixed*2;
+    font-size   : 80%;
+    font-family : $fontSans;
+    color       : $colorWhite;
+}
+
+a.ff-pill { border : none; }

@@ -1,0 +1,165 @@
+/* == INPUT FIELDS ========================================================= */
+
+.ff-input,
+.ff-input:focus,
+.ff-input:active {
+    border  : none;
+    outline : none;
+}
+
+.ff-input {
+    width         : 100%;
+    height        : 100%;
+    border        : none;
+    outline       : none;
+    background    : none;
+    padding       : $measureFixed/2;
+    border-bottom : 1px solid rgba($colorBlack, 0.24);
+    font-family   : $fontSans;
+}
+
+.ff-input:focus,
+.ff-input:active {
+    padding-bottom : 3px;
+    border-bottom  : $measureFixed/4 solid $colorHue;
+}
+
+.ff-input.input-success { border-bottom : $measureFixed/4 solid $colorGreen; }
+.ff-input.input-error   { border-bottom : $measureFixed/4 solid $colorRed; }
+
+.input-success:focus, .input-success:active,
+.input-error:focus, .input-error:active { padding-bottom : $measureFixed/2; }
+
+.ff-input.show-inline {
+    width  : inherit;
+    height : inherit;
+}
+
+.ff-input[type=file] {
+    border  : none;
+    outline : none;
+}
+
+
+
+
+/* == TOGGLES ============================================================== */
+
+input[type=checkbox] { display : none; }
+
+.ff-checkbox {
+    display      : inline-block;
+    margin-right : $measureFixed*1.5;
+}
+
+.ff-checkbox label.ff-checkbox-label {
+    cursor         : pointer;
+    vertical-align : middle;
+}
+
+//  The grey background
+.ff-checkbox input[type=checkbox] + label.ff-checkbox-label {
+    position      : relative;
+    display       : inline-block;
+    width         : $measureFixed*5;
+    height        : $measureFixed*3;
+    margin-right  : $measureFixed*1.5;
+    background    : $colorMildGrey;
+    border-radius : $measureFixed*1.5; //  Basically half of the height
+    cursor        : pointer;
+    transition    : all 0.1s ease-out;
+    box-shadow    : 0 $measureFixed/4 $measureFixed -2px hsla(0, 0, 0, 0.24) inset;
+}
+
+//  The white switch inside
+.ff-checkbox input[type=checkbox] + label.ff-checkbox-label:after {
+    position      : absolute;
+    display       : block;
+    left          : $measureFixed/2;
+    top           : $measureFixed/2;
+    width         : $measureFixed*2;
+    height        : $measureFixed*2;
+    background    : $colorWhite;
+    border-radius : 50%;
+    content       : '';
+    transition    : all 0.1s ease-out;
+    box-shadow    : 0 $measureFixed/2 $measureFixed -4px hsla(0, 0, 0, 0.6);
+}
+
+//  The bg when checked
+.ff-checkbox input[type=checkbox]:checked + label.ff-checkbox-label { background : $colorHue; }
+
+.ff-checkbox input[type=checkbox]:checked + label.ff-checkbox-label:after { left : 20px; }
+
+.ff-checkbox input[type=checkbox]:disabled + label.ff-checkbox-label,
+.ff-checkbox input[type=checkbox]:disabled:checked + label.ff-checkbox-label { pointer-events : none; }
+
+.ff-checkbox input[type=checkbox]:disabled ~ label.ff-checkbox-label {
+    cursor  : default;
+    opacity : 0.24;
+}
+
+//  The switch when disabled
+.ff-checkbox input[type=checkbox]:checked + label.ff-checkbox-label:after {
+    display    : block;
+    background : $colorWhite;
+    box-shadow : none;
+}
+
+
+
+
+/* == TOGGLES ============================================================== */
+
+input[type=radio] { display : none; }
+
+.ff-radio label.ff-radio-label {
+    cursor         : pointer;
+    vertical-align : middle;
+}
+
+//  The grey background
+.ff-radio input[type=radio] + label.ff-radio-label {
+    position      : relative;
+    display       : inline-block;
+    width         : $measureFixed*3;
+    height        : $measureFixed*3;
+    margin-right  : $measureFixed*1.5;
+    background    : $colorMildGrey;
+    border-radius : $measureFixed*1.5; //  Basically half of the height
+    cursor        : pointer;
+    transition    : all 0.1s ease-out;
+    box-shadow    : 0 $measureFixed/4 $measureFixed -2px hsla(0, 0, 0, 0.24) inset;
+}
+
+//  The white circle inside
+.ff-radio input[type=radio] + label.ff-radio-label:after {
+    position      : absolute;
+    display       : none;
+    left          : 6px;
+    top           : 6px;
+    width         : $measureFixed*1.5;
+    height        : $measureFixed*1.5;
+    background    : $colorWhite;
+    border-radius : 50%;
+    content       : "";
+    transition    : all 0.1s ease-out;
+}
+
+//  The bg when checked
+.ff-radio input[type=radio]:checked + label.ff-radio-label { background : $colorHue; }
+
+.ff-radio input[type=radio]:disabled + label.ff-radio-label,
+.ff-radio input[type=radio]:disabled:checked + label.ff-radio-label { pointer-events : none; }
+
+.ff-radio input[type=radio]:disabled ~ label.ff-radio-label {
+    cursor  : default;
+    opacity : 0.24;
+}
+
+//  The switch when disabled
+.ff-radio input[type=radio]:checked + label.ff-radio-label:after {
+    display    : block;
+    background : $colorWhite;
+    box-shadow : none;
+}

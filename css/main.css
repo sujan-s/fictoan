@@ -1,0 +1,2815 @@
+@charset "UTF-8";
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 2.0.0
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.2
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.2
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+/*  Consider removing this if you have
+    a zillion elements in your page  */
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+*:focus {
+  outline: 0; }
+
+html {
+  font-size: 1em; }
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+button {
+  vertical-align: baseline; }
+
+::-webkit-input-placeholder {
+  opacity: 0.5; }
+
+::-moz-placeholder {
+  opacity: 0.5; }
+
+input {
+  outline: none; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none; }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0; }
+
+pre, code {
+  margin: 0; }
+
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.2
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+/*  Basics for the row  */
+.row {
+  display: block;
+  margin: 0 0 2vmax 0;
+  /* This will push the next row a little below */
+  clear: both; }
+
+/*  Basics for the portions  */
+.row .portion,
+.box .portion {
+  float: left;
+  padding: 0 24px; }
+
+@media all and (max-width: 599px) {
+  .row .portion,
+  .box .portion {
+    padding: 0 8px; } }
+/*  Fallback width for portions with unspecified widths  */
+.portion {
+  width: 100%;
+  min-height: 8px; }
+
+/*  Use 'box' class to dump many divs of varied widths  */
+.box .portion {
+  margin-bottom: 1vmax; }
+
+/*  Remove the padding for nested portions  */
+.portion > .row {
+  margin-left: -24px;
+  margin-right: -24px; }
+
+/*  Lessen the gap between elements in the same row  */
+.lesser-gaps .portion,
+.portion.lesser-gaps {
+  padding: 0 12px; }
+
+/*  Remove the gap between elements in the same row  */
+.no-gaps .portion,
+.portion.no-gaps {
+  padding: 0 !important; }
+
+/*  Now the actual grid layout  */
+.portion.whole {
+  width: 100%; }
+
+.portion.half {
+  width: 50%; }
+
+.portion.one-third {
+  width: 33.3332%; }
+
+.portion.two-thirds {
+  width: 66.6665%; }
+
+.portion.one-fourth {
+  width: 25%; }
+
+.portion.three-fourths {
+  width: 75%; }
+
+.portion.one-fifth {
+  width: 20%; }
+
+.portion.two-fifths {
+  width: 40%; }
+
+.portion.three-fifths {
+  width: 60%; }
+
+.portion.four-fifths {
+  width: 80%; }
+
+.portion.one-sixth {
+  width: 16.6666%; }
+
+.portion.two-sixths {
+  width: 33.3332%; }
+
+.portion.three-sixths {
+  width: 50.0000%; }
+
+.portion.four-sixths {
+  width: 66.6665%; }
+
+.portion.five-sixths {
+  width: 83.3332%; }
+
+.portion.one-seventh {
+  width: 14.2856%; }
+
+.portion.two-sevenths {
+  width: 28.5714%; }
+
+.portion.three-sevenths {
+  width: 42.8571%; }
+
+.portion.four-sevenths {
+  width: 57.1428%; }
+
+.portion.five-sevenths {
+  width: 71.4285%; }
+
+.portion.six-sevenths {
+  width: 85.7142%; }
+
+.portion.one-eighth {
+  width: 12.5%; }
+
+.portion.two-eighths {
+  width: 25.0%; }
+
+.portion.three-eighths {
+  width: 37.5%; }
+
+.portion.four-eighths {
+  width: 50.0%; }
+
+.portion.five-eighths {
+  width: 62.5%; }
+
+.portion.six-eighths {
+  width: 75.0%; }
+
+.portion.seven-eighths {
+  width: 87.5%; }
+
+.portion.one-ninth {
+  width: 11.1111%; }
+
+.portion.two-ninths {
+  width: 22.2222%; }
+
+.portion.three-ninths {
+  width: 33.3333%; }
+
+.portion.four-ninths {
+  width: 44.4444%; }
+
+.portion.five-ninths {
+  width: 55.5555%; }
+
+.portion.six-ninths {
+  width: 66.6665%; }
+
+.portion.seven-ninths {
+  width: 77.7778%; }
+
+.portion.eight-ninths {
+  width: 88.8889%; }
+
+.portion.one-tenth {
+  width: 10%; }
+
+.portion.two-tenths {
+  width: 20%; }
+
+.portion.three-tenths {
+  width: 30%; }
+
+.portion.four-tenths {
+  width: 40%; }
+
+.portion.five-tenths {
+  width: 50%; }
+
+.portion.six-tenths {
+  width: 60%; }
+
+.portion.seven-tenths {
+  width: 70%; }
+
+.portion.eight-tenths {
+  width: 80%; }
+
+.portion.nine-tenths {
+  width: 90%; }
+
+.portion.one-eleventh {
+  width: 9.0909%; }
+
+.portion.two-elevenths {
+  width: 18.1818%; }
+
+.portion.three-elevenths {
+  width: 27.2727%; }
+
+.portion.four-elevenths {
+  width: 36.3636%; }
+
+.portion.five-elevenths {
+  width: 45.4545%; }
+
+.portion.six-elevenths {
+  width: 54.5454%; }
+
+.portion.seven-elevenths {
+  width: 63.6363%; }
+
+.portion.eight-elevenths {
+  width: 72.7272%; }
+
+.portion.nine-elevenths {
+  width: 81.8181%; }
+
+.portion.ten-elevenths {
+  width: 90.9090%; }
+
+.portion.one-twelfth {
+  width: 8.3333%; }
+
+.portion.two-twelfths {
+  width: 16.6667%; }
+
+.portion.three-twelfths {
+  width: 25.0000%; }
+
+.portion.four-twelfths {
+  width: 36.3333%; }
+
+.portion.five-twelfths {
+  width: 41.6667%; }
+
+.portion.six-twelfths {
+  width: 50.0000%; }
+
+.portion.seven-twelfths {
+  width: 58.3333%; }
+
+.portion.eight-twelfths {
+  width: 66.6667%; }
+
+.portion.nine-twelfths {
+  width: 75.0000%; }
+
+.portion.ten-twelfths {
+  width: 83.3333%; }
+
+.portion.eleven-twelfths {
+  width: 91.6667%; }
+
+/*  Clearfix for the rows  */
+.row:before, .row:after {
+  display: block;
+  content: ""; }
+
+.row:after {
+  clear: both; }
+
+/*  Clearfix for the rows  */
+.box:before, .box:after {
+  display: block;
+  content: ""; }
+
+.box:after {
+  clear: both; }
+
+/*  Fixing images for better responsive behaviour  */
+.portion img {
+  max-width: 100%; }
+
+/*  Side margins for all your content — increase or decrease at will,
+    or simply add the 'no-padding' class to get full-width  */
+/*  For small screens UP TO 599px width  */
+@media all and (max-width: 599px) {
+  .all-content {
+    padding: 0 2vw; } }
+/*  For screens TILL 599px width  */
+@media all and (min-width: 600px) {
+  .all-content {
+    padding: 0 4vw; } }
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) {
+  .all-content {
+    padding: 0 8vw; } }
+/*  For screens FROM 1200px width and UPWARD  */
+@media all and (min-width: 1200px) {
+  .all-content {
+    padding: 0 10vw; } }
+/*  For big screens FROM 1800px width and UPWARD  */
+@media all and (min-width: 1800px) {
+  .all-content {
+    padding: 0 12vw; } }
+/*  For large screens FROM 2400px width and UPWARD  */
+@media all and (min-width: 2400px) {
+  .all-content {
+    padding: 0 16vw; } }
+/*  Device-specific portion widths —
+    the naming convention is: .{portion-width}-on-{device}-{orientation}  */
+/*  For small screens UP TO 599px  */
+@media all and (max-width: 599px) {
+  .row:not(.retain-layout-on-mobile) > .portion:not([class*='on-mobile']),
+  .box:not(.retain-layout-on-mobile) > .portion:not([class*='on-mobile']) {
+    width: 100%; }
+
+  .portion.whole-on-mobile {
+    width: 100%; }
+
+  .portion.half-on-mobile {
+    width: 50%; }
+
+  .portion.one-third-on-mobile {
+    width: 33.3332%; }
+
+  .portion.two-thirds-on-mobile {
+    width: 66.6665%; }
+
+  .portion.one-fourth-on-mobile {
+    width: 25%; }
+
+  .portion.two-fourths-on-mobile {
+    width: 50%; }
+
+  .portion.three-fourths-on-mobile {
+    width: 75%; }
+
+  .portion.one-fifth-on-mobile {
+    width: 20%; }
+
+  .portion.two-fifths-on-mobile {
+    width: 40%; }
+
+  .portion.three-fifths-on-mobile {
+    width: 60%; }
+
+  .portion.four-fifths-on-mobile {
+    width: 80%; }
+
+  .portion.one-sixth-on-mobile {
+    width: 16.6666%; }
+
+  .portion.two-sixths-on-mobile {
+    width: 33.3332%; }
+
+  .portion.three-sixths-on-mobile {
+    width: 50.0000%; }
+
+  .portion.four-sixths-on-mobile {
+    width: 66.6665%; }
+
+  .portion.five-sixths-on-mobile {
+    width: 83.3332%; }
+
+  .portion.one-seventh-on-mobile {
+    width: 14.2856%; }
+
+  .portion.two-sevenths-on-mobile {
+    width: 28.5714%; }
+
+  .portion.three-sevenths-on-mobile {
+    width: 42.8571%; }
+
+  .portion.four-sevenths-on-mobile {
+    width: 57.1428%; }
+
+  .portion.five-sevenths-on-mobile {
+    width: 71.4285%; }
+
+  .portion.six-sevenths-on-mobile {
+    width: 85.7142%; }
+
+  .portion.one-eighth-on-mobile {
+    width: 12.5%; }
+
+  .portion.two-eighths-on-mobile {
+    width: 25.0%; }
+
+  .portion.three-eighths-on-mobile {
+    width: 37.5%; }
+
+  .portion.four-eighths-on-mobile {
+    width: 50.0%; }
+
+  .portion.five-eighths-on-mobile {
+    width: 62.5%; }
+
+  .portion.six-eighths-on-mobile {
+    width: 75.0%; }
+
+  .portion.seven-eighths-on-mobile {
+    width: 87.5%; }
+
+  .portion.one-ninth-on-mobile {
+    width: 11.1111%; }
+
+  .portion.two-ninths-on-mobile {
+    width: 22.2222%; }
+
+  .portion.three-ninths-on-mobile {
+    width: 33.3333%; }
+
+  .portion.four-ninths-on-mobile {
+    width: 44.4444%; }
+
+  .portion.five-ninths-on-mobile {
+    width: 55.5555%; }
+
+  .portion.six-ninths-on-mobile {
+    width: 66.6665%; }
+
+  .portion.seven-ninths-on-mobile {
+    width: 77.7778%; }
+
+  .portion.eight-ninths-on-mobile {
+    width: 88.8889%; }
+
+  .portion.one-tenth-on-mobile {
+    width: 10%; }
+
+  .portion.two-tenths-on-mobile {
+    width: 20%; }
+
+  .portion.three-tenths-on-mobile {
+    width: 30%; }
+
+  .portion.four-tenths-on-mobile {
+    width: 40%; }
+
+  .portion.five-tenths-on-mobile {
+    width: 50%; }
+
+  .portion.six-tenths-on-mobile {
+    width: 60%; }
+
+  .portion.seven-tenths-on-mobile {
+    width: 70%; }
+
+  .portion.eight-tenths-on-mobile {
+    width: 80%; }
+
+  .portion.nine-tenths-on-mobile {
+    width: 90%; }
+
+  .portion.one-eleventh-on-mobile {
+    width: 9.0909%; }
+
+  .portion.two-elevenths-on-mobile {
+    width: 18.1818%; }
+
+  .portion.three-elevenths-on-mobile {
+    width: 27.2727%; }
+
+  .portion.four-elevenths-on-mobile {
+    width: 36.3636%; }
+
+  .portion.five-elevenths-on-mobile {
+    width: 45.4545%; }
+
+  .portion.six-elevenths-on-mobile {
+    width: 54.5454%; }
+
+  .portion.seven-elevenths-on-mobile {
+    width: 63.6363%; }
+
+  .portion.eight-elevenths-on-mobile {
+    width: 72.7272%; }
+
+  .portion.nine-elevenths-on-mobile {
+    width: 81.8181%; }
+
+  .portion.ten-elevenths-on-mobile {
+    width: 90.9090%; }
+
+  .portion.one-twelfth-on-mobile {
+    width: 8.3333%; }
+
+  .portion.two-twelfths-on-mobile {
+    width: 16.6667%; }
+
+  .portion.three-twelfths-on-mobile {
+    width: 25.0000%; }
+
+  .portion.four-twelfths-on-mobile {
+    width: 36.3333%; }
+
+  .portion.five-twelfths-on-mobile {
+    width: 41.6667%; }
+
+  .portion.six-twelfths-on-mobile {
+    width: 50.0000%; }
+
+  .portion.seven-twelfths-on-mobile {
+    width: 58.3333%; }
+
+  .portion.eight-twelfths-on-mobile {
+    width: 66.6667%; }
+
+  .portion.nine-twelfths-on-mobile {
+    width: 75.0000%; }
+
+  .portion.ten-twelfths-on-mobile {
+    width: 83.3333%; }
+
+  .portion.eleven-twelfths-on-mobile {
+    width: 91.6667%; } }
+/*  For screens FROM 600px width and UPWARD  */
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .row:not(.retain-layout-on-tab-pt) > .portion:not([class*='tab-pt']),
+  .box:not(.retain-layout-on-tab-pt) > .portion:not([class*='tab-pt']) {
+    width: 100%; }
+
+  .portion.whole-on-tab-pt {
+    width: 100%; }
+
+  .portion.half-on-tab-pt {
+    width: 50%; }
+
+  .portion.one-third-on-tab-pt {
+    width: 33.3332%; }
+
+  .portion.two-thirds-on-tab-pt {
+    width: 66.6665%; }
+
+  .portion.one-fourth-on-tab-pt {
+    width: 25%; }
+
+  .portion.two-fourths-on-tab-pt {
+    width: 50%; }
+
+  .portion.three-fourths-on-tab-pt {
+    width: 75%; }
+
+  .portion.one-fifth-on-tab-pt {
+    width: 20%; }
+
+  .portion.two-fifths-on-tab-pt {
+    width: 40%; }
+
+  .portion.three-fifths-on-tab-pt {
+    width: 60%; }
+
+  .portion.four-fifths-on-tab-pt {
+    width: 80%; }
+
+  .portion.one-sixth-on-tab-pt {
+    width: 16.6666%; }
+
+  .portion.two-sixths-on-tab-pt {
+    width: 33.3332%; }
+
+  .portion.three-sixths-on-tab-pt {
+    width: 50.0000%; }
+
+  .portion.four-sixths-on-tab-pt {
+    width: 66.6665%; }
+
+  .portion.five-sixths-on-tab-pt {
+    width: 83.3332%; }
+
+  .portion.one-seventh-on-tab-pt {
+    width: 14.2856%; }
+
+  .portion.two-sevenths-on-tab-pt {
+    width: 28.5714%; }
+
+  .portion.three-sevenths-on-tab-pt {
+    width: 42.8571%; }
+
+  .portion.four-sevenths-on-tab-pt {
+    width: 57.1428%; }
+
+  .portion.five-sevenths-on-tab-pt {
+    width: 71.4285%; }
+
+  .portion.six-sevenths-on-tab-pt {
+    width: 85.7142%; }
+
+  .portion.one-eighth-on-tab-pt {
+    width: 12.5%; }
+
+  .portion.two-eighths-on-tab-pt {
+    width: 25.0%; }
+
+  .portion.three-eighths-on-tab-pt {
+    width: 37.5%; }
+
+  .portion.four-eighths-on-tab-pt {
+    width: 50.0%; }
+
+  .portion.five-eighths-on-tab-pt {
+    width: 62.5%; }
+
+  .portion.six-eighths-on-tab-pt {
+    width: 75.0%; }
+
+  .portion.seven-eighths-on-tab-pt {
+    width: 87.5%; }
+
+  .portion.one-ninth-on-tab-pt {
+    width: 11.1111%; }
+
+  .portion.two-ninths-on-tab-pt {
+    width: 22.2222%; }
+
+  .portion.three-ninths-on-tab-pt {
+    width: 33.3333%; }
+
+  .portion.four-ninths-on-tab-pt {
+    width: 44.4444%; }
+
+  .portion.five-ninths-on-tab-pt {
+    width: 55.5555%; }
+
+  .portion.six-ninths-on-tab-pt {
+    width: 66.6665%; }
+
+  .portion.seven-ninths-on-tab-pt {
+    width: 77.7778%; }
+
+  .portion.eight-ninths-on-tab-pt {
+    width: 88.8889%; }
+
+  .portion.one-tenth-on-tab-pt {
+    width: 10%; }
+
+  .portion.two-tenths-on-tab-pt {
+    width: 20%; }
+
+  .portion.three-tenths-on-tab-pt {
+    width: 30%; }
+
+  .portion.four-tenths-on-tab-pt {
+    width: 40%; }
+
+  .portion.five-tenths-on-tab-pt {
+    width: 50%; }
+
+  .portion.six-tenths-on-tab-pt {
+    width: 60%; }
+
+  .portion.seven-tenths-on-tab-pt {
+    width: 70%; }
+
+  .portion.eight-tenths-on-tab-pt {
+    width: 80%; }
+
+  .portion.nine-tenths-on-tab-pt {
+    width: 90%; }
+
+  .portion.one-eleventh-on-tab-pt {
+    width: 9.0909%; }
+
+  .portion.two-elevenths-on-tab-pt {
+    width: 18.1818%; }
+
+  .portion.three-elevenths-on-tab-pt {
+    width: 27.2727%; }
+
+  .portion.four-elevenths-on-tab-pt {
+    width: 36.3636%; }
+
+  .portion.five-elevenths-on-tab-pt {
+    width: 45.4545%; }
+
+  .portion.six-elevenths-on-tab-pt {
+    width: 54.5454%; }
+
+  .portion.seven-elevenths-on-tab-pt {
+    width: 63.6363%; }
+
+  .portion.eight-elevenths-on-tab-pt {
+    width: 72.7272%; }
+
+  .portion.nine-elevenths-on-tab-pt {
+    width: 81.8181%; }
+
+  .portion.ten-elevenths-on-tab-pt {
+    width: 90.9090%; }
+
+  .portion.one-twelfth-on-tab-pt {
+    width: 8.3333%; }
+
+  .portion.two-twelfths-on-tab-pt {
+    width: 16.6667%; }
+
+  .portion.three-twelfths-on-tab-pt {
+    width: 25.0000%; }
+
+  .portion.four-twelfths-on-tab-pt {
+    width: 36.3333%; }
+
+  .portion.five-twelfths-on-tab-pt {
+    width: 41.6667%; }
+
+  .portion.six-twelfths-on-tab-pt {
+    width: 50.0000%; }
+
+  .portion.seven-twelfths-on-tab-pt {
+    width: 58.3333%; }
+
+  .portion.eight-twelfths-on-tab-pt {
+    width: 66.6667%; }
+
+  .portion.nine-twelfths-on-tab-pt {
+    width: 75.0000%; }
+
+  .portion.ten-twelfths-on-tab-pt {
+    width: 83.3333%; }
+
+  .portion.eleven-twelfths-on-tab-pt {
+    width: 91.6667%; } }
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width: 900px) and (max-width: 1199px) {
+  .row:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']),
+  .box:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']) {
+    width: 100%; }
+
+  .portion.whole-on-tab-ls {
+    width: 100%; }
+
+  .portion.half-on-tab-ls {
+    width: 50%; }
+
+  .portion.one-third-on-tab-ls {
+    width: 33.3332%; }
+
+  .portion.two-thirds-on-tab-ls {
+    width: 66.6665%; }
+
+  .portion.one-fourth-on-tab-ls {
+    width: 25%; }
+
+  .portion.two-fourths-on-tab-ls {
+    width: 50%; }
+
+  .portion.three-fourths-on-tab-ls {
+    width: 75%; }
+
+  .portion.one-fifth-on-tab-ls {
+    width: 20%; }
+
+  .portion.two-fifths-on-tab-ls {
+    width: 40%; }
+
+  .portion.three-fifths-on-tab-ls {
+    width: 60%; }
+
+  .portion.four-fifths-on-tab-ls {
+    width: 80%; }
+
+  .portion.one-sixth-on-tab-ls {
+    width: 16.6666%; }
+
+  .portion.two-sixths-on-tab-ls {
+    width: 33.3332%; }
+
+  .portion.three-sixths-on-tab-ls {
+    width: 50.0000%; }
+
+  .portion.four-sixths-on-tab-ls {
+    width: 66.6665%; }
+
+  .portion.five-sixths-on-tab-ls {
+    width: 83.3332%; }
+
+  .portion.one-seventh-on-tab-ls {
+    width: 14.2856%; }
+
+  .portion.two-sevenths-on-tab-ls {
+    width: 28.5714%; }
+
+  .portion.three-sevenths-on-tab-ls {
+    width: 42.8571%; }
+
+  .portion.four-sevenths-on-tab-ls {
+    width: 57.1428%; }
+
+  .portion.five-sevenths-on-tab-ls {
+    width: 71.4285%; }
+
+  .portion.six-sevenths-on-tab-ls {
+    width: 85.7142%; }
+
+  .portion.one-eighth-on-tab-ls {
+    width: 12.5%; }
+
+  .portion.two-eighths-on-tab-ls {
+    width: 25.0%; }
+
+  .portion.three-eighths-on-tab-ls {
+    width: 37.5%; }
+
+  .portion.four-eighths-on-tab-ls {
+    width: 50.0%; }
+
+  .portion.five-eighths-on-tab-ls {
+    width: 62.5%; }
+
+  .portion.six-eighths-on-tab-ls {
+    width: 75.0%; }
+
+  .portion.seven-eighths-on-tab-ls {
+    width: 87.5%; }
+
+  .portion.one-ninth-on-tab-ls {
+    width: 11.1111%; }
+
+  .portion.two-ninths-on-tab-ls {
+    width: 22.2222%; }
+
+  .portion.three-ninths-on-tab-ls {
+    width: 33.3333%; }
+
+  .portion.four-ninths-on-tab-ls {
+    width: 44.4444%; }
+
+  .portion.five-ninths-on-tab-ls {
+    width: 55.5555%; }
+
+  .portion.six-ninths-on-tab-ls {
+    width: 66.6665%; }
+
+  .portion.seven-ninths-on-tab-ls {
+    width: 77.7778%; }
+
+  .portion.eight-ninths-on-tab-ls {
+    width: 88.8889%; }
+
+  .portion.one-tenth-on-tab-ls {
+    width: 10%; }
+
+  .portion.two-tenths-on-tab-ls {
+    width: 20%; }
+
+  .portion.three-tenths-on-tab-ls {
+    width: 30%; }
+
+  .portion.four-tenths-on-tab-ls {
+    width: 40%; }
+
+  .portion.five-tenths-on-tab-ls {
+    width: 50%; }
+
+  .portion.six-tenths-on-tab-ls {
+    width: 60%; }
+
+  .portion.seven-tenths-on-tab-ls {
+    width: 70%; }
+
+  .portion.eight-tenths-on-tab-ls {
+    width: 80%; }
+
+  .portion.nine-tenths-on-tab-ls {
+    width: 90%; }
+
+  .portion.one-eleventh-on-tab-ls {
+    width: 9.0909%; }
+
+  .portion.two-elevenths-on-tab-ls {
+    width: 18.1818%; }
+
+  .portion.three-elevenths-on-tab-ls {
+    width: 27.2727%; }
+
+  .portion.four-elevenths-on-tab-ls {
+    width: 36.3636%; }
+
+  .portion.five-elevenths-on-tab-ls {
+    width: 45.4545%; }
+
+  .portion.six-elevenths-on-tab-ls {
+    width: 54.5454%; }
+
+  .portion.seven-elevenths-on-tab-ls {
+    width: 63.6363%; }
+
+  .portion.eight-elevenths-on-tab-ls {
+    width: 72.7272%; }
+
+  .portion.nine-elevenths-on-tab-ls {
+    width: 81.8181%; }
+
+  .portion.ten-elevenths-on-tab-ls {
+    width: 90.9090%; }
+
+  .portion.one-twelfth-on-tab-ls {
+    width: 8.3333%; }
+
+  .portion.two-twelfths-on-tab-ls {
+    width: 16.6667%; }
+
+  .portion.three-twelfths-on-tab-ls {
+    width: 25.0000%; }
+
+  .portion.four-twelfths-on-tab-ls {
+    width: 36.3333%; }
+
+  .portion.five-twelfths-on-tab-ls {
+    width: 41.6667%; }
+
+  .portion.six-twelfths-on-tab-ls {
+    width: 50.0000%; }
+
+  .portion.seven-twelfths-on-tab-ls {
+    width: 58.3333%; }
+
+  .portion.eight-twelfths-on-tab-ls {
+    width: 66.6667%; }
+
+  .portion.nine-twelfths-on-tab-ls {
+    width: 75.0000%; }
+
+  .portion.ten-twelfths-on-tab-ls {
+    width: 83.3333%; }
+
+  .portion.eleven-twelfths-on-tab-ls {
+    width: 91.6667%; } }
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.2
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+/* == UTILITY ============================================================== */
+.show-empty {
+  visibility: hidden !important; }
+
+.show-nothing {
+  display: none !important; }
+
+.show-inline {
+  display: inline-block !important; }
+
+.full-width {
+  width: 100% !important; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clear-both {
+  clear: both; }
+
+.vertical-centre-items,
+.vertical-center-items {
+  display: flex;
+  align-items: center; }
+
+.vertical-centre-this,
+.vertical-center-this {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.horizontal-centre-this,
+.horizontal-center-this {
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 4vmax 0; }
+
+hr.main {
+  background: #ffa98f; }
+
+hr.sub {
+  background: #f2f2f2; }
+
+/* == BOX MODEL HELPERS===================================================== */
+.no-margin {
+  margin: 0 !important; }
+
+.margin-all-fixed {
+  margin: 8px; }
+
+.margin-all-tiny {
+  margin: 2vmax; }
+
+.margin-all-small {
+  margin: 4vmax; }
+
+.margin-all-medium {
+  margin: 8vmax; }
+
+.margin-all-large {
+  margin: 16vmax; }
+
+.margin-all-huge {
+  margin: 24vmax; }
+
+.no-margin-top {
+  margin-top: 0 !important; }
+
+.margin-top-fixed {
+  margin-top: 8px; }
+
+.margin-top-tiny {
+  margin-top: 2vmax; }
+
+.margin-top-small {
+  margin-top: 4vmax; }
+
+.margin-top-medium {
+  margin-top: 8vmax; }
+
+.margin-top-large {
+  margin-top: 16vmax; }
+
+.margin-top-huge {
+  margin-top: 24vmax; }
+
+.no-margin-right {
+  margin-right: 0 !important; }
+
+.margin-right-fixed {
+  margin-right: 8px; }
+
+.margin-right-tiny {
+  margin-right: 2vmax; }
+
+.margin-right-small {
+  margin-right: 4vmax; }
+
+.margin-right-medium {
+  margin-right: 8vmax; }
+
+.margin-right-large {
+  margin-right: 16vmax; }
+
+.margin-right-huge {
+  margin-right: 24vmax; }
+
+.no-margin-bottom {
+  margin-bottom: 0 !important; }
+
+.margin-bottom-fixed {
+  margin-bottom: 8px; }
+
+.margin-bottom-tiny {
+  margin-bottom: 2vmax; }
+
+.margin-bottom-small {
+  margin-bottom: 4vmax; }
+
+.margin-bottom-medium {
+  margin-bottom: 8vmax; }
+
+.margin-bottom-large {
+  margin-bottom: 16vmax; }
+
+.margin-bottom-huge {
+  margin-bottom: 24vmax; }
+
+.no-margin-left {
+  margin-left: 0 !important; }
+
+.margin-left-fixed {
+  margin-left: 8px; }
+
+.margin-left-tiny {
+  margin-left: 2vmax; }
+
+.margin-left-small {
+  margin-left: 4vmax; }
+
+.margin-left-medium {
+  margin-left: 8vmax; }
+
+.margin-left-large {
+  margin-left: 16vmax; }
+
+.margin-left-huge {
+  margin-left: 24vmax; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.padding-all-fixed {
+  padding: 8px; }
+
+.padding-all-tiny {
+  padding: 2vmax; }
+
+.padding-all-small {
+  padding: 4vmax; }
+
+.padding-all-medium {
+  padding: 8vmax; }
+
+.padding-all-large {
+  padding: 16vmax; }
+
+.padding-all-huge {
+  padding: 24vmax; }
+
+.no-padding-top {
+  padding-top: 0 !important; }
+
+.padding-top-fixed {
+  padding-top: 8px; }
+
+.padding-top-tiny {
+  padding-top: 2vmax; }
+
+.padding-top-small {
+  padding-top: 4vmax; }
+
+.padding-top-medium {
+  padding-top: 8vmax; }
+
+.padding-top-large {
+  padding-top: 16vmax; }
+
+.padding-top-huge {
+  padding-top: 24vmax; }
+
+.no-padding-right {
+  padding-right: 0 !important; }
+
+.padding-right-fixed {
+  padding-right: 8px; }
+
+.padding-right-tiny {
+  padding-right: 2vmax; }
+
+.padding-right-small {
+  padding-right: 4vmax; }
+
+.padding-right-medium {
+  padding-right: 8vmax; }
+
+.padding-right-large {
+  padding-right: 16vmax; }
+
+.padding-right-huge {
+  padding-right: 24vmax; }
+
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
+
+.padding-bottom-fixed {
+  padding-bottom: 8px; }
+
+.padding-bottom-tiny {
+  padding-bottom: 2vmax; }
+
+.padding-bottom-small {
+  padding-bottom: 4vmax; }
+
+.padding-bottom-medium {
+  padding-bottom: 8vmax; }
+
+.padding-bottom-large {
+  padding-bottom: 16vmax; }
+
+.padding-bottom-huge {
+  padding-bottom: 24vmax; }
+
+.no-padding-left {
+  padding-left: 0 !important; }
+
+.padding-left-fixed {
+  padding-left: 8px; }
+
+.padding-left-tiny {
+  padding-left: 2vmax; }
+
+.padding-left-small {
+  padding-left: 4vmax; }
+
+.padding-left-medium {
+  padding-left: 8vmax; }
+
+.padding-left-large {
+  padding-left: 16vmax; }
+
+.padding-left-huge {
+  padding-left: 24vmax; }
+
+/*  This will render an empty space of
+    24% screen height where you add it  */
+.empty-spacer {
+  display: block;
+  height: 24vmin;
+  clear: both; }
+
+.shape-rounded {
+  border-radius: 4px; }
+
+.shape-curved {
+  border-radius: 40000px; }
+
+.shape-circular {
+  border-radius: 50%; }
+
+.shadow-hard {
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.24); }
+
+.shadow-soft {
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.32); }
+
+.shadow-mild {
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.24); }
+
+.shadow-none {
+  box-shadow: none; }
+
+/* == ICONS ================================================================ */
+.icon-tiny {
+  width: 16px; }
+
+.icon-small {
+  width: 24px; }
+
+.icon-medium {
+  width: 32px; }
+
+.icon-large {
+  width: 48px; }
+
+.icon-huge {
+  width: 64px; }
+
+/* == CUSTOM INTERFACE ELEMENTS =========================================== */
+.card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.04); }
+
+.card-smaller {
+  padding: 16px 24px; }
+
+.card-smallest {
+  padding: 8px 16px; }
+
+.card.shape-circular {
+  border-radius: 50%; }
+
+.full-size-bg, .full-size-bg.bg-fixed {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -5; }
+
+.full-size-bg.bg-fixed {
+  position: fixed !important; }
+
+.show-only-on-mobile {
+  display: none !important; }
+
+.show-only-on-tab-pt {
+  display: none !important; }
+
+.show-only-on-tab-ls {
+  display: none !important; }
+
+@media all and (max-width: 599px) {
+  .center-on-mobile,
+  .centre-on-mobile {
+    text-align: center !important; }
+
+  .hide-on-mobile {
+    display: none !important; }
+
+  .show-only-on-mobile {
+    display: block !important; } }
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .center-on-tab-pt,
+  .centre-on-tab-pt {
+    text-align: center !important; }
+
+  .hide-on-tab-pt {
+    display: none !important; }
+
+  .show-only-on-tab-pt {
+    display: block !important; } }
+@media all and (min-width: 900px) and (max-width: 1199px) {
+  .center-on-tab-ls,
+  .centre-on-tab-ls {
+    text-align: center !important; }
+
+  .hide-on-tab-ls {
+    display: none !important; }
+
+  .show-only-on-tab-ls {
+    display: block !important; } }
+/* == COLOURS ============================================================== */
+.bg-hue {
+  background-color: #ffa98f; }
+
+.bg-tint {
+  background-color: #fff7f5; }
+
+.bg-shade {
+  background-color: #ff5b29; }
+
+.bg-shade-2 {
+  background-color: #290a00; }
+
+.bg-accent {
+  background-color: #8fe5ff; }
+
+.bg-red {
+  background-color: #ff5a57; }
+
+.bg-red-light {
+  background-color: #ff8c8a; }
+
+.bg-red-dark {
+  background-color: #bd0300; }
+
+.bg-green {
+  background-color: #28bd6b; }
+
+.bg-green-light {
+  background-color: #6ce0a0; }
+
+.bg-green-dark {
+  background-color: #16693c; }
+
+.bg-brown {
+  background-color: #a35f38; }
+
+.bg-brown-light {
+  background-color: #cf9472; }
+
+.bg-brown-dark {
+  background-color: #57331e; }
+
+.bg-blue {
+  background-color: #3dc9db; }
+
+.bg-blue-light {
+  background-color: #93e1eb; }
+
+.bg-blue-dark {
+  background-color: #1c8897; }
+
+.bg-indigo {
+  background-color: #3e51e0; }
+
+.bg-indigo-light {
+  background-color: #96a0ee; }
+
+.bg-indigo-dark {
+  background-color: #1a299e; }
+
+.bg-yellow {
+  background-color: #fec043; }
+
+.bg-yellow-light {
+  background-color: #fed176; }
+
+.bg-yellow-dark {
+  background-color: #feaf10; }
+
+.bg-teal {
+  background-color: #64d8b3; }
+
+.bg-teal-light {
+  background-color: #b6eddb; }
+
+.bg-teal-dark {
+  background-color: #2bab83; }
+
+.bg-purple {
+  background-color: #9652c7; }
+
+.bg-purple-light {
+  background-color: #c59fe0; }
+
+.bg-purple-dark {
+  background-color: #612c87; }
+
+.bg-pink {
+  background-color: #ffb3f9; }
+
+.bg-pink-light {
+  background-color: #ffe6fd; }
+
+.bg-pink-dark {
+  background-color: #ff4df0; }
+
+.bg-orange {
+  background-color: #ff9100; }
+
+.bg-orange-light {
+  background-color: #ffa733; }
+
+.bg-orange-dark {
+  background-color: #cc7400; }
+
+.bg-white {
+  background-color: white; }
+
+.bg-light-grey {
+  background-color: #f2f2f2; }
+
+.bg-dark-grey {
+  background-color: #999999; }
+
+.bg-black {
+  background-color: black; }
+
+.text-red {
+  color: #ff5a57; }
+
+.text-red-light {
+  color: #ff8c8a; }
+
+.text-red-dark {
+  color: #bd0300; }
+
+.text-green {
+  color: #28bd6b; }
+
+.text-green-light {
+  color: #6ce0a0; }
+
+.text-green-dark {
+  color: #16693c; }
+
+.text-brown {
+  color: #a35f38; }
+
+.text-brown-light {
+  color: #cf9472; }
+
+.text-brown-dark {
+  color: #57331e; }
+
+.text-blue {
+  color: #3dc9db; }
+
+.text-blue-light {
+  color: #93e1eb; }
+
+.text-blue-dark {
+  color: #1c8897; }
+
+.text-indigo {
+  color: #3e51e0; }
+
+.text-indigo-light {
+  color: #96a0ee; }
+
+.text-indigo-dark {
+  color: #1a299e; }
+
+.text-yellow {
+  color: #fec043; }
+
+.text-yellow-light {
+  color: #fed176; }
+
+.text-yellow-dark {
+  color: #feaf10; }
+
+.text-teal {
+  color: #64d8b3; }
+
+.text-teal-light {
+  color: #b6eddb; }
+
+.text-teal-dark {
+  color: #2bab83; }
+
+.text-purple {
+  color: #9652c7; }
+
+.text-purple-light {
+  color: #c59fe0; }
+
+.text-purple-dark {
+  color: #612c87; }
+
+.text-pink {
+  color: #ffb3f9; }
+
+.text-pink-light {
+  color: #ffe6fd; }
+
+.text-pink-dark {
+  color: #ff4df0; }
+
+.text-orange {
+  color: #ff9100; }
+
+.text-orange-light {
+  color: #ffa733; }
+
+.text-orange-dark {
+  color: #cc7400; }
+
+.text-white {
+  color: white; }
+
+.text-light-grey {
+  color: #f2f2f2; }
+
+.text-dark-grey {
+  color: #999999; }
+
+.text-black {
+  color: black; }
+
+/*  Colour of highlight and text colour
+    — for Firefox browsers  */
+::-moz-selection {
+  background: #ffa98f;
+  color: #fff7f5; }
+
+::selection {
+  background: #ffa98f;
+  color: #fff7f5; }
+
+.fill-red {
+  fill: #ff5a57; }
+
+.fill-red-light {
+  fill: #ff8c8a; }
+
+.fill-red-dark {
+  fill: #bd0300; }
+
+.fill-green {
+  fill: #28bd6b; }
+
+.fill-green-light {
+  fill: #6ce0a0; }
+
+.fill-green-dark {
+  fill: #16693c; }
+
+.fill-brown {
+  fill: #a35f38; }
+
+.fill-brown-light {
+  fill: #cf9472; }
+
+.fill-brown-dark {
+  fill: #57331e; }
+
+.fill-blue {
+  fill: #3dc9db; }
+
+.fill-blue-light {
+  fill: #93e1eb; }
+
+.fill-blue-dark {
+  fill: #1c8897; }
+
+.fill-indigo {
+  fill: #3e51e0; }
+
+.fill-indigo-light {
+  fill: #96a0ee; }
+
+.fill-indigo-dark {
+  fill: #1a299e; }
+
+.fill-yellow {
+  fill: #fec043; }
+
+.fill-yellow-light {
+  fill: #fed176; }
+
+.fill-yellow-dark {
+  fill: #feaf10; }
+
+.fill-teal {
+  fill: #64d8b3; }
+
+.fill-teal-light {
+  fill: #b6eddb; }
+
+.fill-teal-dark {
+  fill: #2bab83; }
+
+.fill-purple {
+  fill: #9652c7; }
+
+.fill-purple-light {
+  fill: #c59fe0; }
+
+.fill-purple-dark {
+  fill: #612c87; }
+
+.fill-pink {
+  fill: #ffb3f9; }
+
+.fill-pink-light {
+  fill: #ffe6fd; }
+
+.fill-pink-dark {
+  fill: #ff4df0; }
+
+.fill-orange {
+  fill: #ff9100; }
+
+.fill-orange-light {
+  fill: #ffa733; }
+
+.fill-orange-dark {
+  fill: #cc7400; }
+
+.fill-white {
+  fill: white; }
+
+.fill-light-grey {
+  fill: #f2f2f2; }
+
+.fill-dark-grey {
+  fill: #999999; }
+
+.fill-black {
+  fill: black; }
+
+body {
+  background-color: white;
+  font-family: "Work Sans", sans-serif;
+  color: #290a00;
+  line-height: 1.6;
+  word-wrap: normal;
+  text-rendering: optimizeLegibility; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  line-height: 1.2;
+  margin: 0; }
+
+h1 {
+  font-size: 4.29982em; }
+
+h2 {
+  font-size: 2.98598em; }
+
+h3 {
+  font-size: 2.0736em; }
+
+h4 {
+  font-size: 1.728em; }
+
+h5 {
+  font-size: 1.44em; }
+
+h6 {
+  font-size: 1.2em; }
+
+p {
+  font-family: "Work Sans", sans-serif;
+  margin: 0 0 2vmax 0; }
+
+p.text-serif {
+  font-size: 1.3em;
+  line-height: 1.4em; }
+
+a {
+  cursor: pointer;
+  color: #ff5b29;
+  font-weight: bold;
+  border-bottom: 1px dotted #ff5b29;
+  transition: all 0.2s; }
+
+a:hover {
+  border-bottom: 1px solid #ff5b29; }
+
+b, strong {
+  font-weight: 700; }
+
+i, em {
+  font-style: italic; }
+
+.text-sans {
+  font-family: "Work Sans", sans-serif; }
+
+.text-serif {
+  font-family: "Crimson Text", serif; }
+
+.text-mono {
+  font-family: "Space Mono", monospace; }
+
+.text-tiny {
+  font-size: 0.69444em; }
+
+.text-small {
+  font-size: 0.83333em; }
+
+.text-normal {
+  font-size: 1em; }
+
+.text-large {
+  font-size: 2.0736em; }
+
+.text-huge {
+  font-size: 4.29982em; }
+
+.text-centre,
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.no-line-height {
+  line-height: 0; }
+
+/* == CODE ================================================================= */
+code {
+  background-color: #fff7f5;
+  font-family: "Space Mono", monospace;
+  font-size: 80%;
+  color: #ff5b29;
+  white-space: pre;
+  margin: 0;
+  border-radius: 4px; }
+
+code.inline {
+  margin: 2px;
+  padding: 0 8px; }
+
+pre > code {
+  display: block;
+  white-space: pre;
+  letter-spacing: -0.5px;
+  line-height: 1.2em; }
+
+header {
+  overflow: hidden;
+  background: white; }
+
+header a,
+header label {
+  display: block;
+  padding: 16px;
+  color: #290a00;
+  text-decoration: none;
+  line-height: 20px;
+  border: none; }
+
+header a:hover,
+header label:hover {
+  color: #ff5b29;
+  border: none; }
+
+header li.current-page a {
+  color: #ffa98f; }
+
+header label {
+  float: right;
+  padding: 16px 24px;
+  cursor: pointer; }
+
+header label:after {
+  content: "\2261";
+  font-size: 2.4em; }
+
+nav {
+  float: right;
+  max-height: 0;
+  width: 100%; }
+
+nav ul {
+  margin: 0;
+  padding: 0 0 16px; }
+
+nav li {
+  display: block;
+  text-align: center; }
+
+nav a {
+  padding: 10px;
+  width: 100%; }
+
+#nav {
+  display: none; }
+
+/*  This can be anything bigger than your nav height.
+    The transition duration works with this  */
+#nav:checked ~ nav {
+  max-height: 200px; }
+
+.nav-logo {
+  float: left; }
+
+@media only screen and (min-width: 499px) {
+  header label {
+    display: none; }
+
+  nav {
+    width: auto;
+    max-height: none; }
+
+  nav ul {
+    padding: 0 8px 0 0; }
+
+  nav li {
+    display: inline-block;
+    text-align: left; }
+
+  header nav a {
+    display: inline-block;
+    padding: 16px 24px;
+    width: auto; } }
+/* == INPUT FIELDS ========================================================= */
+.ff-input,
+.ff-input:focus,
+.ff-input:active {
+  border: none;
+  outline: none; }
+
+.ff-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  font-family: "Work Sans", sans-serif; }
+
+.ff-input:focus,
+.ff-input:active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #ffa98f; }
+
+.ff-input.input-success {
+  border-bottom: 2px solid #28bd6b; }
+
+.ff-input.input-error {
+  border-bottom: 2px solid #ff5a57; }
+
+.input-success:focus, .input-success:active,
+.input-error:focus, .input-error:active {
+  padding-bottom: 4px; }
+
+.ff-input.show-inline {
+  width: inherit;
+  height: inherit; }
+
+.ff-input[type=file] {
+  border: none;
+  outline: none; }
+
+/* == TOGGLES ============================================================== */
+input[type=checkbox] {
+  display: none; }
+
+.ff-checkbox {
+  display: inline-block;
+  margin-right: 12px; }
+
+.ff-checkbox label.ff-checkbox-label {
+  cursor: pointer;
+  vertical-align: middle; }
+
+.ff-checkbox input[type=checkbox] + label.ff-checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin-right: 12px;
+  background: #f2f2f2;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.24) inset; }
+
+.ff-checkbox input[type=checkbox] + label.ff-checkbox-label:after {
+  position: absolute;
+  display: block;
+  left: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  content: '';
+  transition: all 0.1s ease-out;
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6); }
+
+.ff-checkbox input[type=checkbox]:checked + label.ff-checkbox-label {
+  background: #ffa98f; }
+
+.ff-checkbox input[type=checkbox]:checked + label.ff-checkbox-label:after {
+  left: 20px; }
+
+.ff-checkbox input[type=checkbox]:disabled + label.ff-checkbox-label,
+.ff-checkbox input[type=checkbox]:disabled:checked + label.ff-checkbox-label {
+  pointer-events: none; }
+
+.ff-checkbox input[type=checkbox]:disabled ~ label.ff-checkbox-label {
+  cursor: default;
+  opacity: 0.24; }
+
+.ff-checkbox input[type=checkbox]:checked + label.ff-checkbox-label:after {
+  display: block;
+  background: white;
+  box-shadow: none; }
+
+/* == TOGGLES ============================================================== */
+input[type=radio] {
+  display: none; }
+
+.ff-radio label.ff-radio-label {
+  cursor: pointer;
+  vertical-align: middle; }
+
+.ff-radio input[type=radio] + label.ff-radio-label {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  background: #f2f2f2;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.24) inset; }
+
+.ff-radio input[type=radio] + label.ff-radio-label:after {
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  content: "";
+  transition: all 0.1s ease-out; }
+
+.ff-radio input[type=radio]:checked + label.ff-radio-label {
+  background: #ffa98f; }
+
+.ff-radio input[type=radio]:disabled + label.ff-radio-label,
+.ff-radio input[type=radio]:disabled:checked + label.ff-radio-label {
+  pointer-events: none; }
+
+.ff-radio input[type=radio]:disabled ~ label.ff-radio-label {
+  cursor: default;
+  opacity: 0.24; }
+
+.ff-radio input[type=radio]:checked + label.ff-radio-label:after {
+  display: block;
+  background: white;
+  box-shadow: none; }
+
+a.ff-button {
+  border: none; }
+
+.ff-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 4px;
+  padding: 8px 24px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  color: white;
+  border: none;
+  transition: all 0.1s; }
+
+.ff-button:hover {
+  transform: translateY(-1px); }
+
+.ff-button:active {
+  transform: translateY(1px);
+  box-shadow: none; }
+
+.button-large {
+  padding: 16px 32px;
+  font-size: 110%; }
+
+.button-small {
+  padding: 4px 16px;
+  font-size: 80%; }
+
+.ff-button.bg-gradient {
+  background: -webkit-linear-gradient(-45deg, #ffa98f 0%, #ff5b29 100%);
+  background: -moz-linear-gradient(-45deg, #ffa98f 0%, #ff5b29 100%);
+  background: linear-gradient(135deg, #ffa98f 0%, #ff5b29 100%); }
+
+.ff-button.bg-none {
+  background: none;
+  box-shadow: none;
+  color: #ff5b29;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.16); }
+
+.ff-button.bg-none:hover {
+  background: none;
+  box-shadow: none;
+  color: #ffa98f;
+  transform: translateY(-1px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+
+.ff-button.bg-none:active {
+  color: #ff5b29;
+  transform: translateY(0);
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.24); }
+
+.ff-button.shape-circular {
+  border-radius: 50%;
+  padding: 16px; }
+
+.ff-button.bordered {
+  background: none;
+  border: 2px solid #ffa98f;
+  color: #ffa98f; }
+
+.ff-button path {
+  fill: white; }
+
+.ff-button.bg-none path {
+  fill: #ff5b29; }
+
+.ff-button.disabled {
+  pointer-events: none;
+  box-shadow: none;
+  opacity: 0.4; }
+
+.ff-pill {
+  position: relative;
+  display: inline-block;
+  margin: 4px;
+  padding: 4px 16px;
+  font-size: 80%;
+  font-family: "Work Sans", sans-serif;
+  color: white; }
+
+a.ff-pill {
+  border: none; }
+
+.ff-side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 192px;
+  height: 100vh;
+  overflow: scroll;
+  padding: 16px;
+  box-shadow: inset -8px 0 16px -8px rgba(0, 0, 0, 0.24); }
+
+.ff-side-menu a {
+  display: block;
+  font-weight: 700;
+  color: #fff7f5;
+  border-bottom: none;
+  margin-bottom: 8px; }
+
+.ff-side-menu a:hover {
+  color: #ff5b29;
+  border-bottom: none; }
+
+.ff-side-menu a.sublink-one {
+  font-weight: 400; }
+
+.ff-side-menu a.sublink-one {
+  margin-left: 24px; }
+
+.ff-side-menu a.sublink-two {
+  margin-left: 48px; }
+
+.content-with-side-menu > .all-content {
+  margin-left: 192px; }
+
+@media all and (max-width: 899px) {
+  .content-with-side-menu > .all-content {
+    margin-left: 0; } }
+.ff-tabs {
+  display: flex;
+  flex-wrap: wrap; }
+
+.ff-tab-label {
+  order: 1;
+  display: block;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #999999;
+  opacity: 0.64; }
+
+.ff-tab-content {
+  display: none;
+  width: 100%;
+  order: 99;
+  flex-grow: 1;
+  padding: 16px;
+  border-top: 1px solid #f2f2f2; }
+
+.ff-tab-select {
+  display: none; }
+
+.ff-tab-label:hover {
+  color: #ffa98f;
+  border-bottom: 2px solid #ffa98f;
+  opacity: 0.64; }
+
+.ff-tab-select:checked + .ff-tab-label {
+  color: #ffa98f;
+  border-bottom: 2px solid #ffa98f;
+  opacity: 1; }
+
+.ff-tab-select:checked + .ff-tab-label + .ff-tab-content {
+  display: block; }
+
+@media all and (max-width: 599px) {
+  .ff-tabs .ff-tab-content,
+  .ff-tabs .ff-tab-label {
+    order: initial; }
+
+  .ff-tab-content {
+    border-bottom: 1px solid #f2f2f2; }
+
+  .ff-tabs .ff-tab-label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 16px; } }
+.ff-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  background: rgba(255, 169, 143, 0.88);
+  transition: opacity 0.4s ease-in;
+  pointer-events: none;
+  z-index: 99999; }
+
+.ff-modal:target {
+  opacity: 1;
+  pointer-events: auto; }
+
+.ff-modal-box {
+  position: relative;
+  margin: 10vmin auto; }
+
+#close {
+  border: none; }
+
+code[class*=language-], pre[class*=language-], pre code {
+  color: #f2f2f2;
+  font-family: "Space Mono", monospace;
+  font-variant-ligatures: none;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  border-radius: 8px;
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+pre code {
+  display: block;
+  padding: 16px;
+  overflow: auto;
+  background-color: #2d2d2d; }
+
+@media (min-width: 600px) {
+  pre code {
+    padding: 1.5rem; } }
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 2px #fff;
+  color: #333;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  margin: 0 .1em;
+  padding: .1em .6em;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 14px; }
+
+:not(pre) > code[class*=language-] {
+  padding: 2px 4px;
+  background: #2d2d2d;
+  border: 1px solid #2d2d2d; }
+
+:not(pre) > code {
+  padding: 2px 4px;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  border-radius: 4px; }
+
+code[class*=language-css], code[class*=language-less], code[class*=language-sass], code[class*=language-scss] {
+  color: #c9c; }
+
+.token.doctype {
+  background: #000;
+  color: #fff; }
+
+.token.cdata, .token.comment, .token.prolog {
+  color: #7e7d72; }
+
+.token.namespace {
+  opacity: 0.7; }
+
+.token.attr-value, .token.string {
+  color: #a8d3a9; }
+
+.token.punctuation {
+  color: #999999; }
+
+.token.operator {
+  color: #cda869; }
+
+.token.variable {
+  color: #f78d8c; }
+
+.token.property {
+  color: #d2d0c9; }
+
+.token.boolean, .token.constant, .token.entity, .token.inserted, .token.number, .token.regex, .token.symbol, .token.url {
+  color: #fca369; }
+
+.token.delimiter {
+  background: #000;
+  color: #fff;
+  padding: 1px 2px; }
+
+.token.atrule {
+  color: #76d4d6; }
+
+.token.keyword {
+  color: #ffeead; }
+
+.language-autohotkey .token.selector {
+  color: #f7931e; }
+
+.token.attr-name {
+  color: #ffd479; }
+
+.token.function {
+  color: #76d4d6; }
+
+.language-php .token.function {
+  color: #fff; }
+
+.token.class-name {
+  color: #d6acd6; }
+
+.language-autohotkey .token.tag, .token.deleted {
+  color: #f5b80e; }
+
+.token.tag {
+  color: #78aad6; }
+
+.language-autohotkey .token.keyword {
+  color: #ffeead; }
+
+.token.selector {
+  color: #ffd479; }
+
+.token.italic {
+  font-style: italic; }
+
+code::-moz-selection, pre::-moz-selection {
+  text-shadow: none;
+  color: inherit;
+  background: rgba(150, 150, 150, 0.3) !important; }
+
+code::selection, pre::selection {
+  text-shadow: none;
+  color: inherit;
+  background: rgba(150, 150, 150, 0.3) !important; }
+
+code[class*=language-] ::-moz-selection, pre[class*=language-]::-moz-selection {
+  text-shadow: none;
+  color: inherit;
+  background: rgba(150, 150, 150, 0.3) !important; }
+
+code[class*=language-] ::selection, pre[class*=language-]::selection {
+  text-shadow: none;
+  color: inherit;
+  background: rgba(150, 150, 150, 0.3) !important; }
+
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 1.20.2
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+.intro-banner {
+  width: 100vw;
+  height: 80vh;
+  background: #fff7f5; }
+
+.intro-logo {
+  height: 128px; }
+
+.test-box,
+.test-row,
+.test-portion {
+  border: 1px dotted #f2f2f2;
+  background: rgba(255, 91, 41, 0.5); }
+
+/*# sourceMappingURL=main.css.map */

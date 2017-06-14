@@ -1,0 +1,39 @@
+/*  Consider removing this if you have
+    a zillion elements in your page  */
+*,
+*:before,
+*:after { box-sizing : border-box; }
+
+*:focus { outline : 0; }
+
+//  This affects all type scale values
+html { font-size : $baseFontSize; }
+
+body {
+    -moz-osx-font-smoothing : grayscale;
+    -webkit-font-smoothing  : antialiased;
+}
+
+img { display : block; }
+
+a { text-decoration : none; }
+
+button { vertical-align : baseline; }
+
+::-webkit-input-placeholder { opacity : 0.5; }
+::-moz-placeholder { opacity : 0.5; }
+
+input { outline : none; }
+
+input[type="number"] { -moz-appearance : textfield; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance : none;
+    margin             : 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button { display : none; }
+input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
+
+pre, code { margin : 0; }

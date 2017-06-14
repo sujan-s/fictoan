@@ -1,0 +1,85 @@
+body {
+    background-color : $bodyBgColor;
+    font-family      : $fontSans;
+    color            : $bodyFontColor;
+    line-height      : 1.6;
+    word-wrap        : normal;
+    text-rendering   : optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight : inherit;
+    line-height : 1.2;
+    margin      : 0;
+}
+
+h1 { font-size : $baseFontSize*pow($scaleFactor, 8); }
+h2 { font-size : $baseFontSize*pow($scaleFactor, 6); }
+h3 { font-size : $baseFontSize*pow($scaleFactor, 4); }
+h4 { font-size : $baseFontSize*pow($scaleFactor, 3); }
+h5 { font-size : $baseFontSize*pow($scaleFactor, 2); }
+h6 { font-size : $baseFontSize*pow($scaleFactor, 1); }
+
+p {
+    font-family : $fontSans;
+    margin      : 0 0 $measureDynamic 0;
+}
+p.text-serif {
+    font-size   : $paraSerifFontSize;
+    line-height : $paraSerifLineHeight;
+}
+
+a {
+    cursor        : pointer;
+    color         : $linkColor;
+    font-weight   : bold;
+    border-bottom : $linkBorder;
+    transition    : all 0.2s;
+}
+a:hover { border-bottom : $linkHoverBorder; }
+
+b, strong { font-weight : 700; }
+i, em { font-style : italic; }
+
+.text-sans  { font-family : $fontSans; }
+.text-serif { font-family : $fontSerif; }
+.text-mono  { font-family : $fontMono; }
+
+.text-tiny   { font-size : $baseFontSize*pow($scaleFactor,-2); }
+.text-small  { font-size : $baseFontSize*pow($scaleFactor,-1); }
+.text-normal { font-size : $baseFontSize*pow($scaleFactor, 0); }
+.text-large  { font-size : $baseFontSize*pow($scaleFactor, 4); }
+.text-huge   { font-size : $baseFontSize*pow($scaleFactor, 8); }
+
+.text-centre,
+.text-center { text-align : center; }
+.text-right { text-align : right; }
+.text-left  { text-align : left; }
+
+.no-line-height { line-height : 0; }
+
+
+
+/* == CODE ================================================================= */
+
+code {
+    background-color : $codeBgColor;
+    font-family      : $fontMono;
+    font-size        : 80%;
+    color            : $codeColor;
+    white-space      : pre;
+    margin           : 0;
+    border-radius    : $measureFixed/2;
+}
+
+code.inline {
+    margin  : $measureFixed/4;
+    padding : 0 $measureFixed;
+}
+
+pre > code {
+    display        : block;
+    white-space    : pre;
+    letter-spacing : -0.5px;
+    line-height    : 1.2em;
+}

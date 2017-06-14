@@ -1,0 +1,39 @@
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 2.0.0
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+
+
+//  Normalize first ==========================
+@import "../vendor/normalize";
+
+//  Variables next ===========================
+@import "base/variables-fictoan";
+
+//  The meat of the matter ===================
+//  Opinionated baseline rules
+@import "base/reset-fictoan";
+
+//  Basics
+@import "base/layout-fictoan";
+@import "base/utilities-fictoan";
+
+//The FICTOAN buffet menu
+@import "components/ff-responsiveness";
+@import "components/ff-colours";
+@import "components/ff-typography";
+@import "components/ff-header";
+@import "components/ff-inputs";
+@import "components/ff-buttons";
+@import "components/ff-side-menu";
+@import "components/ff-tab-bar";
+@import "components/ff-modal";
+
+//  Other small plugins ======================
+@import "../vendor/new-moon";

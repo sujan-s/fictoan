@@ -1,0 +1,33 @@
+.ff-side-menu {
+    position   : fixed;
+    top        : 0;
+    left       : 0;
+    width      : $ff-side-menuWidth;
+    height     : 100vh;
+    overflow   : scroll;
+    padding    : $measureFixed*2;
+    box-shadow : inset -8px 0 16px -8px rgba(0, 0, 0, 0.24);
+}
+
+.ff-side-menu a {
+    display       : block;
+    font-weight   : 700;
+    color         : $colorTint;
+    border-bottom : none;
+    margin-bottom : $measureFixed;
+}
+.ff-side-menu a:hover {
+    color         : $colorShade;
+    border-bottom : none;
+}
+
+.ff-side-menu a.sublink-one { font-weight: 400; }
+
+.ff-side-menu a.sublink-one { margin-left: $measureFixed*3 }
+.ff-side-menu a.sublink-two { margin-left: $measureFixed*6 }
+
+.content-with-side-menu > .all-content { margin-left : $ff-side-menuWidth; }
+
+@media all and (max-width : 899px) {
+    .content-with-side-menu > .all-content { margin-left : 0; }
+}
