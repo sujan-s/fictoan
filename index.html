@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 1.20.2
+    Current version: 2.0.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -14,809 +14,2117 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
 
-    <!--A nice, sober serif typeface-->
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,700,700i" rel="stylesheet">
     <!--And a clean, simple sans typeface-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+    <!--A nice, sober serif typeface-->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i" rel="stylesheet">
     <!-- Also a classy monospace typeface for all you nerds -->
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
 
     <!--  This will import all the necessary files in one go  -->
-    <link rel="stylesheet" href="css/import-fictoan.css" type="text/css" >
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 
-    <!--Put your page name here-->
+    <script src="js/smoothscroll.js"></script>
+
+    <script>
+        smoothScroll.init({
+            speed: 500,
+            easing: 'easeInOutQuint',
+            offset: 50
+        });
+    </script>
+
     <title>FICTOAN &bull; Intuitive, minimalist responsive HTML+CSS boilerplate</title>
 </head>
 
-<body>
-
-<!--For those fancy full bleed background images
-    Add the filename in styles-fictoan.css line 84 	-->
-    <!--<div class="full-size-bg"></div>-->
-
-    <div class="all-content">
-
-        <!-- == INTRO ===================================================== -->
-
-        <div class="empty-spacer"></div>
-
-        <div class="row margin-tiny">
-            <div class="portion whole">
-                <p class="text-huge no-margin centre-on-mobiles">FICTOAN</p>
-                <p class="text-white text-tiny centre-on-mobiles no-margin">(F*ck, I Couldn't Think Of A Name)</p>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="portion half">
-                <p class="text-large">FICTOAN is an intuitive, minimalist, responsive HTML+CSS boilerplate.</p>
-            </div>
-
-            <div class="portion half">
-                <p class="text-large">Most sites be like, “For devs, by devs”. So, this is for designers, by a designer.</p>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="portion one-third">
-                <p>FICTOAN uses straightforward, self-explanatory and intuitive class names. No cols, spans, MDs, LGs and such.</p>
-            </div>
-
-            <div class="portion one-third">
-                <p>This is mainly for newbies just starting to learn code(moi), but are put off by complex systems like Bootstrap or Foundation.</p>
-            </div>
-
-            <div class="portion one-third">
-                <p>Right now it’s got a grid, buttons, typography, icons, colours and code. More modules coming soon.</p>
-            </div>
-        </div>
-
-
-        <hr>
-
-
-        <!-- == NOMENCLATURE ============================================== -->
-
-        <div class="row no-margin-bottom">
-            <div class="portion whole">
-                <p class="text-large no-margin-bottom"><strong>Installing</strong></p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="portion half">
-                <p>You can <a class="button shape-rounded bg-red text-red" id="download-link" target="_blank" href="fictoan-dist.zip"><strong>DOWNLOAD</strong></a> the source files directly and get right to work&mdash; there’s a template HTML file where you just have fill content.</p>
-            </div>
-
-            <div class="portion half">
-                <p>Or, if you’re the slightly more nerdy type, there’s also a <a class="show-inline text-red" href="https://github.com/sujan-s/fictoan" target="_blank">GitHub repo</a> you can clone, fork, edit, have a good laugh, whatever.</p>
-            </div>
-        </div>
-
-
-        <hr>
-
-
-
-        <!-- == NOMENCLATURE ============================================== -->
-
-        <div class="row no-margin-bottom">
-            <div class="portion whole">
-                <p class="text-big no-margin-bottom"><strong>The naming system</strong></p>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="portion half">
-                <p>FICTOAN uses names like
-                    <code class="inline">.horizontal-centre-this</code>,
-                    <code class="inline">.no-margin-top</code>,
-                    <code class="inline">.shape-circular</code> and
-                    <code class="inline">.only-on-mobiles</code>.
-                    Simple and easy to recollect.
-                </p>
-            </div>
-
-            <div class="portion half">
-                <p>The styling is also modular&mdash; throw
-                    <code class="inline">button</code>,
-                    <code class="inline">.large</code>,
-                    <code class="inline">.no-bg</code> and
-                    <code class="inline">.shape-rounded</code> together to get a large, borderless button that has rounded edges.
-                </p>
-            </div>
-        </div>
-
-
-        <hr>
-
-
-
-        <!-- == THE GRID ================================================== -->
-
-        <div class="row no-margin-bottom">
-            <div class="portion whole">
-                <p class="text-big no-margin-bottom"><strong>The Grid</strong></p>
-
-                <p>A digital frontier...I tried to picture clusters of infor&mdash; oh. Right. Sorry.<br>
-                The grid is made up of full-width <code class="inline">.row</code> classes that can contain one or many <code class="inline">.portion</code> elements. These portions is where you put your content. All the rows put together form one big box called <code class="inline">.all-content</code>.
-                </p>
-                <img src="images/grid-1.png">
-            </div>
-        </div>
-
-
-        <hr>
-
-
-        <div class="row margin-top-2x">
-            <div class="portion whole">
-                <p class="margin-bottom-3x">The <code class="inline">.portion</code> elements are, well, portions of the row, and come in varying widths, from <code class="inline">.whole</code> &mdash;which takes up the entire row, all the way to <code class="inline">.one-eighth</code>, which takes up 12.5% of the width. Different combinations are possible, as long as the sum of their widths is 100%. Well, they can be less, but don’t leave them hangin’, they don’t like that.
-                </p>
-                <img src="images/grid-2.png">
-            </div>
-        </div>
-
-
-        <hr>
-
-
-
-        <!-- == TYPOGRAPHY ================================================ -->
-
-        <div class="row no-margin-bottom">
-            <div class="portion whole">
-                <p class="text-big no-margin-bottom"><strong>Typography</strong></p>
-                <p>FICTOAN uses <b class="text-sans">Cormorant Garamond</b> for a serif typeface, <b class="text-sans">Work Sans</b> for sans, and <b class="text-sans">Fira Mono</b> for monospace. They’re all from Google Fonts, and thus, free.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="portion half">
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-            </div>
-
-            <div class="portion half margin-top-3x">
-                <p class="margin-bottom-fixed">Headings are set in Cormorant Garamond, and sizes vary between 4em for <code class="inline">h1</code> and 1em for <code class="inline">h6</code>. Want some more flexibility? Text also comes in&mdash;</p>
-                <p class="margin-top-tiny margin-bottom-tiny">
-                    <span class="show-inline text-huge">huge, </span>
-                    <span class="show-inline text-large">large, </span>
-                    <span class="show-inline text-medium">medium, </span>
-                    <span class="show-inline text-small">small,</span>
-                    <span class="show-inline text-tiny">tiny</span> and
-                    <span class="show-inline text-micro">micro</span>
-                    sizes. Simply use <code class="inline">.text-huge</code>, <code class="inline">.text-big</code> and so on.
-                </p>
-
-                <p class="margin-bottom-3x">
-                    Now, the usual <b>bold,</b> <em>italic</em> and <a>link</a> styling. Throw serifs into the mix, and you have <span class="text-serif">Cormorant Garamond that’s <b>bold, <em>italic and also a <a>link</a></em></b></span>. You can even combine these with the above text size classes, but handle with care.
-                </p>
-
-                <p class="margin-bottom-3x">
-                    But wait, there’s more! You can also style inline text as <span class="text-serif">serif</span>,
-                    <span class="text-sans">sans-serif</span> or <span class="text-mono">monospace</span> using
-                    <code class="inline">.text-serif</code>, <code class="inline">.text-sans</code> and <code class="inline">.text-mono</code>.
-                    Neat, huh?
-                </p>
-            </div>
-        </div>
-
-
-        <hr>
-
-
-
-        <!-- == ICONS ===================================================== -->
-
-        <div class="row margin-bottom-1x">
-            <div class="portion whole margin-bottom-2x">
-                <p class="text-big no-margin-bottom"><strong>Icons</strong></p>
-
-                <p>There’s also a sweet set of 16 custom-made, pixel-perfect SVG icons that are completely free to  use. They’re all drawn on a 24px grid, and will scale nicely at its multiples. You can even scale them with CSS, just use <code class="inline">.icon-24</code> or <code class="inline">.icon-48</code> to resize as you need. More icons will be added regularly.
-                </p>
-            </div>
-        </div>
-
-        <!-- <div class="hide-on-mobiles hide-on-tablets">
-            <div class="row">
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-user.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-compass.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-home.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-bell.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-location.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-chat.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-group.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-mail.svg">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-search.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-camera.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-photo.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-tag.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-pin.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-clock.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-book.svg">
-                </div>
-
-                <div class="portion one-eighth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-share.svg">
-                </div>
-            </div>
-        </div> -->
-
-
-        <div>
-            <div class="row retain-layout-on-mobile">
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-user.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-compass.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-home.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-bell.svg">
-                </div>
-            </div>
-
-            <div class="row retain-layout-on-mobile">
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-location.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-chat.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-group.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-mail.svg">
-                </div>
-            </div>
-
-            <div class="row retain-layout-on-mobile">
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-search.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-camera.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-photo.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-tag.svg">
-                </div>
-            </div>
-
-            <div class="row retain-layout-on-mobile">
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-pin.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-clock.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-book.svg">
-                </div>
-
-                <div class="portion one-fourth">
-                    <img class="icon-48 horizontal-centre-this" src="icons/icon-share.svg">
-                </div>
-            </div>
-        </div>
-
-
-
-        <hr>
-
-
-
-        <!-- == COLOURS =================================================== -->
-
-        <div class="row margin-bottom-1x">
-            <div class="portion whole">
-                <p class="text-big no-margin-bottom"><strong>Colour</strong></p>
-
-                <p>FICTOAN comes with a bright and vivid scheme of eight colours. You can apply them to pretty much any element as a background colour, or to text too. Plus, there’s also a tint and a shade&mdash; 5% black and 85% black, which you can customise as necessary.
-                </p>
-            </div>
-        </div>
-
-        <div class="row no-margin-bottom">
-            <div class="portion one-fifth">
-                <div class="bg-mild shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-mild</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-hue shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-hue</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-shade shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-shade</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-dark shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-dark</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-accent shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-accent</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row no-margin-bottom">
-            <div class="portion one-fifth">
-                <div class="bg-red shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-red</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-white shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-green</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-blue shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-blue</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-yellow shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-yellow</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-teal shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-teal</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row margin-bottom-1x">
-            <div class="portion one-fifth">
-                <div class="bg-purple shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-purple</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-orange shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-orange</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-brown shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-brown</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-light shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-black text-mono">.bg-light</p>
-                </div>
-            </div>
-
-            <div class="portion one-fifth">
-                <div class="bg-dark shape-rounded">
-                    <p class="margin-bottom-fixed padding-all-fixed text-white text-mono">.bg-dark</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row margin-bottom-1x">
-            <div class="portion whole">
-                <p>For applying colours to text, just use <code class="inline">.text-</code> as a prefix, instead of <code class="inline">.bg-</code>. And, if you use the icons as an inline element instead of an image, you can even colour them with CSS classes! All you need is the <code class="inline">.icon-</code> prefix. How cool is that?
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-USER  -->
-                <svg class="icon-48 icon-blue horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                    <g>
-                        <path d="M17,17c1.1,0,2,0.9,2,2v1c0,0.6-0.4,1-1,1H6c-0.6,0-1-0.4-1-1v-1c0-1.1,0.9-2,2-2H17 M17,16H7c-1.7,0-3,1.3-3,3v1
-                            c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-1C20,17.3,18.7,16,17,16L17,16z"/>
-                    </g>
-                    <g>
-                        <path d="M12,3c2.8,0,5,2.2,5,5s-2.2,5-5,5s-5-2.2-5-5S9.2,3,12,3 M12,2C8.7,2,6,4.7,6,8s2.7,6,6,6s6-2.7,6-6S15.3,2,12,2L12,2z"/>
-                    </g>
-                </svg>
-            </div>
-
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-BOOK  -->
-                <svg class="icon-48 icon-red horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                    <g>
-                        <path d="M18.5,2h-13C4.7,2,4,2.7,4,3.5V18c0,1.5,1.2,2,2,2h1v2c0,0.2,0.1,0.4,0.3,0.5c0.1,0,0.1,0,0.2,0c0.1,0,0.3-0.1,0.4-0.2
-                            L9,21.1l1.2,1.2c0.1,0.1,0.4,0.2,0.5,0.1c0.2-0.1,0.3-0.3,0.3-0.5v-2h7.5c0.8,0,1.5-0.7,1.5-1.5v-3V13V3.5C20,2.7,19.3,2,18.5,2z
-                             M5,3.5C5,3.2,5.2,3,5.5,3h13C18.8,3,19,3.2,19,3.5V13v2.5c0,0.3-0.2,0.5-0.5,0.5H6c-0.3,0-0.7,0.1-1,0.3V3.5z M10,20.8l-0.7-0.7
-                            C9.2,20,9.1,19.9,9,19.9c0,0,0,0,0,0c-0.1,0-0.3,0.1-0.4,0.2L8,20.7V19h2V20.8z M18.5,19H11v-0.5c0-0.3-0.2-0.5-0.5-0.5h-3
-                            C7.2,18,7,18.2,7,18.5V19H6c-0.2,0-1-0.1-1-1c0-1,1-1,1-1h12.5c0.2,0,0.3,0,0.5-0.1v1.6C19,18.8,18.8,19,18.5,19z"/>
-                        <path d="M9,10h6c0.6,0,1-0.4,1-1V7c0-0.6-0.4-1-1-1H9C8.4,6,8,6.4,8,7v2C8,9.6,8.4,10,9,10z M9,7h6v2H9V7z"/>
-                    </g>
-                </svg>
-            </div>
-
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-PHOTO  -->
-                <svg class="icon-48 icon-green horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                    <path d="M20,2H4C2.9,2,2,2.9,2,4v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M4,3h16c0.6,0,1,0.4,1,1v9.3
-                        l-3.6-3.6c-0.2-0.2-0.5-0.2-0.7,0L11,15.3l-2.6-2.6c-0.2-0.2-0.5-0.2-0.7,0L3,17.3V4C3,3.4,3.4,3,4,3z M3,20v-1.5
-                        c0.1,0,0.3,0,0.4-0.1L8,13.7l7.3,7.3H4C3.4,21,3,20.6,3,20z M21,20c0,0.6-0.4,1-1,1h-3.5c0-0.1,0-0.3-0.1-0.4L11.7,16l5.3-5.3
-                        l3.6,3.6c0.1,0.1,0.2,0.1,0.4,0.1V20z"/>
-                </svg>
-            </div>
-
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-LOCATION  -->
-                <svg class="icon-48 icon-yellow horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                    <g>
-                        <path d="M12,6c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4s4-1.8,4-4C16,7.8,14.2,6,12,6z M12,13c-1.7,0-3-1.3-3-3c0-1.7,1.3-3,3-3s3,1.3,3,3
-                            C15,11.7,13.7,13,12,13z"/>
-                        <path d="M12,2c-4,0-8,3-8,8c0,6,8,12,8,12s8-6,8-12C20,5,16,2,12,2z M12,20.7c-1.8-1.5-7-6.2-7-10.7c0-4.5,3.6-7,7-7s7,2.5,7,7
-                            C19,14.5,13.8,19.2,12,20.7z"/>
-                    </g>
-                </svg>
-            </div>
-
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-MAIL  -->
-                <svg class="icon-48 icon-teal horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                    <path d="M20,6H4C2.9,6,2,6.9,2,8v0v2v6c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2v-6V8v0C22,6.9,21.1,6,20,6z M3,8c0-0.6,0.4-1,1-1h16
-                        c0.6,0,1,0.4,1,1v1.3L12,13L3,9.4V8z M21,16c0,0.6-0.4,1-1,1H4c-0.6,0-1-0.4-1-1v-5.6l8.6,3.5c0.1,0,0.2,0.1,0.4,0.1
-                        c0.1,0,0.3,0,0.4-0.1l8.6-3.5V16z"/>
-                </svg>
-            </div>
-
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-CAMERA  -->
-                <svg class="icon-48 icon-orange horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                    <g>
-                        <path d="M20,7H10c0-0.6-0.4-1-1-1H6C5.4,6,5,6.4,5,7H4C2.9,7,2,7.9,2,9v8c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V9C22,7.9,21.1,7,20,7
-                            z M21,17c0,0.6-0.4,1-1,1H4c-0.6,0-1-0.4-1-1V9c0-0.6,0.4-1,1-1h2h3h11c0.6,0,1,0.4,1,1V17z"/>
-                        <path d="M9,10c-1.7,0-3,1.3-3,3s1.3,3,3,3s3-1.3,3-3S10.7,10,9,10z M9,15c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2s2,0.9,2,2
-                            C11,14.1,10.1,15,9,15z"/>
-                        <path d="M19,9h-3c-0.6,0-1,0.4-1,1v1c0,0.6,0.4,1,1,1h3c0.6,0,1-0.4,1-1v-1C20,9.4,19.6,9,19,9z M19,11h-3v-1h3V11z"/>
-                    </g>
-                </svg>
-            </div>
-
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-CHAT  -->
-                <svg class="icon-48 icon-purple horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                    <g>
-                        <path class="st0" d="M20,4H4C2.9,4,2,4.9,2,6v14l3-3h15c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M21,15c0,0.6-0.4,1-1,1H5
-                            c-0.3,0-0.5,0.1-0.7,0.3L3,17.6V6c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1V15z"/>
-                        <path class="st0" d="M18,7H6C5.7,7,5.5,7.2,5.5,7.5S5.7,8,6,8h12c0.3,0,0.5-0.2,0.5-0.5S18.3,7,18,7z"/>
-                        <path class="st0" d="M18,10H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,11,6,11h12c0.3,0,0.5-0.2,0.5-0.5S18.3,10,18,10z"/>
-                        <path class="st0" d="M14,13H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,14,6,14h8c0.3,0,0.5-0.2,0.5-0.5S14.3,13,14,13z"/>
-                    </g>
-                </svg>
-            </div>
-
-            <div class="portion one-eighth one-fourth-on-mobile one-sixth-on-tablet-portrait half-on-tablet-landscape">
-                <!--  ICON-GROUP  -->
-                <svg class="icon-48 icon-brown horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                <path d="M19,12h-3.6c0.2-0.4,0.4-0.8,0.5-1.2c0.3,0.1,0.7,0.2,1.1,0.2c2.2,0,4-1.8,4-4c0-2.2-1.8-4-4-4c-1.9,0-3.5,1.4-3.9,3.2
-                    C12.8,6.1,12.4,6,12,6c-0.4,0-0.8,0.1-1.1,0.2C10.5,4.4,8.9,3,7,3C4.8,3,3,4.8,3,7c0,2.2,1.8,4,4,4c0.4,0,0.7-0.1,1.1-0.2
-                    c0.1,0.4,0.3,0.8,0.5,1.2H5c-1.1,0-2,0.9-2,2v3c0,0.6,0.4,1,1,1h4v2c0,0.6,0.4,1,1,1h6c0.6,0,1-0.4,1-1v-2h4c0.6,0,1-0.4,1-1v-3
-                    C21,12.9,20.1,12,19,12z M17,4c1.7,0,3,1.3,3,3c0,1.7-1.3,3-3,3c-0.4,0-0.7-0.1-1-0.2c-0.1-1.4-0.8-2.5-1.9-3.2
-                    C14.3,5.1,15.5,4,17,4z M12,7c1.7,0,3,1.3,3,3c0,1.7-1.3,3-3,3s-3-1.3-3-3C9,8.3,10.3,7,12,7z M11,13.9c0.3,0.1,0.7,0.1,1,0.1
-                    s0.7-0.1,1-0.1c0,0,0,0.1,0,0.1v1h-2v-1C11,14,11,13.9,11,13.9z M8,9.8C7.7,9.9,7.4,10,7,10c-1.7,0-3-1.3-3-3c0-1.7,1.3-3,3-3
-                    c1.5,0,2.7,1.1,3,2.6C8.8,7.2,8.1,8.4,8,9.8z M8,17H4v-3c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1v1C8.9,15,8,15.9,8,17z M15,20H9v-3
-                    c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V20z M20,17h-4c0-1.1-0.9-2-2-2v-1c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V17z"/>
-                </svg>
-            </div>
-        </div>
-
-
-        <hr>
-
-
-
-        <!-- == TYPOGRAPHY ================================================ -->
-
-        <div class="row">
-            <div class="portion whole">
-                <p class="text-big no-margin-bottom"><strong>Buttons</strong></p>
-                <p>Buttons are a cinch with FICTOAN. First add the <code class="inline">.button</code> class, and then any combination of the styling such as <code class="inline">.shape-circular</code>, <code class="inline">.button-large</code>, <code class="inline">.no-shadow</code> and so on.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="portion one-third">
-                <div class="text-centre">
-                    <a class="button bg-green shape-rounded">DEFAULT</a>
-                </div>
-            </div>
-
-            <div class="portion one-third">
-                <div class="text-centre">
-                    <a class="button button-large bg-brown shape-rounded">LARGE</a>
-                </div>
-            </div>
-
-            <div class="portion one-third">
-                <div class="text-centre">
-                    <a class="button button-disabled shape-rounded">DISABLED</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="portion one-third">
-                <div class="text-centre">
-                    <a class="button shape-circular bg-orange shape-rounded">
-                        <svg class="icon-24 icon-purple horizontal-centre-this" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                            <g>
-                                <path class="st0" d="M20,4H4C2.9,4,2,4.9,2,6v14l3-3h15c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M21,15c0,0.6-0.4,1-1,1H5
-                                    c-0.3,0-0.5,0.1-0.7,0.3L3,17.6V6c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1V15z"/>
-                                <path class="st0" d="M18,7H6C5.7,7,5.5,7.2,5.5,7.5S5.7,8,6,8h12c0.3,0,0.5-0.2,0.5-0.5S18.3,7,18,7z"/>
-                                <path class="st0" d="M18,10H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,11,6,11h12c0.3,0,0.5-0.2,0.5-0.5S18.3,10,18,10z"/>
-                                <path class="st0" d="M14,13H6c-0.3,0-0.5,0.2-0.5,0.5S5.7,14,6,14h8c0.3,0,0.5-0.2,0.5-0.5S14.3,13,14,13z"/>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="portion one-third">
-                <div class="text-centre">
-                    <a class="button button-large bg-light shape-rounded no-shadow">
-                        <img class="icon-24 horizontal-centre-this" src="icons/icon-home.svg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="portion one-third">
-                <div class="text-centre">
-                    <a class="button no-bg">SIMPLE</a>
-                </div>
-            </div>
-        </div>
-
-
-        <hr>
-
-
-
-        <!-- == TOGGLES AND RADIO BUTTONS ================================= -->
-
-        <div class="row">
-            <div class="portion whole">
-                <p class="text-big no-margin-bottom"><strong>Toggles &amp; Radio buttons</strong></p>
-                <p>Toggle switches are just restyled checkboxes. The radio buttons are also styled similarly, but the code is separate, which means you can customise either one individually. Just use a <code class="inline">p</code> tag after the toggle for the label.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="portion one-fourth">
-                <div class="text-center">
-                    <div class="ff-checkbox">
-                        <input type="checkbox" id="toggle-1" />
-                        <label for="toggle-1"></label>
-                        <label for="toggle-1">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portion one-fourth">
-                <div class="text-center">
-                    <div class="ff-checkbox">
-                        <input type="checkbox" id="toggle-2" />
-                        <label for="toggle-2"></label>
-                        <label for="toggle-2">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portion one-fourth">
-                <div class="text-center">
-                    <div class="ff-checkbox">
-                        <input type="checkbox" id="toggle-3" disabled />
-                        <label for="toggle-3"></label>
-                        <label for="toggle-3">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portion one-fourth">
-                <div class="text-center">
-                    <div class="ff-checkbox">
-                        <input type="checkbox" id="toggle-4" checked disabled />
-                        <label for="toggle-4"></label>
-                        <label for="toggle-4">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="portion one-fourth">
-                <div class="text-centre">
-                    <div class="ff-radio">
-                        <input type="radio" id="radio-1" name="radioset-1" />
-                        <label for="radio-1"></label>
-                        <label for="radio-1">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portion one-fourth">
-                <div class="text-centre">
-                    <div class="ff-radio">
-                        <input type="radio" id="radio-2" name="radioset-1" />
-                        <label for="radio-2"></label>
-                        <label for="radio-2">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portion one-fourth">
-                <div class="text-centre">
-                    <div class="ff-radio">
-                        <input type="radio" id="radio-3" name="radioset-1" disabled />
-                        <label for="radio-3"></label>
-                        <label for="radio-3">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portion one-fourth">
-                <div class="text-centre">
-                    <div class="ff-radio">
-                        <input type="radio" id="radio-4" name="radioset-1" checked disabled />
-                        <label for="radio-4"></label>
-                        <label for="radio-4">Toggle me too!</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-
-
-        <!-- == COMING SOON =============================================== -->
-
-        <div class="row margin-bottom-1x">
-            <div class="portion whole">
-                <p class="text-big no-margin-bottom"><b>More stuff coming soon!</b></p>
-                <p>FICTOAN is a continuous work in progress, and more features will be added soon. Stay tuned for forms, tiles, more icons and other reusable elements.
-                </p>
-            </div>
-        </div>
-
-
-        <hr>
-
-
-
-        <!-- == FOOTER ==================================================== -->
-        <div class="row margin-bottom-3x">
-            <div class="portion whole">
-                <p class="text-tiny">&copy; 2016 Sujan Sundareswaran. All rights reserved.<br>
-                    FICTOAN, lovingly created and maintained by Sujan Sundareswaran, a master tea-brewer and designer. Check other work <a href="http://sujansundareswaran.com/" target="_blank">here.</a><p>
-            </div>
-        </div>
-
+<body class="content-with-side-menu">
+
+    <div class="ff-side-menu bg-hue hide-on-mobile hide-on-tab-pt">
+        <a data-scroll href="#intro">INTRO</a>
+        <a data-scroll href="#getting-started">GETTING STARTED</a>
+            <a data-scroll href="#setup" class="sublink-one">Setup</a>
+        <a data-scroll href="#building-stuff">BUILDING STUFF</a>
+            <a data-scroll href="#page-basics" class="sublink-one">Page basics</a>
+        <a data-scroll href="#the-grid">&mdash; THE GRID</a>
+            <a data-scroll href="#responsiveness" class="sublink-one">Responsiveness</a>
+            <a data-scroll href="#helper-classes-grid" class="sublink-one">Helpers</a>
+        <a data-scroll href="#typography">&mdash; TYPOGRAPHY</a>
+            <a data-scroll href="#type-scale" class="sublink-one">Type sizing</a>
+            <a data-scroll href="#code" class="sublink-one">Code</a>
+            <a data-scroll href="#helper-classes-type" class="sublink-one">Helpers</a>
+        <a data-scroll href="#colour">&mdash; COLOUR</a>
+            <a data-scroll href="#base-colours" class="sublink-one">Base scheme</a>
+            <a data-scroll href="#all-colours" class="sublink-one">All colours</a>
+            <a data-scroll href="#using-the-colours" class="sublink-one">Using them</a>
+        <a data-scroll href="#buttons">&mdash; BUTTONS</a>
+        <a data-scroll href="#forms">&mdash; FORMS</a>
+        <a data-scroll href="#tabs">&mdash; TABS</a>
+        <a data-scroll href="#modals">&mdash; MODALS</a>
     </div>
 
+    <div class="all-content padding-left-tiny padding-right-tiny">
+
+<!--    ========================================================================================================
+        INTRO
+        ========================================================================================================     -->
+        <div id="intro" class="row margin-top-medium margin-bottom-large">
+            <div class="portion half margin-top-small margin-bottom-small">
+                <img class=" intro-logo margin-bottom-fixed" src="images/logo.svg">
+                <p class="text-white text-small">F*ck I couldn't think of a name</p>
+
+                <a class="ff-button shape-rounded bg-gradient shadow-soft" href="">DOWNLOAD v2.0.0</a>
+                <p class="show-inline">or, check it out on</p>
+                <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a>.
+            </div>
+
+            <div class="portion half">
+                <p class="text-large margin-bottom-tiny">FICTOAN is a simple HTML+CSS boilerplate that’s intuitive, modular, and responsive.</p>
+                <p class="text-large margin-bottom-tiny">Most sites be like, “For devs, by devs”. So, in order to restore balance in the Universe, this framework is aimed at web newbies and designers starting to code.</p>
+
+                <p><strong>But hey, don’t run away if you’re a pro dev. Try it, you might just fall in love.</strong></p>
+            </div>
+        </div>
+
+
+<!--    ========================================================================================================
+        USP
+        ========================================================================================================     -->
+
+        <div class="row">
+            <div class="portion whole">
+                <h2 class="">The sell</h2>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-tiny">
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>It’s intuitive.</strong></h6>
+                <p>FICTOAN uses straight-forward and intuitive class names such as <code class="inline">.horizontal-center-this</code>, <code class="inline">.no-margin-top</code>, <code class="inline">.center-on-mobile</code> and so on. Simple and easy to recollect.</p>
+            </div>
+
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>It’s modular.</strong></h6>
+                <p>Styling for elements are like a jigsaw puzzle&mdash; take a <code class="inline">.button</code>, simply add <code class="inline">.bg-red</code>, <code class="inline">.shape-circular</code> and <code class="inline">.no-shadow</code> to get a red, round button without a shadow. It’s like playing with Lego.</p>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-tiny">
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>It’s responsive.</strong></h6>
+                <p>The grid is completely responsive, and uses the popular 12-column layout. It also has specific classes for tablet portrait, landscape and mobile breakpoints, which means you have complete control of the layout all the time.</p>
+            </div>
+
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>It’s awesome.</strong></h6>
+                <p>FICTOAN is the path to nirvana, is capable of faster-than-light travel, and runs on nuclear fusion energy. But all that is for the next version. Right now it’s great for building web pages that look nice out of the box.</p>
+            </div>
+        </div>
+
+        <hr class="main">
+
+
+
+<!--    ========================================================================================================
+        GETTING STARTED
+        ========================================================================================================     -->
+
+        <div id="getting-started" class="row margin-bottom-small">
+            <div class="portion whole">
+                <h2>Getting started</h2>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-small">
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>Download</strong></h6>
+                <p class="margin-bottom-fixed">Hit that fancy button to get the zip file of the latest version. Comes with a nice empty <code class="inline">template.html</code> that’s just waiting for your content.</p>
+                <a class="ff-button shape-rounded" href="https://github.com/sujan-s/fictoan/archive/master.zip">DOWNLOAD v2.0.0</a>
+            </div>
+
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>Source</strong></h6>
+                <p>If you’re the nerdier type, head to <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a>, where you can look at the code and have a good laugh. Or contribute. Your call.</p>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-small">
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>Do you even SASS, bro?</strong></h6>
+                <p class="margin-bottom-fixed">FICTOAN uses SCSS, which is basically CSS on steroids. It’s a preprocessor for regular CSS, and adds a lot of extra features such as variables, nested style rules, mixins and what not. But keep in mind, browsers can’t read SASS code, so we will need to transpile to CSS everytime we make changes.</p>
+            </div>
+
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>No? Install it.</strong></h6>
+                <p class="margin-bottom-fixed">Worry not. Just head <a href="http://sass-lang.com/install">here</a> and install the preprocessor on your machine. I recommend the command-line method, its painless, and it’s time we all started using CLI anyway. You’ll find everything you need on that site. We’ll be using SCSS, because it’s easier to understand than the SASS syntax.</p>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+
+
+<!--    ========================================================================================================
+        SETUP
+        ========================================================================================================     -->
+
+        <div id="setup" class="row">
+            <div class="portion whole">
+                <h3>Setup</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion five-eighths">
+                <h5 class=" margin-bottom-fixed">The folder structure</h5>
+                <p>This is the folder structure you should see after you extract the zip file locally. Inside the main folder, there’re separate folders for CSS/SCSS, icons, and images. The HTML files are all in the root folder itself. Inside the <code class="inline">css</code> folder, there are three folders&mdash; <code class="inline">vendor</code>, <code class="inline">fictoan</code>, and <code class="inline">this-project</code>.</p>
+
+                <div class="margin-bottom-small">
+                    <h6><strong>/vendor</strong></h6>
+                    <p>The <code class="inline">vendor</code> folder contains any third-party CSS files necessary for FICTOAN to work properly. Add all your externally-linked files in here. Right now, it&rsquo;s got only one file&mdash;</p>
+
+                    <p><code class="inline">normalize.scss</code> is a nifty little file that has a bunch of rules to force elements to render consistently across different browsers and platforms. Think of it as a standardised baseline for elements to follow.</p>
+                </div>
+
+                <div class="margin-bottom-small">
+                    <h6><strong>/fictoan</strong></h6>
+                    <p>The <code class="inline">fictoan</code> folder is the core of the framework. It&rsquo;s the engine under the hood.</p>
+                    <p><code class="inline">_main-fictoan.scss</code> is the single place where all the FICTOAN files are all brought together in a particular order for transpiling.</p>
+
+                    <h6><strong>/fictoan/base</strong></h6>
+                    <p><code class="inline">_reset-fictoan.scss</code> basically builds on <code class="inline">normalize.scss</code> with a few custom rules to make our lives easier. Some of its rules are opinionated, though.</p>
+
+                    <p><code class="inline">_variables-fictoan.scss</code> contains all the styling variables used in FICTOAN. SCSS variables allow you to set attribute values globally, so that you don&rsquo;t have to set them individually each time.</p>
+
+                    <p><code class="inline">_layout-fictoan.scss</code> has all the rules for grid and general layout behaviour. Also has media-queries for various screen sizes.</p>
+
+                    <p><code class="inline">_utilities-fictoan.scss</code>, as the name suggests, has classes for your margins, paddings, icon sizes, alignments and a few custom elements as well.</p>
+
+                    <h6><strong>/fictoan/components</strong></h6>
+                    <p>Elements within FICTOAN is broken down into meaningful groups, so that you can find what you’re looking for easily. Also, I’m OCD like that.</p>
+                </div>
+
+
+                <h6><strong>/this-project</strong></h6>
+                <p><code class="inline">styles-this-project.scss</code> is for project-specific styling you might need. Having it on a separate file makes it easier to update FICTOAN (which you do by replacing old files with newer ones).</p>
+
+                <p>And finally, <code class="inline">main-fictoan.scss</code> loads all the other SCSS files in a particular order, so that styling properly cascades down the file order.</p>
+            </div>
+
+            <div class="portion three-eighths">
+<pre><code>
+    <strong class="text-yellow">fictoan</strong>
+    |
+    |—— <strong class="text-red">css</strong>
+    |    |—— <span class="text-blue">main.scss</span>
+    |    |
+    |    |—— <strong class="text-red">vendor</strong>
+    |    |    |—— <span class="text-blue">_normalize.scss</span>
+    |    |    |—— <span class="text-blue">_new-moon.scss</span>
+    |    |
+    |    |
+    |    |—— <strong class="text-red">fictoan</strong>
+    |    |    |—— <span class="text-blue">_main-fictoan.scss</span>
+    |    |    |
+    |    |    |—— <strong class="text-red">base</strong>
+    |    |    |   |—— <span class="text-blue">_reset-fictoan.scss</span>
+    |    |    |   |—— <span class="text-blue">_variables-fictoan.scss</span>
+    |    |    |   |—— <span class="text-blue">_layout-fictoan.scss</span>
+    |    |    |   |—— <span class="text-blue">_styles-fictoan.scss</span>
+    |    |    |
+    |    |    |—— <strong class="text-red">components</strong>
+    |    |        |—— <span class="text-blue">_ff-responsiveness.scss</span>
+    |    |        |—— <span class="text-blue">_ff-colours.scss</span>
+    |    |        |—— <span class="text-blue">_ff-typography.scss</span>
+    |    |        |—— <span class="text-blue">_ff-header.scss</span>
+    |    |        |—— <span class="text-blue">_ff-inputs.scss</span>
+    |    |        |—— <span class="text-blue">_ff-buttons.scss</span>
+    |    |        |—— <span class="text-blue">_ff-side-menu.scss</span>
+    |    |        |—— <span class="text-blue">_ff-tab-bar.scss</span>
+    |    |
+    |    |
+    |    |—— <strong class="text-red">this-project</strong>
+    |        |—— <span class="text-blue">_styles-this-project.scss</span>
+    |
+    |
+    |—— <strong class="text-red">icons</strong>
+    |    |—— all icon files in svg
+    |
+    |—— <strong class="text-red">images</strong>
+    |    |—— all image files
+    |
+    |
+    |—— <strong class="text-blue">index.html</strong>
+    |
+    |—— <strong class="text-blue">template.html</strong>
+    |
+    |—— <strong class="text-blue">README.md</strong>
+    |
+    |—— <strong class="text-blue">LICENSE</strong>
+
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion two-fifths">
+                <h5 class=" margin-bottom-fixed">HTML setup</h5>
+                <p>Now, for the HTML setup. You can either jump right to the <code class="inline">template.html</code>, which is an empty file with the basic <code class="inline">.row</code> and <code class="inline">.portion</code> blocks already set up for you. All you have to do is fill in your content as you want it. Feel free to add and remove blocks as you see fit.</p>
+
+                <p>But if you’d like to start afresh, make sure you include the necessary files at the top of your HTML file. Note that we’re including a CSS file&mdash; the SCSS we write is transpiled into CSS, which is understood by the browser.</p>
+            </div>
+
+            <div class="portion three-fifths">
+                <pre><code class="language-html">    &lt;!doctype html>
+    &lt;html xmlns="http://www.w3.org/1999/xhtml">
+    &lt;head>
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+        &lt;link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+        &lt;!--  This will import all the necessary files in one go  -->
+        &lt;link rel="stylesheet" href="css/main.css" type="text/css">
+
+        &lt;title>Your page name&lt;&sol;title>
+    &lt;/head>
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p>That&rsquo;s it! You&rsquo;re good to go. But that was the easy part, now to get into the meat of the madness, but fear not, this document will be the shining light in your hour of darkness. FICTOAN is built in such a way that it&rsquo;s extremely easy for newbies to pick up on, so it really shouldn&rsquo;t be that much of a hassle.</p>
+            </div>
+        </div>
+
+        <hr class="main">
+
+
+
+<!--    ============================================================================================================
+        BUILDING STUFF
+        ============================================================================================================ -->
+
+        <div id="building-stuff" class="row margin-bottom-small">
+            <div class="portion whole">
+                <h2 class="">Building stuff</h2>
+            </div>
+        </div>
+
+        <div id="page-basics" class="row">
+            <div class="portion whole">
+                <h3>Page basics</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>To begin with, FICTOAN has a <code class="inline">.all-content</code> class that places, well, all your content in the centre of the page, with equal padding on the left and right.</p>
+                <p>This padding automatically increases and decreases depending on the viewport width using media queries, so that your content doesn’t stick to the screen edges and looks good at any resolution. The padding is also set in <code class="inline">vw</code> units, meaning it takes into account viewport-width instead of static pixels.</p>
+
+                <p>Of course, if your prefer edge-to-edge content, you can just skip using this class.</p>
+            </div>
+
+            <div class="portion half">
+<pre><code class="language-html">
+    &lt;head>
+        ...
+    &lt;/head>
+
+    &lt;body>
+        &lt;div class="all-content">
+            All your content goes here
+        &lt;/div>
+    &lt;/body>
+
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row all-content test-row">
+            <div class="test-row padding-all-small text-centre">This is <span class="text-mono">.all-content</span> <br>&nbsp;<br>&nbsp;</div>
+        </div>
+
+        <hr class="main">
+
+
+
+<!--    ============================================================================================================
+        THE GRID
+        ============================================================================================================ -->
+
+        <div class="row">
+            <div class="portion whole">
+                <h3 id="the-grid">The grid</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p>A digital frontier...I tried to picture clusters of infor— oh. Right. Sorry.</p>
+                <p>FICTOAN uses a simple 12-column grid for layout. Each horizontal section on your page is a <code class="inline">.row</code>, containing <code class="inline">.portion</code> divs of various widths. The children of the <code class="inline">.row</code> all need to have a <code class="inline">.portion</code> class, along with a width class. These width classes range from <code class="inline">.whole</code>, whose width is 100% of the <code class="inline">.row</code>, to <code class="inline">.one-twelfths</code>, which is 8.33%.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>Same-width columns</strong></h6>
+                <p>All the portion width classes have simple fraction-based names, such as <code class="inline">.half</code>, <code class="inline">.three-fourths</code>, <code class="inline">.one-fifth</code>, <code class="inline">.seven-twelfths</code> and the like. Pretty easy to remember. In this way, you can have multiple equal width <code class="inline">.portion</code> elements in a <code class="inline">.row</code>.</p>
+
+                <p>If you don’t specify a width class for a <code class="inline">.portion</code>, it reverts back to a full-width element.</p>
+            </div>
+
+            <div class="portion half">
+<pre><code class="language-html">
+    &lt;!-- FULL WIDTH -->
+    &lt;div class="row">
+        &lt;div class="portion whole">
+            ...
+        &lt;/div>
+    &lt;/div>
+
+    &lt;!-- EQUAL THIRDS -->
+    &lt;div class="row">
+        &lt;div class="portion one-third">
+            ...
+        &lt;/div>
+        &lt;div class="portion one-third">
+            ...
+        &lt;/div>
+        &lt;div class="portion one-third">
+            ...
+        &lt;/div>
+    &lt;/div>
+    .
+    .
+    .
+    and so on. You get the gist, right?
+
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion whole">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.whole</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion half">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.half</p>
+                </div>
+            </div>
+            <div class="portion half">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.half</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-third">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-third</p>
+                </div>
+            </div>
+            <div class="portion two-thirds">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.two-thirds</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-fourth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-fourth</p>
+                </div>
+            </div>
+            <div class="portion three-fourths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.three-fourths</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-fifth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-fifth</p>
+                </div>
+            </div>
+            <div class="portion four-fifths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.four-fifths</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-sixth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-sixth</p>
+                </div>
+            </div>
+            <div class="portion five-sixths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.five-sixths</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-seventh">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-seventh</p>
+                </div>
+            </div>
+            <div class="portion six-sevenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.six-sevenths</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-eighth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-eighth</p>
+                </div>
+            </div>
+            <div class="portion seven-eighths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.seven-eighths</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-ninth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-ninth</p>
+                </div>
+            </div>
+            <div class="portion eight-ninths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.eight-ninths</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-tenth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                <p class="text-mono text-small no-margin">.one-tenth</p>
+                    </div>
+            </div>
+            <div class="portion nine-tenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                <p class="text-mono text-small no-margin">.nine-tenths</p>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-fixed">
+            <div class="portion one-eleventh">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-eleventh</p>
+                </div>
+            </div>
+            <div class="portion ten-elevenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.ten-elevenths<br>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gaps margin-bottom-small">
+            <div class="portion one-twelfth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-twelfth</p>
+                </div>
+            </div>
+            <div class="portion eleven-twelfths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.eleven-twelfths<br>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="sub">
+
+
+<!--    ============================================================================================================
+        UNEQUAL WIDTH COLUMNS
+        ============================================================================================================ -->
+
+        <div class="row">
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>Unequal-width columns</strong></h6>
+                <p>You can have unequal widths too, you know. <strong>Basically, the widths of the portions must add up to 1, in terms of fractions.</strong></p>
+
+                <p>But technically, you <em>can</em> have total width that doesn’t approach 1, but it’s generally not advisable&mdash; Don’t leave the rows hangin’, they don’t like that...it’s bad form, you know.</p>
+            </div>
+
+            <div class="portion half">
+<pre><code class="language-html">
+    &lt;!-- UNEQUAL WIDTHS  -->
+    &lt;div class="row">
+        &lt;div class="portion one-tenth">
+            ...
+        &lt;/div>
+        &lt;div class="portion two-sevenths">
+            ...
+        &lt;/div>
+        &lt;div class="portion one-twelfth">
+            ...
+        &lt;/div>
+        &lt;div class="portion four-elevenths">
+            ...
+        &lt;/div>
+        &lt;div class="portion one-sixth">
+            ...
+        &lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+        </div>
+
+
+        <div class="row test-row no-gaps margin-bottom-small retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+            <p class="text-mono margin-all-fixed"><strong>.row</strong></p>
+            <div class="portion one-tenth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-tenth<br>&nbsp;</p>
+                </div>
+            </div>
+            <div class="portion two-sevenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.two-sevenths<br>&nbsp;</p>
+                </div>
+            </div>
+            <div class="portion one-twelfth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-twelfth</p>
+                </div>
+            </div>
+            <div class="portion four-elevenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.four-elevenths<br>&nbsp;</p>
+                </div>
+            </div>
+            <div class="portion one-sixth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-sixth<br>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+
+<!--    ============================================================================================================
+        BOX
+        ============================================================================================================ -->
+        <div class="row">
+            <div class="portion half">
+                <h6 class="margin-bottom-fixed"><strong>Many multi-width columns</strong></h6>
+                <p>Ok, now, if you need to stack divs of such unequal widths all into a container, you can use the <code class="inline">.box</code> class instead of the <code class="inline">.row</code>. Now you can dump as many <code class="inline">.portion</code> elements inside as you like. You’d need help for your psychosis, but your divs won’t break.</p>
+            </div>
+
+            <div class="portion half">
+<pre><code class="language-html">
+    &lt;!-- UNEQUAL WIDTHS, MORE THAN PAGE WIDTH  -->
+    &lt;div class="box">
+        &lt;div class="portion three-elevenths">
+            ...
+        &lt;/div>
+        &lt;div class="portion one-eighth">
+            ...
+        &lt;/div>
+        &lt;div class="portion three-twelfths">
+            ...
+        &lt;/div>
+        &lt;div class="portion three-sevenths">
+            ...
+        &lt;/div>
+        &lt;div class="portion four-ninths">
+            ...
+        &lt;/div>
+        &lt;div class="portion four-sevenths">
+            ...
+        &lt;/div>
+        &lt;div class="portion one-sixth">
+            ...
+        &lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+        </div>
+
+
+        <div class="box test-box no-gaps margin-bottom-small retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+            <p class="text-mono margin-all-fixed"><strong>.box</strong></p>
+            <div class="portion three-elevenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.three-elevenths</p>
+                </div>
+            </div>
+            <div class="portion one-eighth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-eighth</p>
+                </div>
+            </div>
+            <div class="portion three-twelfths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.three-twelfths</p>
+                </div>
+            </div>
+            <div class="portion three-sevenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.three-sevenths</p>
+                </div>
+            </div>
+            <div class="portion four-ninths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.four-ninths</p>
+                </div>
+            </div>
+            <div class="portion four-sevenths">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.four-sevenths</p>
+                </div>
+            </div>
+            <div class="portion one-sixth">
+                <div class="card card-smaller shadow-hard bg-tint">
+                    <p class="text-mono text-small no-margin">.one-sixth</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+
+<!--    ============================================================================================================
+        NESTED GRIDS
+        ============================================================================================================ -->
+
+        <div class="row">
+            <div class="portion whole">
+                <h6 class="margin-bottom-fixed"><strong>Nested grids</strong></h6>
+                <p>You can nest your <code class="inline">.row</code> divs inside of more <code class="inline">.row</code> divs, as many times as you want. But be wary&mdash; it’s a slippery slope, you might never find your way out.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-third">
+<pre><code class="language-html">
+    &lt;div class="row">
+        &lt;div class="portion half">
+             &lt;div class="row">
+                &lt;div class="portion half">
+                ...
+                &lt;/div>
+                &lt;div class="portion half">
+                ...
+                &lt;/div>
+            &lt;/div>
+        &lt;div class="portion half">
+        ...
+        &lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+
+            <div class="portion two-thirds">
+                <div class="row test-row">
+                    <p class="text-mono"><strong>.row</strong></p>
+                    <div class="portion test-portion half">
+                        <p class="text-mono">.half</p>
+                        <div class="row test-row">
+                            <p class="text-mono"><strong>.row</strong></p>
+                            <div class="portion test-portion half">
+                                <p class="text-mono">.half</p>
+                            </div>
+                            <div class="portion test-portion half">
+                                <p class="text-mono">.half</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portion test-portion half">
+                        <p class="text-mono">.half</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+
+    <!--    ============================================================================================================
+            HELPER CLASSES
+            ============================================================================================================ -->
+
+        <div class="row">
+            <div class="portion whole">
+                <h4 id="responsiveness" class="margin-bottom-fixed">Responsive classes</h4>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-fixed">
+            <div class="portion whoLe">
+                <p>FICTOAN has four width-range buckets to segregate responsiveness behaviour. They are desktop (default), tablet landscape, tablet portrait, and mobile.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-fourth">
+                <p class="no-margin-bottom"><strong>Mobile</strong></p>
+                <p>Up to 599px</p>
+            </div>
+
+            <div class="portion one-fourth">
+                <p class="no-margin-bottom"><strong>Tablet portrait</strong></p>
+                <p>From 600px to 899px</p>
+            </div>
+
+            <div class="portion one-fourth">
+                <p class="no-margin-bottom"><strong>Tablet landscape</strong></p>
+                <p>From 900px to 1199px</p>
+            </div>
+
+            <div class="portion one-fourth">
+                <p class="no-margin-bottom"><strong>Desktop</strong></p>
+                <p>From 1200px</p>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+
+<!--    ============================================================================================================
+        CONTENT PADDING
+        ============================================================================================================ -->
+
+        <div class="row margin-bottom-fixed">
+            <div class="portion whoLe">
+                <h6><strong>Content padding</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>FICTOAN is completely responsive, maintaining a coherent page layout across various resolutions. The <code class="inline">.all-content</code> class’ padding resizes with screen width, allowing for easy readability.</p>
+                <p>Currently, for managing this padding, there are six breakpoints, each with progressively increasing padding, both left and right. You can over-ride this though, with specific padding classes.</p>
+            </div>
+            <div class="portion half">
+<pre><code class="language-css">
+    @media all and (max-width: 599px) {
+        .all-content { padding: 0 2vw; }
+    }
+
+    @media all and (min-width: 600px) {
+        .all-content { padding: 0 4vw; }
+    }
+
+    @media all and (min-width: 900px) {
+        .all-content { padding: 0 8vw; }
+    }
+
+    @media all and (min-width: 1200px) {
+        .all-content { padding: 0 10vw; }
+    }
+
+    @media all and (min-width: 1800px) {
+        .all-content { padding: 0 12vw; }
+    }
+
+    @media all and (min-width: 2400px) {
+        .all-content { padding: 0 16vw; }
+    }
+
+</code></pre>
+            </div>
+        </div>
+
+
+        <hr class="sub">
+
+        <div class="row margin-bottom-fixed">
+            <div class="portion whoLe">
+                <h6><strong>For other devices</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>Apart from the overall content padding, there are a quite a few other classes you can use. FICTOAN breaks down responsive behaviour into three main buckets&mdash; mobile, tablet portrait, and tablet landscape. Everything else is considered as desktop.</p>
+            </div>
+            <div class="portion half">
+                <p>These classes are all suffix classes, meant to be used along with the <code class="inline">portion</code> divs. As shown below, you can use them to force a particular layout for a row, on a particular width range. You can even set different width on different devices.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+<pre class="margin-bottom-tiny"><code class="language-html">
+    &lt;div class="row">
+        &lt;div class="portion  one-sixth  one-fourth-on-tab-ls  one-third-on-tab-pt  half-on-mobile">&lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>The above <code class="inline">.portion</code> does exactly what its classes dictate&mdash; it is one-sixth of the parent width by default (on desktops), quarter-width on tablet landscape, a third on tablet portrait, and finally, half-width on mobile.</p>
+            </div>
+            <div class="portion half">
+                <p>In this manner, you can use any combination of widths to control your layout on different resolutions. As you can see, the class names are all plain english, not cryptic abbreviations and numerals.</p>
+            </div>
+        </div>
+
+
+        <hr class="sub">
+
+        <div class="row margin-bottom-fixed">
+            <div class="portion whoLe">
+                <h6><strong>Forcing layouts</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>On the other hand, suppose you want a layout to remain the same across all devices, and force that behaviour always, FICTOAN’s got you covered.</p>
+            </div>
+            <div class="portion half">
+                <p>Depending on the breakpoint, you can apply any of the following classes. Just add these to the <code class="inline">.row</code> div where you want to force the layout.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+<pre class="margin-bottom-tiny"><code class="language-html">
+    &lt;div class="row  retain-layout-on-tab-ls  retain-layout-on-tab-pt  retain-layout-on-mobile">
+        &lt;div class="portion one-third">...&lt;/div>
+        &lt;div class="portion one-third">...&lt;/div>
+        &lt;div class="portion one-third">...&lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>The <code class="inline">.row</code> here will have three <code class="inline">.portion</code> divs, each one-third of the width. Because the retain classes are applied to the parent <code class="inline">.row</code>, the portions will remain one-third always, no matter the device or resolution.</p>
+            </div>
+            <div class="portion half">
+                <p>You can also remove any of the classes to revert the row back to the default behaviour. So removing <code class="inline">.retain-layout-on-tab-pt</code> means the portions won’t stay 1/3 on tablet portrait&mdash; 600px to 899px.</p>
+            </div>
+        </div>
+
+
+
+        <hr class="sub">
+
+
+<!--    ============================================================================================================
+        HELPER CLASSES
+        ============================================================================================================ -->
+
+        <div class="row">
+            <div class="portion whoLe">
+                <h4 id="helper-classes-grid" class="margin-bottom-fixed">Nifty helpers</h4>
+            </div>
+        </div>
+
+        <div class="row no-margin-bottom">
+            <div class="portion whoLe">
+                <h6 class="margin-bottom-fixed"><strong>Default behaviour</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-third">
+<pre><code class="language-html">
+    &lt;!-- DEFAULT BEHAVIOUR  -->
+    &lt;div class="row">
+        &lt;div class="portion half">
+            ...
+        &lt;/div>
+        &lt;div class="portion half">
+            ...
+        &lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+
+            <div class="portion two-thirds">
+                <div class="row margin-bottom-small retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+                    <div class="portion test-portion half">
+                        <p class="text-mono margin-all-fixed"><strong>.portion</strong></p>
+                        <div class="card card-smaller bg-tint shape-rounded">
+                            <p class="text-mono text-small no-margin">Content goes here</p>
+                        </div>
+                    </div>
+                    <div class="portion test-portion half">
+                        <p class="text-mono margin-all-fixed"><strong>.portion</strong></p>
+                        <div class="card card-smaller bg-tint shape-rounded">
+                            <p class="text-mono text-small no-margin">Content goes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row no-margin-bottom">
+            <div class="portion whoLe">
+                <h6 class="text-mono margin-bottom-fixed"><strong>.lesser-gaps</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-third">
+<pre><code class="language-html">
+    &lt;!-- REDUCED GUTTER  -->
+    &lt;div class="row lesser-gaps">
+        &lt;div class="portion half">
+            ...
+        &lt;/div>
+        &lt;div class="portion half">
+            ...
+        &lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+
+            <div class="portion two-thirds">
+                <div class="row lesser-gaps margin-bottom-small retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+                    <div class="portion test-portion half">
+                        <p class="text-mono margin-all-fixed"><strong>.portion</strong></p>
+                        <div class="card card-smaller bg-tint shape-roundedbg-tint shape-rounded">
+                            <p class="text-mono text-small no-margin">Content goes here</p>
+                        </div>
+                    </div>
+                    <div class="portion test-portion half">
+                        <p class="text-mono margin-all-fixed"><strong>.portion</strong></p>
+                        <div class="card card-smaller bg-tint shape-roundedbg-tint shape-rounded">
+                            <p class="text-mono text-small no-margin">Content goes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row no-margin-bottom">
+            <div class="portion whoLe">
+                <h6 class="text-mono margin-bottom-fixed"><strong>.no-gaps</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-third">
+<pre><code class="language-html">
+    &lt;!-- NO GUTTER  -->
+    &lt;div class="row no-gaps">
+        &lt;div class="portion half">
+            ...
+        &lt;/div>
+        &lt;div class="portion half">
+            ...
+        &lt;/div>
+    &lt;/div>
+
+</code></pre>
+            </div>
+
+            <div class="portion two-thirds">
+                <div class="row no-gaps margin-bottom-small retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+                    <div class="portion test-portion half">
+                        <p class="text-mono margin-all-fixed"><strong>.portion</strong></p>
+                        <div class="card card-smaller bg-tint shape-rounded">
+                            <p class="text-mono text-small no-margin">Content goes here</p>
+                        </div>
+                    </div>
+                    <div class="portion test-portion half">
+                        <p class="text-mono margin-all-fixed"><strong>.portion</strong></p>
+                        <div class="card card-smaller bg-tint shape-rounded">
+                            <p class="text-mono text-small no-margin">Content goes here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+<!--    ============================================================================================================
+        TYPOGRAPHY
+        ============================================================================================================ -->
+
+        <div id="typography" class="row">
+            <div class="portion whole">
+                <h3>Typography</h3>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-fixed">
+            <div class="portion whole">
+                <h6><strong>The typefaces</strong></h6>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="portion half">
+                <p>Typography is an important part of FICTOAN, and there are myriad classes focused just on typography. To keep things free, the framework uses fonts from Google Fonts, handpicked beauties just for you.</p>
+            </div>
+
+            <div class="portion half">
+                <p>There are three typefaces, each for one category commonly used on web pages— one sans for body, one serif for fancy occasions, and one geometric monospace for displaying code.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-third">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;p class="text-sans"></code></pre>
+                <h4 class="text-sans margin-bottom-fixed">This is sans.</h4>
+                <p class="text-sans">Work Sans is the typeface of choice for body, chosen for its excellent legibility and subdued style. You just can’t go wrong with this one.</p>
+            </div>
+
+            <div class="portion one-third">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;p class="text-serif"></code></pre>
+                <h4 class="text-serif margin-bottom-fixed">This is serif.</h4>
+                <p class="text-serif">Crimson Text is the selected serif, for its understated elegance and subtle class. It’s sober characters are great for body text as well.</p>
+            </div>
+
+            <div class="portion one-third">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;p class="text-mono"></code></pre>
+                <h4 class="text-mono margin-bottom-fixed">This is mono.</h4>
+                <p class="text-mono">Space Mono handles the monospace department, and with quite a bit of panache too, though its a newcomer.</p>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+        <div id="type-scale" class="row margin-bottom-fixed">
+            <div class="portion whole">
+                <h6><strong>Typescale</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>FICTOAN uses a minor-third scale-factor to fix the font-sizing ratio for headings. First, we set the base font size as 1em, or 16px. This is the default font size for our HTML body.</p>
+            </div>
+
+            <div class="portion half">
+                <p>Then, we do a fancy power function calculation, and bam! We can now get all heading sizes from a single value. This means that each heading size is 1.2 times larger than the previous, like so&mdash;</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p class="show-inline no-line-height"><code class="inline">h1</code></p>
+                <h1 class="show-inline">You’re just my type.</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p class="show-inline no-line-height"><code class="inline">h2</code></p>
+                <h2 class="show-inline">You’re just my type.</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p class="show-inline no-line-height"><code class="inline">h3</code></p>
+                <h3 class="show-inline">You’re just my type.</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p class="show-inline no-line-height"><code class="inline">h4</code></p>
+                <h4 class="show-inline">You’re just my type.</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p class="show-inline no-line-height"><code class="inline">h5</code></p>
+                <h5 class="show-inline">You’re just my type.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion whole">
+                <p class="show-inline no-line-height"><code class="inline">h6</code></p>
+                <h6 class="show-inline">You’re just my type.</h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-third">
+                <p>Ok, let’ break it down.</p>
+                <p>As you can see here, we’ve set the base font size as 1, and the scale factor as 1.2. Using these values, we’re doing some fancy math to attain the the power function for easy scaling.</p>
+
+                <p>Both <code class="inline">$baseFontSize</code> and <code class="inline">$scaleFactor</code> are set as variables. This makes it real easy to edit font sizes across the board&mdash; just edit either of the values, and your heading sizes will resize accordingly.</p>
+            </div>
+
+            <div class="portion two-thirds">
+<pre><code class="language-scss">
+    $baseFontSize : 1em; // =16px
+    $scaleFactor  : 1.2;
+
+    // Power function — for scaleFactor usage
+    @function pow($number, $exponent) {
+        $value : 1;
+
+        @if $exponent > 0 {
+            @for $i from 1 through $exponent {
+                $value: $value * $number;
+            }
+            } @else if $exponent < 0 {
+                @for $i from 1 through -$exponent {
+                $value: $value / $number;
+            }
+        }
+
+    @return $value;
+    }
+
+    //  Using that value to set heading sizes
+    h1 { font-size : $baseFontSize*pow($scaleFactor, 8); }  // 4.29982em
+    h2 { font-size : $baseFontSize*pow($scaleFactor, 6); }  // 2.98598em
+    h3 { font-size : $baseFontSize*pow($scaleFactor, 4); }  // 2.0736em
+    h4 { font-size : $baseFontSize*pow($scaleFactor, 3); }  // 1.728em
+    h5 { font-size : $baseFontSize*pow($scaleFactor, 2); }  // 1.44em
+    h6 { font-size : $baseFontSize*pow($scaleFactor, 1); }  // 1.2em
+
+</code></pre>
+            </div>
+        </div>
+
+        <hr class="sub">
+
+        <div id="code" class="row">
+            <div class="portion whoLe">
+                <h4 class="margin-bottom-fixed">Code</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>FICTOAN also has a pretty extensive syntax highlighting system. Although it uses <a href="http://prismjs.com/" target="_blank">prismJS</a> for the syntax identification, the colours are all based off of FICTOAN’s colour scheme.</p>
+            </div>
+
+            <div class="portion half">
+                <p>To offer a consistent, reliable performance, the prismJS is included locally, inside the <code class="inline">js</code> folder. By default, it offers highlighting for Markup, CSS, SCSS JS, JSON and C-like languages, but you can add for as many as you want.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <pre><code class="language-html">    &lt;pre>
+        &lt;code class="language-html">
+            &lt;p>Wow, this is some meta shit!&lt;/p>
+        &lt;/code>
+    &lt;/pre></code></pre>
+            </div>
+
+            <div class="portion half">
+                <p>That’s all you need for making your code colourful and readable. Just add the <code class="inline">language-</code> prefix and the name of the language, in the <code class="inline">code</code> class, and you’re good to go.</p>
+
+                <p>You can even make your own colour scheme, just edit the values in the <code class="inline">fictoan-code-colours.scss</code> file.</p>
+            </div>
+        </div>
+
+
+
+        <hr class="sub">
+
+        <div id="helper-classes-type" class="row">
+            <div class="portion whoLe">
+                <h4 class="margin-bottom-fixed">Nifty helpers</h4>
+            </div>
+        </div>
+
+        <div class="row no-margin-bottom">
+            <div class="portion whoLe">
+                <h6 class="margin-bottom-fixed"><strong>Text sizing</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>There’s also very convenient text-sizing classes that you can use in your inline <code class="inline">span</code> elements. Simply add the appropriate class.</p>
+            </div>
+
+            <div class="portion half">
+                <p>These too are sized using the scaleFactor calculation, so they too will resize when if you change <code class="inline">$baseFontSize</code>.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>Your text can be <span class="text-huge">huge,</span>
+                    <span class="text-large">large,</span>
+                    <span class="text-normal">normal,</span>
+                    <span class="text-small">small, and</span>
+                    <span class="text-tiny">tiny.</span>
+                </p>
+            </div>
+
+            <div class="portion half">
+                <pre><code class="language-css">
+    .text-tiny   { font-size : $baseFontSize*pow($scaleFactor,-2); }
+    .text-small  { font-size : $baseFontSize*pow($scaleFactor,-1); }
+    .text-normal { font-size : $baseFontSize*pow($scaleFactor, 0); }
+    .text-large  { font-size : $baseFontSize*pow($scaleFactor, 4); }
+    .text-huge   { font-size : $baseFontSize*pow($scaleFactor, 8); }
+                </code></pre>
+            </div>
+        </div>
+
+
+        <hr class="main">
+
+
+
+<!--    ============================================================================================================
+        COLOUR
+        ============================================================================================================ -->
+
+        <div id="colour" class="row">
+            <div class="portion whole">
+                <h3>Colour</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>Colour is another integral part of FICTOAN. The framework has a simple complementary scheme set up to provide a basic out-of-the-box usage, and a general spectrum for more nuanced control.</p>
+            </div>
+
+            <div class="portion half">
+                <p>You’ll also notice that the colour format used here is <code class="inline">hsl</code> and <code class="inline">hsla</code>. HSL is an intuitive system, unlike abstract formats like RGB and Hex. You can read more about why, <a href="https://chromatichq.com/blog/understanding-and-using-hsl-your-css" target="_blank">here</a>.</p>
+            </div>
+        </div>
+
+        <div id="base-colours" class="row">
+            <div class="portion whole">
+                <h6><strong>Complements of FICTOAN</strong></h6>
+            </div>
+        </div>
+
+        <div class="row lesser-gaps">
+            <div class="portion one-fifth">
+                <p class="margin-bottom-fixed">Primary hue + white</p>
+                <div class="padding-all-tiny shape-rounded bg-tint margin-bottom-fixed">&nbsp;</div>
+                <code class="inline"><strong>$colorTint</strong></code><br>
+                <code class="inline">lighten($colorHue, 25%);</code>
+            </div>
+
+            <div class="portion one-fifth">
+                <p class="margin-bottom-fixed">PRIMARY HUE</p>
+                <div class="padding-all-tiny shape-rounded bg-hue margin-bottom-fixed">&nbsp;</div>
+                <code class="inline"><strong>$colorHue</strong></code><br>
+                <code class="inline">hsl(10, 90%, 70%);</code>
+            </div>
+
+            <div class="portion one-fifth">
+                <p class="margin-bottom-fixed">Primary hue + black</p>
+                <div class="padding-all-tiny shape-rounded bg-shade margin-bottom-fixed">&nbsp;</div>
+                <code class="inline"><strong>$colorShade</strong></code><br>
+                <code class="inline">darken($colorHue, 25%);</code>
+            </div>
+
+            <div class="portion one-fifth">
+                <p class="margin-bottom-fixed">Primary hue + more black</p>
+                <div class="padding-all-tiny shape-rounded bg-shade-2 margin-bottom-fixed">&nbsp;</div>
+                <code class="inline"><strong>$colorShade-2</strong></code><br>
+                <code class="inline">darken($colorHue, 60%);</code>
+            </div>
+
+            <div class="portion one-fifth">
+                <p class="margin-bottom-fixed">Complement of primary hue</p>
+                <div class="padding-all-tiny shape-rounded bg-accent margin-bottom-fixed">&nbsp;</div>
+                <code class="inline"><strong>$colorAccent</strong></code><br>
+                <code class="inline">complement($colorHue);</code>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-fixed">
+            <div class="portion whole">
+                <h6><strong>How this works</strong></h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>The colour scheme in FICTOAN is complementary, as you can see. The system is built using simple SASS functions, allowing more nuanced user control over the scheme. Only the primary colour is set with a hard-coded value, rest are all derived using that value.</p>
+            </div>
+
+            <div class="portion half">
+                <p>This means that if you change the <code class="inline">$colorHue</code> variable, the rest of the four colours will also change accordingly. You can over-ride the SASS functions as you like, and you can find a full list of what’s possible <a href="http://jackiebalzer.com/color" target="_blank">here.</a> Play around and create your own custom schemes with these functions.</p>
+            </div>
+        </div>
+
+
+        <div id="all-colours" class="row">
+            <div class="portion whole">
+                <h6><strong>The many colours of FICTOAN</strong></h6>
+            </div>
+        </div>
+
+        <div class="row no-margin-bottom">
+            <div class="portion half">
+                <p>There’s also a whole bunch of preset colours you can use, each with one lighter and one darker variant. The lightening and darkening value is again controlled by SASS functions, mostly in the 10% to 30% range.</p>
+            </div>
+
+            <div class="portion half">
+                <p>Because we’re using SASS functions, we don’t have to come up with individual values of the light and dark colours, instead, we just have to specify the hue, and variants are calculated automatically.</p>
+            </div>
+        </div>
+
+        <div class="row lesser-gaps retain-layout-on-tab-ls">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-red">
+                    <p class="text-white">Red</p>
+                    <code class="inline"><strong>$colorRed</strong></code><br>
+                    <code class="inline">hsl(1, 100%, 67%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-red-light">
+                    <p class="text-white">Light Red</p>
+                    <code class="inline"><strong>$colorRed-light</strong></code><br>
+                    <code class="inline">lighten($colorRed, 10%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-red-dark">
+                    <p class="text-white">Dark Red</p>
+                    <code class="inline"><strong>$colorRed-dark</strong></code><br>
+                    <code class="inline">darken($colorRed, 30%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-orange">
+                    <p class="text-white">Orange</p>
+                    <code class="inline"><strong>$colorOrange</strong></code><br>
+                    <code class="inline">hsl(34, 100%, 50%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-orange-light">
+                    <p class="text-white">Light Orange</p>
+                    <code class="inline"><strong>$colorOrange-light</strong></code><br>
+                    <code class="inline">lighten($colorOrange, 10%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-orange-dark">
+                    <p class="text-white">Dark Orange</p>
+                    <code class="inline"><strong>$colorOrange-dark</strong></code><br>
+                    <code class="inline">darken($colorOrange, 10%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-yellow">
+                    <p class="text-white">Yellow</p>
+                    <code class="inline"><strong>$colorYellow</strong></code><br>
+                    <code class="inline">hsl(40, 99%, 63%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-yellow-light">
+                    <p class="text-white">Light Yellow</p>
+                    <code class="inline"><strong>$colorYellow-light</strong></code><br>
+                    <code class="inline">lighten($colorYellow, 10%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-yellow-dark">
+                    <p class="text-white">Dark Yellow</p>
+                    <code class="inline"><strong>$colorYellow-dark</strong></code><br>
+                    <code class="inline">darken($colorYellow, 10%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-green">
+                    <p class="text-white">Green</p>
+                    <code class="inline"><strong>$colorGreen</strong></code><br>
+                    <code class="inline">hsl(147, 65%, 45%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-green-light">
+                    <p class="text-white">Light Green</p>
+                    <code class="inline"><strong>$colorGreen-light</strong></code><br>
+                    <code class="inline">lighten($colorGreen, 20%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-green-dark">
+                    <p class="text-white">Dark Green</p>
+                    <code class="inline"><strong>$colorGreen-dark</strong></code><br>
+                    <code class="inline">darken($colorGreen, 20%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-teal">
+                    <p class="text-white">Teal</p>
+                    <code class="inline"><strong>$colorTeal</strong></code><br>
+                    <code class="inline">hsl(161, 60%, 62%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-teal-light">
+                    <p class="text-white">Light Teal</p>
+                    <code class="inline"><strong>$colorTeal-light</strong></code><br>
+                    <code class="inline">lighten($colorTeal, 20%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-teal-dark">
+                    <p class="text-white">Dark Teal</p>
+                    <code class="inline"><strong>$colorTeal-dark</strong></code><br>
+                    <code class="inline">darken($colorTeal, 20%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-blue">
+                    <p class="text-white">Blue</p>
+                    <code class="inline"><strong>$colorBlue</strong></code><br>
+                    <code class="inline">hsl(187, 69%, 55%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-blue-light">
+                    <p class="text-white">Light Blue</p>
+                    <code class="inline"><strong>$colorBlue-light</strong></code><br>
+                    <code class="inline">lighten($colorBlue, 20%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-blue-dark">
+                    <p class="text-white">Dark Blue</p>
+                    <code class="inline"><strong>$colorBlue-dark</strong></code><br>
+                    <code class="inline">darken($colorBlue, 20%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-indigo">
+                    <p class="text-white">Indigo</p>
+                    <code class="inline"><strong>$colorIndigo</strong></code><br>
+                    <code class="inline">hsl(187, 69%, 55%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-indigo-light">
+                    <p class="text-white">Light Indigo</p>
+                    <code class="inline"><strong>$colorIndigo-light</strong></code><br>
+                    <code class="inline">lighten($colorIndigo, 20%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-indigo-dark">
+                    <p class="text-white">Dark Indigo</p>
+                    <code class="inline"><strong>$colorIndigo-dark</strong></code><br>
+                    <code class="inline">darken($colorBlue, 20%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-purple">
+                    <p class="text-white">Purple</p>
+                    <code class="inline"><strong>$colorPurple</strong></code><br>
+                    <code class="inline">hsl(275, 51%, 55%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-purple-light">
+                    <p class="text-white">Light Purple</p>
+                    <code class="inline"><strong>$colorPurple-light</strong></code><br>
+                    <code class="inline">lighten($colorPurple, 20%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-purple-dark">
+                    <p class="text-white">Dark Purple</p>
+                    <code class="inline"><strong>$colorPurple-dark</strong></code><br>
+                    <code class="inline">darken($colorPurple, 20%);</code>
+                </div>
+            </div>
+        </div>
+
+        <!--  PINK  -->
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-pink">
+                    <p class="text-white">Pink</p>
+                    <code class="inline"><strong>$colorPink</strong></code><br>
+                    <code class="inline">hsl(305, 100%, 85%)</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-pink-light">
+                    <p class="text-white">Light Pink</p>
+                    <code class="inline"><strong>$colorPink-light</strong></code><br>
+                    <code class="inline">lighten($colorPink, 10%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-pink-dark">
+                    <p class="text-white">Dark Pink</p>
+                    <code class="inline"><strong>$colorPink-dark</strong></code><br>
+                    <code class="inline">darken($colorPink, 20%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row lesser-gaps">
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-brown">
+                    <p class="text-white">Brown</p>
+                    <code class="inline"><strong>$colorBrown</strong></code><br>
+                    <code class="inline">hsl(22, 49%, 43%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-brown-light">
+                    <p class="text-white">Light Brown</p>
+                    <code class="inline"><strong>$colorBrown-light</strong></code><br>
+                    <code class="inline">lighten($colorBrown, 20%);</code>
+                </div>
+            </div>
+
+            <div class="portion one-third">
+                <div class="card card-smallest shape-rounded bg-brown-dark">
+                    <p class="text-white">Dark Brown</p>
+                    <code class="inline"><strong>$colorBrown-dark</strong></code><br>
+                    <code class="inline">darken($colorBrown, 20%);</code>
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="sub">
+
+        <!--  ==========================================================================================================
+        USING THESE COLOURS
+        ============================================================================================================ -->
+
+        <div id="using-the-colours" class="row">
+            <div class="portion whole">
+                <h6><strong>Using these colours</strong></h6>
+            </div>
+        </div>
+
+        <div class="row no-margin-bottom">
+            <div class="portion half">
+                <p>SASS also makes it very easy to use the same values over and over again without repetition. Because we’ve set the colour value as a variable, it becomes very easy to reuse these for other purposes too.</p>
+            </div>
+
+            <div class="portion half">
+                <p>We can now use these colours for backgrounds, text and even icons. Just add the appropriate class to the appropriate element. The colours remains the same, only the prefix differs from element to element.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion one-third margin-bottom-small">
+                <h6 class="text-sans margin-bottom-fixed">For backgrounds</h6>
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;div class="bg-green">&lt;/div></code></pre>
+                <div class="card card-smaller bg-green shape-rounded">
+                    <p class="text-white no-margin">Card with a green background</p>
+                </div>
+            </div>
+
+            <div class="portion one-third margin-bottom-small">
+                <h6 class="text-sans margin-bottom-fixed">For text</h6>
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;p class="text-indigo">&lt;/div></code></pre>
+                <p class="text-indigo show-inline margin-bottom-fixed">I’m indigo.</p> <p class="text-red-dark show-inline margin-bottom-fixed">I’m dark red.</p> <p class="text-brown-light show-inline margin-bottom-fixed">I’m light brown.</p>
+                <h5><strong>
+                    And I’m
+                    <span class="text-red">F</span>
+                    <span class="text-orange">A</span>
+                    <span class="text-teal">B</span>
+                    <span class="text-purple">U</span>
+                    <span class="text-pink">L</span>
+                    <span class="text-teal">O</span>
+                    <span class="text-blue">U</span>
+                    <span class="text-orange-light">S</span>
+                    <span class="text-red">!</span>
+                </strong></h5>
+            </div>
+
+            <div class="portion one-third margin-bottom-small">
+                <h6 class="text-sans margin-bottom-fixed">For inline-SVG elements</h6>
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;svg class="fill-blue" /></code></pre>
+                <svg class="icon-large fill-yellow margin-right-tiny" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                </svg>
+
+                <svg class="icon-large fill-teal-light margin-right-tiny" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"/>
+                </svg>
+
+                <svg class="icon-large fill-purple margin-right-tiny"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+
+                <svg class="icon-large fill-indigo margin-right-tiny" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+            </div>
+        </div>
+
+        <hr class="main">
+
+        <!--  ==========================================================================================================
+        BUTTONS
+        ============================================================================================================ -->
+
+        <div id="buttons" class="row">
+            <div class="portion whole">
+                <h3>Buttons</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>Buttons come a variety of shapes and sizes in FICTOAN, and like all other components in here, they are modular, and the class names fit together like a jig-saw puzzle.</p>
+            </div>
+
+            <div class="portion half">
+                <p>Ideally, you’ll be using the <code class="inline">a</code> tag with specific classes to give the appearance of a button. Each class comes with its own particular styling rules, add and remove as you please.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion two-thirds">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;a class="ff-button shape-rounded bg-blue shadow-hard">CLICK ME&lt;/a></code></pre>
+            </div>
+
+            <div class="portion one-third">
+                <a class="ff-button shape-rounded bg-blue shadow-hard">CLICK ME</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion two-thirds">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;a class="ff-button shape-curved bordered">CLICK ME&lt;/a></code></pre>
+            </div>
+
+            <div class="portion one-third">
+                <a class="ff-button shape-curved bordered">CLICK ME</a>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="portion two-thirds">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;!-- bg-gradient uses color-hue and color-shade classes -->
+&lt;a class="ff-button shape-circular bg-gradient shadow-soft">
+    &lt;img class="icon-small" src="icons/icon-book.svg">
+&lt;/a></code></pre>
+            </div>
+
+            <div class="portion one-third">
+                <a class="ff-button shape-circular bg-gradient shadow-soft">
+                    <img class="icon-small" src="icons/icon-book.svg">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion two-thirds">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;a class="ff-button bg-none">CLICK ME&lt;/a></code></pre>
+            </div>
+
+            <div class="portion one-third">
+                <a class="ff-button bg-none">CLICK ME</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion two-thirds">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;a class="ff-button bg-yellow shape-curved disabled">CAN’T CLICK ME&lt;/a></code></pre>
+            </div>
+
+            <div class="portion one-third">
+                <a class="ff-button bg-yellow shape-curved disabled">CAN’T CLICK ME</a>
+            </div>
+        </div>
+
+        <hr class="main">
+
+<!--    ============================================================================================================
+        FORMS
+        ============================================================================================================ -->
+
+        <div id="forms" class="row">
+            <div class="portion whole">
+                <h3>Forms</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>Input fields are pretty straight-forward, with a simple grey line at the bottom by default, which turns into the <code class="inline">$colorHue</code> variable on focus.</p>
+            </div>
+
+            <div class="portion half">
+                <p>Other elements like the checkbox and radio button also use the same principle, using the same variable when selected.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <pre class="margin-bottom-tiny"><code class="language-html">&lt;!-- Text fields -->
+&lt;input class="ff-input" placeholder="Username">
+&lt;input class="ff-input input-success">
+&lt;input class="ff-input input-error">
+
+&lt;!-- Checkbox -->
+&lt;div class="ff-checkbox">
+    &lt;input type="checkbox" id="toggle-1" />
+    &lt;label class="ff-checkbox-label" for="toggle-1">&lt;/label>
+    &lt;label class="ff-checkbox-label" for="toggle-1">Default&lt;/label>
+&lt;/div>
+
+&lt;!-- Radio button -->
+&lt;div class="ff-radio">
+    &lt;input type="radio" id="radio-1" name="radioset-1" />
+    &lt;label class="ff-radio-label" for="toggle-1">&lt;/label>
+    &lt;label class="ff-radio-label" for="toggle-1">Default&lt;/label>
+&lt;/div></code></pre>
+            </div>
+
+            <div class="portion half">
+                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
+                    <div class="portion whole">
+                        <input class="ff-input" placeholder="Username">
+                    </div>
+                </div>
+
+                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
+                    <div class="portion half">
+                        <input class="ff-input" placeholder="First name">
+                    </div>
+                    <div class="portion half">
+                        <input class="ff-input" placeholder="Last name">
+                    </div>
+                </div>
+
+                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt margin-bottom-small">
+                    <div class="portion half">
+                        <input class="ff-input input-success" value="That’s right!">
+                    </div>
+
+                    <div class="portion half">
+                        <input class="ff-input input-error" value="Um, nope.">
+                    </div>
+                </div>
+
+                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
+                    <div class="portion one-third">
+                        <div class="ff-checkbox">
+                            <input type="checkbox" id="toggle-1" />
+                            <label class="ff-checkbox-label" for="toggle-1"></label>
+                            <label class="ff-checkbox-label" for="toggle-1">Default</label>
+                        </div>
+                    </div>
+
+                    <div class="portion one-third">
+                        <div class="ff-checkbox">
+                            <input type="checkbox" id="toggle-2" checked />
+                            <label class="ff-checkbox-label" for="toggle-2"></label>
+                            <label class="ff-checkbox-label" for="toggle-2">Checked</label>
+                        </div>
+                    </div>
+
+                    <div class="portion one-third">
+                        <div class="ff-radio">
+                            <input type="radio" id="toggle-3" checked disabled/>
+                            <label class="ff-radio-label" for="toggle-3"></label>
+                            <label class="ff-radio-label" for="toggle-3">Both</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt margin-bottom-small">
+                    <div class="portion one-third">
+                        <div class="ff-radio">
+                            <input type="radio" id="radio-1" name="radioset-1" />
+                            <label class="ff-radio-label" for="radio-1"></label>
+                            <label class="ff-radio-label" for="radio-1">Default</label>
+                        </div>
+                    </div>
+
+                    <div class="portion one-third">
+                        <div class="ff-radio">
+                            <input type="radio" id="radio-2" name="radioset-1" checked />
+                            <label class="ff-radio-label" for="radio-2"></label>
+                            <label class="ff-radio-label" for="radio-2">Checked</label>
+                        </div>
+                    </div>
+
+                    <div class="portion one-third">
+                        <div class="ff-radio">
+                            <input type="radio" id="radio-3" name="radioset-1" disabled />
+                            <label class="ff-radio-label" for="radio-3"></label>
+                            <label class="ff-radio-label" for="radio-3">Disabled</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
+                    <div class="portion whole">
+                        <a class="ff-button shape-curved bg-green shadow-hard show-inline">SUBMIT</a>
+                        <a class="ff-button shape-curved bg-none show-inline"><span class="text-dark">CANCEL</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <hr class="main">
+
+<!--    ============================================================================================================
+        TABS
+        ============================================================================================================ -->
+
+        <div id="tabs" class="row">
+            <div class="portion whole">
+                <h3>Tabs</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>Tabs in FICTOAN are CSS-only, and use the radio-button hack for displaying the corresponding content. In desktop view, they’re placed left to right.</p>
+            </div>
+
+            <div class="portion half">
+                <p>And in mobile view, they’re stacked vertically, to behave like an accordion menu, expanding and collapsing on select.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <pre class="margin-bottom-tiny"><code class="language-html">
+    &lt;div class="ff-tabs">
+        &lt;input class="ff-tab-select" type="radio" name="tabs" id="tab-1" checked>
+        &lt;label class="ff-tab-label" for="tab-1">Tab One&lt;/label>
+
+        &lt;div class="ff-tab-content">
+            &lt;p>Lorem ipsum dolor&lt;/p>
+        &lt;/div>
+
+        &lt;input class="ff-tab-select" type="radio" name="tabs" id="tab-2">
+        &lt;label class="ff-tab-label" for="tab-2">Tab Two&lt;/label>
+
+        &lt;div class="ff-tab-content">
+            &lt;p>Lorem ipsum dolor&lt;/p>
+        &lt;/div>
+    &lt;/div>
+
+</code>
+            </div>
+
+            <div class="portion half">
+                <div class="ff-tabs">
+                    <input class="ff-tab-select" type="radio" name="tabs" id="tab-1" checked>
+                    <label class="ff-tab-label" for="tab-1">Tab One</label>
+                    <div class="ff-tab-content">
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+
+                    <input class="ff-tab-select" type="radio" name="tabs" id="tab-2">
+                    <label class="ff-tab-label" for="tab-2">Tab Two</label>
+                    <div class="ff-tab-content">
+                        <p>Lorem ipsum</p>
+                    </div>
+
+                    <input class="ff-tab-select" type="radio" name="tabs" id="tab-3">
+                    <label class="ff-tab-label" for="tab-3">Tab Three</label>
+                    <div class="ff-tab-content">
+                        <p>Lorem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="main">
+
+<!--    ============================================================================================================
+            TABS
+        ============================================================================================================ -->
+
+        <div id="modals" class="row">
+            <div class="portion whole">
+                <h3>Modals</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <p>Modals are CSS-only, and again uses the <code class="inline">:target</code> selector. Modals basically use a full-page overlay with a <code class="inline">row</code> and <code class="inline">portion</code> element inside.</p>
+            </div>
+
+            <div class="portion half">
+                <p>The modal box itself is a simple <code class="inline">.card</code> element, with customisable background colour, shape and so on.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="portion half">
+                <pre class="margin-bottom-tiny"><code class="language-html">
+    &lt;a href="#modal01">Open Modal&lt;/a>
+
+    &lt;div id="modal01" class="ff-modal">
+        &lt;div class="row margin-top-small">
+            &lt;div class="portion one-third">&lt;/div>
+
+            &lt;div class="portion one-third">
+                &lt;div class="ff-modal-box card bg-white shape-rounded shadow-soft">
+                    &lt;h5 class="margin-bottom-tiny">Something&lt;/h5>
+                    &lt;a href="#close">OK, Fine&lt;/a>
+                &lt;/div>
+            &lt;/div>
+
+            &lt;div class="portion one-third">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+
+</code>
+            </div>
+
+            <div class="portion half">
+                <a href="#modal01">Open Modal</a>
+
+                <div id="modal01" class="ff-modal">
+                    <div class="row">
+                        <div class="portion one-third"></div>
+
+                        <div class="portion one-third">
+                            <div class="ff-modal-box card card-smaller bg-white shape-rounded shadow-soft margin-top-small">
+                                <h5 class="margin-bottom-fixed">Look!</h5>
+                                <p>It’s a bird! It’s a plane!</p>
+                                <a href="#close">No, it’s a modal.</a>
+                            </div>
+                        </div>
+
+                        <div class="portion one-third"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div> <!-- All-content ends here -->
+
+    <script src="js/prism.js"></script>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
         ga('create', 'UA-87045454-1', 'auto');
         ga('send', 'pageview');
-
         var downloadButton = document.getElementById('download-link');
-
         downloadButton.addEventListener('click', function(e){
             // prevent default click event
             e.preventDefault();
-
             //send data to Google Analytics
             ga('send', 'event', 'Files', 'Click', 'Fictoan downloads', '0');
-
             //get href and put it inside a variable
             var link = downloadButton.href;
-
             // the function that does the redirection
             function startDownload(link){
                 window.open(link);
             }
-
             //now start download after 1s
             setTimeout(function(){
                 startDownload(link);
@@ -825,3 +2133,6 @@
     </script>
 
 </body>
+
+
+

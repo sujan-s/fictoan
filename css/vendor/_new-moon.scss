@@ -1,0 +1,178 @@
+code[class*=language-], pre[class*=language-], pre code {
+    color                  : $colorMildGrey;
+    font-family            : $fontMono;
+    font-variant-ligatures : none;
+    direction              : ltr;
+    text-align             : left;
+    white-space            : pre;
+    word-spacing           : normal;
+    word-break             : normal;
+    line-height            : 1.5;
+    font-weight            : 400;
+    -moz-tab-size          : 4;
+    tab-size               : 4;
+    -webkit-hyphens        : none;
+    -ms-hyphens            : none;
+    hyphens                : none;
+    border-radius          : 8px;
+    -webkit-font-smoothing : subpixel-antialiased
+}
+
+pre code {
+    display          : block;
+    padding          : $measureFixed*02;
+    overflow         : auto;
+    background-color : #2d2d2d
+}
+
+@media (min-width : 600px) {
+    pre code { padding : 1.5rem }
+}
+
+kbd {
+    background-color : #f7f7f7;
+    border           : 1px solid rgba(0, 0, 0, .3);
+    border-radius    : 3px;
+    box-shadow       : 0 1px 0 rgba(0, 0, 0, .2), inset 0 0 0 2px #fff;
+    color            : #333;
+    display          : inline-block;
+    font-family      : Helvetica, Arial, sans-serif;
+    line-height      : 1.4;
+    margin           : 0 .1em;
+    padding          : .1em .6em;
+    text-shadow      : 0 1px 0 #fff;
+    font-size        : 14px
+}
+
+:not(pre) > code[class*=language-] {
+    padding    : 2px 4px;
+    background : #2d2d2d;
+    border     : 1px solid #2d2d2d
+}
+
+:not(pre) > code {
+    padding       : 2px 4px;
+    border        : none;
+    font-family   : $fontMono;
+    font-weight   : 400;
+    border-radius : 4px;
+}
+
+code[class*=language-css], code[class*=language-less], code[class*=language-sass], code[class*=language-scss] {
+    color : #c9c
+}
+
+.token.doctype {
+    background : #000;
+    color      : #fff
+}
+
+.token.cdata, .token.comment, .token.prolog {
+    color : #7e7d72
+}
+
+.token.namespace {
+    opacity : .7
+}
+
+.token.attr-value, .token.string {
+    color : #a8d3a9
+}
+
+.token.punctuation {
+    color : $colorDarkGrey;
+}
+
+.token.operator {
+    color : #cda869
+}
+
+.token.variable {
+    color : #f78d8c
+}
+
+.token.property {
+    color : #d2d0c9
+}
+
+.token.boolean, .token.constant, .token.entity, .token.inserted, .token.number, .token.regex, .token.symbol, .token.url {
+    color : #fca369
+}
+
+.token.delimiter {
+    background : #000;
+    color      : #fff;
+    padding    : 1px 2px
+}
+
+.token.atrule {
+    color : #76d4d6
+}
+
+.token.keyword {
+    color : #ffeead
+}
+
+.language-autohotkey .token.selector {
+    color : #f7931e
+}
+
+.token.attr-name {
+    color : #ffd479
+}
+
+.token.function {
+    color : #76d4d6
+}
+
+.language-php .token.function {
+    color : #fff
+}
+
+.token.class-name {
+    color : #d6acd6
+}
+
+.language-autohotkey .token.tag, .token.deleted {
+    color : #f5b80e
+}
+
+.token.tag {
+    color : #78aad6
+}
+
+.language-autohotkey .token.keyword {
+    color : #ffeead
+}
+
+.token.selector {
+    color : #ffd479
+}
+
+.token.italic {
+    font-style : italic
+}
+
+code::-moz-selection, pre::-moz-selection {
+    text-shadow : none;
+    color       : inherit;
+    background  : hsla(0, 0%, 59%, .3) !important
+}
+
+code::selection, pre::selection {
+    text-shadow : none;
+    color       : inherit;
+    background  : hsla(0, 0%, 59%, .3) !important
+}
+
+code[class*=language-] ::-moz-selection, pre[class*=language-]::-moz-selection {
+    text-shadow : none;
+    color       : inherit;
+    background  : hsla(0, 0%, 59%, .3) !important
+}
+
+code[class*=language-] ::selection, pre[class*=language-]::selection {
+    text-shadow : none;
+    color       : inherit;
+    background  : hsla(0, 0%, 59%, .3) !important
+}

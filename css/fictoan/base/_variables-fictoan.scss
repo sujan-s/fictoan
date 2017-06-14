@@ -1,0 +1,120 @@
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 2.0.0
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+
+
+
+//  Typography
+$fontSans  : "Work Sans", sans-serif;
+$fontSerif : "Crimson Text", serif;
+$fontMono  : "Space Mono", monospace;
+
+//  Paragraph-specific variables
+$paraSerifFontSize   : 1.3em;
+$paraSerifLineHeight : 1.4em;
+
+$baseFontSize : 1em;
+$scaleFactor  : 1.2;
+
+//  Margin, padding and pretty much
+//  anything similar
+$measureFixed   : 8px;
+$measureDynamic : 2vmax;
+
+
+//  Colours — Currently using a complementary scheme
+$colorHue     : hsl(  14, 100%,  78%); // Peachy salmon — this is the main colour
+$colorTint    : lighten($colorHue, 20%);
+$colorShade   :  darken($colorHue, 20%);
+$colorShade-2 :  darken($colorHue, 70%);
+$colorAccent  : complement($colorHue);
+
+$colorRed          : hsl(   1, 100%,  67%);
+$colorRed-light    : lighten($colorRed, 10%);
+$colorRed-dark     :  darken($colorRed, 30%);
+
+$colorGreen        : hsl( 147,  65%,  45%);
+$colorGreen-light  : lighten($colorGreen, 20%);
+$colorGreen-dark   :  darken($colorGreen, 20%);
+
+$colorBrown        : hsl(  22,  49%,  43%);
+$colorBrown-light  : lighten($colorBrown, 20%);
+$colorBrown-dark   :  darken($colorBrown, 20%);
+
+$colorOrange       : hsl(  34, 100%,  50%);
+$colorOrange-light : lighten($colorOrange, 10%);
+$colorOrange-dark  :  darken($colorOrange, 10%);
+
+$colorYellow       : hsl(  40,  99%,  63%);
+$colorYellow-light : lighten($colorYellow, 10%);
+$colorYellow-dark  :  darken($colorYellow, 10%);
+
+$colorTeal         : hsl( 161,  60%,  62%);
+$colorTeal-light   : lighten($colorTeal, 20%);
+$colorTeal-dark    :  darken($colorTeal, 20%);
+
+$colorBlue         : hsl( 187,  69%,  55%);
+$colorBlue-light   : lighten($colorBlue, 20%);
+$colorBlue-dark    :  darken($colorBlue, 20%);
+
+$colorIndigo       : hsl( 233,  72%,  56%);
+$colorIndigo-light : lighten($colorIndigo, 20%);
+$colorIndigo-dark  :  darken($colorIndigo, 20%);
+
+$colorPurple       : hsl( 275,  51%,  55%);
+$colorPurple-light : lighten($colorPurple, 20%);
+$colorPurple-dark  :  darken($colorPurple, 20%);
+
+$colorPink         : hsl( 305, 100%,  85%);
+$colorPink-light   : lighten($colorPink, 10%);
+$colorPink-dark    :  darken($colorPink, 20%);
+
+
+
+$colorWhite    : lighten($colorHue, 100%);
+$colorMildGrey : hsl(  35,   0%,  95% );
+$colorDarkGrey : hsl(  35,   0%,  60% );
+$colorBlack    : darken($colorHue, 100%);
+
+// Code area styles
+$codeColor   : $colorShade;
+$codeBgColor : $colorTint;
+
+//  Selection highlight
+$textHighlightBg    : $colorHue;
+$textHighlightColor : $colorTint;
+
+
+//  Variables for the page body
+$bodyBgColor     : $colorWhite;
+$bodyFontColor   : $colorShade-2;
+$linkColor       : $colorShade;
+$linkBorder      : 1px dotted $colorShade;
+$linkHoverBorder : 1px  solid $colorShade;
+
+$ff-side-menuWidth : $measureFixed*24;
+
+
+// Power function — for scaleFactor usage
+@function pow($number, $exponent) {
+    $value : 1;
+
+    @if $exponent > 0 {
+        @for $i from 1 through $exponent {
+            $value: $value * $number;
+        }
+        } @else if $exponent < 0 {
+            @for $i from 1 through -$exponent {
+            $value: $value / $number;
+        }
+    }
+
+    @return $value;
+}

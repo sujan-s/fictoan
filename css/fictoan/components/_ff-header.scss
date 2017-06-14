@@ -1,0 +1,86 @@
+header {
+    overflow   : hidden;
+    background : $colorWhite;
+}
+
+header a,
+header label {
+    display         : block;
+    padding         : $measureFixed*2;
+    color           : $colorShade-2;
+    text-decoration : none;
+    line-height     : 20px;
+    border          : none;
+}
+
+header a:hover,
+header label:hover {
+    color  : $colorShade;
+    border : none;
+}
+
+header li.current-page a { color : $colorHue; }
+
+header label {
+    float   : right;
+    padding : $measureFixed*2 $measureFixed*3;
+    cursor  : pointer;
+}
+
+header label:after {
+    content   : "\2261"; //  This is the hamburger menu icon
+    font-size : 2.4em;
+}
+
+nav {
+    float      : right;
+    max-height : 0;
+    width      : 100%;
+}
+
+nav ul {
+    margin  : 0;
+    padding : 0 0 $measureFixed*2;
+}
+
+nav li {
+    display    : block;
+    text-align : center;
+}
+
+nav a {
+    padding : 10px;
+    width   : 100%;
+}
+
+#nav { display : none; }
+
+/*  This can be anything bigger than your nav height.
+    The transition duration works with this  */
+#nav:checked ~ nav { max-height : 200px; }
+
+.nav-logo { float : left; }
+
+@media only screen and (min-width : 499px) {
+
+    header label { display : none; }
+
+    nav {
+        width      : auto;
+        max-height : none;
+    }
+
+    nav ul { padding : 0 $measureFixed 0 0; }
+
+    nav li {
+        display    : inline-block;
+        text-align : left;
+    }
+
+    header nav a {
+        display : inline-block;
+        padding : $measureFixed*2 $measureFixed*3;
+        width   : auto;
+    }
+
+}
