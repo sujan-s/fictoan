@@ -56,6 +56,12 @@
 
 
 
+.text-hue     { color : $colorHue }
+.text-tint    { color : $colorTint }
+.text-shade   { color : $colorShade }
+.text-shade-2 { color : $colorShade-2 }
+.text-accent  { color : $colorAccent }
+
 //  Standardized presets for text
 .text-red          { color : $colorRed; }
 .text-red-light    { color : $colorRed-light; }

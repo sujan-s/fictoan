@@ -89,6 +89,7 @@ a.ff-button { border : none; }
     font-size   : 80%;
     font-family : $fontSans;
     color       : $colorWhite;
+    line-height : $measureFixed*2;
 }
 
 a.ff-pill { border : none; }

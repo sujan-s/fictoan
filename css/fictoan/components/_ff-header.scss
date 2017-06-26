@@ -1,83 +1,76 @@
-header {
-    overflow   : hidden;
-    background : $colorWhite;
-}
+.ff-header { overflow : hidden; }
 
-header a,
-header label {
+.ff-header a,
+.ff-header label {
     display         : block;
-    padding         : $measureFixed*2;
     color           : $colorShade-2;
+    padding         : $measureFixed*2 $measureFixed*3;
     text-decoration : none;
     line-height     : 20px;
     border          : none;
 }
 
-header a:hover,
-header label:hover {
-    color  : $colorShade;
-    border : none;
+.ff-header a:hover,
+.ff-header label:hover {
+    opacity : 0.72;
+    border  : none;
 }
 
-header li.current-page a { color : $colorHue; }
-
-header label {
-    float   : right;
-    padding : $measureFixed*2 $measureFixed*3;
-    cursor  : pointer;
+.ff-header label {
+    float  : right;
+    cursor : pointer;
 }
 
-header label:after {
+.ff-header label:after {
     content   : "\2261"; //  This is the hamburger menu icon
     font-size : 2.4em;
 }
 
-nav {
+.ff-nav {
     float      : right;
     max-height : 0;
     width      : 100%;
 }
 
-nav ul {
-    margin  : 0;
-    padding : 0 0 $measureFixed*2;
-}
+.ff-nav ul { margin : 0; }
 
-nav li {
+.ff-nav li {
     display    : block;
     text-align : center;
 }
 
-nav a {
-    padding : 10px;
-    width   : 100%;
+li.current-page a { color : $colorHue; }
+
+.ff-nav a {
+    margin-right : $measureFixed;
+    width        : 100%;
 }
 
 #nav { display : none; }
 
-/*  This can be anything bigger than your nav height.
+/*  This can be anything bigger than your .ff-nav height.
     The transition duration works with this  */
-#nav:checked ~ nav { max-height : 200px; }
+#nav:checked ~ .ff-nav { max-height : 200px; }
 
 .nav-logo { float : left; }
 
-@media only screen and (min-width : 499px) {
+@media only screen and (min-width : 599px) {
 
-    header label { display : none; }
+    .ff-header label { display : none; }
 
-    nav {
+    .ff-nav {
         width      : auto;
         max-height : none;
     }
 
-    nav ul { padding : 0 $measureFixed 0 0; }
+    .ff-nav ul { padding : 0 $measureFixed 0 0; }
 
-    nav li {
+    .ff-nav li {
         display    : inline-block;
         text-align : left;
     }
 
-    header nav a {
+    .ff-header .ff-nav a {
         display : inline-block;
         padding : $measureFixed*2 $measureFixed*3;
         width   : auto;
