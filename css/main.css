@@ -1892,6 +1892,21 @@ hr.sub {
 .bg-black {
   background-color: black; }
 
+.text-hue {
+  color: #ffa98f; }
+
+.text-tint {
+  color: #fff7f5; }
+
+.text-shade {
+  color: #ff5b29; }
+
+.text-shade-2 {
+  color: #290a00; }
+
+.text-accent {
+  color: #8fe5ff; }
+
 .text-red {
   color: #ff5a57; }
 
@@ -2218,80 +2233,77 @@ pre > code {
   letter-spacing: -0.5px;
   line-height: 1.2em; }
 
-header {
-  overflow: hidden;
-  background: white; }
+.ff-header {
+  overflow: hidden; }
 
-header a,
-header label {
+.ff-header a,
+.ff-header label {
   display: block;
-  padding: 16px;
   color: #290a00;
+  padding: 16px 24px;
   text-decoration: none;
   line-height: 20px;
   border: none; }
 
-header a:hover,
-header label:hover {
-  color: #ff5b29;
+.ff-header a:hover,
+.ff-header label:hover {
+  opacity: 0.72;
   border: none; }
 
-header li.current-page a {
-  color: #ffa98f; }
-
-header label {
+.ff-header label {
   float: right;
-  padding: 16px 24px;
   cursor: pointer; }
 
-header label:after {
+.ff-header label:after {
   content: "\2261";
   font-size: 2.4em; }
 
-nav {
+.ff-nav {
   float: right;
   max-height: 0;
   width: 100%; }
 
-nav ul {
-  margin: 0;
-  padding: 0 0 16px; }
+.ff-nav ul {
+  margin: 0; }
 
-nav li {
+.ff-nav li {
   display: block;
   text-align: center; }
 
-nav a {
-  padding: 10px;
+li.current-page a {
+  color: #ffa98f; }
+
+.ff-nav a {
+  margin-right: 8px;
   width: 100%; }
 
 #nav {
   display: none; }
 
-/*  This can be anything bigger than your nav height.
+/*  This can be anything bigger than your .ff-nav height.
     The transition duration works with this  */
-#nav:checked ~ nav {
+#nav:checked ~ .ff-nav {
   max-height: 200px; }
 
 .nav-logo {
   float: left; }
 
-@media only screen and (min-width: 499px) {
-  header label {
+@media only screen and (min-width: 599px) {
+  .ff-header label {
     display: none; }
 
-  nav {
+  .ff-nav {
     width: auto;
     max-height: none; }
 
-  nav ul {
+  .ff-nav ul {
     padding: 0 8px 0 0; }
 
-  nav li {
+  .ff-nav li {
     display: inline-block;
     text-align: left; }
 
-  header nav a {
+  .ff-header .ff-nav a {
     display: inline-block;
     padding: 16px 24px;
     width: auto; } }
@@ -2304,13 +2316,13 @@ nav a {
 
 .ff-input {
   width: 100%;
-  height: 100%;
   border: none;
   outline: none;
   background: none;
   padding: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.35; }
 
 .ff-input:focus,
 .ff-input:active {
@@ -2519,7 +2531,8 @@ a.ff-button {
   padding: 4px 16px;
   font-size: 80%;
   font-family: "Work Sans", sans-serif;
-  color: white; }
+  color: white;
+  line-height: 16px; }
 
 a.ff-pill {
   border: none; }
@@ -2777,5 +2790,29 @@ code[class*=language-] ::selection, pre[class*=language-]::selection {
   text-shadow: none;
   color: inherit;
   background: rgba(150, 150, 150, 0.3) !important; }
+
+/*
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 2.1.0
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+*/
+.intro-banner {
+  width: 100vw;
+  height: 80vh;
+  background: #fff7f5; }
+
+.intro-logo {
+  height: 128px; }
+
+.test-box,
+.test-row,
+.test-portion {
+  border: 1px dotted #f2f2f2;
+  background: rgba(255, 91, 41, 0.5); }
 
 /*# sourceMappingURL=main.css.map */

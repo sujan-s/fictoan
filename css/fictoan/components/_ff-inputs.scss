@@ -9,13 +9,13 @@
 
 .ff-input {
     width         : 100%;
-    height        : 100%;
     border        : none;
     outline       : none;
     background    : none;
     padding       : $measureFixed/2;
     border-bottom : 1px solid rgba($colorBlack, 0.24);
     font-family   : $fontSans;
+    line-height   : 1.35;
 }
 
 .ff-input:focus,
