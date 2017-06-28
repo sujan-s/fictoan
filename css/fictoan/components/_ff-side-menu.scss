@@ -1,33 +1,196 @@
-.ff-side-menu {
-    position   : fixed;
+//  BASICS ====================================================================
+.ff-sidebar-container {
+    display  : block;
+    position : relative;
+    width    : 240px;
+    height   : 100vh;
+    float    : left;
+    transition: all 0.2s;
+}
+
+.ff-sidebar-container.collapsed { width: 48px; }
+
+.ff-sidebar-container #menu-toggle {
+    position : absolute;
+    left     : $measureFixed*2;
+    bottom   : $measureFixed*2;
+    z-index  : 500;
+}
+
+#menu-toggle + label {
+    position   : absolute;
+    left       : $measureFixed*1.5;
+    bottom     : $measureFixed*2;
+    content    : url("../icons/icon-chevron-right.svg");
+    width      : 24px;
+    height     : 24px;
+    z-index    : 600;
+    transform  : rotate(180deg);
+    transition : all 0.2s;
+}
+
+#menu-toggle:checked + label { transform: rotate(0deg); }
+
+.content-container {
+    display : block;
+    float   : right;
+    transition: all 0.2s;
+}
+
+.page-with-sidebar .ff-sidebar-container + .content-container           { width : calc(100% - 240px); }
+.page-with-sidebar .ff-sidebar-container.collapsed + .content-container { width : calc(100% - 48px); }
+
+.ff-sidebar {
+    position   : absolute;
     top        : 0;
     left       : 0;
-    width      : $ff-side-menuWidth;
-    height     : 100vh;
-    overflow   : scroll;
-    padding    : $measureFixed*2;
-    box-shadow : inset -8px 0 16px -8px rgba(0, 0, 0, 0.24);
+    width      : 100%;
+    height     : 100%;
+    margin     : 0;
+    background : $colorMildGrey;
+    overflow-y : scroll;
+    list-style : none;
+    padding    : 0;
 }
 
-.ff-side-menu a {
-    display       : block;
-    font-weight   : 700;
-    color         : $colorTint;
-    border-bottom : none;
-    margin-bottom : $measureFixed;
+
+.ff-sidebar-container.collapsed .ff-sidebar ul > li,
+.ff-sidebar-container.collapsed .ff-sidebar label::after { display: none; }
+
+.ff-sidebar-container.collapsed .ff-sidebar a { padding-left : 48px; }
+
+.ff-sidebar-container.collapsed .ff-sidebar label { padding : 5px 16px 5px 72px; }
+
+//  Hide default checkbox
+.ff-sidebar input[type=checkbox] {
+    position : absolute;
+    opacity  : 0;
 }
-.ff-side-menu a:hover {
-    color         : $colorShade;
-    border-bottom : none;
+
+//  Collapse submenus by default
+.ff-sidebar ul {
+    display    : none;
+    list-style : none;
+    padding    : 0;
 }
 
-.ff-side-menu a.sublink-one { font-weight: 400; }
+//  Un-collapse submenus
+.ff-sidebar input[type=checkbox]:checked + label + ul { display : block; }
 
-.ff-side-menu a.sublink-one { margin-left: $measureFixed*3 }
-.ff-side-menu a.sublink-two { margin-left: $measureFixed*6 }
+.ff-sidebar li { user-select : none; }
 
-.content-with-side-menu > .all-content { margin-left : $ff-side-menuWidth; }
-
-@media all and (max-width : 899px) {
-    .content-with-side-menu > .all-content { margin-left : 0; }
+.ff-sidebar a,
+.ff-sidebar label {
+    position   : relative;
+    display    : block;
+    padding    : 16px 16px 16px 72px;
+    color      : $colorShade-2;
+    background : $colorMildGrey;
+    font-size  : 14px;
+    font-weight: normal;
+    border     : none;
+    cursor     : pointer;
+    box-shadow : inset 0 -1px darken($colorMildGrey, 16%);
 }
+
+.ff-sidebar a:hover,
+.ff-sidebar label:hover {
+    background : rgba($colorHue, 0.64);
+    color      : $colorWhite;
+}
+
+//  Icons
+.ff-sidebar a::before,
+.ff-sidebar label::before,
+.ff-sidebar label::after {
+    position   : absolute;
+    display    : inline-block;
+    content    : "";
+    width      : 16px;
+    height     : 16px;
+    top        : 50%;
+    transform  : translateY(-50%);
+    background : no-repeat center center;
+}
+
+.ff-sidebar a::before {
+    background-image : url(../icons/icon-link.svg);
+}
+
+.ff-sidebar label::before {
+    background-image : url(../icons/icon-folder.svg);
+}
+
+.ff-sidebar label::after {
+    background-image : url(../icons/icon-chevron-right.svg);
+}
+
+.ff-sidebar input[type=checkbox]:checked + label::after {
+    background-image : url(../icons/icon-chevron-down.svg);
+}
+
+//  INDENTATION ===============================================================
+//  Base level
+.ff-sidebar > li > a::before { left: $measureFixed*2; }
+.ff-sidebar > li > a { padding-left: $measureFixed*5; }
+
+.ff-sidebar a,
+.ff-sidebar label { padding : $measureFixed*2 $measureFixed*2 $measureFixed*2 $measureFixed*5; }
+
+.ff-sidebar label::before { left  : $measureFixed*2; }
+.ff-sidebar label::after  { right : $measureFixed*2; }
+
+//  First indent
+.ff-sidebar ul label::before { left : $measureFixed*4; }
+.ff-sidebar ul a::before     { left : $measureFixed*4; }
+
+.ff-sidebar ul a,
+.ff-sidebar ul label {
+    padding-left : $measureFixed*7;
+    background   : darken($colorMildGrey, 4%);
+}
+
+.ff-sidebar ul label::after { right : $measureFixed*2; }
+
+//  Second indent
+.ff-sidebar ul ul label::before { left : $measureFixed*6; }
+.ff-sidebar ul ul a::before     { left : $measureFixed*6; }
+
+.ff-sidebar ul ul a,
+.ff-sidebar ul ul label {
+    padding-left : $measureFixed*9;
+    background   : darken($colorMildGrey,  8%);
+}
+
+.ff-sidebar ul ul label::after { right : $measureFixed*2; }
+
+//  Third indent
+.ff-sidebar ul ul ul label::before { left : $measureFixed*12; }
+.ff-sidebar ul ul ul a::before     { left :  $measureFixed*9; }
+
+.ff-sidebar ul ul ul a,
+.ff-sidebar ul ul ul label {
+    padding-left : $measureFixed*12;
+    background   : darken($colorMildGrey, 12%);
+}
+
+//  Custom scrollbar, works only in
+//  webkit browsers
+.ff-sidebar ::-webkit-scrollbar {
+    position : absolute;
+    top      : 0;
+    right    : 0;
+    width    : 12px;
+}
+
+.ff-sidebar ::-webkit-scrollbar-track { display : none; }
+
+.ff-sidebar ::-webkit-scrollbar-thumb {
+    width            : 6px;
+    height           : 24px;
+    max-height       : 24px;
+    background-color : rgba($colorShade-2, 0.4);
+    border-radius    : 10px;
+    padding          : 2px;
+}
+.ff-sidebar ::-webkit-scrollbar-thumb:hover { background-color : rgba($colorShade-2, 0.8); }
