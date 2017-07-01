@@ -3,11 +3,12 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.2.0
+    Current version: 2.3.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
 */
+
 
 //  Normalize first ==========================
 @import "vendor/normalize";
@@ -30,6 +31,7 @@
 @import "fictoan/components/ff-header";
 @import "fictoan/components/ff-inputs";
 @import "fictoan/components/ff-buttons";
+@import "fictoan/components/ff-sidebar";
 @import "fictoan/components/ff-side-menu";
 @import "fictoan/components/ff-tab-bar";
 @import "fictoan/components/ff-modal";

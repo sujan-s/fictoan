@@ -1,50 +1,56 @@
 //  BASICS ====================================================================
 .ff-sidebar-container {
-    display  : block;
-    position : relative;
-    width    : 240px;
-    height   : 100vh;
-    float    : left;
-    transition: all 0.2s;
+    display    : block;
+    position   : relative;
+    width      : 240px;
+    height     : 100vh;
+    float      : left;
+    transition : all 0.2s;
+    z-index    : 400;
 }
 
 .ff-sidebar-container.collapsed { width: 48px; }
 
 .ff-sidebar-container #menu-toggle {
-    position : absolute;
+    position : fixed;
     left     : $measureFixed*2;
     bottom   : $measureFixed*2;
-    z-index  : 500;
 }
 
 #menu-toggle + label {
-    position   : absolute;
-    left       : $measureFixed*1.5;
-    bottom     : $measureFixed*2;
-    content    : url("../icons/icon-chevron-right.svg");
-    width      : 24px;
-    height     : 24px;
-    z-index    : 600;
-    transform  : rotate(180deg);
-    transition : all 0.2s;
+    position      : fixed;
+    left          : $measureFixed*1.5;
+    bottom        : $measureFixed*2;
+    content       : url("../icons/icon-chevron-right.svg");
+    width         : 24px;
+    height        : 24px;
+    z-index       : 600;
+    transform     : rotate(180deg);
+    background    : #fff;
+    border-radius : 50%;
+    box-shadow    : 0 0 $measureFixed 0 rgba($colorBlack, 0.24);
 }
 
 #menu-toggle:checked + label { transform: rotate(0deg); }
 
 .content-container {
-    display : block;
-    float   : right;
-    transition: all 0.2s;
+    display    : block;
+    position   : relative;
+    float      : right;
+    min-height : 100vh;
+    z-index    : 500;
+    transition : all 0.2s;
+    background : $colorWhite;
 }
 
 .page-with-sidebar .ff-sidebar-container + .content-container           { width : calc(100% - 240px); }
 .page-with-sidebar .ff-sidebar-container.collapsed + .content-container { width : calc(100% - 48px); }
 
 .ff-sidebar {
-    position   : absolute;
+    position   : fixed;
     top        : 0;
     left       : 0;
-    width      : 100%;
+    width      : 240px;
     height     : 100%;
     margin     : 0;
     background : $colorMildGrey;
@@ -52,14 +58,6 @@
     list-style : none;
     padding    : 0;
 }
-
-
-.ff-sidebar-container.collapsed .ff-sidebar ul > li,
-.ff-sidebar-container.collapsed .ff-sidebar label::after { display: none; }
-
-.ff-sidebar-container.collapsed .ff-sidebar a { padding-left : 48px; }
-
-.ff-sidebar-container.collapsed .ff-sidebar label { padding : 5px 16px 5px 72px; }
 
 //  Hide default checkbox
 .ff-sidebar input[type=checkbox] {
@@ -83,7 +81,7 @@
 .ff-sidebar label {
     position   : relative;
     display    : block;
-    padding    : 16px 16px 16px 72px;
+    padding    : 16px 16px 16px 56px;
     color      : $colorShade-2;
     background : $colorMildGrey;
     font-size  : 14px;
@@ -111,6 +109,7 @@
     top        : 50%;
     transform  : translateY(-50%);
     background : no-repeat center center;
+    transition : all 0.2s;
 }
 
 .ff-sidebar a::before {
@@ -132,10 +131,6 @@
 //  INDENTATION ===============================================================
 //  Base level
 .ff-sidebar > li > a::before { left: $measureFixed*2; }
-.ff-sidebar > li > a { padding-left: $measureFixed*5; }
-
-.ff-sidebar a,
-.ff-sidebar label { padding : $measureFixed*2 $measureFixed*2 $measureFixed*2 $measureFixed*5; }
 
 .ff-sidebar label::before { left  : $measureFixed*2; }
 .ff-sidebar label::after  { right : $measureFixed*2; }
@@ -173,6 +168,13 @@
     padding-left : $measureFixed*12;
     background   : darken($colorMildGrey, 12%);
 }
+
+.ff-sidebar-container.collapsed .ff-sidebar ul a::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul label::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul a::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul label::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul ul a::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul ul label::before { left : $measureFixed*2; }
 
 //  Custom scrollbar, works only in
 //  webkit browsers

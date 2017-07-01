@@ -11,7 +11,7 @@
     width         : 100%;
     border        : none;
     outline       : none;
-    background    : none;
+    background    : $colorWhite;
     padding       : $measureFixed/2;
     border-bottom : 1px solid rgba($colorBlack, 0.24);
     font-family   : $fontSans;
@@ -24,20 +24,18 @@
     border-bottom  : $measureFixed/4 solid $colorHue;
 }
 
-.ff-input.input-success { border-bottom : $measureFixed/4 solid $colorGreen; }
-.ff-input.input-error   { border-bottom : $measureFixed/4 solid $colorRed; }
-
-.input-success:focus, .input-success:active,
-.input-error:focus, .input-error:active { padding-bottom : $measureFixed/2; }
-
 .ff-input.show-inline {
     width  : inherit;
     height : inherit;
 }
 
-.ff-input[type=file] {
-    border  : none;
-    outline : none;
+.ff-input[type=file],
+.ff-input[type=image],
+.ff-input[type=color],
+.ff-input[type=reset],
+.ff-input[type=submit] {
+    border  : none !important;
+    outline : none !important;
 }
 
 
@@ -109,7 +107,7 @@ input[type=checkbox] { display : none; }
 
 
 
-/* == TOGGLES ============================================================== */
+/* == RADIO-BUTTONS ======================================================== */
 
 input[type=radio] { display : none; }
 
@@ -162,4 +160,55 @@ input[type=radio] { display : none; }
     display    : block;
     background : $colorWhite;
     box-shadow : none;
+}
+
+
+/* == FORMS ================================================================ */
+
+.ff-input-unit {
+    position      : relative;
+    margin-bottom : $measureFixed*5;
+}
+
+.ff-input::placeholder { opacity: 0 };
+
+.ff-input-unit > label {
+    opacity     : 0.4;
+    position    : absolute;
+    top         : $measureFixed/2;
+    left        : $measureFixed/2;
+    transition  : all 0.16s;
+    user-select : none;
+}
+
+.ff-input.needs-validation { padding-right : 32px; }
+.ff-input.needs-validation:valid {
+    background-size : 16px;
+    background      : url(../icons/icon-check.svg) no-repeat 98% $measureFixed;
+}
+
+.ff-input:invalid:not(:focus):not(:placeholder-shown) { border-bottom: 2px solid $colorRed; }
+
+.ff-input:focus + label,
+.ff-input:not(:placeholder-shown) + label {
+    top       : -$measureFixed*2;
+    font-size : 12px;
+}
+
+
+.ff-input:invalid:focus:not(:placeholder-shown) ~ .input-rules {
+    max-height : 200px;
+    padding    : $measureFixed/2;
+}
+
+.input-rules {
+    max-height  : 0;
+    font-size   : 12px;
+    text-align  : right;
+    color       : $colorRed;
+    //font-weight : 700;
+    line-height : 1.4;
+    margin      : 0;
+    transition  : 0.16s;
+    overflow    : hidden;
 }
