@@ -11,14 +11,14 @@ It’s still a bit rough around the edges, some functionality might break, but i
 
 ### Installation
 
-Just [download the zip file](http://sujansundareswaran.com/fictoan/fictoan-v2.2.0.zip), and in it you will find a template file where you can just start filling content, and it'll work like magic.
+Just [download the zip file](http://sujansundareswaran.com/fictoan/fictoan-v2.3.0.zip), and in it you will find a template file where you can just start filling content, and it'll work like magic.
 
 ### Contributing
 
 Please do. Just keep in mind to include short, helpful comments too, as this project is aimed at absolute
 newbies.
 
-`Current version is 2.2.0`
+`Current version is 2.3.0`
 
 The versioning logic is simple:
 Versions are written as `major.minor.patch`. <br>

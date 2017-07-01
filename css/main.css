@@ -4,7 +4,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.2.0
+    Current version: 2.3.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -418,7 +418,7 @@ template {
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.2.0
+    Current version: 2.3.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -449,10 +449,10 @@ a {
 button {
   vertical-align: baseline; }
 
-::-webkit-input-placeholder {
+::-moz-placeholder {
   opacity: 0.5; }
 
-::-moz-placeholder {
+::-webkit-input-placeholder {
   opacity: 0.5; }
 
 input {
@@ -472,6 +472,11 @@ input[type="date"]::-webkit-inner-spin-button {
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0; }
 
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 5000px white inset !important; }
+
 pre, code {
   margin: 0; }
 
@@ -480,7 +485,7 @@ pre, code {
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.2.0
+    Current version: 2.3.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -1396,7 +1401,7 @@ pre, code {
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.2.0
+    Current version: 2.3.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -2326,7 +2331,7 @@ li.current-page a {
   width: 100%;
   border: none;
   outline: none;
-  background: none;
+  background: white;
   padding: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
   font-family: "Work Sans", sans-serif;
@@ -2337,23 +2342,17 @@ li.current-page a {
   padding-bottom: 3px;
   border-bottom: 2px solid #ffa98f; }
 
-.ff-input.input-success {
-  border-bottom: 2px solid #28bd6b; }
-
-.ff-input.input-error {
-  border-bottom: 2px solid #ff5a57; }
-
-.input-success:focus, .input-success:active,
-.input-error:focus, .input-error:active {
-  padding-bottom: 4px; }
-
 .ff-input.show-inline {
   width: inherit;
   height: inherit; }
 
-.ff-input[type=file] {
-  border: none;
-  outline: none; }
+.ff-input[type=file],
+.ff-input[type=image],
+.ff-input[type=color],
+.ff-input[type=reset],
+.ff-input[type=submit] {
+  border: none !important;
+  outline: none !important; }
 
 /* == TOGGLES ============================================================== */
 input[type=checkbox] {
@@ -2411,7 +2410,7 @@ input[type=checkbox] {
   background: white;
   box-shadow: none; }
 
-/* == TOGGLES ============================================================== */
+/* == RADIO-BUTTONS ======================================================== */
 input[type=radio] {
   display: none; }
 
@@ -2459,6 +2458,51 @@ input[type=radio] {
   background: white;
   box-shadow: none; }
 
+/* == FORMS ================================================================ */
+.ff-input-unit {
+  position: relative;
+  margin-bottom: 40px; }
+
+.ff-input::placeholder {
+  opacity: 0; }
+
+.ff-input-unit > label {
+  opacity: 0.4;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: all 0.16s;
+  user-select: none; }
+
+.ff-input.needs-validation {
+  padding-right: 32px; }
+
+.ff-input.needs-validation:valid {
+  background-size: 16px;
+  background: url(../icons/icon-check.svg) no-repeat 98% 8px; }
+
+.ff-input:invalid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 2px solid #ff5a57; }
+
+.ff-input:focus + label,
+.ff-input:not(:placeholder-shown) + label {
+  top: -16px;
+  font-size: 12px; }
+
+.ff-input:invalid:focus:not(:placeholder-shown) ~ .input-rules {
+  max-height: 200px;
+  padding: 4px; }
+
+.input-rules {
+  max-height: 0;
+  font-size: 12px;
+  text-align: right;
+  color: #ff5a57;
+  line-height: 1.4;
+  margin: 0;
+  transition: 0.16s;
+  overflow: hidden; }
+
 a.ff-button {
   border: none; }
 
@@ -2466,7 +2510,6 @@ a.ff-button {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  margin: 4px;
   padding: 8px 24px;
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
@@ -2551,19 +2594,19 @@ a.ff-pill {
   width: 240px;
   height: 100vh;
   float: left;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  z-index: 400; }
 
 .ff-sidebar-container.collapsed {
   width: 48px; }
 
 .ff-sidebar-container #menu-toggle {
-  position: absolute;
+  position: fixed;
   left: 16px;
-  bottom: 16px;
-  z-index: 500; }
+  bottom: 16px; }
 
 #menu-toggle + label {
-  position: absolute;
+  position: fixed;
   left: 12px;
   bottom: 16px;
   content: url("../icons/icon-chevron-right.svg");
@@ -2571,15 +2614,21 @@ a.ff-pill {
   height: 24px;
   z-index: 600;
   transform: rotate(180deg);
-  transition: all 0.2s; }
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.24); }
 
 #menu-toggle:checked + label {
   transform: rotate(0deg); }
 
 .content-container {
   display: block;
+  position: relative;
   float: right;
-  transition: all 0.2s; }
+  min-height: 100vh;
+  z-index: 500;
+  transition: all 0.2s;
+  background: white; }
 
 .page-with-sidebar .ff-sidebar-container + .content-container {
   width: calc(100% - 240px); }
@@ -2588,26 +2637,16 @@ a.ff-pill {
   width: calc(100% - 48px); }
 
 .ff-sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 240px;
   height: 100%;
   margin: 0;
   background: #f2f2f2;
   overflow-y: scroll;
   list-style: none;
   padding: 0; }
-
-.ff-sidebar-container.collapsed .ff-sidebar ul > li,
-.ff-sidebar-container.collapsed .ff-sidebar label::after {
-  display: none; }
-
-.ff-sidebar-container.collapsed .ff-sidebar a {
-  padding-left: 48px; }
-
-.ff-sidebar-container.collapsed .ff-sidebar label {
-  padding: 5px 16px 5px 72px; }
 
 .ff-sidebar input[type=checkbox] {
   position: absolute;
@@ -2628,7 +2667,7 @@ a.ff-pill {
 .ff-sidebar label {
   position: relative;
   display: block;
-  padding: 16px 16px 16px 72px;
+  padding: 16px 16px 16px 56px;
   color: #290a00;
   background: #f2f2f2;
   font-size: 14px;
@@ -2652,7 +2691,8 @@ a.ff-pill {
   height: 16px;
   top: 50%;
   transform: translateY(-50%);
-  background: no-repeat center center; }
+  background: no-repeat center center;
+  transition: all 0.2s; }
 
 .ff-sidebar a::before {
   background-image: url(../icons/icon-link.svg); }
@@ -2668,13 +2708,6 @@ a.ff-pill {
 
 .ff-sidebar > li > a::before {
   left: 16px; }
-
-.ff-sidebar > li > a {
-  padding-left: 40px; }
-
-.ff-sidebar a,
-.ff-sidebar label {
-  padding: 16px 16px 16px 40px; }
 
 .ff-sidebar label::before {
   left: 16px; }
@@ -2721,6 +2754,14 @@ a.ff-pill {
   padding-left: 96px;
   background: #d4d4d4; }
 
+.ff-sidebar-container.collapsed .ff-sidebar ul a::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul label::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul a::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul label::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul ul a::before,
+.ff-sidebar-container.collapsed .ff-sidebar ul ul ul label::before {
+  left: 16px; }
+
 .ff-sidebar ::-webkit-scrollbar {
   position: absolute;
   top: 0;
@@ -2741,6 +2782,42 @@ a.ff-pill {
 .ff-sidebar ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(41, 10, 0, 0.8); }
 
+.ff-side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 192px;
+  height: 100vh;
+  overflow: scroll;
+  padding: 16px;
+  box-shadow: inset -8px 0 16px -8px rgba(0, 0, 0, 0.24); }
+
+.ff-side-menu a {
+  display: block;
+  font-weight: 700;
+  color: #fff7f5;
+  border-bottom: none;
+  margin-bottom: 8px; }
+
+.ff-side-menu a:hover {
+  color: #ff5b29;
+  border-bottom: none; }
+
+.ff-side-menu a.sublink-one {
+  font-weight: 400; }
+
+.ff-side-menu a.sublink-one {
+  margin-left: 24px; }
+
+.ff-side-menu a.sublink-two {
+  margin-left: 48px; }
+
+.content-with-side-menu > .all-content {
+  margin-left: 192px; }
+
+@media all and (max-width: 899px) {
+  .content-with-side-menu > .all-content {
+    margin-left: 0; } }
 .ff-tabs {
   display: flex;
   flex-wrap: wrap; }
@@ -2964,7 +3041,7 @@ code[class*=language-] ::selection, pre[class*=language-]::selection {
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.2.0
+    Current version: 2.3.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
