@@ -11,13 +11,13 @@
 
 .ff-sidebar-container.collapsed { width: 48px; }
 
-.ff-sidebar-container #menu-toggle {
+.ff-sidebar-container #sidebar-toggle {
     position : fixed;
     left     : $measureFixed*2;
     bottom   : $measureFixed*2;
 }
 
-#menu-toggle + label {
+#sidebar-toggle + label {
     position      : fixed;
     left          : $measureFixed*1.5;
     bottom        : $measureFixed*2;
@@ -31,7 +31,7 @@
     box-shadow    : 0 0 $measureFixed 0 rgba($colorBlack, 0.24);
 }
 
-#menu-toggle:checked + label { transform: rotate(0deg); }
+#sidebar-toggle:checked + label { transform: rotate(0deg); }
 
 .content-container {
     display    : block;
@@ -125,7 +125,7 @@
 }
 
 .ff-sidebar input[type=checkbox]:checked + label::after {
-    background-image : url(../icons/icon-chevron-down.svg);
+    transform : rotate(90deg);
 }
 
 //  INDENTATION ===============================================================

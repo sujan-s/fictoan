@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.3.0
+    Current version: 2.2.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -29,7 +29,7 @@
 //   in the centre, both axes
 .totally-centre-items,
 .totally-center-items {
-    display     : flex;
+    display     : flex !important;
     align-items : center;
 }
 
@@ -37,7 +37,7 @@
 //  vertically in the middle
 .vertical-centre-items,
 .vertical-center-items {
-    display     : flex;
+    display     : flex !important;
     align-items : center;
 }
 
@@ -64,8 +64,8 @@ hr {
     margin : 4vmax 0;
 }
 
-hr.main { background : $colorHue; }
-hr.sub  { background : $colorMildGrey; }
+hr.main { background : rgba($colorHue, 0.8); }
+hr.sub  { background : rgba($colorHue, 0.2); }
 
 
 
@@ -171,7 +171,7 @@ hr.sub  { background : $colorMildGrey; }
 .shadow-hard { box-shadow : 0 $measureFixed/2 $measureFixed   -2px hsla(0, 0, 0, 0.24); }
 .shadow-soft { box-shadow : 0 $measureFixed*2 $measureFixed*4 -8px hsla(0, 0, 0, 0.32); }
 .shadow-mild { box-shadow : 0 $measureFixed/4 $measureFixed/4 -2px hsla(0, 0, 0, 0.24); }
-.shadow-none { box-shadow : none; }
+.shadow-none { box-shadow : none !important; }
 
 
 

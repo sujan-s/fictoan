@@ -3,7 +3,7 @@
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.3.0
+    Current version: 2.2.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -26,7 +26,9 @@
 
 @media all and (max-width : 599px) {
     .row .portion,
-    .box .portion { padding : 0 $measureFixed*1; }
+    .box .portion,
+    .row .lesser-gaps .portion,
+    .box .lesser-gaps .portion { padding : 0 $measureFixed*1; }
 }
 
 /*  Fallback width for portions with unspecified widths  */
