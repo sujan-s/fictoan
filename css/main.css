@@ -18,6 +18,7 @@
  */
 /* Document
    ========================================================================== */
+@import url(prism.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -418,7 +419,7 @@ template {
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.3.0
+    Current version: 2.2.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -449,10 +450,10 @@ a {
 button {
   vertical-align: baseline; }
 
-::-moz-placeholder {
+::-webkit-input-placeholder {
   opacity: 0.5; }
 
-::-webkit-input-placeholder {
+::-moz-placeholder {
   opacity: 0.5; }
 
 input {
@@ -466,16 +467,14 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 5000px white inset; }
+
 input[type="date"]::-webkit-inner-spin-button {
   display: none; }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0; }
-
-input:-webkit-autofill,
-select:-webkit-autofill,
-textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 5000px white inset !important; }
 
 pre, code {
   margin: 0; }
@@ -485,7 +484,7 @@ pre, code {
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.3.0
+    Current version: 2.2.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -505,7 +504,9 @@ pre, code {
 
 @media all and (max-width: 599px) {
   .row .portion,
-  .box .portion {
+  .box .portion,
+  .row .lesser-gaps .portion,
+  .box .lesser-gaps .portion {
     padding: 0 8px; } }
 /*  Fallback width for portions with unspecified widths  */
 .portion {
@@ -1401,7 +1402,7 @@ pre, code {
     An intuitive, minimalist responsive HTML+CSS setup
     for designers just starting to code — just like me.
     by Sujan Sundareswaran
-    Current version: 2.3.0
+    Current version: 2.2.0
 
     https://github.com/sujan-s/fictoan/
     http://sujansundareswaran.com/
@@ -1433,12 +1434,13 @@ pre, code {
 
 .totally-centre-items,
 .totally-center-items {
-  display: flex;
-  align-items: center; }
+  display: flex !important;
+  align-items: center;
+  justify-content: center; }
 
 .vertical-centre-items,
 .vertical-center-items {
-  display: flex;
+  display: flex !important;
   align-items: center; }
 
 .vertical-centre-this,
@@ -1459,10 +1461,10 @@ hr {
   margin: 4vmax 0; }
 
 hr.main {
-  background: #ffa98f; }
+  background: rgba(255, 169, 143, 0.8); }
 
 hr.sub {
-  background: #f2f2f2; }
+  background: rgba(255, 169, 143, 0.2); }
 
 /* == BOX MODEL HELPERS===================================================== */
 .no-margin {
@@ -1701,7 +1703,7 @@ hr.sub {
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.24); }
 
 .shadow-none {
-  box-shadow: none; }
+  box-shadow: none !important; }
 
 /* == ICONS ================================================================ */
 .icon-tiny {
@@ -2135,7 +2137,6 @@ hr.sub {
   fill: black; }
 
 body {
-  background-color: white;
   font-family: "Work Sans", sans-serif;
   color: #290a00;
   line-height: 1.6;
@@ -2184,7 +2185,7 @@ a:hover {
   border-bottom: 1px solid #ff5b29; }
 
 b, strong {
-  font-weight: 700; }
+  font-weight: bold; }
 
 i, em {
   font-style: italic; }
@@ -2335,12 +2336,14 @@ li.current-page a {
   padding: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
   font-family: "Work Sans", sans-serif;
-  line-height: 1.35; }
+  line-height: 1.35;
+  margin-bottom: 40px; }
 
 .ff-input:focus,
 .ff-input:active {
   padding-bottom: 3px;
-  border-bottom: 2px solid #ffa98f; }
+  border-bottom: 2px solid #ffa98f;
+  margin-bottom: 39px; }
 
 .ff-input.show-inline {
   width: inherit;
@@ -2353,6 +2356,9 @@ li.current-page a {
 .ff-input[type=submit] {
   border: none !important;
   outline: none !important; }
+
+.ff-input[type=password] {
+  letter-spacing: 4px; }
 
 /* == TOGGLES ============================================================== */
 input[type=checkbox] {
@@ -2460,8 +2466,7 @@ input[type=radio] {
 
 /* == FORMS ================================================================ */
 .ff-input-unit {
-  position: relative;
-  margin-bottom: 40px; }
+  position: relative; }
 
 .ff-input::placeholder {
   opacity: 0; }
@@ -2480,6 +2485,9 @@ input[type=radio] {
 .ff-input.needs-validation:valid {
   background-size: 16px;
   background: url(../icons/icon-check.svg) no-repeat 98% 8px; }
+
+.ff-input:invalid {
+  padding-bottom: 3px; }
 
 .ff-input:invalid:not(:focus):not(:placeholder-shown) {
   border-bottom: 2px solid #ff5a57; }
@@ -2889,152 +2897,6 @@ a.ff-pill {
 
 #close {
   border: none; }
-
-code[class*=language-], pre[class*=language-], pre code {
-  color: #f2f2f2;
-  font-family: "Space Mono", monospace;
-  font-variant-ligatures: none;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-  font-weight: 400;
-  -moz-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  border-radius: 8px;
-  -webkit-font-smoothing: subpixel-antialiased; }
-
-pre code {
-  display: block;
-  padding: 16px;
-  overflow: auto;
-  background-color: #2d2d2d; }
-
-@media (min-width: 600px) {
-  pre code {
-    padding: 1.5rem; } }
-kbd {
-  background-color: #f7f7f7;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 2px #fff;
-  color: #333;
-  display: inline-block;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.4;
-  margin: 0 .1em;
-  padding: .1em .6em;
-  text-shadow: 0 1px 0 #fff;
-  font-size: 14px; }
-
-:not(pre) > code[class*=language-] {
-  padding: 2px 4px;
-  background: #2d2d2d;
-  border: 1px solid #2d2d2d; }
-
-:not(pre) > code {
-  padding: 2px 4px;
-  border: none;
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  border-radius: 4px; }
-
-code[class*=language-css], code[class*=language-less], code[class*=language-sass], code[class*=language-scss] {
-  color: #c9c; }
-
-.token.doctype {
-  background: #000;
-  color: #fff; }
-
-.token.cdata, .token.comment, .token.prolog {
-  color: #7e7d72; }
-
-.token.namespace {
-  opacity: 0.7; }
-
-.token.attr-value, .token.string {
-  color: #a8d3a9; }
-
-.token.punctuation {
-  color: #999999; }
-
-.token.operator {
-  color: #cda869; }
-
-.token.variable {
-  color: #f78d8c; }
-
-.token.property {
-  color: #d2d0c9; }
-
-.token.boolean, .token.constant, .token.entity, .token.inserted, .token.number, .token.regex, .token.symbol, .token.url {
-  color: #fca369; }
-
-.token.delimiter {
-  background: #000;
-  color: #fff;
-  padding: 1px 2px; }
-
-.token.atrule {
-  color: #76d4d6; }
-
-.token.keyword {
-  color: #ffeead; }
-
-.language-autohotkey .token.selector {
-  color: #f7931e; }
-
-.token.attr-name {
-  color: #ffd479; }
-
-.token.function {
-  color: #76d4d6; }
-
-.language-php .token.function {
-  color: #fff; }
-
-.token.class-name {
-  color: #d6acd6; }
-
-.language-autohotkey .token.tag, .token.deleted {
-  color: #f5b80e; }
-
-.token.tag {
-  color: #78aad6; }
-
-.language-autohotkey .token.keyword {
-  color: #ffeead; }
-
-.token.selector {
-  color: #ffd479; }
-
-.token.italic {
-  font-style: italic; }
-
-code::-moz-selection, pre::-moz-selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important; }
-
-code::selection, pre::selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important; }
-
-code[class*=language-] ::-moz-selection, pre[class*=language-]::-moz-selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important; }
-
-code[class*=language-] ::selection, pre[class*=language-]::selection {
-  text-shadow: none;
-  color: inherit;
-  background: rgba(150, 150, 150, 0.3) !important; }
 
 /*
     FICTOAN

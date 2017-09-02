@@ -36,8 +36,13 @@
 @import "fictoan/components/ff-tab-bar";
 @import "fictoan/components/ff-modal";
 
+
+//@import "fictoan/components/ff-code-light";
+@import "prism.css";
+//@import "highlight.css";
+//@import "vendor/new-moon";
+
 //  Other small plugins ======================
-@import "vendor/new-moon";
 
 //  Project-specific =========================
 @import "custom-rules/styles-fictoan-website";

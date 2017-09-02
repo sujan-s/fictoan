@@ -29,8 +29,9 @@
 //   in the centre, both axes
 .totally-centre-items,
 .totally-center-items {
-    display     : flex !important;
-    align-items : center;
+    display         : flex !important;
+    align-items     : center;
+    justify-content : center;
 }
 
 //  For when you want child elements

@@ -1,0 +1,478 @@
+<!--
+    FICTOAN
+    An intuitive, minimalist responsive HTML+CSS setup
+    for designers just starting to code — just like me.
+    by Sujan Sundareswaran
+    Current version: 2.3.0
+
+    https://github.com/sujan-s/fictoan/
+    http://sujansundareswaran.com/
+-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--And a clean, simple sans typeface-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--<script src="js/highlight.js"></script>-->
+    <script src="js/prism.js"></script>
+
+    <title>FICTOAN Code Highlight</title>
+</head>
+
+<body>
+    <div class="all-content">
+        <div class="empty-spacer"></div>
+        <div class="row">
+            <div class="portion whole">
+                <pre>
+                    <code class="language-json">
+                        "glossary": {
+                            "title": "example glossary",
+                            "GlossDiv": {
+                                "title": "S",
+                                "GlossList": {
+                                    "GlossEntry": {
+                                        "ID": "SGML",
+                                        "SortAs": "SGML",
+                                        "GlossTerm": "Standard Generalized Markup Language",
+                                        "Acronym": "SGML",
+                                        "Abbrev": "ISO 8879:1986",
+                                        "GlossDef": {
+                                            "para": "A meta-markup language, used to create.",
+                                            "GlossSeeAlso": ["GML", "XML"]
+                                        },
+                                        "GlossSee": "markup"
+                                    }
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="portion whole">
+                <pre>
+                    <code class="language-js">
+                        'use strict';
+
+                        // In production, the bundled pdf.js shall be used instead of SystemJS.
+                        Promise.all([System.import('pdfjs/display/api'),
+                        System.import('pdfjs/display/global'),
+                        System.resolve('pdfjs/worker_loader')])
+                        .then(function (modules) {
+
+                            var api = modules[0], global = modules[1];
+
+                            // In production, change this to point to the built `pdf.worker.js` file.
+                            global.PDFJS.workerSrc = modules[2];
+
+                            // Fetch the PDF document from the URL using promises.
+                            api.getDocument('helloworld.pdf').then(function (pdf) {
+
+                                // Fetch the page.
+                                pdf.getPage(1).then(function (page) {
+                                    var scale = 1.5;
+                                    var viewport = page.getViewport(scale);
+
+                                // Prepare canvas using PDF page dimensions.
+                                    var canvas = document.getElementById('the-canvas');
+                                    var context = canvas.getContext('2d');
+                                    canvas.height = viewport.height;
+                                    canvas.width = viewport.width;
+
+                                // Render PDF page into canvas context.
+                                var renderContext = {
+                                    canvasContext: context,
+                                    viewport: viewport
+                                };
+
+                                page.render(renderContext);
+                            });
+                        });
+                    });
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="portion whole">
+                <pre><code class="language-html">
+                    &lt;!doctype html>
+                    &lt;html lang="en">
+                        &lt;head>
+                            &lt;meta charset="UTF-8">
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+
+                            &lt;!--And a clean, simple sans typeface-->
+                            &lt;link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+
+                            &lt;link rel="stylesheet" href="css/main.css">
+
+                            &lt;title>FICTOAN Forms&lt;/title>
+                        &lt;/head>
+                        &lt;body>
+                            &lt;div class="all-content">
+                                &lt;div class="row margin-top-medium">
+                                            &lt;h6 class="margin-bottom-small">Login&lt;/h6>
+
+                                            &lt;form class="ff-form">
+                                                &lt;div class="ff-input-unit">
+                                                    &lt;input class="ff-input needs-validation input-success" type="text" id="first_name" name="first_name" placeholder=" " required/>
+                                                    &lt;label for="first_name">First Name&lt;/label>
+                                                &lt;/div>
+
+                                                &lt;div class="ff-input-unit">
+                                                    &lt;input class="ff-input needs-validation" type="text" id="last_name" name="last_name" placeholder=" " required/>
+                                                    &lt;label for="last_name">Last Name&lt;/label>
+                                                &lt;/div>
+
+                                                &lt;div class="ff-input-unit">
+                                                    &lt;input class="ff-input needs-validation" type="number" id="number" name="last_name" placeholder=" " required/>
+                                                    &lt;label for="number">Number&lt;/label>
+                                                &lt;/div>
+
+                                                &lt;div class="ff-input-unit">
+                                                    &lt;input class="ff-input needs-validation" type="email" id="email" name="email" placeholder=" " required/>
+                                                    &lt;label for="email">Email Address&lt;/label>
+                                                    &lt;p class="input-rules">Must be a valid email address&lt;/p>
+                                                &lt;/div>
+
+                                                &lt;div class="ff-input-unit">
+                                                    &lt;input class="ff-input needs-validation" type="password" id="password" name="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
+                                                    &lt;label for="password">Password&lt;/label>
+                                                    &lt;p class="input-rules">Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.&lt;/p>
+                                                &lt;/div>
+
+                                                &lt;input class="ff-button shape-rounded bg-indigo shadow-hard full-width" type="submit" value="Sign Up" />
+                                            &lt;/form>
+                                        &lt;/div>
+                                    &lt;/div>
+                                &lt;/div>
+
+                                &lt;div class="row">
+                                    &lt;div class="portion whole">
+                                        &lt;p>sdsd&lt;/p>
+                                    &lt;/div>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/body>
+                    &lt;/html>
+                </code></pre>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="portion whole">
+                <pre>
+                    <code class="language-scss">
+                        body {
+                            font-family      : $fontSans;
+                            color            : $bodyFontColor;
+                            line-height      : 1.6;
+                            word-wrap        : normal;
+                            text-rendering   : optimizeLegibility;
+                        }
+
+                        h1, h2, h3, h4, h5, h6 {
+                            font-weight : inherit;
+                            line-height : 1.2;
+                            margin      : 0;
+                        }
+
+                        h1 { font-size : $baseFontSize*pow($scaleFactor, 8); }
+                        h2 { font-size : $baseFontSize*pow($scaleFactor, 6); }
+                        h3 { font-size : $baseFontSize*pow($scaleFactor, 4); }
+                        h4 { font-size : $baseFontSize*pow($scaleFactor, 3); }
+                        h5 { font-size : $baseFontSize*pow($scaleFactor, 2); }
+                        h6 { font-size : $baseFontSize*pow($scaleFactor, 1); }
+
+                        p {
+                            font-family : $fontSans;
+                            margin      : 0 0 $measureDynamic 0;
+                        }
+                        p.text-serif {
+                            font-size   : $paraSerifFontSize;
+                            line-height : $paraSerifLineHeight;
+                        }
+
+                        a {
+                            cursor        : pointer;
+                            color         : $linkColor;
+                            font-weight   : bold;
+                            border-bottom : $linkBorder;
+                            transition    : all 0.2s;
+                        }
+                        a:hover { border-bottom : $linkHoverBorder; }
+
+                        b, strong { font-weight : bold; }
+                        i, em { font-style : italic; }
+
+                        .text-sans  { font-family : $fontSans; }
+                        .text-serif { font-family : $fontSerif; }
+                        .text-mono  { font-family : $fontMono; }
+
+                        .text-tiny   { font-size : $baseFontSize*pow($scaleFactor,-2); }
+                        .text-small  { font-size : $baseFontSize*pow($scaleFactor,-1); }
+                        .text-normal { font-size : $baseFontSize*pow($scaleFactor, 0); }
+                        .text-large  { font-size : $baseFontSize*pow($scaleFactor, 4); }
+                        .text-huge   { font-size : $baseFontSize*pow($scaleFactor, 8); }
+
+                        .text-centre,
+                        .text-center { text-align : center; }
+                        .text-right { text-align : right; }
+                        .text-left  { text-align : left; }
+
+                        .no-line-height { line-height : 0; }
+
+
+
+                        /* == CODE ================================================================= */
+
+                        code {
+                            background-color : $codeBgColor;
+                            font-family      : $fontMono;
+                            font-size        : 80%;
+                            color            : $codeColor;
+                            white-space      : pre;
+                            margin           : 0;
+                            border-radius    : $measureFixed/2;
+                        }
+
+                        code.inline {
+                            margin  : $measureFixed/4;
+                            padding : 0 $measureFixed;
+                        }
+
+                        pre > code {
+                            display        : block;
+                            white-space    : pre;
+                            letter-spacing : -0.5px;
+                            line-height    : 1.2em;
+                        }
+
+
+
+
+
+
+
+                        @import "compass/reset";
+
+                        // variables
+                        $colorGreen: #008000;
+                        $colorGreenDark: darken($colorGreen, 10);
+
+                        @mixin container {
+                            max-width: 980px;
+                        }
+
+                        // mixins with parameters
+                        @mixin button($color:green) {
+                            @if ($color == green) {
+                                background-color: #008000;
+                            }
+                            @else if ($color == red) {
+                                background-color: #B22222;
+                            }
+                        }
+
+                        button {
+                            @include button(red);
+                        }
+
+                        div,
+                        .navbar,
+                        #header,
+                        input[type="input"] {
+                            font-family: "Helvetica Neue", Arial, sans-serif;
+                            width: auto;
+                            margin: 0 auto;
+                            display: block;
+                        }
+
+                        .row-12 > [class*="spans"] {
+                            border-left: 1px solid #B5C583;
+                        }
+
+                        // nested definitions
+                        ul {
+                            width: 100%;
+                            padding: {
+                                left: 5px; right: 5px;
+                            }
+                          li {
+                              float: left; margin-right: 10px;
+                              .home {
+                                  background: url('http://placehold.it/20') scroll no-repeat 0 0;
+                            }
+                          }
+                        }
+
+                        .banner {
+                            @extend .container;
+                        }
+
+                        a {
+                          color: $colorGreen;
+                          &:hover { color: $colorGreenDark; }
+                          &:visited { color: #c458cb; }
+                        }
+
+                        @for $i from 1 through 5 {
+                            .span#{$i} {
+                                width: 20px*$i;
+                            }
+                        }
+
+                        @mixin mobile {
+                          @media screen and (max-width : 600px) {
+                            @content;
+                          }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="portion whole">
+                <pre>
+                    <code class="language-css">
+
+                        @import "fictoan/base/reset-fictoan";
+
+
+                        code[class*="language-"],
+                        pre[class*="language-"] {
+                            color                  : #51514F;
+                            background             : none;
+                            text-align             : left;
+                            white-space            : pre;
+                            word-spacing           : normal;
+                            word-break             : normal;
+                            word-wrap              : normal;
+                            line-height            : 1.5;
+                            -moz-tab-size          : 4;
+                            tab-size               : 4;
+                            -webkit-hyphens        : none;
+                            -moz-hyphens           : none;
+                            -ms-hyphens            : none;
+                            hyphens                : none;
+                            font-variant-ligatures : none;
+                        }
+
+                        pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+                        code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+                            text-shadow : none;
+                            background  : #b3d4fc;
+                        }
+
+                        pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+                        code[class*="language-"]::selection, code[class*="language-"] ::selection {
+                            text-shadow : none;
+                            background  : #b3d4fc;
+                        }
+
+                        /* Code blocks */
+                        pre[class*="language-"] {
+                            padding  : 1em;
+                            margin   : .5em 0;
+                            overflow : auto;
+                        }
+
+                        pre[class*="language-"],
+                        :not(pre) > code[class*="language-"] { background : #eceef7; }
+
+                        /* Inline code */
+                        :not(pre) > code[class*="language-"] {
+                            padding       : .1em;
+                            border-radius : .3em;
+                            white-space   : normal;
+                        }
+
+                        pre:hover { transition: all 0.2s #ff8899; }
+
+                        pre::after { content: "&amp;"; }
+
+                        /*  For screens FROM 900px width and UPWARD  */
+                        @media all and (min-width : 900px) {
+                            .all-content { padding : 0 8vw; }
+                        }
+
+                        /*  For screens FROM 1200px width and UPWARD  */
+                        @media all and (min-width : 1200px) {
+                            .all-content { padding : 0 10vw; }
+                        }
+
+                        /*  For big screens FROM 1800px width and UPWARD  */
+                        @media all and (min-width : 1800px) {
+                            .all-content { padding : 0 12vw; }
+                        }
+
+                        /*  For large screens FROM 2400px width and UPWARD  */
+                        @media all and (min-width : 2400px) {
+                            .all-content { padding : 0 16vw; }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+    </div><!-- All-content ends here  -->
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
