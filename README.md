@@ -5,7 +5,7 @@ As a designer just starting to learn basic web development, I found large framew
 
 And thus FICTOAN was born. It aims to be an intuitive and design-centric CSS framework for creating and themeing on projects easily. It uses simple and descriptive class names, and yet generic enough to be understood easily.
 
-You can check more details and documentation here: http://fictoan.io/.s3-website.ap-south-1.amazonaws.com/
+You can check more details and documentation here: http://fictoan.io.s3-website.ap-south-1.amazonaws.com/
 
 It's still a bit rough around the edges, some functionality might break, but it will be polished in due course.
 
