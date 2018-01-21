@@ -1,0 +1,4058 @@
+<!doctype html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112793348-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112793348-1');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/png"/>
+
+    <!--And a clean, simple sans typeface-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+    <!--A nice, sober serif typeface-->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i" rel="stylesheet">
+    <!-- Also a classy monospace typeface for all you nerds -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+    <!--  This will import all the necessary files in one go  -->
+    <link rel="stylesheet" href="../dist/fictoan.css" type="text/css">
+
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/prism.js"></script>
+
+    <script>
+        smoothScroll.init({
+            speed: 500,
+            easing: 'easeInOutQuint'
+        });
+    </script>
+
+    <title>FICTOAN &bull; Intuitive, minimalist responsive SCSS framework + UI library</title>
+</head>
+
+<body class="page-with-sidebar">
+
+    <div class="ff-sidebar-container">
+        <nav class="ff-sidebar">
+            <a id="sidebar-logo">
+                <img id="logo-big" src="images/fictoan-logo.svg" />
+                <img id="logo-small" src="icons/favicon.png" />
+            </a>
+
+            <a id="intro" data-scroll href="#section-intro"><strong>Hello!</strong></a>
+
+            <details>
+                <summary>
+                    <a data-scroll id="getting-started" href="#section-getting-started">Getting started</a>
+                </summary>
+                <a data-scroll href="#using-fictoan">Using FICTOAN</a>
+                <a data-scroll href="#class-names">Class names</a>
+                <a data-scroll href="#variable-themes">Variable themes</a>
+            </details>
+
+            <details>
+                <summary>
+                    <a data-scroll id="layout" href="#section-layout">Layout</a>
+                </summary>
+                <a data-scroll href="#single-row">Single row</a>
+                <a data-scroll href="#multiple-rows">Multiple rows</a>
+                <a data-scroll href="#responive-helpers">Responsive helpers</a>
+                <a data-scroll href="#layout-responsive-visibility">Responsive visibility</a>
+                <a data-scroll href="#gutter-sizing">Gutter sizing</a>
+            </details>
+
+            <details>
+                <summary>
+                    <a data-scroll id="typography" href="#section-typography">Typography</a>
+                </summary>
+                <a data-scroll href="#type-scaling">Type scaling</a>
+                <a data-scroll href="#type-helpers">Type helpers</a>
+                <a data-scroll href="#syntax-highlighting">Syntax highlighting</a>
+            </details>
+
+            <details>
+                <summary>
+                    <a data-scroll id="colour" href="#section-colour">Colour</a>
+                </summary>
+                <a data-scroll href="#colour-list">Colour list</a>
+            </details>
+
+            <details>
+                <summary>
+                    <a data-scroll id="inputs" href="#section-inputs">Inputs</a>
+                </summary>
+                <details>
+                    <summary>
+                        <a data-scroll href="#text-input">Text input</a>
+                    </summary>
+                    <a data-scroll href="#input-validity" class="sublink">Input validity</a>
+                </details>
+                <a data-scroll href="#checkboxes">Checkboxes</a>
+                <a data-scroll href="#switches">Switches</a>
+                <a data-scroll href="#radio-buttons">Radio buttons</a>
+                <a data-scroll href="#select-options">Select options</a>
+                <details>
+                    <summary>
+                        <a data-scroll href="#buttons">Buttons</a>
+                    </summary>
+                    <a data-scroll href="#button-simple" class="sublink">Simple button</a>
+                    <a data-scroll href="#button-bg" class="sublink">Background</a>
+                    <a data-scroll href="#button-size" class="sublink">Sizes</a>
+                    <a data-scroll href="#button-shape" class="sublink">Shape</a>
+                    <a data-scroll href="#button-shadow" class="sublink">Shadow</a>
+                    <a data-scroll href="#button-tags" class="sublink">Tags</a>
+                    <a data-scroll href="#button-states" class="sublink">Button states</a>
+                </details>
+                <a data-scroll href="#progress-bar">Progress bar</a>
+            </details>
+
+            <details>
+                <summary>
+                    <a data-scroll id="components" href="#section-components">Components</a>
+                </summary>
+
+                <details>
+                    <summary>
+                        <a data-scroll href="#comp-header">Header</a>
+                    </summary>
+                    <a data-scroll href="#header-structure" class="sublink">Structure</a>
+                    <a data-scroll href="#header-position" class="sublink">Position</a>
+                    <a data-scroll href="#header-styling" class="sublink">Styling</a>
+                    <a data-scroll href="#header-responsiveness" class="sublink">Responsiveness</a>
+                </details>
+
+                <details>
+                    <summary>
+                        <a data-scroll href="#comp-sidebar">Sidebar</a>
+                    </summary>
+                    <a data-scroll href="#sidebar-structure" class="sublink">Structure</a>
+                    <a data-scroll href="#sidebar-open-collapse" class="sublink">Open and collapse</a>
+                    <a data-scroll href="#sidebar-adding-logo" class="sublink">Sidebar logo</a>
+                </details>
+
+                <details>
+                    <summary>
+                        <a data-scroll href="#comp-card">Card</a>
+                    </summary>
+                    <a data-scroll href="#card-bg" class="sublink">Background</a>
+                    <a data-scroll href="#card-shape" class="sublink">Shape</a>
+                    <a data-scroll href="#card-circular" class="sublink">Circular card</a>
+                    <a data-scroll href="#card-shadow" class="sublink">Shadow</a>
+                    <a data-scroll href="#card-padding" class="sublink">Padding</a>
+                    <a data-scroll href="#card-examples" class="sublink">Examples</a>
+                </details>
+
+
+            </details>
+        </nav>
+    </div>
+
+    <div class="ff-content-container">
+        <!--  =========================================================================================================  -->
+        <!--  INTRO
+        <!--  =========================================================================================================  -->
+        <section id="section-intro">
+            <div class="row padding-top-small margin-bottom-small">
+                <div class="portion two-thirds">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h4>FICTOAN is an intuitive, simple SCSS framework that also moonlights as an UI kit.</h4>
+                </div>
+
+                <div class="portion one-third">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h4>Give it a shot&mdash; download or fork from <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a>.</h4>
+                </div>
+            </div>
+
+
+            <!--  USPs ============================================================ -->
+            <div class="box">
+                <div class="portion one-third margin-bottom-tiny">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h6 class="margin-bottom-fixed">It’s intuitive.</h6>
+                    <p>FICTOAN uses straight-forward and intuitive class names like <code>.horizontal-center-this</code>, <code>.no-padding-left</code>,  <code>.center-on-mobile</code> and so on. Simple to use, and easy to recollect.</p>
+                </div>
+
+                <div class="portion one-third margin-bottom-tiny">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h6 class="margin-bottom-fixed">It’s modular.</h6>
+                    <p>Styling elements is like a jigsaw puzzle— take a <code>.button</code>, simply add <code>.bg-red</code>, <code>.shape-circular</code> and <code>.no-shadow</code> to get a red, round button without a shadow. It’s like playing with Lego.</p>
+                </div>
+
+                <div class="portion one-third margin-bottom-tiny">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h6 class="margin-bottom-fixed">It’s responsive.</h6>
+                    <p>Change layouts across devices&mdash; <code>.one-fourth</code>, <code>.one-third-on-tab-ls</code>, <code>.six-eights-on-mobile</code> and so on. Or use <code>.retain-layout-on-mobile</code> to turn off responsiveness completely.</p>
+                </div>
+
+                <div class="portion one-third margin-bottom-tiny">
+                    <div class="margin-bottom-tiny padding-top-fixed">
+                        <h6 class="margin-bottom-fixed">It’s customisable.</h6>
+                        <p>It’s also got a nice little variables file to tweak. Now you can have different styling rules for each of your projects, without having to rewrite each time.</p>
+                    </div>
+                </div>
+
+                <div class="portion one-third margin-bottom-tiny">
+                    <div class="margin-bottom-tiny padding-top-fixed">
+                        <h6 class="margin-bottom-fixed">It’s ready to go.</h6>
+                        <p>It comes with a set of pre-defined elements that you can simply drop into your project. Cards, sidebar menus, modal windows and whatnot.</p>
+                    </div>
+                </div>
+
+                <div class="portion one-third margin-bottom-tiny">
+                    <div class="margin-bottom-tiny padding-top-fixed">
+                        <h6 class="margin-bottom-fixed">It’s open source.</h6>
+                        <p>Just head to the <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a> page and fork at will. Not interested in writing code? Just add your feedback, and it might just make it to the next feature release!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!--  =====================================================================================================  -->
+        <!--  GETTING STARTED
+        <!--  =====================================================================================================  -->
+        <section id="section-getting-started">
+            <div class="row">
+                <div class="portion whole">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h3 class="margin-bottom-fixed"><strong>Getting started</strong></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>FICTOAN runs on SCSS, meaning it needs to be transpiled into CSS before it can be read by the browser. Install it from <a href="http://sass-lang.com/install">here</a>.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Once installed, you’ll write SCSS, where you can use variables and mixins, greatly adding functionality to plain ol’ CSS.</p>
+                </div>
+            </div>
+
+
+            <!--  USING FICTOAN  ==================================================================================  -->
+            <div id="using-fictoan" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Using FICTOAN</h4>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <h6>Straight out of the box</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p class="margin-bottom-fixed">Just head to the <code>dist</code> folder, and take <code>fictoan.min.css</code> file and drop it into your project. Include the path in your HTML file, and that’s it, you’re done.</p>
+                </div>
+
+                <div class="portion half">
+                    <pre><code class="language-markup">&lt;link rel="stylesheet" href="path-to/fictoan.min.css" type="text/css"></code></pre>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-fixed">
+                <div class="portion whole no-margin-bottom">
+                    <h6>Or, getting your hands dirty</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion one-third">
+            <pre><code><span class="text-accent">scss</span>
+|
+|—— <span class="text-grey-70">fictoan.scss</span>
+|
+|—— <span class="text-indigo">vendor</span>
+|    |—— <span class="text-grey-70">_normalize.scss</span>
+|
+|
+|—— <span class="text-indigo">fictoan</span>
+|    |—— <span class="text-blue-80">base</span>
+|    |    |—— <span class="text-grey-70">_ff-reset.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-layout.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-responsive.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-utilities.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-config.scss</span>
+|    |
+|    |
+|    |—— <span class="text-blue-80">components</span>
+|    |    |—— <span class="text-grey-70">_ff-header.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-modal.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-sidebar.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-tabs.scss</span>
+|    |
+|    |
+|    |—— <span class="text-blue-80">design</span>
+|    |    |—— <span class="text-grey-70">_ff-colours.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-typography.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-code-light.scss</span>
+|    |
+|    |
+|    |—— <span class="text-blue-80">elements</span>
+|    |    |—— <span class="text-grey-70">_ff-buttons.scss</span>
+|    |    |—— <span class="text-grey-70">_ff-inputs.scss</span>
+|    |
+|    |
+|    |—— <span class="text-blue-80">theme</span>
+|         |—— <span class="text-grey-70">_ff-variables.scss</span>
+|
+|
+|—— <span class="text-indigo">this-project</span>
+     |—— <span class="text-grey-70">_variables-this-project.scss</span>
+     |—— <span class="text-grey-70">_styles-this-project.scss</span>
+</code></pre>
+                </div>
+
+                <div class="portion two-thirds">
+                    <p>Want to build on top of FICTOAN? Then, open the <code>scss</code> directory, and in it, you'll find three more folders and the <code>main.scss</code> source file and the transpiled <code>fictoan.min.css</code> output file. The <code>fictoan.scss</code> imports all the other SCSS files in a particular order and transpiles them into one single CSS file.</p>
+
+                    <p class="no-margin-bottom"><strong>Customised builds</strong></p>
+                    <p>You can comment out the files you don’t want&mdash; your project doesn&rsquo;t need a sidebar? Comment it out. Or you need FICTOAN for just the layouts? Comment out all the folders but <code>base</code>. This way you can reduce the outputted CSS file size and thus performance.</p>
+
+                    <h6 class="margin-bottom-fixed">/vendor</h6>
+                    <p>This folder contains all third-party plugins, right now it has only one file— <code>normalize.scss</code>.</p>
+
+                    <h6 class="margin-bottom-fixed">/fictoan</h6>
+                    <p>This is the meat of FICTOAN, and has all the layouts, grids, styling rules, elements and components all neatly organised. They all have a <code>ff</code> prefix, so that you don’t confuse them with your our files in your projects.</p>
+
+                    <h6 class="margin-bottom-fixed">/this-project</h6>
+                    <p>Now, we come to the custom part. This folder has two files inside, one for defining variables, and another for all your styling rules. Rename them to reflect the name of your current project, and edit only these files. This way, it becomes easy to track changes, and updating FICTOAN is also a breeze. Be sure to rename the filenames in <code>main.scss</code> too.</p>
+                </div>
+            </div>
+
+
+
+
+
+            <!--  VARIABLE THEMES  ================================================================================  -->
+
+            <div id="class-names" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Class names</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Class names in FICTOAN are designed to be intuitively recalled, so that you don&rsquo;t have to remember complex nomenclature and contextual modifiers. All class names are in plain, conversational English, rather than devspeak. </p>
+                </div>
+
+                <div class="portion half">
+                    <p>For example, <code>.vertically-centre-this</code>, <code>.no-padding-left</code> and <code>.show-only-on-mobile</code>, to name a few. We&rsquo;ll elaborate this in the individual sections.</p>
+                </div>
+            </div>
+
+
+            <!--  INPUT VALIDITY  ============================================  -->
+            <div id="element-sizing" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Element sizing</h6>
+                </div>
+            </div>
+
+            <div class="row retain-layout-on-tab-ls">
+                <div class="portion half one-third-on-tab-ls">
+                    <p>There are five preset sizing suffixes in FICTOAN&mdash; <code>-tiny</code>, <code>-small</code>, <code>-medium</code>, <code>-large</code> and <code>-huge</code>. You use them as suffixes for margin, padding, text, icons etc.</p>
+                </div>
+
+                <div class="portion one-fourth one-third-on-tab-ls half-on-tab-pt half-on-mobile">
+                    <pre><code class="language-css">
+/*  Prefix  */
+.margin-all
+.margin-top
+.margin-right
+.margin-bottom
+.margin-left
+
+.padding-all
+.padding-top
+.padding-right
+.padding-bottom
+.padding-left
+
+.text
+
+.icon
+
+.spacer
+                    </code></pre>
+                </div>
+
+                <div class="portion one-fourth one-third-on-tab-ls half-on-tab-pt half-on-mobile">
+                    <pre><code class="language-css">
+/*  Suffix  */
+-tiny
+-small
+-medium
+-large
+-huge
+                    </code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!--  USING FICTOAN  ==================================================================================  -->
+
+            <div id="variable-themes" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Variable themes</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>If you are planning to use FICTOAN right out of the box, it comes with a well laid out theme to set the look and feel of your web project. </p>
+                </div>
+
+                <div class="portion half">
+                    <p>You can easily change the look and feel completely just by changing a few values of variables, in the <code>theme/_ff-variables.scss</code> file.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                <pre><code class="language-scss">
+$fontSans  : "Work Sans", sans-serif;
+$fontSerif : "Crimson Text", serif;
+$fontMono  : "Space Mono", monospace;
+
+//  Paragraph-specific variables
+$baseFontSize : 1em;
+$scaleFactor  : 1.2;
+
+$paraSerifFontSize   : 1.1em;
+$paraSerifLineHeight : 1.4;
+
+//  Body basics  ==========================================
+$bodyBgColor : $colorWhite;
+
+$paraFontSize   : 1em;
+$bodyLineHeight : 1.6;
+
+//  Selection highlight
+$textHighlightBg    : $colorHue;
+$textHighlightColor : $colorWhite;
+
+//  Variables for text
+$bodyFontColor : $colorShade;
+$linkColor     : $colorHue;
+
+//  Button  ===============================================
+$buttonGradientStartColour : $colorHue;
+$buttonGradientEndColour   : $colorAnalogue;
+
+//  Progress bar  =========================================
+$progressBarBG   : $colorTint;
+$progressBarFill : $colorHue;
+
+//  Sidebar  ==============================================
+$sideBarBG        : $colorGrey-10;
+$sideBarItemBG    : $colorGrey-10;
+$sidebarTextColor : $colorShade;
+
+$sideBarItemBGOnHover    : $colorHue;
+$sidebarTextColorOnHover : $colorWhite;
+                </code></pre>
+                </div>
+
+                <div class="portion half">
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!--  =====================================================================================================  -->
+        <!--  THE GRID
+        <!--  =====================================================================================================  -->
+        <section id="section-layout">
+            <div class="row">
+                <div class="portion whole">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h3 class="margin-bottom-fixed"><strong>Layout</strong></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>FICTOAN uses a 16&ndash;column grid system. Content by default is full-width, but you can add a <code>.padded-content</code> class to the <code>body</code> to provide a bit of equal padding to the left and right.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Some of you might think 16 columns a bit much, but there have been quite a few times when the extra columns have come to my rescue, offering a bit more fine control over the content.</p>
+                </div>
+            </div>
+
+
+
+            <!--  SINGLE ROW  ========================================================================================== -->
+            <div id="single-row" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>A single row</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>All content is organised into <code>.row</code> elements having <code>.portion</code> children elements of varying widths. The <code>.portion</code> divs are accompanied by a width class, ranging from <code>one-sixteenth</code> which would be 6.25% of parent <code>.row</code>&rsquo;s width, to <code>.whole</code>, which is 100%.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>The idea is to have the widths of the <code>.portion</code> elements add up to a 100%. So, for example, in a <code>.row</code>, you could have three instances of <code>.portion.one-third</code> to create a three-column layout. You can also have unequal widths, as long as the widths add up to a 100%. If exceeded, it’ll wrap to the next line.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+            <pre><code class="language-markup">
+// Example 1
+&lt;div class="row">
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+&lt;/div>
+            </code></pre>
+                </div>
+
+                <div class="portion half">
+            <pre><code class="language-markup">
+// Example 2
+&lt;div class="row">
+    &lt;div class="portion one-ninth">&lt;/div>
+    &lt;div class="portion three-fourteenths">&lt;/div>
+    &lt;div class="portion two-tenths">&lt;/div>
+    &lt;div class="portion two-twelfths">&lt;/div>
+    &lt;div class="portion four-thirteeths">&lt;/div>
+&lt;/div>
+            </code></pre>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <h6 class="no-margin-bottom">Example 1</h6>
+                </div>
+            </div>
+
+            <div class="row bg-tint">
+                <div class="portion whole">
+                    <p><strong>.row</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-hue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+                <div class="portion one-fourth bg-analogue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+                <div class="portion one-fourth bg-hue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+                <div class="portion one-fourth bg-analogue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+            </div>
+
+
+            <div class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <h6 class="no-margin-bottom">Example 2</h6>
+                </div>
+            </div>
+
+            <div class="row retain-layout-on-mobile bg-tint">
+                <div class="portion whole">
+                    <p><strong>.row</strong></p>
+                </div>
+
+                <div class="portion one-ninth bg-hue">
+                    <p><strong>.one-ninth</strong></p>
+                </div>
+                <div class="portion three-fourteenths bg-analogue">
+                    <p><strong>.three-fourteenths</strong></p>
+                </div>
+                <div class="portion two-tenths bg-hue">
+                    <p><strong>.two-tenths</strong></p>
+                </div>
+                <div class="portion two-twelfths bg-analogue">
+                    <p><strong>.two-twelfths</strong></p>
+                </div>
+                <div class="portion four-thirteenths bg-hue">
+                    <p><strong>.four-thirteenths</strong></p>
+                </div>
+            </div>
+
+
+            <!--  MULTIPLE ROWS   ====================================================================================== -->
+            <div id="multiple-rows" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Multiple rows</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>If you want to group portions whose collective widths exceed a 100% into a single container, just use a <code>.box</code> class instead of a <code>.row</code>.</p>
+
+                    <p>The portions inside can be all of equal widths, or varying widths too.</p>
+                </div>
+
+                <div class="portion half">
+            <pre><code class="language-markup">
+&lt;div class="box">
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+    &lt;div class="portion one-fourth">&lt;/div>
+&lt;/div>
+            </code></pre>
+                </div>
+            </div>
+
+
+            <div class="box bg-tint">
+                <div class="portion whole">
+                    <p><strong>.box</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-hue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-analogue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-hue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-analogue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-hue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-analogue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+
+                <div class="portion one-fourth bg-hue">
+                    <p><strong>.one-fourth</strong></p>
+                </div>
+            </div>
+
+
+
+            <!--  RESPONSIVE HELPERS  =============================================================================  -->
+            <div id="responive-helpers" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Responsive helpers</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Use special classes to change the way a particular <code>.portion</code> behaves in each of these devices. Simply specify what width you want it to have in each of these breakpoints. Use any width class suffixed with the appropriate device.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Then, if you want to turn off the responsive behaviour, and have the divs maintain their layout across all or even specific devices, there are classes for that, too. Just add <code>retain-layout</code> along with the device and orientation.</p>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-fixed">
+                <div class="portion one-fourth">
+                    <p class="no-margin-bottom"><strong>Mobile</strong></p>
+                    <p class="no-margin-top no-margin-bottom">Below 600px</p>
+                </div>
+
+                <div class="portion one-fourth">
+                    <p class="no-margin-bottom"><strong>Tablet &ndash; portrait</strong></p>
+                    <p class="no-margin-top no-margin-bottom">From 601px to 900px</p>
+                </div>
+
+                <div class="portion one-fourth">
+                    <p class="no-margin-bottom"><strong>Tablet &ndash; landscape</strong></p>
+                    <p class="no-margin-top no-margin-bottom">From 901px to 1200px</p>
+                </div>
+
+                <div class="portion one-fourth">
+                    <p class="no-margin-bottom"><strong>Desktop</strong></p>
+                    <p class="no-margin-top no-margin-bottom">Above 1200px</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion whole">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Specific layout
+&lt;div class="row">
+&lt;div class="portion  one-sixth  one-fourth-on-tab-ls  one-third-on-tab-pt  half-on-mobile">&lt;/div>
+&lt;/div></code></pre>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">//  Turn off responsive behaviour
+&lt;div class="row">
+&lt;div class="portion  retain-layout-on-tab-ls  retain-layout-on-tab-pt  retain-layout-on-mobile">&lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+            <!--  RESPONSIVE VISIBILITY  ==========================================================================  -->
+            <div id="layout-responsive-visibility" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Responsive visibility</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>There are also special classes to handle visibility across various device resolutions.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Simply add the <code>.show-only-on-</code> or <code>.hide-on-</code> prefix and the device suffix to the element.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Visible on tablets and desktops
+&lt;div class="hide-on-mobile">&lt;/div></code></pre>
+                </div>
+
+                <div class="portion half">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Visible on mobiles and desktops
+&lt;div class="hide-on-tab-pt hide-on-tab-ls">&lt;/div></code></pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Visible on tablets and mobiles
+&lt;div class="hide-on-desktop">&lt;/div></code></pre>
+                </div>
+
+                <div class="portion half">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Visible on mobiles and desktops
+&lt;div class="hide-on-tab-pt hide-on-tab-ls">&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!--  GUTTER SIZING  ==================================================================================  -->
+            <div id="gutter-sizing" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Gutter sizing</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion whole">
+                    <p>The <code>.portion</code> divs come with a bit of padding on their left and right, which essentially act as the gutters in the grid layout. You can increase or decrease this padding to change the gutter accordingly.</p>
+                </div>
+            </div>
+
+            <div class="row large-gutters bg-tint">
+                <div class="portion whole margin-bottom-fixed">
+                    <p><strong>.row.large-gutters</strong></p>
+                </div>
+
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-analogue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row bg-tint">
+                <div class="portion whole margin-bottom-fixed">
+                    <p><strong>.row</strong></p>
+                </div>
+
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-analogue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row small-gutters bg-tint">
+                <div class="portion whole margin-bottom-fixed">
+                    <p><strong>.row.small-gutters</strong></p>
+                </div>
+
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-analogue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters bg-tint">
+                <div class="portion whole margin-bottom-fixed">
+                    <p><strong>.row.no-gutters</strong></p>
+                </div>
+
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-analogue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+                <div class="portion one-third">
+                    <div class=" bg-hue">
+                        <p><strong>.one-third</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion one-third">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Smaller gutters
+&lt;div class="row small-gutters">
+...portion divs
+&lt;/div></code></pre>
+                </div>
+
+                <div class="portion one-third">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Larger gutters
+&lt;div class="row large-gutters">
+...portion divs
+&lt;/div></code></pre>
+                </div>
+
+                <div class="portion one-third">
+            <pre class="margin-top-fixed"><code class="language-markup">//  No gutters
+&lt;div class="row no-gutters">
+...portion divs
+&lt;/div></code></pre>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <!--  =====================================================================================================  -->
+        <!--  TYPOGRAPHY
+        <!--  =====================================================================================================  -->
+        <section id="section-typography">
+            <div class="row">
+                <div class="portion whole">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h3 class="margin-bottom-fixed"><strong>Typography</strong></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Typography is an important part of FICTOAN, and there are myriad classes focused just on typography. To keep things free, the framework uses fonts from Google Fonts, handpicked beauties that you can quickly use in your projects.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>There are three typefaces, each for one category commonly used on web pages— one sans for body, one serif for fancy occasions, and one geometric monospace for displaying code.</p>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-fixed">
+                <div class="portion one-third">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Sans-serif
+&lt;p class="font-sans">&lt;/p></code></pre>
+                </div>
+
+                <div class="portion one-third">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Serif
+&lt;p class="font-serif">&lt;/p></code></pre>
+                </div>
+
+                <div class="portion one-third">
+            <pre class="margin-top-fixed"><code class="language-markup">//  Monospace
+&lt;p class="font-mono">&lt;/p></code></pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion one-third">
+                    <h4 class="font-sans">Work Sans</h4>
+                    <p class="font-sans">Work Sans is the typeface of choice for body, chosen for its excellent legibility and subdued style. You just can’t go wrong with this one.</p>
+                </div>
+
+                <div class="portion one-third">
+                    <h4 class="font-serif">Crimson Text</h4>
+                    <p class="font-serif">Crimson Text is the selected serif, for its understated elegance and subtle class. Its sober characters are great for body text as well.</p>
+                </div>
+
+                <div class="portion one-third">
+                    <h4 class="font-mono">Space Mono</h4>
+                    <p class="font-mono">This little beaut handles the monospace department, and with quite a bit of panache too, don&rsquo;t you think?</p>
+                </div>
+            </div>
+
+
+
+
+            <!--  TYPE SCALING  ======================================================================================== -->
+            <div id="type-scaling" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Type scaling</h4>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-fixed">
+                <div class="portion one-third">
+                    <p>There are two main values you can tweak in the <code>_ff-variables.scss</code> file to change type size.</p>
+
+                    <p>The <code>$baseFontSize</code> is set at <code>1em</code>, which is 16px. Change this to affect your body font size.</p>
+
+                    <p>The <code>$scaleFactor</code> is set at <code>1.2</code>, a minor-third scale, change this to affect the heading sizes.</p>
+                </div>
+
+                <div class="portion two-thirds">
+                    <div class="row no-margin-bottom">
+                        <div class="portion whole">
+                            <code class="show-inline margin-right-tiny">h1</code><h1 class="show-inline">I&rsquo;m just your type.</h1>
+                        </div>
+
+                        <div class="portion whole">
+                            <code class="show-inline margin-right-tiny">h2</code><h2 class="show-inline">I&rsquo;m just your type.</h2>
+                        </div>
+
+                        <div class="portion whole">
+                            <code class="show-inline margin-right-tiny">h3</code><h3 class="show-inline">I&rsquo;m just your type.</h3>
+                        </div>
+
+                        <div class="portion whole">
+                            <code class="show-inline margin-right-tiny">h4</code><h4 class="show-inline">I&rsquo;m just your type.</h4>
+                        </div>
+
+                        <div class="portion whole">
+                            <code class="show-inline margin-right-tiny">h5</code><h5 class="show-inline">I&rsquo;m just your type.</h5>
+                        </div>
+
+                        <div class="portion whole">
+                            <code class="show-inline margin-right-tiny">h6</code><h6 class="show-inline">I&rsquo;m just your type.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion whole">
+                    <p>Apart from this, there are also generic font-size classes you can use anywhere. They range from <span class="text-tiny">tiny</span>, <span class="text-small">small</span>, <span class="text-normal">normal</span>, <span class="text-large">large</span>, and <span class="text-huge">huge</span>. The class names are pretty simple&mdash; just use <code>.text-tiny</code>, <code>.text-large</code> and so on.</p>
+                </div>
+            </div>
+
+
+
+            <!--  TYPE HELPERS  ======================================================================================== -->
+            <div id="type-helpers" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Type helpers</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion one-third">
+            <pre class="margin-top-fixed"><code class="language-markup">// Centre-align text
+&lt;p class="text-center">&lt;/p>
+&lt;p class="text-centre">&lt;/p>
+
+//  Left and right align text
+&lt;h3 class="text-left">&lt;/h3>
+&lt;h1 class="text-right">&lt;/h1>
+
+//  Remove line height completely
+&lt;p class="no-line-height">&lt;/p></code></pre>
+                </div>
+
+                <div class="portion two-thirds">
+                    <p>As you can see, classes are pretty straight-forward and intuitive. Just slap these onto any text-element and they&rsquo;ll work.</p>
+                </div>
+            </div>
+
+
+
+            <!--  CODE THEMING  ======================================================================================== -->
+            <div id="syntax-highlighting" class="row">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Syntax highlighting</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>There&rsquo;s a custom code colour theme available in FICTOAN. Right now it supports HTML, CSS, SCSS, JS, JSON and PHP.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>While the colour theme itself is custom-made, it uses <a href="http://prismjs.com" target="_blank">PrismJS</a>, a kickass plugin for language identification and highlighter.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>There are two themes&mdash; one light and one dark. Hit the button to switch between them. For the dark theme, just add <code>.bg-dark</code> class to the <code>pre</code> element.</p>
+                </div>
+
+                <div class="portion half">
+                    <a id="theme-switcher" class="ff-button size-small shape-rounded bg-hue text-white shadow-hard">Switch colour theme</a>
+                </div>
+            </div>
+
+            <script>
+                function toggleNavigation(element) {
+                    element.classList.toggle("bg-dark");
+                }
+
+                document.getElementById("theme-switcher").addEventListener('click', function() {
+                    Array.from(document.getElementsByClassName("change-bg")).forEach(toggleNavigation);
+                });
+            </script>
+
+            <div class="box small-gutters">
+                <div class="portion half code-box">
+                    <p class="no-margin-bottom"><strong>JSON</strong></p>
+                    <pre class="change-bg"><code class="language-json">"glossary": {
+    "title": "example glossary",
+    "GlossDiv": {
+        "title": "S",
+        "GlossList": {
+            "GlossEntry": {
+                "ID": "SGML",
+                "SortAs": "SGML",
+                "GlossTerm": "Standard Generalized Markup Language",
+                "Acronym": "SGML",
+                "Abbrev": "ISO 8879:1986",
+                "GlossDef": {
+                    "para": "A meta-markup language, used to create.",
+                    "GlossSeeAlso": ["GML", "XML"]
+                },
+                "GlossSee": "markup"
+            }
+        }
+    }
+}
+                        </code></pre>
+                </div>
+
+                <div class="portion half code-box">
+                    <p class="no-margin-bottom"><strong>JS</strong></p>
+                    <pre class="change-bg"><code class="language-js">'use strict';
+
+    // In production, the bundled pdf.js shall be used instead of SystemJS.
+    Promise.all([System.import('pdfjs/display/api'),
+    System.import('pdfjs/display/global'),
+    System.resolve('pdfjs/worker_loader')])
+    .then(function (modules) {
+
+        var api = modules[0], global = modules[1];
+
+        global.PDFJS.workerSrc = modules[2];
+
+        api.getDocument('helloworld.pdf').then(function (pdf) {
+
+            pdf.getPage(1).then(function (page) {
+                var scale = 1.5;
+                var viewport = page.getViewport(scale);
+
+                var canvas = document.getElementById('the-canvas');
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+
+                page.render(renderContext);
+            });
+        });
+    });
+                        </code></pre>
+                </div>
+
+                <div class="portion half code-box">
+                    <p class="no-margin-bottom"><strong>PHP</strong></p>
+                    <pre class="change-bg"><code class="language-php">&lt;?
+    class Address {
+        protected $city;
+
+        public function setCity($city) {
+            $this->city = $city;
+        }
+
+        public function getCity() {
+            return $this->city;
+        }
+    }
+
+    class Person {
+        protected $name;
+        protected $address;
+
+        public function __construct() {
+            $this->address = new Address;
+        }
+
+        public function setName($name) {
+            $this->name = $name;
+        }
+
+        public function getName() {
+            return $this->name;
+        }
+
+        public function __call($method, $arguments) {
+            if (method_exists($this->address, $method)) {
+                return call_user_func_array(
+                    array($this->address, $method), $arguments);
+            }
+        }
+    }
+?>
+                        </code></pre>
+                </div>
+
+                <div class="portion half code-box">
+                    <p class="no-margin-bottom"><strong>HTML</strong></p>
+                    <pre class="change-bg"><code class="language-html">&lt;!doctype html>
+&lt;html lang="en">
+
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+
+    &lt;!--And a clean, simple sans typeface-->
+    &lt;link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+
+    &lt;link rel="stylesheet" href="css/main.css">
+
+    &lt;title>FICTOAN Forms&lt;/title>
+&lt;/head>
+
+&lt;body>
+    &lt;div class="row margin-top-medium">
+        &lt;h6 class="margin-bottom-small">Login&lt;/h6>
+
+            &lt;form class="ff-form">
+                &lt;div class="ff-input-unit">
+                    &lt;input class="ff-input needs-validation input-success" type="text" id="first_name" name="first_name" placeholder=" " required/>
+                    &lt;label for="first_name">First Name&lt;/label>
+                &lt;/div>
+
+                &lt;div class="ff-input-unit">
+                    &lt;input class="ff-input needs-validation" type="password" id="password" name="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
+                    &lt;label for="password">Password&lt;/label>
+                    &lt;p class="input-rules">Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.&lt;/p>
+                &lt;/div>
+
+                &lt;input class="ff-button shape-rounded bg-indigo shadow-hard full-width" type="submit" value="Sign Up" />
+            &lt;/form>
+        &lt;/div>
+    &lt;/div>
+&lt;/body>
+&lt;/html>
+                </code>
+                    </pre>
+                </div>
+
+                <div class="portion half code-box">
+                    <p class="no-margin-bottom"><strong>SCSS</strong></p>
+                    <pre class="change-bg"><code class="language-scss">body {
+    font-family      : $fontSans;
+    color            : $bodyFontColor;
+    line-height      : 1.6;
+    word-wrap        : normal;
+    text-rendering   : optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight : inherit;
+    line-height : 1.2;
+    margin      : 0;
+}
+
+h1 { font-size : $baseFontSize*pow($scaleFactor, 8); }
+h2 { font-size : $baseFontSize*pow($scaleFactor, 6); }
+h3 { font-size : $baseFontSize*pow($scaleFactor, 4); }
+h4 { font-size : $baseFontSize*pow($scaleFactor, 3); }
+h5 { font-size : $baseFontSize*pow($scaleFactor, 2); }
+h6 { font-size : $baseFontSize*pow($scaleFactor, 1); }
+
+@import "compass/reset";
+
+// variables
+$colorGreen     : #008000;
+$colorGreenDark : darken($colorGreen, 10);
+
+@mixin container {
+    max-width: 980px;
+}
+
+// mixins with parameters
+@mixin button($color:green) {
+    @if ($color == green) {
+        background-color: #008000;
+    }
+    @else if ($color == red) {
+        background-color: #B22222;
+    }
+}
+
+div,
+.navbar,
+#header,
+input[type="input"] {
+    display     : block;
+    width       : auto;
+    margin      : 0 auto;
+    font-family : "Helvetica Neue", Arial, sans-serif;
+}
+
+.row-12 > [class*="spans"] {
+    border-left: 1px solid #B5C583;
+}
+
+@for $i from 1 through 5 {
+    .span#{$i} {
+        width: 20px*$i;
+    }
+}
+
+@mixin mobile {
+  @media screen and (max-width : 600px) {
+    @content;
+  }
+}
+                    </code></pre>
+                </div>
+
+                <div class="portion half code-box">
+                    <p class="no-margin-bottom"><strong>CSS</strong></p>
+                    <pre class="change-bg"><code class="language-css">@import "fictoan/base/reset-fictoan";
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color                  : #51514F;
+    background             : hsla( 200, 100%,  50%);
+    text-align             : left;
+    white-space            : pre;
+    word-spacing           : normal;
+    word-break             : normal;
+    word-wrap              : normal;
+    line-height            : 1.5;
+    -moz-tab-size          : 4;
+         tab-size          : 4;
+    -webkit-hyphens        : none;
+       -moz-hyphens        : none;
+        -ms-hyphens        : none;
+            hyphens        : none;
+    font-variant-ligatures : none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding  : 1em;
+    margin   : .5em 0;
+    overflow : auto;
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] { background : #eceef7; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding       : .1em;
+    border-radius : .3em;
+    white-space   : normal;
+}
+
+pre:hover { transition: all 0.2s #ff8899; }
+
+pre::after { content: "&amp;"; }
+
+/*  For screens FROM 900px width and UPWARD  */
+@media all and (min-width : 900px) {
+    .all-content { padding : 0 8vw; }
+}
+                        </code></pre>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <!--  =====================================================================================================  -->
+        <!--  COLOUR
+        <!--  =====================================================================================================  -->
+
+        <section id="section-colour">
+            <div class="row">
+                <div class="portion whole">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h3 class="margin-bottom-fixed"><strong>Colour</strong></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>FICTOAN uses the HSL colour format, and you should too. You can read more about why, here. FICTOAN comes with a multiple colour schemes to use right out of the box.</p>
+                </div>
+            </div>
+
+            <!--  FICTOAN colour scheme  =================  -->
+            <div class="row margin-bottom-fixed">
+                <div class="portion whole no-margin-bottom">
+                    <p><strong>FICTOAN colour scheme</strong></p>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="portion one-fifth">
+                    <div class="ff-card bg-tint no-border"></div>
+                    <p class="margin-bottom-fixed">Tint of primary hue</p>
+                    <code>$colorTint</code>
+                    <code>hsl( 42, 16%, 96%);</code>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card bg-hue no-border"></div>
+                    <p class="margin-bottom-fixed">PRIMARY HUE</p>
+                    <code>$colorHue</code>
+                    <code>hsl( 42, 100%, 64%);</code>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card bg-analogue no-border"></div>
+                    <p class="margin-bottom-fixed">Analogue of primary hue</p>
+                    <code>$colorAnalogue</code>
+                    <code>hsl( 32, 100%, 64%);</code>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card bg-shade no-border"></div>
+                    <p class="margin-bottom-fixed">Shade of primary hue</p>
+                    <code>$colorShade</code>
+                    <code>hsl( 0, 0%, 16%);</code>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card bg-accent no-border"></div>
+                    <p class="margin-bottom-fixed">Accent</p>
+                    <code>$colorAccent</code>
+                    <code>hsl( 164, 72%, 36%);</code>
+                </div>
+            </div>
+
+
+
+
+
+            <!--  COLOUR LIST  ===================================================================================== -->
+            <div id="colour-list" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Colour list</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Here&rsquo;s a list of colours that you can use. Each of these can be used as a background, text or fill class suffix. Use <code>bg-</code>, <code>text-</code> or <code>fill-</code> as a prefix in your class name, followed by any of the colours listed below.</p>
+                    <p>You can use these prefixes with the main colour scheme too. Just add the appropriate colour term as a suffix.</p>
+                </div>
+
+                <div class="portion half">
+            <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="bg-indigo-90">&lt;/div>
+&lt;p class="text-pistachio-40">&lt;/p>
+&lt;svg class="fill-teal">&lt;/svg>
+
+&lt;h3 class="text-shade">&lt;/h3>
+&lt;div class="bg-analogue">&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+            <!--  Red  =======================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-red-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">red-10</p>
+                </div>
+            </div>
+
+
+            <!--  Orange  ====================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-orange-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">orange-10</p>
+                </div>
+            </div>
+
+
+            <!--  Amber  =====================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-amber-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">amber-10</p>
+                </div>
+            </div>
+
+
+            <!--  Yellow  ====================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-yellow-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">yellow-10</p>
+                </div>
+            </div>
+
+
+            <!--  Pistachio  =================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pistachio-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pistachio-10</p>
+                </div>
+            </div>
+
+
+            <!--  Green  =====================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-green-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">green-10</p>
+                </div>
+            </div>
+
+
+            <!--  Teal  ======================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-teal-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">teal-10</p>
+                </div>
+            </div>
+
+
+            <!--  Cyan  ======================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-cyan-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">cyan-10</p>
+                </div>
+            </div>
+
+
+            <!--  Sky  =======================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-sky-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">sky-10</p>
+                </div>
+            </div>
+
+
+            <!--  Blue  ======================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-blue-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">blue-10</p>
+                </div>
+            </div>
+
+
+            <!--  Indigo  ====================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-indigo-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">indigo-10</p>
+                </div>
+            </div>
+
+
+            <!--  Violet  ====================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-violet-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">violet-10</p>
+                </div>
+            </div>
+
+
+            <!--  Purple  ====================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-purple-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">purple-10</p>
+                </div>
+            </div>
+
+
+            <!--  Pink  ======================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-pink-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">pink-10</p>
+                </div>
+            </div>
+
+
+            <!--  Crimson  ===================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-crimson-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">crimson-10</p>
+                </div>
+            </div>
+
+
+            <!--  Brown  =================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-brown-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">brown-10</p>
+                </div>
+            </div>
+
+
+            <!--  Slate  =================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-slate-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">slate-10</p>
+                </div>
+            </div>
+
+
+            <!--  Grey  ==================================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-90"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-90</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-80"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-80</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-70"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-70</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-60"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-60</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-50"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-50</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-40"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-40</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-30"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-30</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-20"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-20</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-grey-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">grey-10</p>
+                </div>
+            </div>
+
+
+            <!--  Neutrals  ==============================================  -->
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-black"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">black</p>
+                </div>
+
+                <div class="portion one-tenth">
+                    <div class="ff-card padding-small no-border bg-white border-grey-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">white</p>
+                </div>
+            </div>
+
+            <div class="row no-gutters margin-bottom-fixed">
+                <div class="portion one-tenth">
+                    <div id="transparent-card" class="ff-card padding-small no-border bg-transparent border-grey-10"></div>
+                    <p class="text-tiny text-grey-70 no-margin-top">transparent</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!--  =====================================================================================================  -->
+        <!--  INPUTS
+        <!--  =====================================================================================================  -->
+
+        <section id="section-inputs">
+            <div class="row">
+                <div class="portion whole">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h3 class="margin-bottom-fixed"><strong>Inputs</strong></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <div class="ff-card shape-rounded bg-white shadow-hard">
+                        <div class="row">
+                            <div class="portion whole">
+                                <h6 class="margin-bottom-tiny"><strong>A sample form</strong></h6>
+                            </div>
+                        </div>
+
+                        <form class="ff-form">
+                            <div class="row">
+                                <div class="portion half">
+                                    <div class="ff-form-unit">
+                                        <input class="ff-input" id="first-name" placeholder=" " pattern="{1,}$" />
+                                        <label for="first-name">First name</label>
+                                    </div>
+                                </div>
+
+                                <div class="portion half">
+                                    <div class="ff-form-unit">
+                                        <input class="ff-input" id="last-name" placeholder=" " pattern="{1,}$" />
+                                        <label for="last-name">Last name</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ff-form-unit">
+                                <input class="ff-input needs-validation" type="email" id="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
+                                <label for="email">Email</label>
+                                <p class="input-help">Please enter a valid email address</p>
+                            </div>
+
+
+                            <div class="ff-form-unit">
+                                <input class="ff-input needs-validation" type="password" id="password" placeholder=" " pattern="^.{6,}$" required/>
+                                <label for="password">Password</label>
+                                <p class="input-help">At least 6 characters long</p>
+                            </div>
+
+
+                            <div class="ff-form-unit">
+                                <div class="row">
+                                    <div class="portion one-fifth">
+                                        <p class="no-margin">I prefer</p>
+                                    </div>
+
+                                    <div class="portion four-fifths">
+                                        <div class="ff-radio">
+                                            <input type="radio" id="toggle-1" name="radioset-1" />
+                                            <label for="toggle-1">cats</label>
+                                        </div>
+
+                                        <div class="ff-radio">
+                                            <input type="radio" id="toggle-2" name="radioset-1" />
+                                            <label for="toggle-2">dogs</label>
+                                        </div>
+
+                                        <div class="ff-radio">
+                                            <input type="radio" id="toggle-3" name="radioset-1" disabled/>
+                                            <label for="toggle-3">birds</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="ff-form-unit">
+                                <div class="row">
+                                    <div class="portion one-fifth">
+                                        <p class="no-margin">I like</p>
+                                    </div>
+
+                                    <div class="portion four-fifths">
+                                        <div class="ff-checkbox">
+                                            <input type="checkbox" id="checkbox-2" />
+                                            <label for="checkbox-2">books</label>
+                                        </div>
+
+                                        <div class="ff-checkbox">
+                                            <input type="checkbox" id="checkbox-1" />
+                                            <label for="checkbox-1">movies</label>
+                                        </div>
+
+                                        <div class="ff-checkbox">
+                                            <input type="checkbox" id="checkbox-3" disabled />
+                                            <label for="checkbox-3">comics</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="ff-form-unit margin-bottom-medium">
+                                <div class="row">
+                                    <div class="portion one-fifth">
+                                        <p class="no-margin">I&rsquo;m from</p>
+                                    </div>
+
+                                    <div class="portion four-fifths">
+                                        <select class="ff-select show-inline" title="example-select" required>
+                                            <option value="0" selected>Select one...</option>
+                                            <option value="1">Asia</option>
+                                            <option value="3">Australia</option>
+                                            <option value="2">Europe</option>
+                                            <option value="4">North America</option>
+                                            <option value="5">South America</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ff-form-unit">
+                                <div class="row vertical-center-items">
+                                    <div class="portion half">
+                                        <div class="ff-switch">
+                                            <input type="checkbox" id="remember-toggle"/>
+                                            <label for="remember-toggle">Remember me</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="portion half">
+                                        <div class="pull-right">
+                                            <input class="ff-button button-plain text-grey-50 no-shadow" type="reset" value="Reset">
+
+                                            <input class="ff-button shape-rounded bg-hue text-white text-bold shadow-hard" type="submit" value="SUBMIT">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="portion half">
+                    <p>A form takes the full width of its parent, so a form inside a <code>portion.one-third</code> div will be 33% of the page width.</p>
+
+                    <p>Form elements are wrapped within a <code>.ff-form</code> class parent. You can use <code>.row</code> and <code>.portion</code> within this form to control the layout of the elements. Form elements are wrapped individually by a <code>.ff-form-unit</code> div to ensure consistent spacing and margins.</p>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;form class="ff-form">
+    &lt;div class="ff-form-unit">// Some element&lt;/div>
+
+    // Two form elements side-by-side
+    &lt;div class="row">
+        &lt;div class="portion half">
+            &lt;div class="ff-form-unit">&lt;/div>
+        &lt;/div>
+
+        &lt;div class="portion half">
+            &lt;div class="ff-form-unit">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+
+&lt;/form></code></pre>
+                </div>
+            </div>
+
+
+
+            <!--  TEXT INPUT  ========================================================================================== -->
+            <div id="text-input" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Text input</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Text inputs come with simple styling and floating labels for placeholders. Text inputs need a class of <code>.ff-input</code> for their styling and behaviour. Make sure you add the <code>placeholder</code> attribute with a single space as its value, this is what makes the floating labels work. Also include the <code>required</code> tag to add the asterisk.</p>
+
+                    <p>Each <code>.ff-input</code> is followed immediately by a <code>label</code> element, with a <code>for</code> attribute that matches the <code>id</code> of the text input.</p>
+                </div>
+
+                <div class="portion half">
+                    <div class="ff-form-unit">
+                        <input class="ff-input" id="first-name-eg" placeholder=" " pattern="{1,}$" required/>
+                        <label for="first-name-eg">First name</label>
+                    </div>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-form-unit">
+    &lt;input class="ff-input" id="first-name" placeholder=" " pattern="{1,}$" required/>
+    &lt;label for="first-name">First name&lt;/label>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+            <!--  INPUT VALIDITY  ============================================  -->
+            <div id="input-validity" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Input validity</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>You can also check for input validity using regular expressions within the <code>pattern</code> attribute. Add the <code>.needs-validation</code> class to the <code>.ff-input</code>, and also the appropriate regex.</p>
+
+                    <p>You can also add a <code>p</code> element with a  <code>.input-help</code> class to appear as a prompt beneath the input field. Invalid fields get a red border, and the prompt is again displayed on focus. Complete the field to see for yourself.</p>
+                </div>
+
+                <div class="portion half">
+                    <div class="ff-form-unit">
+                        <input class="ff-input needs-validation" type="password" value="123" id="password-eg" placeholder=" " pattern="^.{6,}$" required/>
+                        <label for="password-eg">Password</label>
+                        <p class="input-help">At least 6 characters long</p>
+                    </div>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">// Atleast 6 characters long
+&lt;div class="ff-form-unit">
+    &lt;input class="ff-input needs-validation" pattern="^.{6,}$" type="password" id="password" placeholder=" " required/>
+    &lt;label for="password">Password&lt;/label>
+    &lt;p class="input-help">At least 6 characters long&lt;/p>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--  CHECKBOXES  ====================================================================================== -->
+            <div id="checkboxes" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Checkboxes</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Each checkbox is individually wrapped in a <code>.ff-checkbox</code> div, and has a input checkbox, followed by a label. Just make sure to add an <code>id</code> for the checkbox and the <code>for</code> attribute for the <code>label</code>.</p>
+                </div>
+
+                <div class="portion half">
+                    <div class="ff-form-unit">
+                        <div class="row">
+                            <div class="portion one-fifth">
+                                <p class="no-margin">I like</p>
+                            </div>
+
+                            <div class="portion four-fifths">
+                                <div class="ff-checkbox">
+                                    <input type="checkbox" id="checkbox-2-eg">
+                                    <label for="checkbox-2-eg">books</label>
+                                </div>
+
+                                <div class="ff-checkbox">
+                                    <input type="checkbox" id="checkbox-1-eg">
+                                    <label for="checkbox-1-eg">movies</label>
+                                </div>
+
+                                <div class="ff-checkbox">
+                                    <input type="checkbox" id="checkbox-3-eg">
+                                    <label for="checkbox-3-eg">comics</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-form-unit">
+    &lt;div class="row">
+        &lt;div class="portion one-fifth">
+            &lt;p class="no-margin">I like&lt;/p>
+        &lt;/div>
+
+        &lt;div class="portion four-fifths">
+            &lt;div class="ff-checkbox">
+                &lt;input type="checkbox" id="checkbox-2">
+                &lt;label for="checkbox-2">books&lt;/label>
+            &lt;/div>
+
+            &lt;div class="ff-checkbox">
+                &lt;input type="checkbox" id="checkbox-1">
+                &lt;label for="checkbox-1">movies&lt;/label>
+            &lt;/div>
+
+            &lt;div class="ff-checkbox">
+                &lt;input type="checkbox" id="checkbox-3">
+                &lt;label for="checkbox-3">comics&lt;/label>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+            <!--  SWITCHES  =======================================================================================  -->
+            <div id="switches" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Switches</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Switches are just restyled checkboxes, just to look different. The markup is pretty similar to the checkbox, except that the parent now has a class of <code>.ff-switch</code>.</p>
+                </div>
+
+                <div class="portion half">
+                    <div class="ff-switch margin-bottom-fixed">
+                        <input type="checkbox" id="remember-toggle-eg"/>
+                        <label for="remember-toggle-eg">Remember me</label>
+                    </div>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-switch">
+    &lt;input type="checkbox" id="remember-toggle"/>
+    &lt;label for="remember-toggle">Remember me&lt;/label>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--  RADIO BUTTONS  ==================================================================================  -->
+            <div id="radio-buttons" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Radio buttons</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Radio buttons are also similar to the checkbox, just change the parent div to a <code>.ff-radio</code> class, and add a <code>name</code> attribute to group a set of radio buttons.</p>
+                </div>
+
+                <div class="portion half">
+                    <div class="ff-form-unit">
+                        <div class="row">
+                            <div class="portion one-fifth">
+                                <p class="no-margin">I prefer</p>
+                            </div>
+
+                            <div class="portion four-fifths">
+                                <div class="ff-radio">
+                                    <input type="radio" id="radio1-eg" name="radioset-1" />
+                                    <label for="radio1-eg">cats</label>
+                                </div>
+
+                                <div class="ff-radio">
+                                    <input type="radio" id="radio2-eg" name="radioset-1" />
+                                    <label for="radio2-eg">dogs</label>
+                                </div>
+
+                                <div class="ff-radio">
+                                    <input type="radio" id="radio3-eg" name="radioset-1" />
+                                    <label for="radio3-eg">birds</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-form-unit">
+    &lt;div class="row">
+        &lt;div class="portion one-fifth">
+            &lt;p class="no-margin">I prefer&lt;/p>
+        &lt;/div>
+
+        &lt;div class="portion four-fifths">
+            &lt;div class="ff-radio">
+                &lt;input type="radio" id="radio-1" name="radioset-1" />
+                &lt;label for="radio-1">cats&lt;/label>
+            &lt;/div>
+
+            &lt;div class="ff-radio">
+                &lt;input type="radio" id="radio-2" name="radioset-1" />
+                &lt;label for="radio-2">dogs&lt;/label>
+            &lt;/div>
+
+            &lt;div class="ff-radio">
+                &lt;input type="radio" id="radio-3" name="radioset-1" />
+                &lt;label for="radio-3">birds&lt;/label>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+            <!--  DROPDOWNS  ======================================================================================= -->
+            <div id="select-options" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Select options</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Select dropdowns come with a <code>.ff-select</code> class, again with a <code>.ff-form-unit</code> parent.</p>
+                </div>
+
+                <div class="portion half">
+                    <div class="ff-form-unit">
+                        <div class="row">
+                            <div class="portion one-fifth">
+                                <p class="no-margin">I&rsquo;m from</p>
+                            </div>
+
+                            <div class="portion four-fifths">
+                                <select class="ff-select show-inline" title="example-select" required>
+                                    <option value="0" selected>Select one...</option>
+                                    <option value="1">Asia</option>
+                                    <option value="3">Australia</option>
+                                    <option value="2">Europe</option>
+                                    <option value="4">North America</option>
+                                    <option value="5">South America</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-form-unit">
+    &lt;div class="row">
+        &lt;div class="portion one-fifth">
+            &lt;p class="no-margin">I&rsquo;m from&lt;/p>
+        &lt;/div>
+
+        &lt;div class="portion four-fifths">
+            &lt;select class="ff-select show-inline" title="example-select" required>
+                &lt;option value="" hidden>Select one&lt;/option>
+                &lt;option value="1">Asia&lt;/option>
+                &lt;option value="3">Australia&lt;/option>
+                &lt;option value="2">Europe&lt;/option>
+                &lt;option value="4">North America&lt;/option>
+                &lt;option value="5">South America&lt;/option>
+            &lt;/select>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--  BUTTONS  ============================================================================================= -->
+            <div id="buttons" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Buttons</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Buttons come with a <code>.ff-button</code> class, and myriad other options to mix and match. You can add them as an input element as well as an anchor tag.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Like most elements in FICTOAN, buttons too are modularly styled, which means you can change their look and feel just by adding classes.</p>
+                </div>
+            </div>
+
+
+            <!--  PLAIN BUTTON  ==========================================  -->
+            <div id="button-simple" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Simple button</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>Plain button, just text colour. Default is <code>text-hue</code>. Use any class from the list of colours.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button margin-all-fixed">Click me</a><br>
+                    <a class="ff-button text-indigo-80 margin-all-fixed">Click me</a>
+                </div>
+
+                <div class="portion six-twelfths">
+            <pre><code class="language-markup">&lt;a class="ff-button">&lt;/a>
+
+&lt;a class="ff-button text-indigo-80">&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+
+            <!--  PLAIN BUTTON  ==========================================  -->
+            <div id="button-bg" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Background</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>Button with background and text colour, again choose any colour from the list.</p>
+                    <p>In the <code>ff-variables</code> file, you can edit <code>$buttonGradientStartColour</code> and <code>$buttonGradientEndColour</code> to create a button with a gradient background. Default is <code>$colourHue</code> and <code>$colourAnalogue</code></p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button bg-pistachio-60 text-green-90 margin-all-fixed">Click me</a><br>
+                    <a class="ff-button border-green-80 text-green-90 margin-all-fixed">Click me</a><br>
+                    <a class="ff-button border-green-80 bg-pistachio-60 text-green-90 margin-all-fixed">Click me</a><br>
+                    <a class="ff-button bg-gradient text-red margin-all-fixed">Click me</a><br>
+                </div>
+
+                <div class="portion six-twelfths">
+            <pre><code class="language-markup">&lt;a class="ff-button bg-pistachio-60 text-green-90">Click me&lt;/a>
+
+&lt;a class="ff-button border-green-80 text-green-90">Click me&lt;/a>
+
+&lt;a class="ff-button border-green-80 bg-pistachio-60 text-green-90">Click me&lt;/a>
+
+&lt;a class="ff-button bg-gradient text-white">Click me&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+
+            <!--  PLAIN BUTTON  ==========================================  -->
+            <div id="button-size" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Sizes</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>Button sizes, from <code>size-tiny</code> to <code>size-large</code>. For a normal size, don&rsquo;t add a size class.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button bg-blue-80 text-white size-tiny margin-all-fixed">Click me</a><br>
+                    <a class="ff-button bg-blue-80 text-white size-small margin-all-fixed">Click me</a><br>
+                    <a class="ff-button bg-blue-80 text-white margin-all-fixed">Click me</a><br>
+                    <a class="ff-button bg-blue-80 text-white size-large margin-all-fixed">Click me</a><br>
+                    <a class="ff-button bg-blue-80 text-white size-huge margin-all-fixed">Click me</a>
+                </div>
+
+                <div class="portion six-twelfths">
+            <pre><code class="language-markup">&lt;a class="ff-button size-tiny bg-blue-80 text-white">Click me&lt;/a>
+
+&lt;a class="ff-button size-small bg-blue-80 text-white">Click me&lt;/a>
+
+// Normal size
+&lt;a class="ff-button bg-blue-80 text-white">Click me&lt;/a>
+
+&lt;a class="ff-button size-large bg-blue-80 text-white">Click me&lt;/a>
+
+&lt;a class="ff-button size-huge bg-blue-80 text-white">Click me&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+
+            <!--  PLAIN BUTTON  ==========================================  -->
+            <div id="button-shape" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Shape</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>Button with background, text colour and shaped edges.</p>
+                    <p>The circular button is a standard 64&times;64, but you can change the size of the icon inside.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button shape-rounded bg-teal-70 text-white margin-all-fixed">Click me</a><br>
+                    <a class="ff-button shape-curved bg-teal-70 text-white margin-all-fixed">Click me</a><br>
+                    <a class="ff-button shape-circular bg-teal-70 margin-all-fixed">
+                        <img class="icon-medium" src="icons/icon-cloud.svg">
+                    </a>
+                </div>
+
+                <div class="portion six-twelfths">
+            <pre><code class="language-markup">// Rounded edges
+&lt;a class="ff-button shape-rounded bg-teal-70 text-white">&lt;/a>
+
+// Curved edges
+&lt;a class="ff-button shape-curved bg-teal-70 text-white">&lt;/a>
+
+// Circular button
+&lt;a class="ff-button shape-circular bg-teal-70">
+&lt;img class="icon-medium" src="icons/icon-cloud.svg">
+&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+            <!--  SHADOW =================================================  -->
+            <div id="button-shadow" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Shadow</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>Button with shadows. There are three varieties.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button shape-rounded bg-yellow-10 text-red-70 shadow-mild margin-all-fixed">Click me</a><br>
+                    <a class="ff-button shape-rounded bg-yellow-10 text-red-70 shadow-hard margin-all-fixed">Click me</a><br>
+                    <a class="ff-button shape-rounded bg-yellow-10 text-red-70 shadow-soft margin-all-fixed">Click me</a>
+                </div>
+
+                <div class="portion six-twelfths">
+            <pre><code class="language-markup">// Mild shadow
+&lt;a class="ff-button shape-rounded bg-teal-70 text-white shadow-mild">Click me&lt;/a>
+
+// Hard shadow
+&lt;a class="ff-button shape-rounded bg-teal-70 text-white shadow-hard">Click me&lt;/a>
+
+// Soft shadow
+&lt;a class="ff-button shape-rounded bg-teal-70 text-white shadow-soft">Click me&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+
+
+            <!--  TAGS  ==================================================  -->
+            <div id="button-tags" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Tags</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>You can also create tag pills. Include a <code>with-delete</code> class to add a &times; on the right.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-pill size-tiny shape-curved bg-orange-80 text-white text-regular">kiwi</a>
+                    <a class="ff-pill with-delete size-tiny shape-curved bg-orange-80 text-white text-regular">kiwi</a><br>
+
+                    <a class="ff-pill size-small shape-curved bg-orange-80 text-white text-regular">kiwi</a>
+                    <a class="ff-pill with-delete size-small shape-curved bg-orange-80 text-white text-regular">kiwi</a><br>
+
+                    <a class="ff-pill shape-curved bg-orange-80 text-white text-regular">kiwi</a>
+                    <a class="ff-pill with-delete shape-curved bg-orange-80 text-white text-regular">kiwi</a><br>
+
+                    <a class="ff-pill size-large shape-curved bg-orange-80 text-white text-regular">kiwi</a>
+                    <a class="ff-pill with-delete size-large shape-curved bg-orange-80 text-white text-regular">kiwi</a><br>
+
+                    <a class="ff-pill size-huge shape-curved bg-orange-80 text-white text-regular">kiwi</a>
+                    <a class="ff-pill with-delete size-huge shape-curved bg-orange-80 text-white text-regular">kiwi</a><br>
+                </div>
+
+                <div class="portion six-twelfths">
+                    <pre><code class="language-markup">&lt;a class="ff-pill size-large shape-curved bg-orange-80 text-white text-regular">kiwi&lt;/a>
+&lt;a class="ff-pill with-delete size-large shape-curved bg-orange-80 text-white text-regular">kiwi&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+
+            <div class="border-gray margin-bottom-tiny"></div>
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>So, basically, you can combine all of the above to create this monstrosity.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button size-large shape-curved bg-gradient-eg border-cyan-80 text-indigo-40 shadow-soft">This is fine</a><br>
+                </div>
+
+                <div class="portion six-twelfths">
+                    <pre><code class="language-markup">&lt;a class="ff-button size-large shape-curved bg-gradient border-cyan-80 text-indigo-40 shadow-soft">This is fine&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+
+            <!--  STATES  ================================================  -->
+            <div id="button-states" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>States</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>And finally, you can create a disabled button with a simple <code>disabled</code> attribute in HTML. This will render the button unclickable, over-ride shadow classes, and reduce the opacity.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button shape-curved bg-sky text-white shadow-hard" disabled>Can’t click me, bro</a>
+                </div>
+
+                <div class="portion six-twelfths">
+                    <pre><code class="language-markup">&lt;a class="ff-button" disabled>Can’t click me, bro&lt;/a></code></pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion three-twelfths">
+                    <p>Add a <code>.loading</code> class to display a simple CSS spinner within the button. This will also render the button unclickable and remove shadows.</p>
+                </div>
+
+                <div class="portion three-twelfths">
+                    <a class="ff-button with-loader shape-curved bg-pink-90 text-white shadow-hard">Loading</a>
+                </div>
+
+                <div class="portion six-twelfths">
+                    <pre><code class="language-markup">&lt;a class="ff-button with-loader shape-curved bg-pink-90 text-white shadow-hard">Can’t click me&lt;/a></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--  DROPDOWNS  =========================================================================================== -->
+            <div id="progress-bar" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Progress bar</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Progress bars use the HTML5 <code>progress</code> element, rather than a purely CSS styled div. You can also change the title of the progress bar in HTML, and the value to dynamically change by getting the <code>value</code> attribute via JS.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>You can change the <code>$progressBarBG</code> and <code>$progressBarFill</code> colour values in the <code>ff-variables</code> file. Defaults are <code>$colorTint</code> and <code>$colorHue</code> respectively.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p class="progress-bar-title">Download</p>
+                    <p class="progress-bar-value">40%</p>
+                    <progress class="ff-progress-bar" value="40" max="100"></progress>
+                </div>
+
+                <div class="portion half">
+            <pre><code class="language-markup">&lt;p class="progress-bar-title">Download&lt;/p>
+&lt;p class="progress-bar-value">via JS&lt;/p>
+&lt;progress class="ff-progress-bar" value="40" max="100">&lt;/progress></code></pre>
+                </div>
+            </div>
+
+            <!--<div class="row">-->
+                <!--<div class="portion whole">-->
+                    <!--<div class="range-slider">-->
+                        <!--<input class="slider-range" type="range" value="0" min="0" max="100" step="10">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <!--  =====================================================================================================  -->
+        <!--  COMPONENTS
+        <!--  =====================================================================================================  -->
+
+        <section id="section-components">
+            <div class="row">
+                <div class="portion whole">
+                    <div class="border-thick margin-bottom-tiny"></div>
+                    <h3 class="margin-bottom-fixed"><strong>Components</strong></h3>
+                </div>
+            </div>
+
+
+
+
+
+            <!--  SIDEBAR  ========================================================================================= -->
+            <div id="comp-header" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Header</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>The header is a simple horizontal bar on the top of the page, which displays a logo on the left, and a list of links on the right.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Reduce the window width here to check how it behaves on smaller screens.</p>
+                </div>
+            </div>
+
+            <header class="ff-header bg-grey-10 shadow-hard margin-bottom-tiny">
+                <div id="header-logo">
+                    <img src="images/fictoan-logo.svg">
+                </div>
+
+                <label for="menu-toggle" class="links-toggle">
+                    <img class="icon-small" src="icons/icon-menu.svg">
+                </label>
+                <input type="checkbox" id="menu-toggle"/>
+
+                <nav class="header-links">
+                    <ul>
+                        <li class="nav-item">
+                            <a>Link 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ff-button shape-rounded shadow-hard bg-green text-white">Button</a>
+                        </li>
+                        <li class="nav-item">
+                            <a>Link 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a>Link 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a>Link 4</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="spacer-tiny"></div>
+
+            <!--  STRUCTURE  =========================  -->
+            <div id="header-structure" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Structure</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>&bull; The <code>.ff-header</code> is 56px tall.</p>
+                    <p>&bull; The first bit is the <code>#header-logo</code>, which sits on the left and takes up the entire height of the header. The image inside is defined in HTML.</p>
+                    <p>&bull; Next is the checkbox to show/hide the menu in the mobile view. The actual checkbox element is hidden, and the label is an hamburger icon, with an <code>.icon-small</code> class. This is hidden up till 600px viewport width.</p>
+                        <p>&bull; Then comes the <code>nav.ff-nav</code>. It is immediately succeeded by an <code>ul</code> element. Add <code>li</code> elements with an <code>a</code> tag inside, and you&rsquo;re good to go. You can add buttons in here, too.</p>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;header class="ff-header bg-grey-10 shadow-hard">
+    &lt;div id="header-logo">
+        &lt;img src="images/fictoan-logo.svg">
+    &lt;/div>
+
+    &lt;label for="menu-toggle" class="links-toggle">
+        &lt;img class="icon-small" src="icons/icon-menu.svg">
+    &lt;/label>
+    &lt;input type="checkbox" id="menu-toggle"/>
+
+    &lt;nav class="header-links">
+        &lt;ul>
+            &lt;li class="nav-item">
+                &lt;a>Link 1&lt;/a>
+            &lt;/li>
+            &lt;li class="nav-item">
+                &lt;a class="ff-button shape-rounded shadow-hard bg-green text-white">Button 1&lt;/a>
+            &lt;/li>
+            &lt;li class="nav-item">
+                &lt;a>Link 2&lt;/a>
+            &lt;/li>
+            &lt;li class="nav-item">
+                &lt;a>Link 3&lt;/a>
+            &lt;/li>
+            &lt;li class="nav-item">
+                &lt;a>Link 4&lt;/a>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/nav>
+&lt;/header></code></pre>
+                </div>
+            </div>
+
+
+
+            <!--  POSITIONING  ===========================  -->
+            <div id="header-position" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Position</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>THe default behaviour of the header is to scroll along with the page. To make the header stick to the top of the page when scrolling, add a <code>.fixed-on-top</code> class to the header.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Want it to stick to the bottom instead? Add a <code>.fixed-on-bottom</code> class. Take care to add a bit of margin to the bottom-most body element to avoid overlapping.</p>
+                </div>
+            </div>
+
+            <!--  STYLING  ===========================  -->
+            <div id="header-styling" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Styling</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Basic styling is done by adding classes to the <code>.ff-header</code> element in HTML. You can add background classes and shadow classes. Default is <code>bg-grey-10</code> and <code>shadow-hard</code>.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>There are a few variables you can tweak to change the look and feel of the header.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="portion one-sixth">
+                    <code>$headerLinkBG</code>
+                </div>
+                <div class="portion five-sixths">
+                    <p>Changes the background colour of the links on the right. More evident in the mobile view. Default is <code>$colorGrey-10</code>.</p>
+                </div>
+
+                <div class="portion one-sixth">
+                    <code>$headerLinkColor</code>
+                </div>
+                <div class="portion five-sixths">
+                    <p>Changes the text colour of the links. Default is <code>$colorShade</code>.</p>
+                </div>
+
+                <div class="portion one-sixth">
+                    <code>$headerLinkHoverColor</code>
+                </div>
+                <div class="portion five-sixths">
+                    <p>Changes the text colour of the links on hover. Default is <code>$colorHue</code>.</p>
+                </div>
+
+                <div class="portion one-sixth">
+                    <code>$navItemBorderColor</code>
+                </div>
+                <div class="portion five-sixths">
+                    <p>Draws a 1px line between the links in mobile view. Default is <code>$colorGrey-20</code>.</p>
+                </div>
+            </div>
+
+
+            <!--  RESPONSIVENESS  ====================  -->
+            <div id="header-responsiveness" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Responsiveness</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>On screens less than 600px wide, the <code>.ff-nav</code> element is hidden, and is replaced by the hamburger icon. Tapping this icon slides open the list of links, stacked vertically.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>The logo remains on the left, unaffected by this rearrangement of elements.</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!--  SIDEBAR  ========================================================================================= -->
+            <div id="comp-sidebar" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Sidebar</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>The sidebar is a slightly more complex component, like the one you&rsquo;re on the left. It is a fixed-width div with collapsible, nested folders and sub-links.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Below is the markup for the sidebar setup. The sidebar is 240px when expanded, and 48px when collapsed.</p>
+                </div>
+            </div>
+
+            <div class="box bg-tint">
+                <div class="portion whole">
+                    <p><strong>body.page-with-sidebar</strong></p>
+                </div>
+
+                <div class="portion one-sixth bg-hue" style="height:80px">
+                    <p><strong>div.ff-sidebar-container</strong></p>
+                </div>
+
+                <div class="portion five-sixths bg-analogue" style="height:80px">
+                    <p><strong>div.content-container</strong></p>
+                </div>
+
+                <div class="portion whole">
+                    <p><strong>div.clear-both</strong></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>The layout pretty simple&mdash; <br>
+                        &bull; Add a <code>.page-with-sidebar</code> class to the <code>body</code>.<br>
+                        &bull; Within this add a <code>.ff-sidebar-container</code> and a <code>.ff-content-container</code> as siblings.<br>
+                        &bull; Then, add a <code>nav.ff-sidebar</code> within <code>.ff-sidebar-container</code>.</p>
+
+                    <p>There&rsquo;s a clearfix div just before the close of body. That&rsquo;s it.</p>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;body class="page-with-sidebar">
+    &lt;div class="ff-sidebar-container">
+        &lt;nav class="ff-sidebar">
+            //  Links and folders
+        &lt;/nav>
+    &lt;/div>
+
+    &lt;div class="ff-content-container">
+        //  All your content
+    &lt;/div>
+
+    &lt;div class="clear-both">&lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+            <!--  STRUCTURE  =========================  -->
+            <div id="sidebar-structure" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Structure</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Use simple anchor tags to list them as links on the sidebar. For folders, FICTOAN uses the HTML5 <code>details</code> and <code>summary</code> elements, as they offer the open and collapse functionality by default instead of the usual CSS checkbox hack or extra javascript.</p>
+
+                    <p>A <code>details</code> tag with a <code>summary</code> immediate child creates a simple folder that opens and closes on click.</p>
+
+                    <p>For a nested folder, just add another <code>details</code> tag within the previous <code>details</code> tag, as a sibling to the <code>summary</code> element. You can keep doing this infinitely, but take care not to get in too deep, you might get stuck in limbo forever.</p>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-sidebar-container">
+    &lt;nav class="ff-sidebar">
+        &lt;!--  Single links  -->
+        &lt;a href="#">&lt;/a>
+
+        &lt;!--  Folder  -->
+        &lt;details>
+            &lt;summary>
+                &lt;a href="#">&lt;/a>
+            &lt;/summary>
+            &lt;a href="#">&lt;/a>
+            &lt;a href="#">&lt;/a>
+        &lt;/details>
+
+        &lt;!--  Folder with nested sub-folder  -->
+        &lt;details>
+            &lt;summary>
+                &lt;a href="#">&lt;/a>
+            &lt;/summary>
+            &lt;a href="#">&lt;/a>
+            &lt;a href="#">&lt;/a>
+            &lt;details>
+                &lt;summary>
+                    &lt;a href="#">&lt;/a>
+                &lt;/summary>
+                &lt;a href="#">&lt;/a>
+                &lt;a href="#">&lt;/a>
+            &lt;/details>
+        &lt;/details>
+    &lt;/nav>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+            <!--  OPEN AND COLLAPSE  =================  -->
+            <div id="sidebar-open-collapse" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Open and collapse</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>This is the only JS part in FICTOAN.</p>
+                    <p>The sidebar opens and closes when you click the first child element of the <code>.ff-sidebar</code> div. It can be an image, a text element or just an icon, it will still work.</p>
+
+                    <p>The sidebar is 240px wide when open, and 48px when collapsed. When collapsed, you can still click on the icons to navigate to the corresponding div. The sidebar also automatically collapsed at screen widths less than 800px wide.</p>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-js">var parentContainer = document.getElementsByClassName("ff-sidebar-container")[0];
+var firstChild = document.getElementsByClassName("ff-sidebar")[0].children[0];
+
+function mainNavToggle() {
+    parentContainer.classList.toggle("collapsed");
+}
+
+firstChild.addEventListener("click", mainNavToggle);
+
+window.onresize = function() {
+    if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
+    else parentContainer.classList.remove("collapsed");
+};</code></pre>
+                </div>
+            </div>
+
+
+
+
+            <div id="sidebar-adding-logo" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Adding a logo</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Add an <code>a</code> tag with an <code>sidebar-logo</code> id. Within this add two iamges, one with <code>#logo-big</code> and <code>logo-small</code>. The former is displayed when the sidebar is expanded, and the latter when it is collapsed. Ideal sizes for the bigger image is 240&times;80, and smaller, any square size will do.</p>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-sidebar-container">
+    &lt;nav class="ff-sidebar">
+        &lt;a id="sidebar-logo">
+            &lt;img id="logo-big" src="path/to/image" />
+            &lt;img id="logo-small" src="path/to/image" />
+        &lt;/a>
+        ...
+        //  Folders and links
+    &lt;/nav>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+            <!--  CARD  ============================================================================================ -->
+            <div id="comp-card" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Card</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>A card is a simple UI element that is best used to display disparate chunks of information. Their styling is done by simply adding classes.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Cards always take the full-width of the parent, and height matches the width.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <div class="ff-card">
+                        <p>Some element</p>
+                    </div>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-card">
+    &lt;p>Some element&lt;/p>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+            <div id="card-bg" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Background</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <div class="row">
+                        <div class="portion one-third">
+                            <div class="ff-card"></div>
+                        </div>
+
+                        <div class="portion one-third">
+                            <div class="ff-card bg-teal-70"></div>
+                        </div>
+
+                        <div class="portion one-third">
+                            <div class="ff-card bg-slate-40"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-card">&lt;/div>
+&lt;div class="ff-card bg-teal-70">&lt;/div>
+&lt;div class="ff-card bg-slate-40">&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+            <div id="card-shape" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Shape</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <div class="row">
+                        <div class="portion one-third">
+                            <div class="ff-card shape-rounded bg-amber-60"></div>
+                        </div>
+
+                        <div class="portion one-third">
+                            <div class="ff-card shape-curved bg-violet-50"></div>
+                        </div>
+
+                        <div class="portion one-third">
+                            <div class="ff-card shape-circular bg-pink-70"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-card shape-rounded bg-amber-70">&lt;/div>
+&lt;div class="ff-card shape-curved bg-violet-70">&lt;/div>
+&lt;div class="ff-card shape-circular bg-pink-70">&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+            <div id="card-circular" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Circular cards</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Circular cards are a bit different. They take the full-width of the parent containter, and they resize automatically to remain a circle.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>Add a <code>.circular-card-content</code> to ensure your content remains centered inside the circle. But don&rsquo;t to cram too much into it, though, it will overflow.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <div class="box">
+                        <div class="portion one-sixth half-on-mobile">
+                            <div class="ff-card shape-circular bg-grey-20">
+                                <div class="circular-card-content">
+                                    <p>Text</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portion one-third half-on-mobile">
+                            <div class="ff-card shape-circular bg-grey-20">
+                                <div class="circular-card-content">
+                                    <img class="icon-medium" src="icons/icon-droplet.svg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portion half">
+                            <div class="ff-card shape-circular bg-grey-20">
+                                <div class="circular-card-content">
+                                    <img class="icon-medium" src="icons/icon-layers.svg">
+                                    <p>An icon and text</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">//  Just text
+&lt;div class="portion one-sixth">
+    &lt;div class="ff-card shape-circular bg-grey-20">
+        &lt;div class="circular-card-content">
+            &lt;p>Text&lt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+
+//  Icon or image
+&lt;div class="portion one-third">
+    &lt;div class="ff-card shape-circular bg-grey-20">
+        &lt;div class="circular-card-content">
+            &lt;img class="icon-medium" src="icons/icon-droplet.svg">
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+
+//  Icon and text
+&lt;div class="portion half">
+    &lt;div class="ff-card shape-circular bg-grey-20">
+        &lt;div class="circular-card-content">
+            &lt;img class="icon-medium" src="icons/icon-layers.svg">
+            &lt;p>An icon and text&lt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+            <div id="card-shadow" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Shadow</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <div class="row">
+                        <div class="portion one-third">
+                            <div class="ff-card shape-rounded bg-white shadow-mild"></div>
+                        </div>
+
+                        <div class="portion one-third">
+                            <div class="ff-card shape-curved bg-white shadow-hard"></div>
+                        </div>
+
+                        <div class="portion one-third">
+                            <div class="ff-card shape-circular bg-white shadow-soft"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="portion one-third">
+    &lt;div class="ff-card shape-rounded bg-white shadow-mild">&lt;/div>
+&lt;/div>
+
+&lt;div class="portion one-third">
+    &lt;div class="ff-card shape-curved bg-white shadow-hard">&lt;/div>
+&lt;/div>
+
+&lt;div class="portion one-third">
+    &lt;div class="ff-card shape-circular bg-white shadow-soft">&lt;/div>
+&lt;/div>&lt;</code></pre>
+                </div>
+            </div>
+
+
+            <div id="card-padding" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Padding</h6>
+                </div>
+            </div>
+
+
+            <div class="row small-gutters">
+                <div class="portion one-fifth">
+                    <div class="ff-card padding-huge shape-rounded bg-white shadow-hard">
+                        <p>Some random text to demonstrate padding within a card element.</p>
+                    </div>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card padding-large shape-rounded bg-white shadow-hard">
+                        <p>Some random text to demonstrate padding within a card element.</p>
+                    </div>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card shape-rounded bg-white shadow-hard">
+                        <p>Some random text to demonstrate padding within a card element.</p>
+                    </div>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card padding-small shape-rounded bg-white shadow-hard">
+                        <p>Some random text to demonstrate padding within a card element.</p>
+                    </div>
+                </div>
+
+                <div class="portion one-fifth">
+                    <div class="ff-card padding-tiny shape-rounded bg-white shadow-hard">
+                        <p>Some random text to demonstrate padding within a card element.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row small-gutters">
+                <div class="portion one-fifth">
+                    <pre class="margin-top-fixed"><code class="language-markup">//  Huge padding
+&lt;div class="ff-card padding-huge shape-rounded bg-white shadow-hard">
+    &lt;p>Some random text to demonstrate padding within a card element.&lt;/p>
+&lt;/div></code></pre>
+                </div>
+
+                <div class="portion one-fifth">
+                    <pre class="margin-top-fixed"><code class="language-markup">//  Large padding
+&lt;div class="ff-card padding-large shape-rounded bg-white shadow-hard">
+    &lt;p>Some random text to demonstrate padding within a card element.&lt;/p>
+&lt;/div></code></pre>
+                </div>
+
+                <div class="portion one-fifth">
+                    <pre class="margin-top-fixed"><code class="language-markup">//  Normal padding
+&lt;div class="ff-card shape-rounded bg-white shadow-hard">
+    &lt;p>Some random text to demonstrate padding within a card element.&lt;/p>
+&lt;/div></code></pre>
+                </div>
+
+                <div class="portion one-fifth">
+                    <pre class="margin-top-fixed"><code class="language-markup">//  Small padding
+&lt;div class="ff-card padding-small shape-rounded bg-white shadow-hard">
+    &lt;p>Some random text to demonstrate padding within a card element.&lt;/p>
+&lt;/div></code></pre>
+                </div>
+
+                <div class="portion one-fifth">
+                    <pre class="margin-top-fixed"><code class="language-markup">//  Tiny padding
+&lt;div class="ff-card padding-tiny shape-rounded bg-white shadow-hard">
+    &lt;p>Some random text to demonstrate padding within a card element.&lt;/p>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+            <div id="card-examples" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Examples</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion one-third">
+                    <div class="ff-card shape-rounded shadow-soft">
+                        <img class="horizontally-center-this margin-bottom-tiny" src="images/round-profile.png" style="width: 300px;">
+                        <h5 class="text-center no-margin-bottom">Caterina Murino</h5>
+                        <p class="text-center no-margin-top">Actress</p>
+
+                        <p class="text-center no-margin-bottom">Caterina Murino (born 15 September 1977) is an Italian actress from Sardinia. Murino was born in Cagliari, Sardinia, and initially wanted to be a doctor. She finished fourth in the 1996 Miss Italy contest.</p>
+
+                        <p class="text-center text-small text-grey-40">&mdash; From Wikipedia</p>
+
+                        <div class="row">
+                            <div class="portion half">
+                                <a><img src="icons/icon-edit.svg" class="icon-small show-inline margin-right-fixed"></a>
+                                <a><img src="icons/icon-activity.svg" class="icon-small show-inline"></a>
+                            </div>
+
+                            <div class="portion half">
+                                <a class="ff-button size-small shape-rounded bg-accent text-white shadow-hard pull-right">SAVE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portion two-thirds">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-card shape-rounded shadow-soft">
+    &lt;img class="horizontally-center-this margin-bottom-tiny" src="images/round-profile.png">
+    &lt;h5 class="text-center no-margin-bottom">Caterina Murino&lt;/h5>
+    &lt;p class="text-center no-margin-top">Actress&lt;/p>
+
+    &lt;p class="text-center no-margin-bottom">Caterina Murino (born 15 September 1977) is an Italian actress from Sardinia. Murino was born in Cagliari, Sardinia, and initially wanted to be a doctor. She finished fourth in the 1996 Miss Italy contest.&lt;/p>
+
+    &lt;p class="text-center text-small text-grey-40">&mdash; From Wikipedia&lt;/p>
+
+    &lt;div class="row">
+        &lt;div class="portion half">
+            &lt;a>&lt;img src="icons/icon-edit.svg" class="icon-small show-inline margin-right-fixed">&lt;/a>
+            &lt;a>&lt;img src="icons/icon-activity.svg" class="icon-small show-inline">&lt;/a>
+        &lt;/div>
+
+        &lt;div class="portion half">
+            &lt;a class="ff-button size-small shape-rounded bg-accent text-white shadow-hard pull-right">SAVE&lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+        </section>
+    </div> <!--  End content  -->
+
+
+
+
+
+
+
+
+
+
+    <div class="clear-both"></div>
+
+
+    <script>
+        var parentContainer = document.getElementsByClassName("ff-sidebar-container")[0];
+        var firstChild = document.getElementsByClassName("ff-sidebar")[0].children[0];
+
+        function mainNavToggle() {
+            parentContainer.classList.toggle("collapsed");
+        }
+
+        firstChild.addEventListener("click", mainNavToggle);
+
+
+        window.onresize = function() {
+            if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
+            else parentContainer.classList.remove("collapsed");
+        };
+    </script>
+</body>

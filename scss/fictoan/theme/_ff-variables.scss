@@ -1,0 +1,54 @@
+$fontSans  : "Work Sans", sans-serif;
+$fontSerif : "Crimson Text", serif;
+$fontMono  : "Space Mono", monospace;
+
+//  Paragraph-specific variables
+$baseFontSize : 1em;
+$scaleFactor  : 1.2;
+
+$paraSerifFontSize   : 1.1em;
+$paraSerifLineHeight : 1.4;
+
+//  Body basics  ==============================================================
+$bodyBgColor : $colorWhite;
+
+$bodyFontSize : 1em;
+$bodyLineHeight : 1.6;
+
+$headingFontWeight : 600;
+
+//  Selection highlight
+$textHighlightBg    : $colorHue;
+$textHighlightColor : $colorWhite;
+
+//  Variables for text
+$bodyFontColor : $colorShade;
+
+$linkColor      : $colorHue;
+$linkHoverColor : rgba($colorHue, 0.64);
+
+//  Gradient button  ==========================================================
+$buttonGradientStartColour : $colorHue;
+$buttonGradientEndColour   : $colorAnalogue;
+
+//  Progress bar  =============================================================
+$progressBarBG   : $colorTint;
+$progressBarFill : $colorHue;
+
+//  Header  ===================================================================
+
+$headerLinkBG : $colorGrey-10;
+
+$headerLinkColor      : $colorShade;
+$headerLinkHoverColor : $colorHue;
+
+$navItemBorderColor : 1px solid $colorGrey-20;
+
+//  Sidebar  ==================================================================
+$sideBarBG        : $colorGrey-10;
+$sideBarLogoBG    : $colorGrey-10;
+$sideBarItemBG    : $colorGrey-10;
+$sidebarTextColor : $colorShade;
+
+$sideBarItemBGOnHover    : $colorGrey-20;
+$sidebarTextColorOnHover : $colorAnalogue;

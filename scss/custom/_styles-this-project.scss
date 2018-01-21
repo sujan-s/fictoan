@@ -1,0 +1,93 @@
+//  Add your project-specific styling rules here
+
+@font-face {
+    font-family : "Archia";
+    font-weight : 400;
+    src         : url("../fonts/Archia-Regular.woff2") format('woff2'),
+                  url("../fonts/Archia-Regular.woff") format('woff');
+}
+
+@font-face {
+    font-family : "Archia";
+    font-weight : 600;
+    src         : url("../fonts/Archia-Bold.woff2") format('woff2'),
+                  url("../fonts/Archia-Bold.woff") format('woff');
+}
+
+strong { font-weight : 600; }
+p { color : rgba($colorShade, 0.72); }
+h1, h2, h3, h4, h5, h6 { font-weight : 400; }
+
+.text-regular { font-weight: 400; }
+.text-bold    { font-weight: 600; }
+
+section { margin-bottom: 12vmin; }
+
+.border-thick {
+    width      : 100%;
+    height     : 3px;
+    background : $colorShade;
+}
+
+.border-thin {
+    width      : 100%;
+    height     : 1px;
+    background : $colorShade;
+}
+
+.border-gray {
+    width      : 100%;
+    height     : 1px;
+    background : $colorGrey-20;
+}
+
+#hero-section {
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    width      : 100%;
+    height     : 100vh;
+    background : $colorHue;
+    z-index    : -5;
+}
+
+#opener h1 { font-size: 10vmax; }
+#opener h2 { font-size: 8vmax; }
+#opener h3 { font-size: 6vmax; }
+
+#opener h1,
+#opener h2,
+#opener h3 {
+    line-height: 0.92;
+    word-wrap: break-word;
+}
+
+section               { margin-top: 16vmax; }
+section:first-of-type { margin-top: initial; }
+
+//#section-colour .ff-card { border: none; }
+
+#transparent-card {
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size: 22px 22px;
+    background-position: 0 0, 0 11px, 11px -11px, -11px 0;
+}
+
+.ff-button.bg-gradient-eg {
+    background  : -webkit-linear-gradient(-45deg, $buttonGradientStartColour-eg 0%, $buttonGradientEndColour-eg 100%);
+    background  :    -moz-linear-gradient(-45deg, $buttonGradientStartColour-eg 0%, $buttonGradientEndColour-eg 100%);
+    background  :         linear-gradient(135deg, $buttonGradientStartColour-eg 0%, $buttonGradientEndColour-eg 100%);
+}
+
+.ff-sidebar a#intro::before           { background-image : url(../docs/icons/icon-menu.svg); }
+.ff-sidebar a#getting-started::before { background-image : url(../docs/icons/icon-activity.svg); }
+.ff-sidebar a#layout::before          { background-image : url(../docs/icons/icon-grid.svg); }
+.ff-sidebar a#typography::before      { background-image : url(../docs/icons/icon-type.svg); }
+.ff-sidebar a#colour::before          { background-image : url(../docs/icons/icon-droplet.svg); }
+.ff-sidebar a#inputs::before          { background-image : url(../docs/icons/icon-edit.svg); }
+.ff-sidebar a#components::before      { background-image : url(../docs/icons/icon-layers.svg); }
+
+.code-box pre {
+    height   : 600px;
+    overflow : scroll;
+}
