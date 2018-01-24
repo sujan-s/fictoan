@@ -4859,30 +4859,9 @@ i, em {
 .ff-form-unit {
   position: relative; }
 
-.ff-form-unit:only-of-type,
 .ff-form-unit:not(:last-child) {
   margin-bottom: 40px; }
 
-.row.ff-multi-field-form-unit,
-.ff-multi-field-form-unit .portion {
-  margin-bottom: 0; }
-
-.ff-form-unit .portion {
-  padding-left: 0;
-  padding-right: 0; }
-
-@media all and (max-width: 600px) {
-  .row.ff-multi-field-form-unit:not([class*='-mobile']) .portion:first-of-type,
-  .row.ff-multi-field-form-unit:not([class*='-mobile']) .portion:last-of-type {
-    padding: 0; } }
-@media all and (min-width: 601px) and (max-width: 900px) {
-  .row.ff-multi-field-form-unit:not([class*='tab-pt']) .portion:first-of-type,
-  .row.ff-multi-field-form-unit:not([class*='tab-pt']) .portion:last-of-type {
-    padding: 0; } }
-@media all and (min-width: 901px) and (max-width: 1200px) {
-  .row.ff-multi-field-form-unit:not([class*='tab-ls']) .portion:first-of-type,
-  .row.ff-multi-field-form-unit:not([class*='tab-ls']) .portion:last-of-type {
-    padding: 0; } }
 .ff-form-unit > label {
   position: absolute;
   top: 4px;
@@ -4891,13 +4870,16 @@ i, em {
   transition: all 0.16s;
   user-select: none; }
 
+.ff-form-unit .row,
+.ff-form-unit .portion {
+  margin-bottom: 0; }
+
 .ff-input {
   position: relative;
   width: 100%;
   border: none;
   outline: none;
   background: white;
-  font-family: "Archia", sans-serif;
   padding: 4px;
   border-bottom: 1px solid #d4d4d4;
   line-height: 1.35; }
