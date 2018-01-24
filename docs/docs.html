@@ -155,9 +155,9 @@
     </div>
 
     <div class="ff-content-container">
-        <!--  =====================================================================================================  -->
+        <!--  =========================================================================================================  -->
         <!--  INTRO
-        <!--  =====================================================================================================  -->
+        <!--  =========================================================================================================  -->
         <section id="section-intro">
             <div class="row padding-top-small margin-bottom-small">
                 <div class="portion two-thirds">
@@ -2500,7 +2500,7 @@ pre::after { content: "&amp;"; }
                         </div>
 
                         <form class="ff-form">
-                            <div class="row ff-multi-field-form-unit retain-layout-on-tab-ls">
+                            <div class="row">
                                 <div class="portion half">
                                     <div class="ff-form-unit">
                                         <input class="ff-input" id="first-name" placeholder=" " pattern="{1,}$" />
@@ -2531,7 +2531,7 @@ pre::after { content: "&amp;"; }
 
 
                             <div class="ff-form-unit">
-                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
+                                <div class="row">
                                     <div class="portion one-fifth">
                                         <p class="no-margin">I prefer</p>
                                     </div>
@@ -2557,7 +2557,7 @@ pre::after { content: "&amp;"; }
 
 
                             <div class="ff-form-unit">
-                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
+                                <div class="row">
                                     <div class="portion one-fifth">
                                         <p class="no-margin">I like</p>
                                     </div>
@@ -2583,7 +2583,7 @@ pre::after { content: "&amp;"; }
 
 
                             <div class="ff-form-unit margin-bottom-medium">
-                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+                                <div class="row">
                                     <div class="portion one-fifth">
                                         <p class="no-margin">I&rsquo;m from</p>
                                     </div>
@@ -2602,7 +2602,7 @@ pre::after { content: "&amp;"; }
                             </div>
 
                             <div class="ff-form-unit">
-                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+                                <div class="row vertical-center-items">
                                     <div class="portion half">
                                         <div class="ff-switch">
                                             <input type="checkbox" id="remember-toggle"/>
@@ -2611,9 +2611,11 @@ pre::after { content: "&amp;"; }
                                     </div>
 
                                     <div class="portion half">
-                                        <input class="ff-button button-plain text-grey-50 no-shadow size-small show-inline" type="reset" value="Reset">
+                                        <div class="pull-right">
+                                            <input class="ff-button button-plain text-grey-50 no-shadow" type="reset" value="Reset">
 
-                                        <input class="ff-button shape-rounded bg-hue text-white text-bold shadow-hard show-inline pull-right" type="submit" value="SUBMIT">
+                                            <input class="ff-button shape-rounded bg-hue text-white text-bold shadow-hard" type="submit" value="SUBMIT">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -4049,7 +4051,7 @@ window.onresize = function() {
 
 
         window.onresize = function() {
-            if (window.innerWidth <= 600) parentContainer.classList.add("collapsed");
+            if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
             else parentContainer.classList.remove("collapsed");
         };
     </script>
