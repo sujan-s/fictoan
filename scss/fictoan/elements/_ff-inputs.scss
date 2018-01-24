@@ -1,8 +1,38 @@
-// == INPUT UNIT ==========================================
-
+//  INPUT UNIT  ===============================================================
 .ff-form-unit { position : relative; }
 
 .ff-form-unit:not(:last-child) { margin-bottom: 40px; }
+
+.row.multi-unit-form,
+.multi-unit-form .portion { margin-bottom: 0; }
+
+.ff-form-unit:only-of-type { margin-bottom: 40px; }
+
+.ff-form-unit .portion {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media all and (max-width: 600px) {
+
+    .row.multi-unit-form:not([class*='-mobile']) .portion:first-of-type,
+    .row.multi-unit-form:not([class*='-mobile']) .portion:last-of-type { padding: 0; }
+
+}
+
+@media all and (min-width : 601px) and (max-width : 900px) {
+
+    .row.multi-unit-form:not([class*='tab-pt']) .portion:first-of-type,
+    .row.multi-unit-form:not([class*='tab-pt']) .portion:last-of-type { padding: 0; }
+
+}
+
+@media all and (min-width : 901px) and (max-width : 1200px) {
+
+    .row.multi-unit-form:not([class*='tab-ls']) .portion:first-of-type,
+    .row.multi-unit-form:not([class*='tab-ls']) .portion:last-of-type { padding: 0; }
+
+}
 
 .ff-form-unit > label {
     position    : absolute;
@@ -13,18 +43,15 @@
     user-select : none;
 }
 
-.ff-form-unit .row,
-.ff-form-unit .portion { margin-bottom: 0; }
 
-
-// == INPUT ===============================================
-
+//  INPUT =====================================================================
 .ff-input {
     position      : relative;
     width         : 100%;
     border        : none;
     outline       : none;
     background    : $colorWhite;
+    font-family   : $fontSans;
     padding       : 4px;
     border-bottom : 1px solid $colorGrey-30;
     line-height   : 1.35;
@@ -100,7 +127,7 @@
 }
 
 
-// == CHECKBOX, SWITCH and RADIO BUTTONS ======================================
+//  CHECKBOX, SWITCH and RADIO BUTTONS ========================================
 
 .ff-checkbox,
 .ff-switch,
@@ -183,7 +210,7 @@ input[type="radio"] { display : none; }
 }
 
 
-// == CHECKBOX ================================================================
+//  CHECKBOX ==================================================================
 
 //  The grey square
 .ff-checkbox label::before {
@@ -206,8 +233,7 @@ input[type="radio"] { display : none; }
 }
 
 
-// == TOGGLE SWITCH ===========================================================
-
+//  TOGGLE SWITCH =============================================================
 //  The grey oblong
 .ff-switch label::before {
     position      : absolute;
@@ -237,8 +263,7 @@ input[type="radio"] { display : none; }
 .ff-switch input[type="checkbox"]:checked + label::after { left : 18px; }
 
 
-// == RADIO-BUTTONS ===========================================================
-
+//  RADIO-BUTTONS =============================================================
 //  The grey outer circle
 .ff-radio label::before {
     width         : 16px;
@@ -261,8 +286,7 @@ input[type="radio"] { display : none; }
 
 
 
-// == SELECT DROPDOWN =========================================================
-
+//  SELECT DROPDOWN ===========================================================
 .ff-select {
     border        : none;
     outline       : none;
@@ -275,8 +299,7 @@ input[type="radio"] { display : none; }
 }
 
 
-// == PROGRESS BAR ============================================================
-
+//  PROGRESS BAR ==============================================================
 .progress-bar-title {
     display       : inline-block;
     margin-bottom : 8px;
