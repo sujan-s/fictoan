@@ -7,6 +7,21 @@
 .full-width  { width  : 100% !important; }
 .full-height { height : 100% !important; }
 
+@media all and (max-width : 600px) {
+    .full-width-on-mobile { width : 100% !important; }
+    .full-height-on-mobile { height : 100% !important; }
+}
+
+@media all and (min-width : 601px) and (max-width : 900px) {
+    .full-width-on-tab-pt { width : 100% !important; }
+    .full-height-on-tab-pt { height : 100% !important; }
+}
+
+@media all and (min-width : 901px) and (max-width : 1200px) {
+    .full-width-on-tab-ls { width : 100% !important; }
+    .full-height-on-tab-ls { height : 100% !important; }
+}
+
 .pull-left  { float : left; }
 .pull-right { float : right; }
 .clear-both { clear : both; }

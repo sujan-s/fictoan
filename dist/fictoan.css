@@ -2098,6 +2098,24 @@ progress[value]::-webkit-progress-bar {
 .full-height {
   height: 100% !important; }
 
+@media all and (max-width: 600px) {
+  .full-width-on-mobile {
+    width: 100% !important; }
+
+  .full-height-on-mobile {
+    height: 100% !important; } }
+@media all and (min-width: 601px) and (max-width: 900px) {
+  .full-width-on-tab-pt {
+    width: 100% !important; }
+
+  .full-height-on-tab-pt {
+    height: 100% !important; } }
+@media all and (min-width: 901px) and (max-width: 1200px) {
+  .full-width-on-tab-ls {
+    width: 100% !important; }
+
+  .full-height-on-tab-ls {
+    height: 100% !important; } }
 .pull-left {
   float: left; }
 
@@ -4863,8 +4881,8 @@ i, em {
 .ff-form-unit:not(:last-child) {
   margin-bottom: 40px; }
 
-.row.ff-multi-field-form-unit,
-.ff-multi-field-form-unit .portion {
+.row.ff-form-multi-unit,
+.ff-form-multi-unit .portion {
   margin-bottom: 0; }
 
 .ff-form-unit .portion {
@@ -4872,16 +4890,16 @@ i, em {
   padding-right: 0; }
 
 @media all and (max-width: 600px) {
-  .row.ff-multi-field-form-unit:not([class*='-mobile']) .portion:first-of-type,
-  .row.ff-multi-field-form-unit:not([class*='-mobile']) .portion:last-of-type {
+  .row.ff-form-multi-unit:not([class*='-mobile']) .portion:first-of-type,
+  .row.ff-form-multi-unit:not([class*='-mobile']) .portion:last-of-type {
     padding: 0; } }
 @media all and (min-width: 601px) and (max-width: 900px) {
-  .row.ff-multi-field-form-unit:not([class*='tab-pt']) .portion:first-of-type,
-  .row.ff-multi-field-form-unit:not([class*='tab-pt']) .portion:last-of-type {
+  .row.ff-form-multi-unit:not([class*='tab-pt']) .portion:first-of-type,
+  .row.ff-form-multi-unit:not([class*='tab-pt']) .portion:last-of-type {
     padding: 0; } }
 @media all and (min-width: 901px) and (max-width: 1200px) {
-  .row.ff-multi-field-form-unit:not([class*='tab-ls']) .portion:first-of-type,
-  .row.ff-multi-field-form-unit:not([class*='tab-ls']) .portion:last-of-type {
+  .row.ff-form-multi-unit:not([class*='tab-ls']) .portion:first-of-type,
+  .row.ff-form-multi-unit:not([class*='tab-ls']) .portion:last-of-type {
     padding: 0; } }
 .ff-form-unit > label {
   position: absolute;
