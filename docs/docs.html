@@ -149,15 +149,27 @@
                     <a data-scroll href="#card-examples" class="sublink">Examples</a>
                 </details>
 
-
+                <details>
+                    <summary>
+                        <a data-scroll href="#comp-table">Table</a>
+                    </summary>
+                    <a data-scroll href="#table-default" class="sublink">Default</a>
+                    <a data-scroll href="#table-padding" class="sublink">Padding</a>
+                    <a data-scroll href="#table-border" class="sublink">Borders</a>
+                    <a data-scroll href="#table-colours" class="sublink">Colours</a>
+                    <a data-scroll href="#table-hovering" class="sublink">Hovering</a>
+                    <a data-scroll href="#table-width" class="sublink">Table width</a>
+                    <a data-scroll href="#table-text" class="sublink">Text size</a>
+                    <a data-scroll href="#table-variables" class="sublink">Variables</a>
+                </details>
             </details>
         </nav>
     </div>
 
     <div class="ff-content-container">
-        <!--  =========================================================================================================  -->
+        <!--  =====================================================================================================  -->
         <!--  INTRO
-        <!--  =========================================================================================================  -->
+        <!--  =====================================================================================================  -->
         <section id="section-intro">
             <div class="row padding-top-small margin-bottom-small">
                 <div class="portion two-thirds">
@@ -2492,7 +2504,7 @@ pre::after { content: "&amp;"; }
 
             <div class="row">
                 <div class="portion half">
-                    <div class="ff-card shape-rounded bg-white shadow-hard">
+                    <div class="ff-card padding-large shape-rounded bg-white shadow-hard">
                         <div class="row">
                             <div class="portion whole">
                                 <h6 class="margin-bottom-tiny"><strong>A sample form</strong></h6>
@@ -3397,7 +3409,7 @@ pre::after { content: "&amp;"; }
 
 
 
-            <!--  POSITIONING  ===========================  -->
+            <!--  POSITIONING  =======================  -->
             <div id="header-position" class="row margin-bottom-fixed">
                 <div class="portion whole">
                     <div class="border-gray margin-bottom-tiny"></div>
@@ -3689,7 +3701,7 @@ window.onresize = function() {
 
             <div class="row">
                 <div class="portion half">
-                    <div class="ff-card">
+                    <div class="ff-card padding-medium">
                         <p>Some element</p>
                     </div>
                 </div>
@@ -3713,15 +3725,15 @@ window.onresize = function() {
                 <div class="portion half">
                     <div class="row">
                         <div class="portion one-third">
-                            <div class="ff-card"></div>
+                            <div class="ff-card padding-medium"></div>
                         </div>
 
                         <div class="portion one-third">
-                            <div class="ff-card bg-teal-70"></div>
+                            <div class="ff-card padding-medium bg-teal-70"></div>
                         </div>
 
                         <div class="portion one-third">
-                            <div class="ff-card bg-slate-40"></div>
+                            <div class="ff-card padding-medium bg-slate-40"></div>
                         </div>
                     </div>
                 </div>
@@ -3745,11 +3757,11 @@ window.onresize = function() {
                 <div class="portion half">
                     <div class="row">
                         <div class="portion one-third">
-                            <div class="ff-card shape-rounded bg-amber-60"></div>
+                            <div class="ff-card padding-medium shape-rounded bg-amber-60"></div>
                         </div>
 
                         <div class="portion one-third">
-                            <div class="ff-card shape-curved bg-violet-50"></div>
+                            <div class="ff-card padding-medium shape-curved bg-violet-50"></div>
                         </div>
 
                         <div class="portion one-third">
@@ -3856,15 +3868,15 @@ window.onresize = function() {
                 <div class="portion half">
                     <div class="row">
                         <div class="portion one-third">
-                            <div class="ff-card shape-rounded bg-white shadow-mild"></div>
+                            <div class="ff-card padding-medium shape-rounded bg-white shadow-mild"></div>
                         </div>
 
                         <div class="portion one-third">
-                            <div class="ff-card shape-curved bg-white shadow-hard"></div>
+                            <div class="ff-card padding-medium shape-curved bg-white shadow-hard"></div>
                         </div>
 
                         <div class="portion one-third">
-                            <div class="ff-card shape-circular bg-white shadow-soft"></div>
+                            <div class="ff-card padding-medium shape-circular bg-white shadow-soft"></div>
                         </div>
                     </div>
                 </div>
@@ -3907,7 +3919,7 @@ window.onresize = function() {
                 </div>
 
                 <div class="portion one-fifth">
-                    <div class="ff-card shape-rounded bg-white shadow-hard">
+                    <div class="ff-card padding-medium shape-rounded bg-white shadow-hard">
                         <p>Some random text to demonstrate padding within a card element.</p>
                     </div>
                 </div>
@@ -3974,7 +3986,7 @@ window.onresize = function() {
 
             <div class="row">
                 <div class="portion one-third">
-                    <div class="ff-card shape-rounded shadow-soft">
+                    <div class="ff-card shape-rounded padding-medium shadow-soft">
                         <img class="horizontally-center-this margin-bottom-tiny" src="images/round-profile.png" style="width: 300px;">
                         <h5 class="text-center no-margin-bottom">Caterina Murino</h5>
                         <p class="text-center no-margin-top">Actress</p>
@@ -4019,6 +4031,730 @@ window.onresize = function() {
 &lt;/div></code></pre>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+            <!--  TABLE  ==========================================================================================  -->
+            <div id="comp-table" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Table</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>FICTOAN also lets you style the ever-useful <code>table</code> tag with simple classes that you add to the appropriate element.</p>
+                </div>
+
+                <div class="portion half">
+                </div>
+            </div>
+
+            <div id="table-default" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Default table</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Here&rsquo;s a typical default table. Start by adding <code>.ff-table</code> class to the main element.</p>
+
+                    <table class="ff-table">
+                        <thead>
+                            <tr>
+                                <th>Column 01</th>
+                                <th>Column 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Row-item 1</td>
+                                <td>Row-item 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 3</td>
+                                <td>Row-item 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 5</td>
+                                <td>Row-item 6</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 7</td>
+                                <td>Row-item 8</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 9</td>
+                                <td>Row-item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table">
+    &lt;thead>
+        &lt;tr>
+            &lt;th>Column 01&lt;/th>
+            &lt;th>Column 02&lt;/th>
+        &lt;/tr>
+    &lt;/thead>
+
+    &lt;tbody>
+        &lt;tr>
+            &lt;td>Row-item 1&lt;/td>
+            &lt;td>Row-item 2&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Row-item 3&lt;/td>
+            &lt;td>Row-item 4&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Row-item 5&lt;/td>
+            &lt;td>Row-item 6&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Row-item 7&lt;/td>
+            &lt;td>Row-item 8&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Row-item 9&lt;/td>
+            &lt;td>Row-item 10&lt;/td>
+        &lt;/tr>
+    &lt;/tbody>
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div id="table-padding" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Padding</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Still too congested. Add a <code>.padding-tiny</code> class to the table. There are five padding sizes you can add&mdash; <code>-tiny</code>, <code>-small</code>, <code>-medium</code>, <code>-large</code> and <code>-huge</code>.</p>
+
+                    <table class="ff-table padding-tiny">
+                        <thead>
+                        <tr>
+                            <th>Column 01</th>
+                            <th>Column 02</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Row-item 1</td>
+                            <td>Row-item 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 3</td>
+                            <td>Row-item 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 5</td>
+                            <td>Row-item 6</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 7</td>
+                            <td>Row-item 8</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 9</td>
+                            <td>Row-item 10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table bordered padding-tiny">
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div id="table-border" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Borders</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Add a <code>.bordered-rows</code> or a <code>.bordered-columns</code> class to the table. Want both? Use <code>.bordered-all</code>.</p>
+                </div>
+
+                <div class="portion half">
+                    <p>You can change the colour of the border via the <code>$tableBorderColor</code> variable.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion one-fourth">
+                    <table class="ff-table bordered-rows padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Column 01</th>
+                                <th>Column 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Row-item 1</td>
+                                <td>Row-item 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 3</td>
+                                <td>Row-item 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 5</td>
+                                <td>Row-item 6</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 7</td>
+                                <td>Row-item 8</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 9</td>
+                                <td>Row-item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion one-fourth">
+                    <table class="ff-table bordered-columns padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Column 01</th>
+                                <th>Column 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Row-item 1</td>
+                                <td>Row-item 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 3</td>
+                                <td>Row-item 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 5</td>
+                                <td>Row-item 6</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 7</td>
+                                <td>Row-item 8</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 9</td>
+                                <td>Row-item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table bordered-rows">
+&lt;/table>
+
+&lt;table class="ff-table bordered-columns">
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="portion half">
+                    <table class="ff-table bordered-all padding-tiny">
+                        <thead>
+                        <tr>
+                            <th>Column 01</th>
+                            <th>Column 02</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Row-item 1</td>
+                            <td>Row-item 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 3</td>
+                            <td>Row-item 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 5</td>
+                            <td>Row-item 6</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 7</td>
+                            <td>Row-item 8</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 9</td>
+                            <td>Row-item 10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table bordered-all">
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="table-colours" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Colours</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Now for some stripes. Add a <code>.striped</code> class to the table.</p>
+
+                    <table class="ff-table bordered striped padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Column 01</th>
+                                <th>Column 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Row-item 1</td>
+                                <td>Row-item 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 3</td>
+                                <td>Row-item 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 5</td>
+                                <td>Row-item 6</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 7</td>
+                                <td>Row-item 8</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 9</td>
+                                <td>Row-item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table bordered striped padding-tiny">
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Alternatively, you can set individual row and text colours by adding classes. Hideous, but works. Go nuts!</p>
+
+                    <p>Make sure you remove the <code>.striped</code> class if you wanna colour individually.</p>
+
+                    <table class="ff-table bordered padding-tiny">
+                        <thead class="bg-accent text-white">
+                            <tr>
+                                <th>Column 01</th>
+                                <th>Column 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="bg-blue-60 text-crimson-80">
+                                <td>Row-item 1</td>
+                                <td>Row-item 2</td>
+                            </tr>
+                            <tr class="bg-pistachio-90 text-brown">
+                                <td>Row-item 3</td>
+                                <td class="text-accent">Row-item 4</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-crimson text-black">Row-item 5</td>
+                                <td class="bg-sky-70 text-indigo">Row-item 6</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-grey-70 text-cyan"><strong>Row-item 7</strong></td>
+                                <td class="bg-slate text-hue"><strong>Row-item 8</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="bg-brown-80 text-teal-40">Row-item 9</td>
+                                <td class="bg-pink text-amber-90">Row-item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table bordered padding-tiny">
+    &lt;thead class="bg-accent text-white">
+        &lt;tr>
+            &lt;th>Column 01&lt;/th>
+            &lt;th>Column 02&lt;/th>
+        &lt;/tr>
+    &lt;/thead>
+
+    &lt;tbody>
+        &lt;tr class="bg-blue-60 text-crimson-80">
+            &lt;td>Row-item 1&lt;/td>
+            &lt;td>Row-item 2&lt;/td>
+        &lt;/tr>
+        &lt;tr class="bg-pistachio-90 text-brown">
+            &lt;td>Row-item 3&lt;/td>
+            &lt;td class="text-accent">Row-item 4&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td class="bg-crimson text-black">Row-item 5&lt;/td>
+            &lt;td class="bg-sky-70 text-indigo">Row-item 6&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td class="bg-grey-70 text-cyan">&lt;strong>Row-item 7&lt;/strong>&lt;/td>
+            &lt;td class="bg-slate text-hue">&lt;strong>Row-item 8&lt;/strong>&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td class="bg-brown-80 text-teal-40">Row-item 9&lt;/td>
+            &lt;td class="bg-pink text-amber-90">Row-item 10&lt;/td>
+        &lt;/tr>
+    &lt;/tbody>
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div id="table-hovering" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Hovering</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>You can also change the background colour and text colour of a row on hover, by adding a <code>.hoverable</code> class. You can also change the <code>$tableHoverableBG</code> and <code>$tableHoverableTextColor</code> variables.</p>
+
+                    <table class="ff-table striped hoverable padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Column 01</th>
+                                <th>Column 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Row-item 1</td>
+                                <td>Row-item 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 3</td>
+                                <td>Row-item 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 5</td>
+                                <td>Row-item 6</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 7</td>
+                                <td>Row-item 8</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 9</td>
+                                <td>Row-item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table striped hoverable padding-tiny">
+&lt;/table></code></pre>
+
+<pre class="margin-top-fixed"><code class="language-scss">$tableHoverableBG        : $colorGreen-20;
+$tableHoverableTextColor : $colorShade;</code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div id="table-width" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Table width</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>By default, tables take up as little space as possible. But add the <code>.full-width</code> class, and bam, it stretches to the width of the parent.</p>
+
+                    <table class="ff-table striped hoverable full-width padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Column 01</th>
+                                <th>Column 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Row-item 1</td>
+                                <td>Row-item 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 3</td>
+                                <td>Row-item 4</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 5</td>
+                                <td>Row-item 6</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 7</td>
+                                <td>Row-item 8</td>
+                            </tr>
+                            <tr>
+                                <td>Row-item 9</td>
+                                <td>Row-item 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table striped hoverable full-width padding-tiny">
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div id="table-text" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Text sizing</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Text size is inherited from the body, but you can change it with the text sizing classes. You can use the usual five sizing suffixes.</p>
+                </div>
+
+                <div class="portion half">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion one-sixth">
+                    <table class="ff-table text-tiny striped hoverable padding-tiny">
+                        <thead>
+                        <tr>
+                            <th>Column 01</th>
+                            <th>Column 02</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Row-item 1</td>
+                            <td>Row-item 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 3</td>
+                            <td>Row-item 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 5</td>
+                            <td>Row-item 6</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 7</td>
+                            <td>Row-item 8</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 9</td>
+                            <td>Row-item 10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion one-third">
+                    <table class="ff-table text-large striped hoverable padding-tiny">
+                        <thead>
+                        <tr>
+                            <th>Column 01</th>
+                            <th>Column 02</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Row-item 1</td>
+                            <td>Row-item 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 3</td>
+                            <td>Row-item 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 5</td>
+                            <td>Row-item 6</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 7</td>
+                            <td>Row-item 8</td>
+                        </tr>
+                        <tr>
+                            <td>Row-item 9</td>
+                            <td>Row-item 10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half">
+<pre class="margin-top-fixed"><code class="language-markup">&lt;table class="ff-table striped hoverable text-tiny padding-tiny">
+&lt;/table>
+
+&lt;table class="ff-table striped hoverable text-large padding-tiny">
+&lt;/table></code></pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div id="table-variables" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Variables</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <table class="ff-table shape-rounded bordered-all padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Default value</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><code>$tableBG</code></td>
+                                <td><code>$colorWhite</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$tableTextColor</code></td>
+                                <td><code>$colorShade</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$tableBorderColor</code></td>
+                                <td><code>$colorGrey-40</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$tableStripedHeaderBG</code></td>
+                                <td><code>$colorHue</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$tableStripedCellBG</code></td>
+                                <td><code>$colorSlate-20</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$tableHoverableBG</code></td>
+                                <td><code>$colorAmber-20</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$tableHoverableTextColor</code></td>
+                                <td><code>$colorShade</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half"></div>
+            </div>
+
+
+
+
+
 
 
 
