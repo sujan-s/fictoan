@@ -2500,7 +2500,7 @@ pre::after { content: "&amp;"; }
                         </div>
 
                         <form class="ff-form">
-                            <div class="row">
+                            <div class="row ff-form-multi-unit retain-layout-on-tab-ls retain-layout-on-tab-pt">
                                 <div class="portion half">
                                     <div class="ff-form-unit">
                                         <input class="ff-input" id="first-name" placeholder=" " pattern="{1,}$" />
@@ -2531,7 +2531,7 @@ pre::after { content: "&amp;"; }
 
 
                             <div class="ff-form-unit">
-                                <div class="row">
+                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
                                     <div class="portion one-fifth">
                                         <p class="no-margin">I prefer</p>
                                     </div>
@@ -2557,7 +2557,7 @@ pre::after { content: "&amp;"; }
 
 
                             <div class="ff-form-unit">
-                                <div class="row">
+                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
                                     <div class="portion one-fifth">
                                         <p class="no-margin">I like</p>
                                     </div>
@@ -2583,7 +2583,7 @@ pre::after { content: "&amp;"; }
 
 
                             <div class="ff-form-unit margin-bottom-medium">
-                                <div class="row">
+                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
                                     <div class="portion one-fifth">
                                         <p class="no-margin">I&rsquo;m from</p>
                                     </div>
@@ -2602,7 +2602,7 @@ pre::after { content: "&amp;"; }
                             </div>
 
                             <div class="ff-form-unit">
-                                <div class="row vertical-center-items">
+                                <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
                                     <div class="portion half">
                                         <div class="ff-switch">
                                             <input type="checkbox" id="remember-toggle"/>
@@ -2629,10 +2629,11 @@ pre::after { content: "&amp;"; }
                     <p>Form elements are wrapped within a <code>.ff-form</code> class parent. You can use <code>.row</code> and <code>.portion</code> within this form to control the layout of the elements. Form elements are wrapped individually by a <code>.ff-form-unit</code> div to ensure consistent spacing and margins.</p>
 
                     <pre class="margin-top-fixed"><code class="language-markup">&lt;form class="ff-form">
-    &lt;div class="ff-form-unit">// Some element&lt;/div>
+    // Some element
+    &lt;div class="ff-form-unit">&lt;/div>
 
     // Two form elements side-by-side
-    &lt;div class="row">
+    &lt;div class="row ff-form-multi-unit">
         &lt;div class="portion half">
             &lt;div class="ff-form-unit">&lt;/div>
         &lt;/div>
