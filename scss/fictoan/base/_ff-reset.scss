@@ -6,14 +6,15 @@
 
 *:focus { outline : 0; }
 
-//  This affects all type scale values
+//  This affects all type scale values  =======================================
 html { font-size : $baseFontSize; }
 
 body {
     -moz-osx-font-smoothing : grayscale;
-    -webkit-font-smoothing  : antialiased;
+     -webkit-font-smoothing : antialiased;
 }
 
+//  Basics  ===================================================================
 body, button, input, select, textarea {
     font-family : BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
@@ -24,45 +25,62 @@ a { text-decoration : none; }
 
 button { vertical-align : baseline; }
 
+//  Input fields  =============================================================
 ::-webkit-input-placeholder { opacity : 0.5; }
 ::-moz-placeholder { opacity : 0.5; }
 
 input { outline : none; }
 
-input[type="number"] { -moz-appearance : textfield; }
+input[type="number"] {
+    -webkit-appearance : none;
+       -moz-appearance : none;
+            appearance : none;
+}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance : none;
     margin             : 0;
+    -webkit-appearance : none;
+       -moz-appearance : none;
+            appearance : none;
 }
 
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0 5000px white inset; }
+input:-webkit-autofill { -webkit-box-shadow : 0 0 0 5000px white inset; }
 
 input[type="date"]::-webkit-inner-spin-button { display : none; }
+
 input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
 
+//  Option select  ============================================================
 select {
     border-radius      : 0;
     -webkit-appearance : none;
        -moz-appearance : none;
+            appearance : none;
 }
 
+
+//  List items  ===============================================================
 ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    margin     : 0;
+    padding    : 0;
+    list-style : none;
 }
 
+//  Details and Summary  ======================================================
 ::-webkit-details-marker { display : none; }
-details > summary:first-of-type { list-style-type: none; }
 
+details > summary:first-of-type { list-style-type : none; }
+
+//  Code  =====================================================================
 pre, code { margin : 0; }
 
+//  Tables  ===================================================================
+table { border-collapse : collapse; }
 
+th { text-align : unset; }
 
-//  Reset for custom elements =============================
-
+//  Reset for custom elements =================================================
 .ff-input,
 .ff-input:focus,
 .ff-input:active {
@@ -70,14 +88,14 @@ pre, code { margin : 0; }
     outline : none;
 }
 
-.ff-input::placeholder { opacity: 0 };
+.ff-input::placeholder { opacity : 0; }
 
 .ff-pill,
-.ff-button { user-select: none; }
+.ff-button { user-select : none; }
 
-.ff-button:not([class*='border']) { border: none; }
+.ff-button:not([class*='border']) { border : none; }
 
-.ff-card .row:last-of-type { margin-bottom: 0; }
+.ff-card .row:last-of-type { margin-bottom : 0; }
 
 p:only-child {
     margin-top    : 0;
@@ -87,8 +105,8 @@ p:only-child {
 progress[value],
 progress::-webkit-progress-value,
 progress[value]::-webkit-progress-bar {
+    border             : none;
     -webkit-appearance : none;
        -moz-appearance : none;
             appearance : none;
-                border : none;
 }
