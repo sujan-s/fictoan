@@ -162,6 +162,15 @@
                     <a data-scroll href="#table-text" class="sublink">Text size</a>
                     <a data-scroll href="#table-variables" class="sublink">Variables</a>
                 </details>
+
+                <details>
+                    <summary>
+                        <a data-scroll href="#comp-modal">Modal</a>
+                    </summary>
+                    <a data-scroll href="#modal-structure" class="sublink">Structure</a>
+                    <a data-scroll href="#modal-display" class="sublink">Show and hide</a>
+                    <a data-scroll href="#modal-variables" class="sublink">Variables</a>
+                </details>
             </details>
         </nav>
     </div>
@@ -4756,27 +4765,172 @@ $tableHoverableTextColor : $colorShade;</code></pre>
 
 
 
+            <!--  TABLE  ==========================================================================================  -->
+            <div id="comp-modal" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Modal</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>The modal is a simple pop-up box that you can display with a JS function. It&rsquo;s included in this modal as an example, but please modify it in your projects.</p>
+                </div>
+
+                <div class="portion half">
+                    <a data-modal="modal-01" class="js-open-modal ff-button size-small shape-rounded bg-hue text-white shadow-hard">Show me the modal!</a>
+
+                    <div id="modal-01" class="ff-modal-wrapper">
+                        <div class="ff-modal-overlay">
+                            <div class="ff-modal-content">
+                                <div class="ff-card padding-medium shape-rounded bg-white shadow-soft">
+                                    <a class="close-modal js-close-modal"></a>
+                                    <h5>Modal heading1</h5>
+                                    <p>Modal content, add a basic paragraph here. Or don&rsquo;t.</p>
+                                    <img class="margin-bottom-tiny" src="http://via.placeholder.com/600x300/ffa/000?text=Some image here">
+                                    <a class="ff-button size-small shape-rounded bg-accent text-white shadow-hard pull-right">Button, yo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="modal-structure" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Structure</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    The modal is made of three divs&mdash;<br>
+                    &bull; A parent <code>.ff-modal-wrapper</code> that contains the modal element. This is what you need to add an <code>.ff-active</code> class to display the modal.<br><br>
+                    &bull; A <code>.ff-modal-overlay</code>, which forms the background of the modal window. You can change its colour and opacity via variables.<br><br>
+                    &bull; And finally, a <code>.ff-modal-content</code> div, that contains the actual content in the pop-up. In the example, it holds a simple <code>.ff-card</code> element with a few items inside. There&rsquo;s also a <code>.close-modal</code> div, with a cross icon that closes the modal on click.
+                </div>
+
+                <div class="portion half">
+                    <pre><code class="language-markup">&lt;a data-modal="modal-01" class="js-open-modal">Show me the modal!&lt;/a>
+
+&lt;div id="modal-01" class="ff-modal-wrapper">
+    &lt;div class="ff-modal-overlay">
+        &lt;div class="ff-modal-content">
+            &lt;a class="close-modal js-close-modal">&lt;/a>
+            // Modal content
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+                </div>
+            </div>
 
 
 
+            <div id="modal-display" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Show and hide</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>This is handled by JS, included as a sample script here. I highly recommend you use your own methods for production.</p>
+
+                    <p>The link or button used for triggering the modal needs a <code>data-modal</code> attribute with a value that matches the unique <code>id</code> of the modal you wish to display. Make sure it also has a <code>.js-open-modal</code> class as well. Clicking it will add an <code>active</code> class to the <code>.modal-wrapper</code>, making it visible.</p>
+
+                    <p>To close a modal, there&rsquo;s a <code>a</code> tag with two necessary <code>.close-modal</code> and <code>.js-close-modal</code> classes. Clicking on it removes the <code>active</code> class from the wrapper div, making it invisible again.</p>
+                </div>
+
+                <div class="portion half">
+                    <pre><code class="language-markup">&lt;a data-modal="modal-01" class="js-open-modal ff-button size-small shape-rounded bg-hue text-white shadow-hard">Show me the modal!&lt;/a>
+
+&lt;div id="modal-01" class="ff-modal-wrapper">
+    // The rest of the modal
+&lt;/div></code></pre>
+                </div>
+            </div>
+
+
+
+
+            <div id="modal-variables" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Variables</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <table class="ff-table shape-rounded bordered-all padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Default value</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><code>$modalOverlayBG</code></td>
+                                <td><code>rgba($colorHue, 0.64)</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half"></div>
+            </div>
 
 
         </section>
+
     </div> <!--  End content  -->
-
-
-
-
-
-
-
-
-
 
     <div class="clear-both"></div>
 
 
     <script>
+        //  MODAL  ========================================
+        var openModal = document.getElementsByClassName("js-open-modal");
+        var closeModal = document.querySelectorAll(".js-close-modal");
+
+        var closestByClass = function(el, claz) {
+            while (!el.classList.contains(claz)) {
+                el = el.parentNode;
+                if (!el) {
+                    return null;
+                }
+            }
+            return el;
+        };
+
+        for (var i = 0; i < openModal.length; i++) {
+            var thisBtn = openModal[i];
+            thisBtn.addEventListener("click", function() {
+                var modal = document.getElementById(this.dataset.modal);
+                modal.classList.add("active");
+            }, false)
+        }
+
+        closeModal.forEach(function(elem) {
+            elem.addEventListener('click', function(e) {
+                var el = closestByClass(e.target, "ff-modal-wrapper");
+                if (el) {
+                    el.classList.remove("active");
+                }
+            });
+        });
+
+
+
+
+
+        //  SIDEBAR  ======================================
         var parentContainer = document.getElementsByClassName("ff-sidebar-container")[0];
         var firstChild = document.getElementsByClassName("ff-sidebar")[0].children[0];
 
@@ -4791,5 +4945,8 @@ $tableHoverableTextColor : $colorShade;</code></pre>
             if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
             else parentContainer.classList.remove("collapsed");
         };
+
+
+
     </script>
 </body>
