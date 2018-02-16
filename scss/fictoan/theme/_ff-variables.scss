@@ -44,6 +44,17 @@ $headerLinkHoverColor : $colorHue;
 
 $navItemBorderColor : 1px solid $colorGrey-20;
 
+
+//  Tabs  =====================================================================
+$max-tabs                  : 12;
+$activeTabLabelBG          : $colorWhite;
+$inactiveTabLabelBG        : $colorGrey-20;
+$inactiveTabLabelHoverBG   : $colorGrey-10;
+$tabsBorderColor           : $colorGrey-30;
+$activeTabLabelTextColor   : $colorShade;
+$inactiveTabLabelTextColor : $colorGrey-70;
+
+
 //  Sidebar  ==================================================================
 $sideBarBG        : $colorGrey-10;
 $sideBarLogoBG    : $colorGrey-10;

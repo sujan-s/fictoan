@@ -1,6 +1,11 @@
-# IntelliJ project files
+# IDE project files
 .idea
-*.iml
 .idea/
-.sass-cache
+.vscode
+.vscode/
+*.iml
+
+# Other miscellaneous files
 .DS_Store
+.sass-cache
+.css.map

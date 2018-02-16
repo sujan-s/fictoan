@@ -130,6 +130,13 @@
 
                 <details>
                     <summary>
+                        <a data-scroll href="#comp-tabs">Tabs</a>
+                    </summary>
+                    <a data-scroll href="#tabs-structure" class="sublink">Structure</a>
+                </details>
+
+                <details>
+                    <summary>
                         <a data-scroll href="#comp-sidebar">Sidebar</a>
                     </summary>
                     <a data-scroll href="#sidebar-structure" class="sublink">Structure</a>
@@ -3502,6 +3509,139 @@ pre::after { content: "&amp;"; }
                     <p>The logo remains on the left, unaffected by this rearrangement of elements.</p>
                 </div>
             </div>
+
+
+
+
+
+
+
+            <!--  TABS  ================================================================================================ -->
+            <div id="comp-tabs" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-thin margin-bottom-tiny"></div>
+                    <h4>Tabs</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>Tabs in FICTOAN are CSS-only, and uses the input-radio hack to show and hide content within the tabs.</p>
+                </div>
+
+                <div class="portion half">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion whole">
+                    <div class="ff-tabs-wrapper">
+                        <input id="ff-tab-1" type="radio" name="ff-tabs" checked />
+                        <label id="ff-tab-label-1" for="ff-tab-1" class="ff-tab-label">First tab</label>
+
+                        <input id="ff-tab-2" type="radio" name="ff-tabs" />
+                        <label id="ff-tab-label-2" for="ff-tab-2" class="ff-tab-label">Second tab</label>
+
+                        <input id="ff-tab-3" type="radio" name="ff-tabs" />
+                        <label id="ff-tab-label-3" for="ff-tab-3" class="ff-tab-label">Third tab</label>
+
+                        <input id="ff-tab-4" type="radio" name="ff-tabs" />
+                        <label id="ff-tab-label-4" for="ff-tab-4" class="ff-tab-label">Fourth tab</label>
+
+                        <input id="ff-tab-5" type="radio" name="ff-tabs" />
+                        <label id="ff-tab-label-5" for="ff-tab-5" class="ff-tab-label">Fifth tab</label>
+
+                        <input id="ff-tab-6" type="radio" name="ff-tabs" />
+                        <label id="ff-tab-label-6" for="ff-tab-6" class="ff-tab-label">Sixth tab</label>
+
+                        <input id="ff-tab-7" type="radio" name="ff-tabs" />
+                        <label id="ff-tab-label-7" for="ff-tab-7" class="ff-tab-label">Seventh tab</label>
+
+                        <input id="ff-tab-8" type="radio" name="ff-tabs" />
+                        <label id="ff-tab-label-8" for="ff-tab-8" class="ff-tab-label">Eighth tab</label>
+
+                        <div class="ff-tabs-content">
+                            <div class="ff-tab-content-1">
+                                <p>Content for First tab</p>
+                            </div>
+
+                            <div class="ff-tab-content-2">
+                                <p>Content for Second tab</p>
+                            </div>
+
+                            <div class="ff-tab-content-3">
+                                <p>Content for Third tab</p>
+                            </div>
+
+                            <div class="ff-tab-content-4">
+                                <p>Content for Fourth tab</p>
+                            </div>
+
+                            <div class="ff-tab-content-5">
+                                <p>Content for Fifth tab</p>
+                            </div>
+
+                            <div class="ff-tab-content-6">
+                                <p>Content for Sixth tab</p>
+                            </div>
+
+                            <div class="ff-tab-content-7">
+                                <p>Content for Seventh tab</p>
+                            </div>
+
+                            <div class="ff-tab-content-8">
+                                <p>Content for Eighth tab</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  STRUCTURE  =========================  -->
+            <div id="tabs-structure" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Structure</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <p>The entire tabs section goes into a <code>.ff-tabs-wrapper</code> parent div, followed by the radio inputs with a <code>.ff-tabs</code> <code>name</code> attribute. They also have unique IDs with a <code>.ff-tab-</code> prefix, followed by a number.</p>
+
+                    <p>The radio buttons are immediately followed by a <code>.ff-tab-label</code>, again with unique IDs and a matching <code>for</code> attribute. Duplicate this block as many times as you need.</p>
+
+                    <p>Then comes along a <code>.ff-tab-content</code>, which nicely wraps all the content of the tabs together. Inside, there are separate divs for each tab content, with a class of <code>.ff-tab-</code> prefix, followed by the number of the corresponding tab.</p>
+                </div>
+    
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-tabs-wrapper">
+&lt;input id="ff-tab-1" type="radio" name="ff-tabs" checked />
+&lt;label id="ff-tab-label-1" for="ff-tab-1" class="ff-tab-label">First tab&lt;/label>
+
+&lt;input id="ff-tab-2" type="radio" name="ff-tabs" />
+&lt;label id="ff-tab-label-2" for="ff-tab-2" class="ff-tab-label">Second tab&lt;/label>
+
+&lt;input id="ff-tab-3" type="radio" name="ff-tabs" />
+&lt;label id="ff-tab-label-3" for="ff-tab-3" class="ff-tab-label">Third tab&lt;/label>
+
+&lt;div class="ff-tabs-content">
+    &lt;div class="ff-tab-content-1">
+        &lt;p>Content for First tab&lt;/p>
+    &lt;/div>
+
+    &lt;div class="ff-tab-content-2">
+        &lt;p>Content for Second tab&lt;/p>
+    &lt;/div>
+
+    &lt;div class="ff-tab-content-3">
+        &lt;p>Content for Third tab&lt;/p>
+    &lt;/div>
+&lt;/div>
+&lt;/div></code></pre>
+                    </div>
+                </div>
 
 
 
