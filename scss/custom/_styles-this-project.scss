@@ -13,9 +13,9 @@
                   url("../fonts/Archia-Bold.woff") format('woff');
 }
 
-strong { font-weight : 600; }
-p { color : rgba($colorShade, 0.72); }
 h1, h2, h3, h4, h5, h6 { font-weight : 400; }
+p { color : rgba($colorShade, 0.72); }
+strong { font-weight : 600; }
 
 .text-regular { font-weight: 400; }
 .text-bold    { font-weight: 600; }
