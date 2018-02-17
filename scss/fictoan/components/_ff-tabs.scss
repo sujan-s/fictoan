@@ -1,54 +1,60 @@
-.ff-tabs {
-    display   : flex;
-    flex-wrap : wrap;
+input[name="ff-tabs"],
+.ff-tabs-wrapper .ff-tabs-content > div { display: none; }
+
+@for $i from 1 through $max-tabs {
+    #ff-tab-#{$i}:checked ~ .ff-tabs-content .ff-tab-content-#{$i} { display: block; }
 }
 
-.ff-tab-label {
-    order        : 1;
-    display      : block;
-    padding      : $measureFixed $measureFixed*2;
-    cursor       : pointer;
-    font-weight  : bold;
-    color        : $colorGrey-70;
-    opacity      : 0.64;
-}
+.ff-tabs-wrapper {
+    width: 100%;
 
-.ff-tab-content {
-    display    : none;
-    width      : 100%;
-    order      : 99;
-    flex-grow  : 1;
-    padding    : $measureFixed*2;
-    border-top : 1px solid $colorGrey-10;
-}
+    .ff-tab-label {
+        float         : left;
+        padding       : 8px 16px;
+        margin-right  : 4px;
+        background    : $inactiveTabLabelBG;
+        border        : 1px solid $tabsBorderColor;
+        border-bottom : 0;
+        border-radius : 4px 4px 0 0;
+        transition    : all 0.24s;
+        color         : $inactiveTabLabelTextColor;
+        &:hover {
+            background : $inactiveTabLabelHoverBG;
+            cursor     : pointer;
+        }
+        &:active { background: $activeTabLabelBG; }
 
-.ff-tab-select { display : none; }
+        @media only screen and (max-width : 600px) {
+            margin        : 4px;
+            border-radius : 4px;
 
-.ff-tab-label:hover {
-    color         : $colorHue;
-    border-bottom : 2px solid $colorHue;
-    opacity       : 0.64;
-}
-
-.ff-tab-select:checked + .ff-tab-label {
-    color         : $colorHue;
-    border-bottom : 2px solid $colorHue;
-    opacity       : 1;
-}
-
-.ff-tab-select:checked + .ff-tab-label + .ff-tab-content { display : block; }
-
-@media all and (max-width : 599px) {
-
-    .ff-tabs .ff-tab-content,
-    .ff-tabs .ff-tab-label { order : initial; }
-
-    .ff-tab-content { border-bottom : 1px solid $colorGrey-10; }
-
-    .ff-tabs .ff-tab-label {
-        width        : 100%;
-        margin-right : 0;
-        margin-top   : $measureFixed*2;
+            &:active { border: 1px $tabsBorderColor; }
+          }
     }
+    &:not(:last-child) .ff-tab-label { border-right-width: 0; }
 
+    .ff-tabs-content {
+        clear      : both;
+        border-top : 1px solid $tabsBorderColor;
+
+        div { width   : 100%; }
+    }
+}
+
+@for $i from 1 through $max-tabs {
+    #ff-tab-#{$i}:checked ~ #ff-tab-label-#{$i} {
+        position   : relative;
+        background : $activeTabLabelBG;
+        color      : $activeTabLabelTextColor;
+        &:after {
+            content: '';
+            display    : block;
+            position   : absolute;
+            height     : 2px;
+            width      : 100%;
+            background : $activeTabLabelBG;
+            left       : 0;
+            bottom     : -1px;
+        }
+    }
 }
