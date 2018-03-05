@@ -1,31 +1,32 @@
-/*  Basics for the row and box  */
+//  Basics for the row and box
 .row,
 .box {
-    display : block;
-    margin  : 0 0 2vmax 0; /* This will push the next row a little below */
-    clear   : both;
+    display     : flex;
+    flex-wrap   : wrap;
+    align-items : flex-start;
+    margin      : 0 0 2vmax 0;
 }
 
-/*  Use 'box' class to have portions that add up to more than 100% width  */
+//  Use 'box' class to have portions that add up to more than 100% width
 .box .portion { margin-bottom: $measureFixed*2; }
 
-/*  Basics for the portions  */
+//  Basics for the portions
 .row .portion,
 .box .portion {
-    float   : left;
+    flex    : 1 1 0;
     padding : 0 $measureFixed*3;
 }
 
-/*  Remove the padding for nested portions  */
-.portion > .row {
-    margin-left  : -$measureFixed*3;
-    margin-right : -$measureFixed*3;
-}
+//  Remove the padding for nested portions
+// .portion > .row {
+//     margin-left  : -$measureFixed*3;
+//     margin-right : -$measureFixed*3;
+// }
 
 @media all and (max-width : 600px) {
     .row .portion,
     .box .portion {
-        padding : 0 $measureFixed*1;
+        // padding : 0 $measureFixed*1;
     }
 }
 
@@ -39,27 +40,25 @@
 .row.large-gutters .portion,
 .box.large-gutters .portion { padding : 0 $measureFixed*4; }
 
-/*  Fallback width for portions with unspecified widths  */
+//  Fallback width for portions with unspecified widths
 .portion {
     width      : 100%;
     min-height : $measureFixed;
 }
 
-/*  Lessen the gap between elements in the same row  */
+//  Lessen the gap between portions in the same row
 .small-gutters .portion,
 .portion.small-gutters { padding: 0 12px; }
 
-/*  Remove the gap between elements in the same row  */
+//  Remove the gap between portions in the same row
 .no-gutters .portion,
 .portion.no-gutters { padding: 0 !important; }
 
-/*  Remove portion-padding as card itself has padding  */
+//  Remove portion-padding as card itself has padding
 .ff-card .row .portion:first-of-type { padding-left: 0; }
 .ff-card .row .portion:last-of-type  { padding-right: 0; }
 
-
-
-/*  Now the actual grid layout  */
+//  Explicit widths
 .portion.whole            { width : 100%; }
 
 .portion.half             { width : 50%; }
@@ -196,60 +195,68 @@
 .portion.fourteen-sixteenths  { width : 87.50%; }
 .portion.fifteen-sixteenths   { width : 93.75%; }
 
+.portion[class*="whole"],
+.portion[class*="half"],
+.portion[class*="one-"],
+.portion[class*="two-"],
+.portion[class*="three-"],
+.portion[class*="four-"],
+.portion[class*="five-"],
+.portion[class*="six-"],
+.portion[class*="seven-"],
+.portion[class*="eight-"],
+.portion[class*="nine-"],
+.portion[class*="ten-"],
+.portion[class*="eleven-"],
+.portion[class*="twelve-"],
+.portion[class*="thirteen-"],
+.portion[class*="fourteen-"],
+.portion[class*="fifteen-"] { flex : none; }
 
-/*  Clearfix for the rows  */
-.row:before, .row:after {
-    display : block;
-    content : "";
+
+//  Responsiveness
+.retain-layout-always .portion { flex: none !important; }
+
+@media all and (max-width: 600px) {
+    .row.retain-layout-on-mobile .portion { flex: none !important; }
 }
-.row:after { clear: both; }
 
-/*  Clearfix for the rows  */
-.box:before, .box:after {
-    display : block;
-    content : "";
+@media all and (min-width : 601px) and (max-width : 900px) {
+    .row.retain-layout-on-tab-pt .portion { flex: none !important; }
 }
-.box:after { clear : both; }
 
-/*  Fixing images for better responsive behaviour  */
-.portion img { max-width : 100%; }
+@media all and (min-width : 901px) and (max-width : 1200px) {
+    .row.retain-layout-on-tab-ls .portion { flex: none !important; }
+}
 
-/*  Side margins for all your content - increase or decrease at will,
-    or simply add the 'no-padding' class to get full-width  */
-
-/*  For small screens UP TO 599px width  */
+//  Side margins for all your content - increase or decrease at will,
+//    or simply add the 'no-padding' class to get full-width
 @media all and (max-width : 600px) {
     .padded-content { padding : 0 2vw; }
 }
 
-/*  For screens TILL 600px width  */
 @media all and (min-width : 600px) {
     .padded-content { padding : 0 4vw; }
 }
 
-/*  For screens FROM 900px width and UPWARD  */
 @media all and (min-width : 900px) {
     .padded-content { padding : 0 8vw; }
 }
 
-/*  For screens FROM 1200px width and UPWARD  */
 @media all and (min-width : 1200px) {
     .padded-content { padding : 0 10vw; }
 }
 
-/*  For big screens FROM 1800px width and UPWARD  */
 @media all and (min-width : 1800px) {
     .padded-content { padding : 0 12vw; }
 }
 
-/*  For large screens FROM 2400px width and UPWARD  */
 @media all and (min-width : 2400px) {
     .padded-content { padding : 0 16vw; }
 }
 
-/*  Device-specific portion widths -
-    the naming convention is: .{portion-width}-on-{device}-{orientation}  */
-/*  For small screens UP TO 599px  */
+//  Device-specific portion widths
+//  For small screens UP TO 599px
 @media all and (max-width: 600px) {
 
     .row:not(.retain-layout-on-mobile) > .portion:not([class*='on-mobile']),
@@ -393,7 +400,7 @@
     .portion.fifteen-sixteenths-on-mobile   { width : 93.75%; }
 }
 
-/*  For screens FROM 600px width and UPWARD  */
+//  For screens FROM 600px width and UPWARD
 @media all and (min-width : 601px) and (max-width : 900px) {
 
     .row:not(.retain-layout-on-tab-pt) > .portion:not([class*='tab-pt']),
@@ -537,11 +544,11 @@
     .portion.fifteen-sixteenths-on-tab-pt   { width : 93.75%; }
 }
 
-/*  For screens FROM 900px width and UPWARD  */
+//  For screens FROM 900px width and UPWARD
 @media all and (min-width : 901px) and (max-width : 1200px) {
 
-    .row:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']),
-    .box:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']) { width: 100%; }
+    // .row:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']),
+    // .box:not(.retain-layout-on-tab-ls) > .portion:not([class*='tab-ls']) { width: 100%; }
 
     .portion.whole-on-tab-ls              { width : 100%; }
 

@@ -40,16 +40,6 @@ section { margin-bottom: 12vmin; }
     background : $colorGrey-20;
 }
 
-#hero-section {
-    position   : absolute;
-    top        : 0;
-    left       : 0;
-    width      : 100%;
-    height     : 100vh;
-    background : $colorHue;
-    z-index    : -5;
-}
-
 #opener h1 { font-size: 10vmax; }
 #opener h2 { font-size: 8vmax; }
 #opener h3 { font-size: 6vmax; }
@@ -61,7 +51,6 @@ section { margin-bottom: 12vmin; }
     word-wrap   : break-word;
 }
 
-section               { margin-top: 16vmax; }
 section:first-of-type { margin-top: initial; }
 
 #transparent-card {
