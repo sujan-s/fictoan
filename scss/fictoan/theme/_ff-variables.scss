@@ -47,13 +47,15 @@ $navItemBorderColor : 1px solid $colorGrey-20;
 
 //  Tabs  =====================================================================
 $max-tabs                  : 12;
+
 $activeTabLabelBG          : $colorWhite;
+$activeTabLabelTextColor   : $colorShade;
+
 $inactiveTabLabelBG        : $colorGrey-20;
 $inactiveTabLabelHoverBG   : $colorGrey-10;
-$tabsBorderColor           : $colorGrey-30;
-$activeTabLabelTextColor   : $colorShade;
 $inactiveTabLabelTextColor : $colorGrey-70;
 
+$tabsBorderColor           : $colorGrey-30;
 
 //  Sidebar  ==================================================================
 $sideBarBG        : $colorGrey-10;

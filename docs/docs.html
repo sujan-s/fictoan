@@ -131,6 +131,8 @@
                         <a data-scroll href="#comp-tabs">Tabs</a>
                     </summary>
                     <a data-scroll href="#tabs-structure" class="sublink">Structure</a>
+                    <a data-scroll href="#tabs-max" class="sublink">Max tabs variable</a>
+                    <a data-scroll href="#tabs-variables" class="sublink">Variables</a>
                 </details>
 
                 <details>
@@ -3540,40 +3542,120 @@ pre::after { content: "&amp;"; }
 
             <div class="row">
                 <div class="portion half">
-                    <p>The entire tabs section goes into a <code>.ff-tabs-wrapper</code> parent div, followed by the radio inputs with a <code>.ff-tabs</code> <code>name</code> attribute. They also have unique IDs with a <code>.ff-tab-</code> prefix, followed by a number.</p>
+                    <p>The entire tabs section goes into a <code>.ff-tabs-wrapper</code> parent div. Each tab component is made up by three elements&mdash; The radio button which works as a toggle, a label to display the name of the tab, and finally, the content of the tab.</p>
 
-                    <p>The radio buttons are immediately followed by a <code>.ff-tab-label</code>, again with unique IDs and a matching <code>for</code> attribute. Duplicate this block as many times as you need.</p>
+                    <p>The radio buttons have an unique ID of <code>#ff-tab-&lt;number></code> and a <code>ff-tabs</code> <code>name</code> attribute. Its sibling <code>label</code> has an ID of <code>#ff-tab-label-&lt;number></code> and a <code>for</code> attribute that matches the radio input. </p>
 
-                    <p>Then comes along a <code>.ff-tab-content</code>, which nicely wraps all the content of the tabs together. Inside, there are separate divs for each tab content, with a class of <code>.ff-tab-</code> prefix, followed by the number of the corresponding tab.</p>
+                    <p>Then comes along a <code>.ff-tabs-content</code>, which nicely wraps all the content of the tabs together. Inside, there are separate divs for each tab content, with a class of <code>.ff-tab-content-&lt;number></code> prefix, which needs to match the appropriate radio and label.</p>
                 </div>
     
                 <div class="portion half">
                     <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-tabs-wrapper">
-&lt;input id="ff-tab-1" type="radio" name="ff-tabs" checked />
-&lt;label id="ff-tab-label-1" for="ff-tab-1" class="ff-tab-label">First tab&lt;/label>
+    &lt;input id="ff-tab-1" type="radio" name="ff-tabs" checked />
+    &lt;label id="ff-tab-label-1" for="ff-tab-1" class="ff-tab-label">First tab&lt;/label>
 
-&lt;input id="ff-tab-2" type="radio" name="ff-tabs" />
-&lt;label id="ff-tab-label-2" for="ff-tab-2" class="ff-tab-label">Second tab&lt;/label>
+    &lt;input id="ff-tab-2" type="radio" name="ff-tabs" />
+    &lt;label id="ff-tab-label-2" for="ff-tab-2" class="ff-tab-label">Second tab&lt;/label>
 
-&lt;input id="ff-tab-3" type="radio" name="ff-tabs" />
-&lt;label id="ff-tab-label-3" for="ff-tab-3" class="ff-tab-label">Third tab&lt;/label>
+    &lt;input id="ff-tab-3" type="radio" name="ff-tabs" />
+    &lt;label id="ff-tab-label-3" for="ff-tab-3" class="ff-tab-label">Third tab&lt;/label>
 
-&lt;div class="ff-tabs-content">
-    &lt;div class="ff-tab-content-1">
-        &lt;p>Content for First tab&lt;/p>
+    &lt;div class="ff-tabs-content">
+        &lt;div class="ff-tab-content-1">
+            &lt;p>Content for First tab&lt;/p>
+        &lt;/div>
+
+        &lt;div class="ff-tab-content-2">
+            &lt;p>Content for Second tab&lt;/p>
+        &lt;/div>
+
+        &lt;div class="ff-tab-content-3">
+            &lt;p>Content for Third tab&lt;/p>
+        &lt;/div>
     &lt;/div>
-
-    &lt;div class="ff-tab-content-2">
-        &lt;p>Content for Second tab&lt;/p>
-    &lt;/div>
-
-    &lt;div class="ff-tab-content-3">
-        &lt;p>Content for Third tab&lt;/p>
-    &lt;/div>
-&lt;/div>
 &lt;/div></code></pre>
-                    </div>
                 </div>
+            </div>
+
+
+
+            <!--  MAX TABS  ==========================  -->
+            <div id="tabs-max" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Maximum tabs variable</h6>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="portion half">
+                    <p>FICTOAN uses a simple Sass loop to display the active tab content. But to achieve this, we have to introduce a variable to stop the loop at a particular number, which is where the <code>$max-tabs</code> comes into play.</p>
+
+                    <p>Change this number in the <code>ff-variables.scss</code> file to the maximum number of tabs you have in a particular set in your project. The default is set to 12.</p>
+                </div>
+    
+                <div class="portion half">
+                    <pre class="margin-top-fixed"><code class="language-scss">@for $i from 1 through $max-tabs {
+    #ff-tab-#{$i}:checked ~ .ff-tabs-content .ff-tab-content-#{$i} { display: block; }
+}</code></pre>
+                </div>
+            </div>
+
+
+
+            <!--  STYLING  ===========================  -->
+            <div id="tabs-variables" class="row margin-bottom-fixed">
+                <div class="portion whole">
+                    <div class="border-gray margin-bottom-tiny"></div>
+                    <h6>Variables</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="portion half">
+                    <table class="ff-table shape-rounded bordered-all padding-tiny">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Default value</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><code>$max-tabs</code></td>
+                                <td><code>12</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$activeTabLabelBG</code></td>
+                                <td><code>$colorWhite</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$activeTabLabelTextColor</code></td>
+                                <td><code>$colorShade</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$inactiveTabLabelBG</code></td>
+                                <td><code>$colorGrey-20</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$inactiveTabLabelHoverBG</code></td>
+                                <td><code>$colorGrey-10</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$inactiveTabLabelTextColor</code></td>
+                                <td><code>$colorGrey-70</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>$tabsBorderColor</code></td>
+                                <td><code>$colorGrey-30</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="portion half"></div>
+            </div>
 
 
 
@@ -4778,7 +4860,7 @@ $tableHoverableTextColor : $colorShade;</code></pre>
 
 
 
-
+            <!--  VARIABLES  =========================  -->
             <div id="table-variables" class="row margin-bottom-fixed">
                 <div class="portion whole">
                     <div class="border-gray margin-bottom-tiny"></div>
