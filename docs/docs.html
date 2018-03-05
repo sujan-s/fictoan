@@ -46,8 +46,6 @@
                 <img id="logo-small" src="icons/favicon.png" />
             </a>
 
-            <a id="intro" data-scroll href="#section-intro"><strong>Hello!</strong></a>
-
             <details>
                 <summary>
                     <a data-scroll id="getting-started" href="#section-getting-started">Getting started</a>
@@ -185,77 +183,11 @@
     </div>
 
     <div class="ff-content-container">
-        <!--  =====================================================================================================  -->
-        <!--  INTRO
-        <!--  =====================================================================================================  -->
-        <section id="section-intro">
-            <div class="row padding-top-small margin-bottom-small">
-                <div class="portion two-thirds">
-                    <div class="border-thick margin-bottom-tiny"></div>
-                    <h4>FICTOAN is an intuitive, simple SCSS framework that also moonlights as an UI kit.</h4>
-                </div>
-
-                <div class="portion one-third">
-                    <div class="border-thick margin-bottom-tiny"></div>
-                    <h4>Give it a shot&mdash; download or fork from <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a>.</h4>
-                </div>
-            </div>
-
-
-            <!--  USPs ============================================================ -->
-            <div class="box">
-                <div class="portion one-third margin-bottom-tiny">
-                    <div class="border-thin margin-bottom-tiny"></div>
-                    <h6 class="margin-bottom-fixed">It’s intuitive.</h6>
-                    <p>FICTOAN uses straight-forward and intuitive class names like <code>.horizontal-center-this</code>, <code>.no-padding-left</code>,  <code>.center-on-mobile</code> and so on. Simple to use, and easy to recollect.</p>
-                </div>
-
-                <div class="portion one-third margin-bottom-tiny">
-                    <div class="border-thin margin-bottom-tiny"></div>
-                    <h6 class="margin-bottom-fixed">It’s modular.</h6>
-                    <p>Styling elements is like a jigsaw puzzle— take a <code>.button</code>, simply add <code>.bg-red</code>, <code>.shape-circular</code> and <code>.no-shadow</code> to get a red, round button without a shadow. It’s like playing with Lego.</p>
-                </div>
-
-                <div class="portion one-third margin-bottom-tiny">
-                    <div class="border-thin margin-bottom-tiny"></div>
-                    <h6 class="margin-bottom-fixed">It’s responsive.</h6>
-                    <p>Change layouts across devices&mdash; <code>.one-fourth</code>, <code>.one-third-on-tab-ls</code>, <code>.six-eights-on-mobile</code> and so on. Or use <code>.retain-layout-on-mobile</code> to turn off responsiveness completely.</p>
-                </div>
-
-                <div class="portion one-third margin-bottom-tiny">
-                    <div class="margin-bottom-tiny padding-top-fixed">
-                        <h6 class="margin-bottom-fixed">It’s customisable.</h6>
-                        <p>It’s also got a nice little variables file to tweak. Now you can have different styling rules for each of your projects, without having to rewrite each time.</p>
-                    </div>
-                </div>
-
-                <div class="portion one-third margin-bottom-tiny">
-                    <div class="margin-bottom-tiny padding-top-fixed">
-                        <h6 class="margin-bottom-fixed">It’s ready to go.</h6>
-                        <p>It comes with a set of pre-defined elements that you can simply drop into your project. Cards, sidebar menus, modal windows and whatnot.</p>
-                    </div>
-                </div>
-
-                <div class="portion one-third margin-bottom-tiny">
-                    <div class="margin-bottom-tiny padding-top-fixed">
-                        <h6 class="margin-bottom-fixed">It’s open source.</h6>
-                        <p>Just head to the <a href="https://github.com/sujan-s/fictoan" target="_blank">Github</a> page and fork at will. Not interested in writing code? Just add your feedback, and it might just make it to the next feature release!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-
 
         <!--  =====================================================================================================  -->
-        <!--  GETTING STARTED
+        <!--  GETTING STARTED  -->
         <!--  =====================================================================================================  -->
-        <section id="section-getting-started">
+        <section id="section-getting-started" class="padding-top-small">
             <div class="row">
                 <div class="portion whole">
                     <div class="border-thick margin-bottom-tiny"></div>
@@ -305,7 +237,7 @@
             </div>
 
             <div class="row">
-                <div class="portion one-third">
+                <div class="portion one-third half-on-tab-ls half-on-tab-pt half-on-mobile">
             <pre><code><span class="text-accent">scss</span>
 |
 |—— <span class="text-grey-70">fictoan.scss</span>
@@ -351,7 +283,7 @@
 </code></pre>
                 </div>
 
-                <div class="portion two-thirds">
+                <div class="portion two-thirds half-on-tab-ls half-on-tab-pt half-on-mobile">
                     <p>Want to build on top of FICTOAN? Then, open the <code>scss</code> directory, and in it, you'll find three more folders and the <code>main.scss</code> source file and the transpiled <code>fictoan.min.css</code> output file. The <code>fictoan.scss</code> imports all the other SCSS files in a particular order and transpiles them into one single CSS file.</p>
 
                     <p class="no-margin-bottom"><strong>Customised builds</strong></p>
@@ -525,7 +457,7 @@ $sidebarTextColorOnHover : $colorWhite;
 
 
         <!--  =====================================================================================================  -->
-        <!--  THE GRID
+        <!--  THE GRID  -->
         <!--  =====================================================================================================  -->
         <section id="section-layout">
             <div class="row">
@@ -958,7 +890,7 @@ $sidebarTextColorOnHover : $colorWhite;
 
 
         <!--  =====================================================================================================  -->
-        <!--  TYPOGRAPHY
+        <!--  TYPOGRAPHY  -->
         <!--  =====================================================================================================  -->
         <section id="section-typography">
             <div class="row">
@@ -1419,7 +1351,7 @@ pre::after { content: "&amp;"; }
 
 
         <!--  =====================================================================================================  -->
-        <!--  COLOUR
+        <!--  COLOUR  -->
         <!--  =====================================================================================================  -->
 
         <section id="section-colour">
@@ -2509,7 +2441,7 @@ pre::after { content: "&amp;"; }
 
 
         <!--  =====================================================================================================  -->
-        <!--  INPUTS
+        <!--  INPUTS  -->
         <!--  =====================================================================================================  -->
 
         <section id="section-inputs">
@@ -3309,7 +3241,7 @@ pre::after { content: "&amp;"; }
 
 
         <!--  =====================================================================================================  -->
-        <!--  COMPONENTS
+        <!--  COMPONENTS  -->
         <!--  =====================================================================================================  -->
 
         <section id="section-components">
@@ -5010,7 +4942,11 @@ $tableHoverableTextColor : $colorShade;</code></pre>
                                     <a class="close-modal js-close-modal"></a>
                                     <h5>Modal heading1</h5>
                                     <p>Modal content, add a basic paragraph here. Or don&rsquo;t.</p>
-                                    <img class="margin-bottom-tiny" src="http://via.placeholder.com/600x300/ffa/000?text=Some image here">
+                                    <div class="row">
+                                        <div class="portion whole">
+                                            <img class="margin-bottom-tiny" src="https://media.giphy.com/media/gVE7nURcnD9bW/giphy.gif">
+                                        </div>
+                                    </div>
                                     <a class="ff-button size-small shape-rounded bg-accent text-white shadow-hard pull-right">Button, yo</a>
                                 </div>
                             </div>
@@ -5163,10 +5099,10 @@ $tableHoverableTextColor : $colorShade;</code></pre>
         firstChild.addEventListener("click", mainNavToggle);
 
 
-        window.onresize = function() {
-            if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
-            else parentContainer.classList.remove("collapsed");
-        };
+        // window.onresize = function() {
+        //     if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
+        //     else parentContainer.classList.remove("collapsed");
+        // };
 
 
 

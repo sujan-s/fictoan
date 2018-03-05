@@ -28,8 +28,8 @@
 
 .no-border { border: none !important; }
 
-//  For when you want things bang
-//   in the centre, both axes
+//  For when you want things bang in the centre
+//   both axes. Apply to parent
 .totally-centre-items,
 .totally-center-items {
     display         : flex !important;
@@ -37,20 +37,18 @@
     justify-content : center;
 }
 
-//  For when you want child elements
-//  vertically in the middle
+//  For when you want child elements vertically in 
+//  the middle. Apply to parent
 .vertically-centre-items,
 .vertically-center-items {
     display     : flex !important;
     align-items : center;
 }
 
-//  Parent div needs a set height
+//  Parent div needs to be a flex element
 .vertically-centre-this,
 .vertically-center-this {
-    position  : relative;
-    top       : 50%;
-    transform : translateY(-50%);
+    align-self : center;
 }
 
 //  Parent div needs a set width
@@ -69,7 +67,7 @@ hr {
 }
 
 hr.primary   { background : rgba($colorHue, 0.8); }
-hr.escondary { background : rgba($colorHue, 0.2); }
+hr.secondary { background : rgba($colorHue, 0.2); }
 
 
 //  BOX MODEL HELPERS  ========================================================
