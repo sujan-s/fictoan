@@ -612,6 +612,18 @@ progress[value]::-webkit-progress-bar {
   padding: 0 24px;
 }
 
+.portion > .row {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+@media all and (max-width: 600px) {
+  .row .portion,
+  .box .portion {
+    padding: 0 8px;
+  }
+}
+
 @media all and (max-width: 1200px) {
   .row .portion {
     margin-bottom: 2vmax;

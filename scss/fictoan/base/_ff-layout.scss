@@ -18,15 +18,15 @@
 }
 
 //  Remove the padding for nested portions
-// .portion > .row {
-//     margin-left  : -$measureFixed*3;
-//     margin-right : -$measureFixed*3;
-// }
+.portion > .row {
+    margin-left  : -$measureFixed*3;
+    margin-right : -$measureFixed*3;
+}
 
 @media all and (max-width : 600px) {
     .row .portion,
     .box .portion {
-        // padding : 0 $measureFixed*1;
+        padding : 0 $measureFixed*1;
     }
 }
 
