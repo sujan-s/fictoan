@@ -7,7 +7,8 @@
     margin      : 0 0 2vmax 0;
 }
 
-//  Use 'box' class to have portions that add up to more than 100% width
+//  Use 'box' class to have portions that add up
+//  to more than 100% width
 .box .portion { margin-bottom: $measureFixed*2; }
 
 //  Basics for the portions
