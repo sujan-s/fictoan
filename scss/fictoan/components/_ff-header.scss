@@ -1,48 +1,31 @@
 .ff-header {
-    position : relative;
-    height   : 56px;
+    display         : flex;
+    position        : relative;
+    height          : 56px;
+    justify-content : space-between;
+    align-items     : center;
 }
 
 .ff-content-container .ff-header { margin : 0 -2vmax; }
 
-.ff-header.fixed-on-top {
-    position : fixed;
-    top      : 0;
-    width    : 100%;
-    z-index  : 5000;
-}
-
-.ff-header.fixed-on-bottom {
-    position : fixed;
-    bottom   : 0;
-    width    : 100%;
-    z-index  : 5000;
-}
-
-.ff-header.fixed-on-bottom.shadow-hard { box-shadow : 0  -4px  8px -2px rgba(0, 0, 0, 0.24); }
-.ff-header.fixed-on-bottom.shadow-soft { box-shadow : 0 -16px 32px -8px rgba(0, 0, 0, 0.32); }
-.ff-header.fixed-on-bottom.shadow-mild { box-shadow : 0  -2px  2px -2px rgba(0, 0, 0, 0.24); }
-
 #header-logo {
-    float : left;
-    width : 20%;
+    max-width    : 20%;
+    height       : 56px;
+    justify-self : flex-start;
 }
 
-#header-logo img { height : 56px; }
+#header-logo img {
+    width  : auto;
+    height : 100%;
+}
 
 .header-links {
-    display   : inline-block;
-    position  : relative;
-    float     : right;
-    top       : 50%;
-    transform : translateY(-50%);
+    position         : relative;
+    background-color : transparent;
 }
-
-.header-links { background-color : $headerLinkBG; }
 
 .header-links a:not(.ff-button) {
     color : $headerLinkColor;
-
     &:hover { color : $headerLinkHoverColor; }
 }
 
@@ -70,16 +53,15 @@
         padding : 16px;
     }
 
-    #menu-toggle:checked + .header-links { display : block; }
-
     .header-links {
-        display    : none;
-        position   : absolute;
-        left       : 0;
-        right      : 0;
-        top        : 56px;
-        transform  : translateY(0);
-        box-shadow : 0 4px 8px rgba(10, 10, 10, 0.1);
+        display          : none;
+        position         : absolute;
+        left             : 0;
+        right            : 0;
+        top              : 56px;
+        transform        : translateY(0);
+        background-color : $headerLinkBG;
+        box-shadow       : 0 4px 8px rgba(10, 10, 10, 0.1);
 
         .nav-item { border-top : $navItemBorderColor; }
 
@@ -94,6 +76,8 @@
             width   : 80%;
         }
     }
+
+    #menu-toggle:checked + .header-links { display : block; }
 
     .header-links .nav-item {
         width   : 100%;

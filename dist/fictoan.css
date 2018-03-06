@@ -611,6 +611,18 @@ progress[value]::-webkit-progress-bar {
   padding: 0 24px;
 }
 
+.portion > .row {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+@media all and (max-width: 600px) {
+  .row .portion,
+  .box .portion {
+    padding: 0 8px;
+  }
+}
+
 @media all and (max-width: 1200px) {
   .row .portion {
     margin-bottom: 2vmax;
@@ -6632,59 +6644,31 @@ input::-moz-focus-outer {
 }
 
 .ff-header {
+  display: flex;
   position: relative;
   height: 56px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ff-content-container .ff-header {
   margin: 0 -2vmax;
 }
 
-.ff-header.fixed-on-top {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5000;
-}
-
-.ff-header.fixed-on-bottom {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 5000;
-}
-
-.ff-header.fixed-on-bottom.shadow-hard {
-  box-shadow: 0 -4px 8px -2px rgba(0, 0, 0, 0.24);
-}
-
-.ff-header.fixed-on-bottom.shadow-soft {
-  box-shadow: 0 -16px 32px -8px rgba(0, 0, 0, 0.32);
-}
-
-.ff-header.fixed-on-bottom.shadow-mild {
-  box-shadow: 0 -2px 2px -2px rgba(0, 0, 0, 0.24);
-}
-
 #header-logo {
-  float: left;
-  width: 20%;
+  max-width: 20%;
+  height: 56px;
+  justify-self: flex-start;
 }
 
 #header-logo img {
-  height: 56px;
+  width: auto;
+  height: 100%;
 }
 
 .header-links {
-  display: inline-block;
   position: relative;
-  float: right;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.header-links {
-  background-color: #f7f7f7;
+  background-color: transparent;
 }
 
 .header-links a:not(.ff-button) {
@@ -6719,9 +6703,6 @@ input::-moz-focus-outer {
     display: inline-block;
     padding: 16px;
   }
-  #menu-toggle:checked + .header-links {
-    display: block;
-  }
   .header-links {
     display: none;
     position: absolute;
@@ -6729,6 +6710,7 @@ input::-moz-focus-outer {
     right: 0;
     top: 56px;
     transform: translateY(0);
+    background-color: #f7f7f7;
     box-shadow: 0 4px 8px rgba(10, 10, 10, 0.1);
   }
   .header-links .nav-item {
@@ -6742,6 +6724,9 @@ input::-moz-focus-outer {
     display: block;
     margin: 8px auto;
     width: 80%;
+  }
+  #menu-toggle:checked + .header-links {
+    display: block;
   }
   .header-links .nav-item {
     width: 100%;
