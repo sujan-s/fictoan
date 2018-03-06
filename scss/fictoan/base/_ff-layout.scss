@@ -7,7 +7,8 @@
     margin      : 0 0 2vmax 0;
 }
 
-//  Use 'box' class to have portions that add up to more than 100% width
+//  Use 'box' class to have portions that add up
+//  to more than 100% width
 .box .portion { margin-bottom: $measureFixed*2; }
 
 //  Basics for the portions
@@ -19,8 +20,8 @@
 
 //  Remove the padding for nested portions
 // .portion > .row {
-//     margin-left  : -$measureFixed*3;
-//     margin-right : -$measureFixed*3;
+    // margin-left  : -$measureFixed*3;
+    // margin-right : -$measureFixed*3;
 // }
 
 @media all and (max-width : 600px) {
