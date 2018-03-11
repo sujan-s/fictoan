@@ -598,17 +598,19 @@ progress[value]::-webkit-progress-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin: 0 0 2vmax 0;
+  margin-bottom: 2vmax;
 }
 
-.box .portion {
-  margin-bottom: 16px;
-}
-
-.row .portion,
-.box .portion {
+.row > .portion,
+.box > .portion {
   flex: 1 1 0;
-  padding: 0 24px;
+  min-height: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.box > .portion {
+  margin-bottom: 16px;
 }
 
 .portion > .row {
@@ -616,49 +618,70 @@ progress[value]::-webkit-progress-bar {
   margin-right: -24px;
 }
 
-@media all and (max-width: 600px) {
-  .row .portion,
-  .box .portion {
-    padding: 0 8px;
-  }
-}
-
 @media all and (max-width: 1200px) {
-  .row .portion {
-    margin-bottom: 2vmax;
+  .row > .portion,
+  .box > .portion {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .portion > .row {
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
-.row.small-gutters .portion,
-.box.small-gutters .portion {
-  padding: 0 8px;
+@media all and (max-width: 900px) {
+  .row > .portion,
+  .box > .portion {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .portion > .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
 }
 
-.row.large-gutters .portion,
-.box.large-gutters .portion {
-  padding: 0 32px;
+@media all and (max-width: 600px) {
+  .row {
+    padding: 0 2vmin;
+  }
+  .portion {
+    padding: 0 !important;
+  }
+  .ff-card[class*="padding"] {
+    padding: 4vmin;
+  }
 }
 
-.portion {
-  width: 100%;
-  min-height: 8px;
+.row > .portion:only-of-type,
+.box > .portion:only-of-type {
+  margin-bottom: 0;
 }
 
-.small-gutters .portion,
-.portion.small-gutters {
-  padding: 0 12px;
+.row.large-gutters > .portion,
+.box.large-gutters > .portion {
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
-.no-gutters .portion,
-.portion.no-gutters {
-  padding: 0 !important;
+.row.small-gutters > .portion,
+.box.small-gutters > .portion {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.ff-card .row .portion:first-of-type {
+.row.no-gutters > .portion,
+.box.no-gutters > .portion {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ff-card .row[class^='retain-layout'] > .portion:first-of-type {
   padding-left: 0;
 }
 
-.ff-card .row .portion:last-of-type {
+.ff-card .row[class^='retain-layout'] > .portion:last-of-type {
   padding-right: 0;
 }
 
@@ -1167,20 +1190,26 @@ progress[value]::-webkit-progress-bar {
 }
 
 @media all and (max-width: 600px) {
-  .row.retain-layout-on-mobile .portion {
+  .row.retain-layout-on-mobile > .portion {
     flex: none !important;
   }
 }
 
 @media all and (min-width: 601px) and (max-width: 900px) {
-  .row.retain-layout-on-tab-pt .portion {
+  .row.retain-layout-on-tab-pt > .portion {
     flex: none !important;
   }
 }
 
 @media all and (min-width: 901px) and (max-width: 1200px) {
-  .row.retain-layout-on-tab-ls .portion {
+  .row.retain-layout-on-tab-ls > .portion {
     flex: none !important;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .row:not([class*='retain-layout']) > .portion {
+    margin-bottom: 2vmax;
   }
 }
 
@@ -6045,6 +6074,20 @@ i, em {
 .row.ff-form-multi-unit,
 .ff-form-multi-unit .portion {
   margin-bottom: 0;
+}
+
+.ff-form-multi-unit > .portion:first-of-type {
+  padding-left: 0;
+}
+
+.ff-form-multi-unit > .portion:last-of-type {
+  padding-right: 0;
+}
+
+@media all and (max-width: 600px) {
+  .row.ff-form-multi-unit {
+    padding: 0;
+  }
 }
 
 .ff-form-unit .portion {
