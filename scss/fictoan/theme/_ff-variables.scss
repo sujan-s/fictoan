@@ -60,11 +60,22 @@ $tabsBorderColor           : $colorGrey-30;
 //  Sidebar  ==================================================================
 $sideBarBG        : $colorGrey-10;
 $sideBarLogoBG    : $colorGrey-10;
-$sideBarItemBG    : $colorGrey-10;
-$sidebarTextColor : $colorShade;
 
-$sideBarItemBGOnHover    : $colorGrey-20;
-$sidebarTextColorOnHover : $colorAnalogue;
+$sideBarLinkBG           : $colorGrey-10;
+$sideBarLinkBGOnHover    : $colorGrey-20;
+
+$sideBarLinkIconStrokeColor        : $colorShade;
+$sideBarLinkIconStrokeColorOnHover : $colorShade;
+
+$sidebarTextColor        : $colorShade;
+$sidebarTextColorOnHover : $colorShade;
+
+$sidebarSmallTextColor : $colorGrey-70;
+
+$sideBarLinkChevronColor : $colorGrey-40;
+
+$sidebBarCollapsedLabelBG        : $colorAnalogue;
+$sidebBarCollapsedLabelTextColor : $colorWhite;
 
 
 //  Table  ====================================================================
