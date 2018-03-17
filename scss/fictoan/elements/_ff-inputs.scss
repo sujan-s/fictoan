@@ -38,7 +38,7 @@
     position    : absolute;
     top         : 4px;
     left        : 4px;
-    color       : $colorGrey-30;
+    color       : $colorGrey-40;
     transition  : all 0.16s;
     user-select : none;
 }
@@ -89,7 +89,7 @@
     position    : absolute;
     top         : -2px;
     content     : " *";
-    color       : $colorGrey-30;
+    color       : $colorGrey-40;
     font-weight : normal;
     transition  : all 0.16s;
 }
@@ -104,9 +104,14 @@
 
 .ff-input:invalid:not(:focus):not(:placeholder-shown) { border-bottom: 2px solid $colorRed; }
 
+.ff-input:focus + label {
+    color       : $colorBlack;
+    font-weight : bold;
+}
+
 .ff-input:focus + label,
 .ff-input:not(:placeholder-shown) + label {
-    top       : -12px;
+    top       : -16px;
     font-size : 12px;
 }
 

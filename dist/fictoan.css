@@ -6120,7 +6120,7 @@ i, em {
   position: absolute;
   top: 4px;
   left: 4px;
-  color: #d4d4d4;
+  color: #c2c2c2;
   transition: all 0.16s;
   user-select: none;
 }
@@ -6174,7 +6174,7 @@ i, em {
   position: absolute;
   top: -2px;
   content: " *";
-  color: #d4d4d4;
+  color: #c2c2c2;
   font-weight: normal;
   transition: all 0.16s;
 }
@@ -6193,9 +6193,14 @@ i, em {
   border-bottom: 2px solid #ef4343;
 }
 
+.ff-input:focus + label {
+  color: black;
+  font-weight: bold;
+}
+
 .ff-input:focus + label,
 .ff-input:not(:placeholder-shown) + label {
-  top: -12px;
+  top: -16px;
   font-size: 12px;
 }
 
