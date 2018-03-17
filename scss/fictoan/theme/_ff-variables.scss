@@ -72,7 +72,11 @@ $sidebarTextColorOnHover : $colorShade;
 
 $sidebarSmallTextColor : $colorGrey-70;
 
-$sideBarLinkChevronColor : $colorGrey-40;
+$sideBarLinkChevronColor        : $colorGrey-40;
+$sideBarLinkChevronColorOnHover : $colorWhite;
+
+$sideBarLinkChevronBG           : $colorGrey-20;
+$sideBarLinkChevronBGOnHover    : $colorHue;
 
 $sidebBarCollapsedLabelBG        : $colorAnalogue;
 $sidebBarCollapsedLabelTextColor : $colorWhite;
