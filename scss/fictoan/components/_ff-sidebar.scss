@@ -1,3 +1,4 @@
+//  BASICS  ===================================================================
 .ff-sidebar-container {
     position         : fixed;
     width            : 240px;
@@ -30,6 +31,8 @@
     width       : calc(100% - 48px);
 }
 
+
+//  THE LOGO  =================================================================
 #sidebar-logo #logo-small {
     width      : 48px;
     height     : 48px;
@@ -43,6 +46,8 @@
 .ff-sidebar-container #sidebar-logo #logo-big               { display: block; }
 .ff-sidebar-container.collapsed #sidebar-logo #logo-big     { display: none; }
 
+
+//  LINKS  ====================================================================
 .sidebar-links {
     position : absolute;
     top      : 80px;
@@ -65,7 +70,16 @@
     justify-self : center;
 }
 
-.sidebar-link svg       { stroke: $sideBarLinkIconStrokeColor; }
+.sidebar-link span svg {
+    width           : 16px;
+    height          : 16px;
+    fill            : none;
+    stroke          : $sideBarLinkIconStrokeColor;
+    stroke-linecap  : round;
+    stroke-width    : 2;
+    stroke-linejoin : round;
+}
+
 .sidebar-link:hover svg { stroke: $sideBarLinkIconStrokeColorOnHover; }
 
 .sidebar-link label {
@@ -80,23 +94,40 @@
 
 .sidebar-link label:hover { color: $sidebarTextColorOnHover; }
 
+
+//  NESTED LINKS  =============================================================
 .sidebar-links summary { position: relative; }
 
+.sidebar-links details > summary::before {
+    display          : none;
+    position         : absolute;
+    width            : 20px;
+    height           : 20px;
+    top              : 16px;
+    right            : 11px;
+    content          : "";
+    border-radius    : 50%;
+    background-color : $sideBarLinkChevronBG;
+    cursor           : pointer;
+}
+
+.sidebar-links details > summary:hover::before { display: inline-block; }
+.sidebar-links details > summary::before { background-color : $sideBarLinkChevronBGOnHover; }
+
 .sidebar-links details > summary::after {
-    display        : inline-block;
-    position       : absolute;
-    width          : 10px;
-    height         : 10px;
-    top            : 16px;
-    right          : 16px;
-    content        : "";
-    padding        : 2px;
-    border-style   : solid;
-    border-width   : 0 2px 2px 0;
-    transform      : rotate(45deg);
-    color          : $sideBarLinkChevronColor;
-    transition     : all 0.2s;
-    cursor         : pointer;
+    display      : inline-block;
+    position     : absolute;
+    width        : 8px;
+    height       : 8px;
+    top          : 20px;
+    right        : 17px;
+    content      : "";
+    border-style : solid;
+    border-width : 0px 2px 2px 0;
+    transform    : rotate(45deg);
+    color        : $sideBarLinkChevronColor;
+    transition   : all 0.2s;
+    cursor       : pointer;
 }
 
 .sidebar-links details[open] > summary::after {
@@ -104,8 +135,10 @@
     top       : 22px;
 }
 
-.ff-sidebar-container.collapsed summary::after { display: none; }
+.sidebar-links details[open] > summary:hover::after { color : $sideBarLinkChevronColorOnHover; }
 
+
+//  LABELS WHEN COLLAPSED  ====================================================
 .ff-sidebar-container.collapsed .sidebar-link span:hover + label {
     display          : inline-block;
     position         : fixed;
@@ -128,22 +161,5 @@
 .sidebar-links details details > .sidebar-link:hover > label { color : $sidebarTextColorOnHover; }
 
 //  HIDE THE SCROLLBAR  =======================================================
-//  Custom scrollbar, works only in webkit browsers
-.ff-sidebar-container::-webkit-scrollbar {
-    position : absolute;
-    top      : 0;
-    right    : 0;
-    width    : 12px;
-}
-
-.ff-sidebar-container::-webkit-scrollbar-track { display : none; }
-
-.ff-sidebar-container::-webkit-scrollbar-thumb {
-    width            : 6px;
-    height           : 24px;
-    max-height       : 24px;
-    background-color : rgba($colorGrey, 0.2);
-    border-radius    : 10px;
-    padding          : 2px;
-}
-.ff-sidebar-container::-webkit-scrollbar-thumb:hover { background-color : rgba($colorShade, 0.8); }
+//  works only in webkit browsers
+.ff-sidebar-container::-webkit-scrollbar { display: none; }

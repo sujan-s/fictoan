@@ -6858,8 +6858,14 @@ input::-moz-focus-outer {
   justify-self: center;
 }
 
-.sidebar-link svg {
+.sidebar-link span svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
   stroke: #292929;
+  stroke-linecap: round;
+  stroke-width: 2;
+  stroke-linejoin: round;
 }
 
 .sidebar-link:hover svg {
@@ -6884,17 +6890,37 @@ input::-moz-focus-outer {
   position: relative;
 }
 
+.sidebar-links details > summary::before {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 16px;
+  right: 11px;
+  content: "";
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+.sidebar-links details > summary:hover::before {
+  display: inline-block;
+}
+
+.sidebar-links details > summary::before {
+  background-color: #ffc847;
+}
+
 .sidebar-links details > summary::after {
   display: inline-block;
   position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 16px;
-  right: 16px;
+  width: 8px;
+  height: 8px;
+  top: 20px;
+  right: 17px;
   content: "";
-  padding: 2px;
   border-style: solid;
-  border-width: 0 2px 2px 0;
+  border-width: 0px 2px 2px 0;
   transform: rotate(45deg);
   color: #c2c2c2;
   transition: all 0.2s;
@@ -6906,8 +6932,8 @@ input::-moz-focus-outer {
   top: 22px;
 }
 
-.ff-sidebar-container.collapsed summary::after {
-  display: none;
+.sidebar-links details[open] > summary:hover::after {
+  color: white;
 }
 
 .ff-sidebar-container.collapsed .sidebar-link span:hover + label {
@@ -6934,27 +6960,7 @@ input::-moz-focus-outer {
 }
 
 .ff-sidebar-container::-webkit-scrollbar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 12px;
-}
-
-.ff-sidebar-container::-webkit-scrollbar-track {
   display: none;
-}
-
-.ff-sidebar-container::-webkit-scrollbar-thumb {
-  width: 6px;
-  height: 24px;
-  max-height: 24px;
-  background-color: rgba(87, 87, 87, 0.2);
-  border-radius: 10px;
-  padding: 2px;
-}
-
-.ff-sidebar-container::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(41, 41, 41, 0.8);
 }
 
 .ff-card {
