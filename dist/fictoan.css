@@ -6933,27 +6933,27 @@ input::-moz-focus-outer {
   color: #292929;
 }
 
-.ff-sidebar-container ::-webkit-scrollbar {
+.ff-sidebar-container::-webkit-scrollbar {
   position: absolute;
   top: 0;
   right: 0;
   width: 12px;
 }
 
-.ff-sidebar-container ::-webkit-scrollbar-track {
+.ff-sidebar-container::-webkit-scrollbar-track {
   display: none;
 }
 
-.ff-sidebar-container ::-webkit-scrollbar-thumb {
+.ff-sidebar-container::-webkit-scrollbar-thumb {
   width: 6px;
   height: 24px;
   max-height: 24px;
-  background-color: rgba(87, 87, 87, 0.8);
+  background-color: rgba(87, 87, 87, 0.2);
   border-radius: 10px;
   padding: 2px;
 }
 
-.ff-sidebar-container ::-webkit-scrollbar-thumb:hover {
+.ff-sidebar-container::-webkit-scrollbar-thumb:hover {
   background-color: rgba(41, 41, 41, 0.8);
 }
 
