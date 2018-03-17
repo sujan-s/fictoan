@@ -40,146 +40,682 @@
 <body class="page-with-sidebar">
 
     <div class="ff-sidebar-container">
-        <nav class="ff-sidebar">
-            <a id="sidebar-logo">
-                <img id="logo-big" src="images/fictoan-logo.svg" />
-                <img id="logo-small" src="icons/favicon.png" />
-            </a>
-
+        <a id="sidebar-logo" class="sidebar-toggle">
+            <img id="logo-big" src="images/fictoan-logo.svg" />
+            <img id="logo-small" src="icons/favicon.png" />
+        </a>
+        
+        <div class="sidebar-links">            
+            <!-- GETTING STARTED  ====================  -->
             <details>
                 <summary>
-                    <a data-scroll id="getting-started" href="#section-getting-started">Getting started</a>
+                    <a class="sidebar-link" data-scroll href="#section-getting-started">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </span>
+                        <label><strong>Getting started</strong></label>
+                    </a>
                 </summary>
-                <a data-scroll href="#using-fictoan">Using FICTOAN</a>
-                <a data-scroll href="#class-names">Class names</a>
-                <a data-scroll href="#variable-themes">Variable themes</a>
+                
+                <a class="sidebar-link" data-scroll href="#using-fictoan">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Using FICTOAN</label>
+                </a>
+                
+                <a class="sidebar-link" data-scroll href="#class-names">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Class names</label>
+                </a>
+                
+                <a class="sidebar-link" data-scroll href="#variable-themes">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Variable themes</label>
+                </a>
             </details>
 
+            <!-- LAYOUT  =============================  -->
             <details>
                 <summary>
-                    <a data-scroll id="layout" href="#section-layout">Layout</a>
+                    <a class="sidebar-link" data-scroll href="#section-layout">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                        </span>
+                        <label><strong>Layouts</strong></label>
+                    </a>
                 </summary>
-                <a data-scroll href="#single-row">Single row</a>
-                <a data-scroll href="#multiple-rows">Multiple rows</a>
-                <a data-scroll href="#responive-helpers">Responsive helpers</a>
-                <a data-scroll href="#layout-responsive-visibility">Responsive visibility</a>
-                <a data-scroll href="#gutter-sizing">Gutter sizing</a>
+                
+                <a class="sidebar-link" data-scroll href="#single-row">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Single</label>
+                </a>
+                
+                <a class="sidebar-link" data-scroll href="#multiple-rows">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Multiple rows</label>
+                </a>
+                
+                <a class="sidebar-link" data-scroll href="#responsive-helpers">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Responsive helpers</label>
+                </a>
+
+                <a class="sidebar-link" data-scroll href="#responsive-visibility">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Responsive visibility</label>
+                </a>
+
+                <a class="sidebar-link" data-scroll href="#gutter-sizing">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Gutter sizing</label>
+                </a>
             </details>
 
+            <!-- TYPOGRAPHY  =========================  -->
             <details>
                 <summary>
-                    <a data-scroll id="typography" href="#section-typography">Typography</a>
+                    <a class="sidebar-link" data-scroll href="#section-typography">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <polyline points="4 7 4 4 20 4 20 7" />
+                                <line x1="9" y1="20" x2="15" y2="20" />
+                                <line x1="12" y1="4" x2="12" y2="20" />
+                            </svg>
+                        </span>
+                        <label><strong>Typography</strong></label>
+                    </a>
                 </summary>
-                <a data-scroll href="#type-scaling">Type scaling</a>
-                <a data-scroll href="#type-helpers">Type helpers</a>
-                <a data-scroll href="#syntax-highlighting">Syntax highlighting</a>
+                
+                <a class="sidebar-link" data-scroll href="#type-scaling">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Type scaling</label>
+                </a>
+                
+                <a class="sidebar-link" data-scroll href="#type-helpers">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Type helpers</label>
+                </a>
+                
+                <a class="sidebar-link" data-scroll href="#syntax-highlighting">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Syntax highlighting</label>
+                </a>
             </details>
 
+            <!-- COLOUR  =============================  -->
             <details>
                 <summary>
-                    <a data-scroll id="colour" href="#section-colour">Colour</a>
+                    <a class="sidebar-link" data-scroll href="#section-colour">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                            </svg>
+                        </span>
+                        <label><strong>Colour</strong></label>
+                    </a>
                 </summary>
-                <a data-scroll href="#colour-list">Colour list</a>
+                
+                <a class="sidebar-link" data-scroll href="#colour-list">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Colour list</label>
+                </a>
             </details>
 
+            <!-- INPUTS  =============================  -->
             <details>
                 <summary>
-                    <a data-scroll id="inputs" href="#section-inputs">Inputs</a>
+                    <a class="sidebar-link" data-scroll href="#section-inputs">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/>
+                                <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/>
+                            </svg>
+                        </span>
+                        <label><strong>Inputs</strong></label>
+                    </a>
                 </summary>
+                
                 <details>
                     <summary>
-                        <a data-scroll href="#text-input">Text input</a>
+                        <a class="sidebar-link" data-scroll href="#text-input">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Text input</label>
+                        </a>
                     </summary>
-                    <a data-scroll href="#input-validity" class="sublink">Input validity</a>
+                    
+                    <a class="sidebar-link" data-scroll href="#input-validity">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </span>
+                        <label>Input validity</label>
+                    </a>
                 </details>
-                <a data-scroll href="#checkboxes">Checkboxes</a>
-                <a data-scroll href="#switches">Switches</a>
-                <a data-scroll href="#radio-buttons">Radio buttons</a>
-                <a data-scroll href="#select-options">Select options</a>
+
+                <a class="sidebar-link" data-scroll href="#checkboxes">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Checkboxes</label>
+                </a>
+
+                <a class="sidebar-link" data-scroll href="#switches">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Switches</label>
+                </a>
+
+                <a class="sidebar-link" data-scroll href="#radio-buttons">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Radio buttons</label>
+                </a>
+
+                <a class="sidebar-link" data-scroll href="#select-options">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Dropdowns</label>
+                </a>
+
                 <details>
                     <summary>
-                        <a data-scroll href="#buttons">Buttons</a>
+                        <a class="sidebar-link" data-scroll href="#buttons">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Buttons</label>
+                        </a>
                     </summary>
-                    <a data-scroll href="#button-simple" class="sublink">Simple button</a>
-                    <a data-scroll href="#button-bg" class="sublink">Background</a>
-                    <a data-scroll href="#button-size" class="sublink">Sizes</a>
-                    <a data-scroll href="#button-shape" class="sublink">Shape</a>
-                    <a data-scroll href="#button-shadow" class="sublink">Shadow</a>
-                    <a data-scroll href="#button-tags" class="sublink">Tags</a>
-                    <a data-scroll href="#button-states" class="sublink">Button states</a>
+
+                    <a class="sidebar-link" data-scroll href="#button-plain">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Simple button</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#button-bg">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Background</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#button-size">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Sizing</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#button-shape">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Shapes</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#button-shadow">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Shadow</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#button-tags">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Tags</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#button-states">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>States</label>
+                    </a>
                 </details>
-                <a data-scroll href="#progress-bar">Progress bar</a>
+
+                <a class="sidebar-link" data-scroll href="#progress-bar">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </span>
+                    <label>Progress bar</label>
+                </a>
             </details>
 
+            <!-- COMPONENTS  =========================  -->
             <details>
                 <summary>
-                    <a data-scroll id="components" href="#section-components">Components</a>
+                    <a class="sidebar-link" data-scroll href="#section-components">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                        </span>
+                        <label><strong>Components</strong></label>
+                    </a>
                 </summary>
 
+                <!-- Header  -->
                 <details>
                     <summary>
-                        <a data-scroll href="#comp-header">Header</a>
+                        <a class="sidebar-link" data-scroll href="#section-components">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Header</label>
+                        </a>
                     </summary>
-                    <a data-scroll href="#header-structure" class="sublink">Structure</a>
-                    <a data-scroll href="#header-position" class="sublink">Position</a>
-                    <a data-scroll href="#header-styling" class="sublink">Styling</a>
-                    <a data-scroll href="#header-responsiveness" class="sublink">Responsiveness</a>
+                    
+                    <a class="sidebar-link" data-scroll href="#header-structure">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Structure</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#header-position">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Positioning</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#header-styling">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Styling</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#header-responsiveness">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Responsiveness</label>
+                    </a>
                 </details>
 
+                <!-- Tabs  -->
                 <details>
                     <summary>
-                        <a data-scroll href="#comp-tabs">Tabs</a>
+                        <a class="sidebar-link" data-scroll href="#comp-tabs">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Tabs</label>
+                        </a>
                     </summary>
-                    <a data-scroll href="#tabs-structure" class="sublink">Structure</a>
-                    <a data-scroll href="#tabs-max" class="sublink">Max tabs variable</a>
-                    <a data-scroll href="#tabs-variables" class="sublink">Variables</a>
+                    
+                    <a class="sidebar-link" data-scroll href="#tabs-structure">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Structure</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#tabs-max">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Max-tabs</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#tabs-styling">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Styling</label>
+                    </a>
+                </details>
+            
+                <!-- Sidebar  -->
+                <details>
+                    <summary>
+                        <a class="sidebar-link" data-scroll href="#comp-sidebar">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Sidebar</label>
+                        </a>
+                    </summary>
+                    
+                    <a class="sidebar-link" data-scroll href="#sidebar-structure">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Structure</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#sidebar-toggle">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Toggle</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#sidebar-logo">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Logo</label>
+                    </a>
                 </details>
 
+                <!-- Cards  -->
                 <details>
                     <summary>
-                        <a data-scroll href="#comp-sidebar">Sidebar</a>
+                        <a class="sidebar-link" data-scroll href="#comp-card">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Cards</label>
+                        </a>
                     </summary>
-                    <a data-scroll href="#sidebar-structure" class="sublink">Structure</a>
-                    <a data-scroll href="#sidebar-open-collapse" class="sublink">Open and collapse</a>
-                    <a data-scroll href="#sidebar-adding-logo" class="sublink">Sidebar logo</a>
+                    
+                    <a class="sidebar-link" data-scroll href="#card-bg">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Background</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#card-shape">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Shape</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#card-circular">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Circular</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#card-shadow">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Shadow</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#card-padding">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Padding</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#card-examples">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Examples</label>
+                    </a>
                 </details>
 
+                <!-- Table  -->
                 <details>
                     <summary>
-                        <a data-scroll href="#comp-card">Card</a>
+                        <a class="sidebar-link" data-scroll href="#comp-table">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Table</label>
+                        </a>
                     </summary>
-                    <a data-scroll href="#card-bg" class="sublink">Background</a>
-                    <a data-scroll href="#card-shape" class="sublink">Shape</a>
-                    <a data-scroll href="#card-circular" class="sublink">Circular card</a>
-                    <a data-scroll href="#card-shadow" class="sublink">Shadow</a>
-                    <a data-scroll href="#card-padding" class="sublink">Padding</a>
-                    <a data-scroll href="#card-examples" class="sublink">Examples</a>
+                    
+                    <a class="sidebar-link" data-scroll href="#table-default">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Default</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#table-padding">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Padding</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#table-border">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Border</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#table-colours">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Colours</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#table-hovering">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Hovering</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#table-width">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Width</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#table-text">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Text</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#table-variables">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Variables</label>
+                    </a>
                 </details>
 
+                <!-- Modal  -->
                 <details>
                     <summary>
-                        <a data-scroll href="#comp-table">Table</a>
+                        <a class="sidebar-link" data-scroll href="#comp-modal">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4"/>
+                                </svg>
+                            </span>
+                            <label>Modal</label>
+                        </a>
                     </summary>
-                    <a data-scroll href="#table-default" class="sublink">Default</a>
-                    <a data-scroll href="#table-padding" class="sublink">Padding</a>
-                    <a data-scroll href="#table-border" class="sublink">Borders</a>
-                    <a data-scroll href="#table-colours" class="sublink">Colours</a>
-                    <a data-scroll href="#table-hovering" class="sublink">Hovering</a>
-                    <a data-scroll href="#table-width" class="sublink">Table width</a>
-                    <a data-scroll href="#table-text" class="sublink">Text size</a>
-                    <a data-scroll href="#table-variables" class="sublink">Variables</a>
-                </details>
+                    
+                    <a class="sidebar-link" data-scroll href="#modal-structure">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Structure</label>
+                    </a>
 
-                <details>
-                    <summary>
-                        <a data-scroll href="#comp-modal">Modal</a>
-                    </summary>
-                    <a data-scroll href="#modal-structure" class="sublink">Structure</a>
-                    <a data-scroll href="#modal-display" class="sublink">Show and hide</a>
-                    <a data-scroll href="#modal-variables" class="sublink">Variables</a>
+                    <a class="sidebar-link" data-scroll href="#modal-display">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Display</label>
+                    </a>
+
+                    <a class="sidebar-link" data-scroll href="#modal-variables">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"/>
+                            </svg>
+                        </span>
+                        <label>Variables</label>
+                    </a>
                 </details>
             </details>
-        </nav>
+        </div>
     </div>
 
     <div class="ff-content-container">
@@ -647,7 +1183,7 @@ $sidebarTextColorOnHover : $colorWhite;
 
 
             <!--  RESPONSIVE HELPERS  =============================================================================  -->
-            <div id="responive-helpers" class="row">
+            <div id="responsive-helpers" class="row">
                 <div class="portion whole">
                     <div class="border-thin margin-bottom-tiny"></div>
                     <h4>Responsive helpers</h4>
@@ -705,7 +1241,7 @@ $sidebarTextColorOnHover : $colorWhite;
 
 
             <!--  RESPONSIVE VISIBILITY  ==========================================================================  -->
-            <div id="layout-responsive-visibility" class="row">
+            <div id="responsive-visibility" class="row">
                 <div class="portion whole">
                     <div class="border-thin margin-bottom-tiny"></div>
                     <h4>Responsive visibility</h4>
@@ -2925,7 +3461,7 @@ pre::after { content: "&amp;"; }
 
 
             <!--  PLAIN BUTTON  ==========================================  -->
-            <div id="button-simple" class="row margin-bottom-fixed">
+            <div id="button-plain" class="row margin-bottom-fixed">
                 <div class="portion whole">
                     <div class="border-gray margin-bottom-tiny"></div>
                     <h6>Simple button</h6>
@@ -3189,7 +3725,7 @@ pre::after { content: "&amp;"; }
 
 
 
-            <!--  DROPDOWNS  =========================================================================================== -->
+            <!--  PROGRESS BAR  ==================================================================================  -->
             <div id="progress-bar" class="row margin-bottom-fixed">
                 <div class="portion whole">
                     <div class="border-thin margin-bottom-tiny"></div>
@@ -3745,42 +4281,52 @@ pre::after { content: "&amp;"; }
 
                 <div class="portion half">
                     <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-sidebar-container">
-    &lt;nav class="ff-sidebar">
+    &lt;a id="sidebar-logo" class="sidebar-toggle">
+        &lt;img id="logo-big" src="images/fictoan-logo.svg" />
+        &lt;img id="logo-small" src="icons/favicon.png" />
+    &lt;/a>
+
+    &lt;div class="sidebar-links">
         &lt;!--  Single links  -->
-        &lt;a href="#">&lt;/a>
+        &lt;a class="sidebar-link" href="#">
+            &lt;span>
+                &lt;svg>&lt;/svg>
+            &lt;/span>
+            &lt;label>Label text&lt;/label>
+        &lt;/a>
 
         &lt;!--  Folder  -->
         &lt;details>
             &lt;summary>
-                &lt;a href="#">&lt;/a>
+                &lt;a class="sidebar-link" href="#">&lt;/a>
             &lt;/summary>
-            &lt;a href="#">&lt;/a>
-            &lt;a href="#">&lt;/a>
+            &lt;a class="sidebar-link" href="#">&lt;/a>
+            &lt;a class="sidebar-link" href="#">&lt;/a>
         &lt;/details>
 
         &lt;!--  Folder with nested sub-folder  -->
         &lt;details>
             &lt;summary>
-                &lt;a href="#">&lt;/a>
+                &lt;a class="sidebar-link" href="#">&lt;/a>
             &lt;/summary>
-            &lt;a href="#">&lt;/a>
-            &lt;a href="#">&lt;/a>
+            &lt;a class="sidebar-link" href="#">&lt;/a>
+            &lt;a class="sidebar-link" href="#">&lt;/a>
             &lt;details>
                 &lt;summary>
-                    &lt;a href="#">&lt;/a>
+                    &lt;a class="sidebar-link" href="#">&lt;/a>
                 &lt;/summary>
-                &lt;a href="#">&lt;/a>
-                &lt;a href="#">&lt;/a>
+                &lt;a class="sidebar-link" href="#">&lt;/a>
+                &lt;a class="sidebar-link" href="#">&lt;/a>
             &lt;/details>
         &lt;/details>
-    &lt;/nav>
+    &lt;/div>
 &lt;/div></code></pre>
                 </div>
             </div>
 
 
             <!--  OPEN AND COLLAPSE  =================  -->
-            <div id="sidebar-open-collapse" class="row margin-bottom-fixed">
+            <div id="sidebar-toggle" class="row margin-bottom-fixed">
                 <div class="portion whole">
                     <div class="border-gray margin-bottom-tiny"></div>
                     <h6>Open and collapse</h6>
@@ -3789,25 +4335,33 @@ pre::after { content: "&amp;"; }
 
             <div class="row">
                 <div class="portion half">
-                    <p>This is the only JS part in FICTOAN.</p>
                     <p>The sidebar opens and closes when you click the first child element of the <code>.ff-sidebar</code> div. It can be an image, a text element or just an icon, it will still work.</p>
 
                     <p>The sidebar is 240px wide when open, and 48px when collapsed. When collapsed, you can still click on the icons to navigate to the corresponding div. The sidebar also automatically collapsed at screen widths less than 800px wide.</p>
                 </div>
 
                 <div class="portion half">
-                    <pre class="margin-top-fixed"><code class="language-js">var parentContainer = document.getElementsByClassName("ff-sidebar-container")[0];
-var firstChild = document.getElementsByClassName("ff-sidebar")[0].children[0];
+                    <pre class="margin-top-fixed"><code class="language-js">//  Toggle sidebar  ===================================================
+var sidebar = document.querySelector(".ff-sidebar-container");
+var toggles = document.querySelectorAll(".sidebar-toggle");
 
-function mainNavToggle() {
-    parentContainer.classList.toggle("collapsed");
+for (var i = 0; i < toggles.length; i++) {
+    toggles[i].addEventListener('click', function() {
+        sidebar.classList.toggle("collapsed");
+    });
 }
 
-firstChild.addEventListener("click", mainNavToggle);
-
-window.onresize = function() {
-    if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
-    else parentContainer.classList.remove("collapsed");
+//  Display labels when sidebar is collapsed  =========================
+var sidebarLinkIcons = document.querySelectorAll(".ff-sidebar-container .sidebar-link > span");
+    sidebarLinkIcons.forEach((elem) => {
+        elem.onmouseover = function(e){
+            var top          = this.getBoundingClientRect().top, 
+                siblingLabel = elem.nextElementSibling;
+            
+            top = top + 12;
+            siblingLabel.style.top = top + "px";
+        };
+    });
 };</code></pre>
                 </div>
             </div>
@@ -3815,7 +4369,7 @@ window.onresize = function() {
 
 
 
-            <div id="sidebar-adding-logo" class="row margin-bottom-fixed">
+            <div id="sidebar-logo" class="row margin-bottom-fixed">
                 <div class="portion whole">
                     <div class="border-gray margin-bottom-tiny"></div>
                     <h6>Adding a logo</h6>
@@ -4924,7 +5478,7 @@ $tableHoverableTextColor : $colorShade;</code></pre>
 
 
 
-            <!--  TABLE  ==========================================================================================  -->
+            <!--  MODAL  ==========================================================================================  -->
             <div id="comp-modal" class="row margin-bottom-fixed">
                 <div class="portion whole">
                     <div class="border-thin margin-bottom-tiny"></div>
@@ -5050,206 +5604,6 @@ $tableHoverableTextColor : $colorShade;</code></pre>
             </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div id="option-0" class="js-account-label-settings box small-gutters margin-top-tiny retain-layout-on-tab-ls retain-layout-on-tab-pt">
-                    <div id="service-fee-cards" class="ff-card padding-medium shape-rounded bg-white shadow-hard">
-
-                            <div class="row vertically-center-items retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
-                                <div class="portion one-third">
-                                    <h6><strong>Cards</strong></h6>
-                                </div>
-                                
-                                <div class="portion two-thirds">
-                                    <div class="pull-right fee-actions">
-                                        <a data-modal="modal-01" class="js-open-modal ff-button size-small shape-rounded border-hue">Copy card settings...</a>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <!--  HEADER  ========================  -->
-                            <div class="row margin-bottom-fixed padding-bottom-fixed with-underline">
-                                <div class="portion three-sixteenths no-margin-bottom">
-                                    <p class="text-small text-grey-60">Subtype</p>
-                                </div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <p class="text-small text-grey-60">Percent %</p>
-                                </div>
-        
-                                <div class="portion two-sixteenths no-margin-bottom"></div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <p class="text-small text-grey-60">Flat fee</p>
-                                </div>
-                            </div>
-        
-                            <hr class="bg-red no-margin-top margin-bottom-fixed">
-        
-                            <!--  CREDIT  ========================  -->
-                            <div class="row margin-bottom-fixed padding-bottom-fixed">
-                                <div class="portion three-sixteenths no-margin-bottom">
-                                    <p>Credit</p>
-                                </div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion half">
-                                            <p>0 - 2000</p>
-                                        </div>
-
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-percent" value="1%" required/>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="portion two-sixteenths no-margin-bottom"></div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-rupee" value="&#8377;5" required/>
-                                        </div>
-        
-                                        <div class="portion half">
-                                                <!-- <p>All</p> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="row margin-bottom-fixed padding-bottom-fixed">
-                                <div class="portion three-sixteenths no-margin-bottom"></div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-percent" value="2.3%" required/>
-                                        </div>
-        
-                                        <div class="portion half">
-                                            <p>2001 - 5000</p>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="portion two-sixteenths no-margin-bottom"></div>
-                                <div class="portion five-sixteenths no-margin-bottom"></div>
-                            </div>
-        
-                            <div class="row margin-bottom-fixed padding-bottom-fixed">
-                                <div class="portion three-sixteenths no-margin-bottom"></div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-percent" value="3.2%" required/>
-                                        </div>
-        
-                                        <div class="portion half">
-                                            <p>5001 and up</p>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="portion two-sixteenths no-margin-bottom"></div>
-                                <div class="portion five-sixteenths no-margin-bottom"></div>
-                            </div>
-        
-        
-                            <hr class="bg-red margin-top-fixed margin-bottom-tiny">
-        
-        
-                            <!--  DEBIT  =========================  -->
-                            <div class="row margin-bottom-fixed padding-bottom-fixed">
-                                <div class="portion three-sixteenths no-margin-bottom">
-                                    <p>Debit</p>
-                                </div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-percent" value="2%" required/>
-                                        </div>
-        
-                                        <div class="portion half">
-                                            <!-- <input class="ff-input" value="0 - 2000" required/> -->
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="portion two-sixteenths no-margin-bottom"></div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-rupee" value="&#8377;15" required/>
-                                        </div>
-        
-                                        <div class="portion half">
-                                            <!-- <input class="ff-input" value="All" required/> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-        
-                            <hr class="bg-red margin-top-fixed margin-bottom-tiny">
-        
-                            <!--  TYPE ABSENT  ===================  -->
-                            <div class="row margin-bottom-fixed padding-bottom-fixed">
-                                <div class="portion three-sixteenths no-margin-bottom">
-                                    <p>Card type absent</p>
-                                </div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-percent" value="3.5%" required/>
-                                        </div>
-        
-                                        <div class="portion half">
-                                            <!-- <input class="ff-input" value="0 - 2000" required/> -->
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="portion two-sixteenths no-margin-bottom"></div>
-        
-                                <div class="portion five-sixteenths no-margin-bottom">
-                                    <div class="row">
-                                        <div class="portion one-fourth">
-                                            <input class="ff-input input-rupee" value="&#8377;10" required/>
-                                        </div>
-        
-                                        <div class="portion half">
-                                            <!-- <input class="ff-input" value="0 - 2000" required/> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            </div>
-
         </section>
 
     </div> <!--  End content  -->
@@ -5293,15 +5647,28 @@ $tableHoverableTextColor : $colorShade;</code></pre>
 
 
 
-        //  SIDEBAR  ======================================
-        var parentContainer = document.getElementsByClassName("ff-sidebar-container")[0];
-        var firstChild = document.getElementsByClassName("ff-sidebar")[0].children[0];
-
-        function mainNavToggle() {
-            parentContainer.classList.toggle("collapsed");
+        //  Toggle sidebar  ===================================================
+        var sidebar = document.querySelector(".ff-sidebar-container");
+        var toggles = document.querySelectorAll(".sidebar-toggle");
+        
+        for (var i = 0; i < toggles.length; i++) {
+            toggles[i].addEventListener('click', function() {
+                sidebar.classList.toggle("collapsed");
+            });
         }
 
-        firstChild.addEventListener("click", mainNavToggle);
+
+        //  Display labels when sidebar is collapsed  =========================
+        var sidebarLinkIcons = document.querySelectorAll(".ff-sidebar-container .sidebar-link > span");
+        sidebarLinkIcons.forEach((elem) => {
+            elem.onmouseover = function(e){
+                var top          = this.getBoundingClientRect().top, 
+                    siblingLabel = elem.nextElementSibling;
+                
+                top = top + 12;
+                siblingLabel.style.top = top + "px";
+            };
+        });
 
 
         // window.onresize = function() {
