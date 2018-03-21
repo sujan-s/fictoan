@@ -5609,8 +5609,6 @@ $tableHoverableTextColor : $colorShade;</code></pre>
 
     </div> <!--  End content  -->
 
-    <div class="clear-both"></div>
-
 
     <script>
         //  MODAL  ========================================
@@ -5646,10 +5644,8 @@ $tableHoverableTextColor : $colorShade;</code></pre>
 
 
 
-
-
         //  Toggle sidebar  ===================================================
-        var sidebar = document.querySelector(".ff-sidebar-container");
+        var sidebar = document.querySelector(".page-with-sidebar");
         var toggles = document.querySelectorAll(".sidebar-toggle");
         
         for (var i = 0; i < toggles.length; i++) {
@@ -5670,14 +5666,5 @@ $tableHoverableTextColor : $colorShade;</code></pre>
                 siblingLabel.style.top = top + "px";
             };
         });
-
-
-        // window.onresize = function() {
-        //     if (window.innerWidth <= 800) parentContainer.classList.add("collapsed");
-        //     else parentContainer.classList.remove("collapsed");
-        // };
-
-
-
     </script>
 </body>
