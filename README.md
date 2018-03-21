@@ -14,4 +14,4 @@ It's still a bit rough around the edges, some functionality might break, but it 
 Just drop the `dist/fictoan.css` file into your project and you&rsquo;re good to go.
 
 
-`Current version is 2.10.3`
+`Current version is 2.10.5`

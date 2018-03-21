@@ -85,7 +85,7 @@
     background      : url(../docs/icons/icon-check.svg) no-repeat 98% 8px;
 }
 
-.ff-input:required + label::after{
+.ff-input:required + label::after {
     position    : absolute;
     top         : -2px;
     content     : " *";
@@ -94,7 +94,7 @@
     transition  : all 0.16s;
 }
 
-.ff-input:required:invalid + label::after{
+.ff-input:required:invalid + label::after {
     color       : $colorRed-60;
     font-weight : bold;
 }
