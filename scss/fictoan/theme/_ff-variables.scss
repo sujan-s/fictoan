@@ -68,15 +68,16 @@ $sideBarLinkIconStrokeColor        : $colorShade;
 $sideBarLinkIconStrokeColorOnHover : $colorShade;
 
 $sidebarTextColor        : $colorShade;
+$sidebarSmallTextColor   : $colorGrey-60;
 $sidebarTextColorOnHover : $colorShade;
 
-$sidebarSmallTextColor : $colorGrey-70;
-
-$sideBarLinkChevronColor        : $colorGrey-40;
-$sideBarLinkChevronColorOnHover : $colorWhite;
+$sideBarLinkBG        : $colorGrey-10;
+$sideBarLinkBGOnHover : $colorGrey-20;
 
 $sideBarLinkChevronBG           : $colorGrey-20;
+$sideBarLinkChevronColor        : $colorGrey-40;
 $sideBarLinkChevronBGOnHover    : $colorHue;
+$sideBarLinkChevronColorOnHover : $colorWhite;
 
 $sidebBarCollapsedLabelBG        : $colorAnalogue;
 $sidebBarCollapsedLabelTextColor : $colorWhite;

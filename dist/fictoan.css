@@ -6120,7 +6120,7 @@ i, em {
   position: absolute;
   top: 4px;
   left: 4px;
-  color: #d4d4d4;
+  color: #c2c2c2;
   transition: all 0.16s;
   user-select: none;
 }
@@ -6174,7 +6174,7 @@ i, em {
   position: absolute;
   top: -2px;
   content: " *";
-  color: #d4d4d4;
+  color: #c2c2c2;
   font-weight: normal;
   transition: all 0.16s;
 }
@@ -6193,9 +6193,14 @@ i, em {
   border-bottom: 2px solid #ef4343;
 }
 
+.ff-input:focus + label {
+  color: black;
+  font-weight: bold;
+}
+
 .ff-input:focus + label,
 .ff-input:not(:placeholder-shown) + label {
-  top: -12px;
+  top: -16px;
   font-size: 12px;
 }
 
@@ -6777,8 +6782,13 @@ input::-moz-focus-outer {
   }
 }
 
+.page-with-sidebar {
+  display: flex;
+  height: 100vh;
+}
+
 .ff-sidebar-container {
-  position: fixed;
+  flex: 0 0 auto;
   width: 240px;
   height: 100vh;
   flex-shrink: 0;
@@ -6795,6 +6805,8 @@ input::-moz-focus-outer {
 
 .ff-content-container {
   display: flex;
+  flex: 1 1 auto;
+  overflow: auto;
   flex-direction: column;
   width: 100%;
   padding: 0 2vw;
@@ -6802,12 +6814,10 @@ input::-moz-focus-outer {
 }
 
 .ff-sidebar-container + .ff-content-container {
-  margin-left: 240px;
   width: calc(100% - 240px);
 }
 
 .ff-sidebar-container.collapsed + .ff-content-container {
-  margin-left: 48px;
   width: calc(100% - 48px);
 }
 
@@ -6832,11 +6842,6 @@ input::-moz-focus-outer {
 
 .ff-sidebar-container.collapsed #sidebar-logo #logo-big {
   display: none;
-}
-
-.sidebar-links {
-  position: absolute;
-  top: 80px;
 }
 
 .sidebar-link {
@@ -6880,6 +6885,7 @@ input::-moz-focus-outer {
   font-weight: normal;
   color: #292929;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .sidebar-link label:hover {
@@ -6907,10 +6913,6 @@ input::-moz-focus-outer {
   display: inline-block;
 }
 
-.sidebar-links details > summary::before {
-  background-color: #ffc847;
-}
-
 .sidebar-links details > summary::after {
   display: inline-block;
   position: absolute;
@@ -6932,8 +6934,13 @@ input::-moz-focus-outer {
   top: 22px;
 }
 
-.sidebar-links details[open] > summary:hover::after {
-  color: white;
+.sidebar-links summary::before:hover + ::after {
+  color: red;
+}
+
+.ff-sidebar-container.collapsed .sidebar-links summary::before,
+.ff-sidebar-container.collapsed .sidebar-links summary::after {
+  display: none !important;
 }
 
 .ff-sidebar-container.collapsed .sidebar-link span:hover + label {
@@ -6952,7 +6959,7 @@ input::-moz-focus-outer {
 
 .sidebar-links details details > .sidebar-link > label {
   font-size: 80%;
-  color: #8c8c8c;
+  color: #9e9e9e;
 }
 
 .sidebar-links details details > .sidebar-link:hover > label {

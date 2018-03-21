@@ -1,6 +1,11 @@
 //  BASICS  ===================================================================
-.ff-sidebar-container {
-    position         : fixed;
+.page-with-sidebar {
+    display : flex;
+    height  : 100vh;
+}
+
+  .ff-sidebar-container {
+    flex             : 0 0 auto;
     width            : 240px;
     height           : 100vh;
     flex-shrink      : 0;
@@ -16,20 +21,16 @@
 
 .ff-content-container {
     display        : flex;
+    flex           : 1 1 auto;
+    overflow       : auto;
     flex-direction : column;
     width          : 100%;
     padding        : 0 2vw;
     transition     : margin 0.2s ease-out;
 }
 
-.ff-sidebar-container + .ff-content-container {
-    margin-left : 240px;
-    width       : calc(100% - 240px);
-}
-.ff-sidebar-container.collapsed + .ff-content-container {
-    margin-left : 48px;
-    width       : calc(100% - 48px);
-}
+.ff-sidebar-container + .ff-content-container           { width : calc(100% - 240px); }
+.ff-sidebar-container.collapsed + .ff-content-container { width : calc(100% - 48px); }
 
 
 //  THE LOGO  =================================================================
@@ -48,10 +49,6 @@
 
 
 //  LINKS  ====================================================================
-.sidebar-links {
-    position : absolute;
-    top      : 80px;
-}
 
 .sidebar-link {
     display     : flex;
@@ -90,6 +87,7 @@
     font-weight : normal;
     color       : $sidebarTextColor;
     cursor      : pointer;
+    white-space : nowrap;
 }
 
 .sidebar-link label:hover { color: $sidebarTextColorOnHover; }
@@ -112,7 +110,6 @@
 }
 
 .sidebar-links details > summary:hover::before { display: inline-block; }
-.sidebar-links details > summary::before { background-color : $sideBarLinkChevronBGOnHover; }
 
 .sidebar-links details > summary::after {
     display      : inline-block;
@@ -135,8 +132,12 @@
     top       : 22px;
 }
 
-.sidebar-links details[open] > summary:hover::after { color : $sideBarLinkChevronColorOnHover; }
+.sidebar-links summary::before:hover + ::after { color : red; }
 
+ 
+
+.ff-sidebar-container.collapsed .sidebar-links summary::before,
+.ff-sidebar-container.collapsed .sidebar-links summary::after { display: none !important; }
 
 //  LABELS WHEN COLLAPSED  ====================================================
 .ff-sidebar-container.collapsed .sidebar-link span:hover + label {
