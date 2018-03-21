@@ -1165,7 +1165,9 @@ progress[value]::-webkit-progress-bar {
   width: 93.75%;
 }
 
-.portion.whole .portion.half .portion.one-third,
+.portion.whole,
+.portion.half,
+.portion.one-third,
 .portion.two-thirds,
 .portion.one-fourth,
 .portion.three-fourths,

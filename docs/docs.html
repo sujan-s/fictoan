@@ -4336,19 +4336,19 @@ pre::after { content: "&amp;"; }
 
             <div class="row">
                 <div class="portion half">
-                    <p>The sidebar opens and closes when you click the first child element of the <code>.ff-sidebar</code> div. It can be an image, a text element or just an icon, it will still work.</p>
+                    <p>The sidebar opens and closes when you click the <code>#sidebar-logo</code> div.</p>
 
-                    <p>The sidebar is 240px wide when open, and 48px when collapsed. When collapsed, you can still click on the icons to navigate to the corresponding div. The sidebar also automatically collapsed at screen widths less than 800px wide.</p>
+                    <p>The sidebar is 240px wide when open, and 48px when collapsed. When collapsed, you can still click on the icons to navigate to the corresponding div.</p>
                 </div>
 
                 <div class="portion half">
                     <pre class="margin-top-fixed"><code class="language-js">//  Toggle sidebar  ===================================================
-var sidebar = document.querySelector(".ff-sidebar-container");
-var toggles = document.querySelectorAll(".sidebar-toggle");
+var wrapper = document.querySelector(".page-with-sidebar");
+var toggler = document.querySelectorAll(".sidebar-toggle");
 
-for (var i = 0; i < toggles.length; i++) {
-    toggles[i].addEventListener('click', function() {
-        sidebar.classList.toggle("collapsed");
+for (var i = 0; i &lt; toggler.length; i++) {
+    toggler[i].addEventListener('click', function() {
+        wrapper.classList.toggle("collapsed");
     });
 }
 
@@ -5645,12 +5645,12 @@ $tableHoverableTextColor : $colorShade;</code></pre>
 
 
         //  Toggle sidebar  ===================================================
-        var sidebar = document.querySelector(".page-with-sidebar");
-        var toggles = document.querySelectorAll(".sidebar-toggle");
+        var wrapper = document.querySelector(".page-with-sidebar");
+        var toggler = document.querySelectorAll(".sidebar-toggle");
         
-        for (var i = 0; i < toggles.length; i++) {
-            toggles[i].addEventListener('click', function() {
-                sidebar.classList.toggle("collapsed");
+        for (var i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener('click', function() {
+                wrapper.classList.toggle("collapsed");
             });
         }
 
