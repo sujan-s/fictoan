@@ -1,10 +1,11 @@
 //  BASICS  ===================================================================
 .page-with-sidebar {
-    display : flex;
-    height  : 100vh;
+    // display : flex;
+    // height  : 100vh;
 }
 
   .ff-sidebar-container {
+    position         : fixed;
     flex             : 0 0 auto;
     width            : 240px;
     height           : 100vh;
@@ -29,8 +30,15 @@
     transition     : margin 0.2s ease-out;
 }
 
-.ff-sidebar-container + .ff-content-container           { width : calc(100% - 240px); }
-.ff-sidebar-container.collapsed + .ff-content-container { width : calc(100% - 48px); }
+.ff-sidebar-container + .ff-content-container {
+    margin-left : 240px;
+    width       : calc(100% - 240px);
+}
+
+.ff-sidebar-container.collapsed + .ff-content-container { 
+    margin-left : 48px;
+    width       : calc(100% - 48px);
+}
 
 
 //  THE LOGO  =================================================================
