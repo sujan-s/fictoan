@@ -1,15 +1,18 @@
 //  BASICS  ===================================================================
 .page-with-sidebar {
-    // display : flex;
-    // height  : 100vh;
+    display               : grid;
+    max-width             : 100vw;
+    grid-template-columns : 240px 1fr;
+    grid-template-areas   : "sidebar content";
 }
 
-  .ff-sidebar-container {
+.page-with-sidebar.collapsed { grid-template-columns : 48px 1fr; }
+
+.ff-sidebar-container {
     position         : fixed;
-    flex             : 0 0 auto;
     width            : 240px;
     height           : 100vh;
-    flex-shrink      : 0;
+    grid-area        : sidebar;
     overflow-x       : hidden;
     overflow-y       : scroll;
     background-color : $sideBarBG;
@@ -21,25 +24,14 @@
 }
 
 .ff-content-container {
-    display        : flex;
-    flex           : 1 1 auto;
-    overflow       : auto;
-    flex-direction : column;
-    width          : 100%;
-    padding        : 0 2vw;
-    transition     : margin 0.2s ease-out;
+    grid-area  : content;
+    min-height : 0;
+    min-width  : 0;
+    padding    : 0 2vw;
+    transition : margin 0.2s ease-out;
 }
 
-.ff-sidebar-container + .ff-content-container {
-    margin-left : 240px;
-    width       : calc(100% - 240px);
-}
-
-.ff-sidebar-container.collapsed + .ff-content-container { 
-    margin-left : 48px;
-    width       : calc(100% - 48px);
-}
-
+.page-with-sidebar.collapsed .ff-sidebar-container { width: 48px; }
 
 //  THE LOGO  =================================================================
 #sidebar-logo #logo-small {
@@ -49,15 +41,14 @@
     transition : all 0.2s ease-out;
 }
 
-.ff-sidebar-container #sidebar-logo #logo-small             { display: none; }
-.ff-sidebar-container.collapsed #sidebar-logo #logo-small   { display: block; }
+.ff-sidebar-container #sidebar-logo #logo-small        { display: none; }
+.page-with-sidebar.collapsed #sidebar-logo #logo-small { display: block; }
 
-.ff-sidebar-container #sidebar-logo #logo-big               { display: block; }
-.ff-sidebar-container.collapsed #sidebar-logo #logo-big     { display: none; }
+.ff-sidebar-container #sidebar-logo #logo-big          { display: block; }
+.page-with-sidebar.collapsed #sidebar-logo #logo-big   { display: none; }
 
 
 //  LINKS  ====================================================================
-
 .sidebar-link {
     display     : flex;
     position    : relative;
@@ -144,11 +135,11 @@
 
  
 
-.ff-sidebar-container.collapsed .sidebar-links summary::before,
-.ff-sidebar-container.collapsed .sidebar-links summary::after { display: none !important; }
+.page-with-sidebar.collapsed .sidebar-links summary::before,
+.page-with-sidebar.collapsed .sidebar-links summary::after { display: none !important; }
 
 //  LABELS WHEN COLLAPSED  ====================================================
-.ff-sidebar-container.collapsed .sidebar-link span:hover + label {
+.page-with-sidebar.collapsed .sidebar-link span:hover + label {
     display          : inline-block;
     position         : fixed;
     width            : auto;

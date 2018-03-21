@@ -1165,23 +1165,126 @@ progress[value]::-webkit-progress-bar {
   width: 93.75%;
 }
 
-.portion[class*="whole"],
-.portion[class*="half"],
-.portion[class*="one-"],
-.portion[class*="two-"],
-.portion[class*="three-"],
-.portion[class*="four-"],
-.portion[class*="five-"],
-.portion[class*="six-"],
-.portion[class*="seven-"],
-.portion[class*="eight-"],
-.portion[class*="nine-"],
-.portion[class*="ten-"],
-.portion[class*="eleven-"],
-.portion[class*="twelve-"],
-.portion[class*="thirteen-"],
-.portion[class*="fourteen-"],
-.portion[class*="fifteen-"] {
+.portion.whole,
+.portion.half,
+.portion.one-third,
+.portion.two-thirds,
+.portion.one-fourth,
+.portion.three-fourths,
+.portion.one-fifth,
+.portion.two-fifths,
+.portion.three-fifths,
+.portion.four-fifths,
+.portion.one-sixth,
+.portion.two-sixths,
+.portion.three-sixths,
+.portion.four-sixths,
+.portion.five-sixths,
+.portion.one-seventh,
+.portion.two-sevenths,
+.portion.three-sevenths,
+.portion.four-sevenths,
+.portion.five-sevenths,
+.portion.six-sevenths,
+.portion.one-eighth,
+.portion.two-eighths,
+.portion.three-eighths,
+.portion.four-eighths,
+.portion.five-eighths,
+.portion.six-eighths,
+.portion.seven-eighths,
+.portion.one-ninth,
+.portion.two-ninths,
+.portion.three-ninths,
+.portion.four-ninths,
+.portion.five-ninths,
+.portion.six-ninths,
+.portion.seven-ninths,
+.portion.eight-ninths,
+.portion.one-tenth,
+.portion.two-tenths,
+.portion.three-tenths,
+.portion.four-tenths,
+.portion.five-tenths,
+.portion.six-tenths,
+.portion.seven-tenths,
+.portion.eight-tenths,
+.portion.nine-tenths,
+.portion.one-eleventh,
+.portion.two-elevenths,
+.portion.three-elevenths,
+.portion.four-elevenths,
+.portion.five-elevenths,
+.portion.six-elevenths,
+.portion.seven-elevenths,
+.portion.eight-elevenths,
+.portion.nine-elevenths,
+.portion.ten-elevenths,
+.portion.one-twelfth,
+.portion.two-twelfths,
+.portion.three-twelfths,
+.portion.four-twelfths,
+.portion.five-twelfths,
+.portion.six-twelfths,
+.portion.seven-twelfths,
+.portion.eight-twelfths,
+.portion.nine-twelfths,
+.portion.ten-twelfths,
+.portion.eleven-twelfths,
+.portion.one-thirteenth,
+.portion.two-thirteenths,
+.portion.three-thirteenths,
+.portion.four-thirteenths,
+.portion.five-thirteenths,
+.portion.six-thirteenths,
+.portion.seven-thirteenths,
+.portion.eight-thirteenths,
+.portion.nine-thirteenths,
+.portion.ten-thirteenths,
+.portion.eleven-thirteenths,
+.portion.twelve-thirteenths,
+.portion.one-fourteenth,
+.portion.two-fourteenths,
+.portion.three-fourteenths,
+.portion.four-fourteenths,
+.portion.five-fourteenths,
+.portion.six-fourteenths,
+.portion.seven-fourteenths,
+.portion.eight-fourteenths,
+.portion.nine-fourteenths,
+.portion.ten-fourteenths,
+.portion.eleven-fourteenths,
+.portion.twelve-fourteenths,
+.portion.thirteen-fourteenths,
+.portion.one-fifteenth,
+.portion.two-fifteenths,
+.portion.three-fifteenths,
+.portion.four-fifteenths,
+.portion.five-fifteenths,
+.portion.six-fifteenths,
+.portion.seven-fifteenths,
+.portion.eight-fifteenths,
+.portion.nine-fifteenths,
+.portion.ten-fifteenths,
+.portion.eleven-fifteenths,
+.portion.twelve-fifteenths,
+.portion.thirteen-fifteenths,
+.portion.fourteen-fifteenths,
+.portion.one-sixteenth,
+.portion.two-sixteenths,
+.portion.three-sixteenths,
+.portion.four-sixteenths,
+.portion.five-sixteenths,
+.portion.six-sixteenths,
+.portion.seven-sixteenths,
+.portion.eight-sixteenths,
+.portion.nine-sixteenths,
+.portion.ten-sixteenths,
+.portion.eleven-sixteenths,
+.portion.twelve-sixteenths,
+.portion.thirteen-sixteenths,
+.portion.fourteen-sixteenths,
+.portion.fifteen-sixteenths {
   flex: none;
 }
 
@@ -6782,12 +6885,22 @@ input::-moz-focus-outer {
   }
 }
 
+.page-with-sidebar {
+  display: grid;
+  max-width: 100vw;
+  grid-template-columns: 240px 1fr;
+  grid-template-areas: "sidebar content";
+}
+
+.page-with-sidebar.collapsed {
+  grid-template-columns: 48px 1fr;
+}
+
 .ff-sidebar-container {
   position: fixed;
-  flex: 0 0 auto;
   width: 240px;
   height: 100vh;
-  flex-shrink: 0;
+  grid-area: sidebar;
   overflow-x: hidden;
   overflow-y: scroll;
   background-color: #f7f7f7;
@@ -6800,23 +6913,15 @@ input::-moz-focus-outer {
 }
 
 .ff-content-container {
-  display: flex;
-  flex: 1 1 auto;
-  overflow: auto;
-  flex-direction: column;
-  width: 100%;
+  grid-area: content;
+  min-height: 0;
+  min-width: 0;
   padding: 0 2vw;
   transition: margin 0.2s ease-out;
 }
 
-.ff-sidebar-container + .ff-content-container {
-  margin-left: 240px;
-  width: calc(100% - 240px);
-}
-
-.ff-sidebar-container.collapsed + .ff-content-container {
-  margin-left: 48px;
-  width: calc(100% - 48px);
+.page-with-sidebar.collapsed .ff-sidebar-container {
+  width: 48px;
 }
 
 #sidebar-logo #logo-small {
@@ -6830,7 +6935,7 @@ input::-moz-focus-outer {
   display: none;
 }
 
-.ff-sidebar-container.collapsed #sidebar-logo #logo-small {
+.page-with-sidebar.collapsed #sidebar-logo #logo-small {
   display: block;
 }
 
@@ -6838,7 +6943,7 @@ input::-moz-focus-outer {
   display: block;
 }
 
-.ff-sidebar-container.collapsed #sidebar-logo #logo-big {
+.page-with-sidebar.collapsed #sidebar-logo #logo-big {
   display: none;
 }
 
@@ -6936,12 +7041,12 @@ input::-moz-focus-outer {
   color: red;
 }
 
-.ff-sidebar-container.collapsed .sidebar-links summary::before,
-.ff-sidebar-container.collapsed .sidebar-links summary::after {
+.page-with-sidebar.collapsed .sidebar-links summary::before,
+.page-with-sidebar.collapsed .sidebar-links summary::after {
   display: none !important;
 }
 
-.ff-sidebar-container.collapsed .sidebar-link span:hover + label {
+.page-with-sidebar.collapsed .sidebar-link span:hover + label {
   display: inline-block;
   position: fixed;
   width: auto;
