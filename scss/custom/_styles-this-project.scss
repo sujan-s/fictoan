@@ -40,15 +40,15 @@ section { margin-bottom: 12vmin; }
     background : $colorGrey-20;
 }
 
-#opener h1 { font-size: 10vmax; }
-#opener h2 { font-size: 8vmax; }
-#opener h3 { font-size: 6vmax; }
-
-#opener h1,
-#opener h2,
-#opener h3 {
+#opener h1:first-of-type {
+    font-size   : 9vw;
     line-height : 0.92;
-    word-wrap   : break-word;
+}
+
+@media all and (max-width: 900px) {
+    
+    #opener h1:first-of-type { font-size : 16vw; }
+
 }
 
 section:first-of-type { margin-top: initial; }

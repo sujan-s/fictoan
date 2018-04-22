@@ -460,22 +460,13 @@
                         <label>Structure</label>
                     </a>
 
-                    <a class="sidebar-link" data-scroll href="#tabs-max">
+                    <a class="sidebar-link" data-scroll href="#tabs-variables">
                         <span>
                             <svg viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="1"/>
                             </svg>
                         </span>
-                        <label>Max-tabs</label>
-                    </a>
-
-                    <a class="sidebar-link" data-scroll href="#tabs-styling">
-                        <span>
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="1"/>
-                            </svg>
-                        </span>
-                        <label>Styling</label>
+                        <label>Variables</label>
                     </a>
                 </details>
             
@@ -2999,15 +2990,15 @@ pre::after { content: "&amp;"; }
                         </div>
 
                         <form class="ff-form">
-                            <div class="row ff-form-multi-unit retain-layout-on-tab-ls">
-                                <div class="portion half">
+                            <div class="row retain-layout-on-tab-ls">
+                                <div class="portion">
                                     <div class="ff-form-unit">
                                         <input class="ff-input" id="first-name" placeholder=" " pattern="{1,}$" />
                                         <label for="first-name">First name</label>
                                     </div>
                                 </div>
 
-                                <div class="portion half">
+                                <div class="portion">
                                     <div class="ff-form-unit">
                                         <input class="ff-input" id="last-name" placeholder=" " pattern="{1,}$" />
                                         <label for="last-name">Last name</label>
@@ -3021,7 +3012,6 @@ pre::after { content: "&amp;"; }
                                 <p class="input-help">Please enter a valid email address</p>
                             </div>
 
-
                             <div class="ff-form-unit">
                                 <input class="ff-input needs-validation" type="password" id="password" placeholder=" " pattern="^.{6,}$" required/>
                                 <label for="password">Password</label>
@@ -3032,7 +3022,7 @@ pre::after { content: "&amp;"; }
                             <div class="ff-form-unit">
                                 <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
                                     <div class="portion one-fifth">
-                                        <p class="no-margin">I prefer</p>
+                                        <p>I prefer</p>
                                     </div>
 
                                     <div class="portion four-fifths">
@@ -3058,7 +3048,7 @@ pre::after { content: "&amp;"; }
                             <div class="ff-form-unit">
                                 <div class="row retain-layout-on-tab-ls retain-layout-on-tab-pt">
                                     <div class="portion one-fifth">
-                                        <p class="no-margin">I like</p>
+                                        <p>I like</p>
                                     </div>
 
                                     <div class="portion four-fifths">
@@ -4008,62 +3998,34 @@ pre::after { content: "&amp;"; }
             <div class="row">
                 <div class="portion whole">
                     <div class="ff-tabs-wrapper">
-                        <input id="ff-tab-1" type="radio" name="ff-tabs" checked />
-                        <label id="ff-tab-label-1" for="ff-tab-1" class="ff-tab-label">First tab</label>
+                        <input id="ff-tab-1" type="radio" name="ff-tabset-1" checked />
+                        <label class="ff-tab-label" for="ff-tab-1">Tab One</label>
+                        <div class="ff-tab-content">
+                            <h4>Tab 01 content</p>
+                        </div>
+                      
+                        <input id="ff-tab-2" type="radio" name="ff-tabset-1" />
+                        <label class="ff-tab-label" for="ff-tab-2">Tab Two</label>
+                        <div class="ff-tab-content">
+                            <h4>Tab 02 content</p>
+                        </div>
+                      
+                        <input id="ff-tab-3" type="radio" name="ff-tabset-1" />
+                        <label class="ff-tab-label" for="ff-tab-3">Tab Three</label>
+                        <div class="ff-tab-content">
+                            <h4>Tab 03 content</p>
+                        </div>
 
-                        <input id="ff-tab-2" type="radio" name="ff-tabs" />
-                        <label id="ff-tab-label-2" for="ff-tab-2" class="ff-tab-label">Second tab</label>
+                        <input id="ff-tab-4" type="radio" name="ff-tabset-1" />
+                        <label class="ff-tab-label" for="ff-tab-4">Tab Four</label>
+                        <div class="ff-tab-content">
+                            <img style="width: 400px" src="images/si.jpg">
+                        </div>
 
-                        <input id="ff-tab-3" type="radio" name="ff-tabs" />
-                        <label id="ff-tab-label-3" for="ff-tab-3" class="ff-tab-label">Third tab</label>
-
-                        <input id="ff-tab-4" type="radio" name="ff-tabs" />
-                        <label id="ff-tab-label-4" for="ff-tab-4" class="ff-tab-label">Fourth tab</label>
-
-                        <input id="ff-tab-5" type="radio" name="ff-tabs" />
-                        <label id="ff-tab-label-5" for="ff-tab-5" class="ff-tab-label">Fifth tab</label>
-
-                        <input id="ff-tab-6" type="radio" name="ff-tabs" />
-                        <label id="ff-tab-label-6" for="ff-tab-6" class="ff-tab-label">Sixth tab</label>
-
-                        <input id="ff-tab-7" type="radio" name="ff-tabs" />
-                        <label id="ff-tab-label-7" for="ff-tab-7" class="ff-tab-label">Seventh tab</label>
-
-                        <input id="ff-tab-8" type="radio" name="ff-tabs" />
-                        <label id="ff-tab-label-8" for="ff-tab-8" class="ff-tab-label">Eighth tab</label>
-
-                        <div class="ff-tabs-content">
-                            <div class="ff-tab-content-1">
-                                <p>Content for First tab</p>
-                            </div>
-
-                            <div class="ff-tab-content-2">
-                                <p>Content for Second tab</p>
-                            </div>
-
-                            <div class="ff-tab-content-3">
-                                <p>Content for Third tab</p>
-                            </div>
-
-                            <div class="ff-tab-content-4">
-                                <p>Content for Fourth tab</p>
-                            </div>
-
-                            <div class="ff-tab-content-5">
-                                <p>Content for Fifth tab</p>
-                            </div>
-
-                            <div class="ff-tab-content-6">
-                                <p>Content for Sixth tab</p>
-                            </div>
-
-                            <div class="ff-tab-content-7">
-                                <p>Content for Seventh tab</p>
-                            </div>
-
-                            <div class="ff-tab-content-8">
-                                <p>Content for Eighth tab</p>
-                            </div>
+                        <input id="ff-tab-5" type="radio" name="ff-tabset-1" />
+                        <label class="ff-tab-label" for="ff-tab-5">Tab Five</label>
+                        <div class="ff-tab-content">
+                            <h4>Tab 05 content</h4>
                         </div>
                     </div>
                 </div>
@@ -4083,58 +4045,43 @@ pre::after { content: "&amp;"; }
 
                     <p>The radio buttons have an unique ID of <code>#ff-tab-&lt;number></code> and a <code>ff-tabs</code> <code>name</code> attribute. Its sibling <code>label</code> has an ID of <code>#ff-tab-label-&lt;number></code> and a <code>for</code> attribute that matches the radio input. </p>
 
-                    <p>Then comes along a <code>.ff-tabs-content</code>, which nicely wraps all the content of the tabs together. Inside, there are separate divs for each tab content, with a class of <code>.ff-tab-content-&lt;number></code> prefix, which needs to match the appropriate radio and label.</p>
+                    <p>Then comes along a <code>.ff-tabs-content</code>, which nicely wraps all the content of the tab together. In this way, you can add as many tabs as you need. You can even nest them within each other, as long as you keep the <code>name</code> attribute unique to each group.</p>
+
+                    <p>Add the <code>checked</code> value to the tab you wanted activated by default.</p>
                 </div>
     
                 <div class="portion half">
                     <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-tabs-wrapper">
-    &lt;input id="ff-tab-1" type="radio" name="ff-tabs" checked />
-    &lt;label id="ff-tab-label-1" for="ff-tab-1" class="ff-tab-label">First tab&lt;/label>
+    &lt;input id="ff-tab-1" type="radio" name="ff-tabset-1" checked />
+    &lt;label class="ff-tab-label" for="ff-tab-1">Tab One&lt;/label>
+    &lt;div class="ff-tab-content">
+        &lt;p>Tab 01 content&lt;/p>
+    &lt;/div>
+    
+    &lt;input id="ff-tab-2" type="radio" name="ff-tabset-1" />
+    &lt;label class="ff-tab-label" for="ff-tab-2">Tab Two&lt;/label>
+    &lt;div class="ff-tab-content">
+        &lt;p>Tab 02 content&lt;/p>
+    &lt;/div>
+    
+    &lt;input id="ff-tab-3" type="radio" name="ff-tabset-1" />
+    &lt;label class="ff-tab-label" for="ff-tab-3">Tab Three&lt;/label>
+    &lt;div class="ff-tab-content">
+        &lt;p>Tab 03 content&lt;/p>
+    &lt;/div>
 
-    &lt;input id="ff-tab-2" type="radio" name="ff-tabs" />
-    &lt;label id="ff-tab-label-2" for="ff-tab-2" class="ff-tab-label">Second tab&lt;/label>
+    &lt;input id="ff-tab-4" type="radio" name="ff-tabset-1" />
+    &lt;label class="ff-tab-label" for="ff-tab-4">Tab Four&lt;/label>
+    &lt;div class="ff-tab-content">
+        &lt;p>Tab 04 content&lt;/p>
+    &lt;/div>
 
-    &lt;input id="ff-tab-3" type="radio" name="ff-tabs" />
-    &lt;label id="ff-tab-label-3" for="ff-tab-3" class="ff-tab-label">Third tab&lt;/label>
-
-    &lt;div class="ff-tabs-content">
-        &lt;div class="ff-tab-content-1">
-            &lt;p>Content for First tab&lt;/p>
-        &lt;/div>
-
-        &lt;div class="ff-tab-content-2">
-            &lt;p>Content for Second tab&lt;/p>
-        &lt;/div>
-
-        &lt;div class="ff-tab-content-3">
-            &lt;p>Content for Third tab&lt;/p>
-        &lt;/div>
+    &lt;input id="ff-tab-5" type="radio" name="ff-tabset-1" />
+    &lt;label class="ff-tab-label" for="ff-tab-5">Tab Five&lt;/label>
+    &lt;div class="ff-tab-content">
+        &lt;p>Tab 05 content&lt;/p>
     &lt;/div>
 &lt;/div></code></pre>
-                </div>
-            </div>
-
-
-
-            <!--  MAX TABS  ==========================  -->
-            <div id="tabs-max" class="row margin-bottom-fixed">
-                <div class="portion whole">
-                    <div class="border-gray margin-bottom-tiny"></div>
-                    <h6>Maximum tabs variable</h6>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="portion half">
-                    <p>FICTOAN uses a simple Sass loop to display the active tab content. But to achieve this, we have to introduce a variable to stop the loop at a particular number, which is where the <code>$max-tabs</code> comes into play.</p>
-
-                    <p>Change this number in the <code>ff-variables.scss</code> file to the maximum number of tabs you have in a particular set in your project. The default is set to 12.</p>
-                </div>
-    
-                <div class="portion half">
-                    <pre class="margin-top-fixed"><code class="language-scss">@for $i from 1 through $max-tabs {
-    #ff-tab-#{$i}:checked ~ .ff-tabs-content .ff-tab-content-#{$i} { display: block; }
-}</code></pre>
                 </div>
             </div>
 
@@ -4159,10 +4106,6 @@ pre::after { content: "&amp;"; }
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td><code>$max-tabs</code></td>
-                                <td><code>12</code></td>
-                            </tr>
                             <tr>
                                 <td><code>$activeTabLabelBG</code></td>
                                 <td><code>$colorWhite</code></td>
@@ -4708,8 +4651,87 @@ var sidebarLinkIcons = document.querySelectorAll(".ff-sidebar-container .sidebar
             </div>
 
             <div class="row">
-                <div class="portion one-third">
-                    <div class="ff-card shape-rounded padding-medium shadow-soft">
+                <div class="portion half">
+                    <div class="ff-card shape-rounded bg-white shadow-hard no-border">
+                        <div class="row vertically-center-items retain-layout-on-tab-ls retain-layout-on-tab-pt retain-layout-on-mobile">
+                            <div class="portion half">
+                                <img id="checkout-form-logo" class="margin-all-tiny" src="images/logo-ezetap.svg">
+                            </div>
+
+                            <div class="portion half">
+                                <h6 class="text-slate-60 text-right margin-all-tiny"><strong>Checkout</strong></h6>
+                            </div>
+                        </div>
+    
+                        <div class="row no-margin-bottom">
+                            <div class="portion whole no-padding bg-slate-20">
+                                <div class="carousel carousel-main" data-flickity='{"prevNextButtons": false, "percentPosition": false}'>
+                                    <!--  CARDS  =========================  -->
+                                    <div class="carousel-cell">
+                                        <div class="js-method-card ff-card padding-all-tiny shape-rounded bg-white shadow-hard">
+                                            <div class="row margin-bottom-small">
+                                                <div class="portion whole padding-all-fixed">
+                                                    <img class="icon-large show-inline" src="icons/card-amex.svg">
+                                                    <img class="icon-large show-inline" src="icons/card-visa.svg">
+                                                    <img class="icon-large show-inline" src="icons/card-master.svg">
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="portion whole">
+                                                    <div class="ff-form-unit no-margin-bottom">
+                                                        <input id="card-number" class="js-card-details ff-input font-mono" placeholder=" " maxlength="19" />
+                                                        <label for="card-number">Card number</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="portion one-fourth one-third-on-tab-pt one-third-on-mobile">
+                                                    <div class="ff-form-unit no-margin-bottom">
+                                                        <input id="card-expiry-month" class="js-card-details ff-input font-mono" placeholder=" " maxlength="2" />
+                                                        <label for="card-expiry-month">MM</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="portion one-fourth one-third-on-tab-pt one-third-on-mobile">
+                                                    <div class="ff-form-unit no-margin-bottom">
+                                                        <input id="card-expiry-year" class="js-card-details ff-input font-mono" placeholder=" " maxlength="2" />
+                                                        <label for="card-expiry-year">YY</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="portion one-fourth hide-on-mobile"></div>
+
+                                                <div class="portion one-fourth one-third-on-tab-pt one-third-on-mobile">
+                                                    <div class="ff-form-unit no-margin-bottom">
+                                                        <input id="card-cvv" class="js-card-details ff-input font-mono" type="password" placeholder=" " maxlength="4" />
+                                                        <label for="card-cvv">CVV</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="portion whole">
+                                                    <div class="ff-form-unit no-margin-bottom">
+                                                        <input id="card-owner" class="ff-input font-mono" placeholder=" " />
+                                                        <label for="card-owner">Name on card</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row margin-bottom-small">
+                            <div class="portion whole bg-slate-20">
+                                <a class="ff-button full-width margin-bottom-tiny shape-rounded bg-hue text-white shadow-hard font-mono">PAY &#8377;5,304.00</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="ff-card shape-rounded padding-medium shadow-soft">
                         <img class="horizontally-center-this margin-bottom-tiny" src="images/round-profile.png" style="width: 300px;">
                         <h5 class="text-center no-margin-bottom">Caterina Murino</h5>
                         <p class="text-center no-margin-top">Actress</p>
@@ -4728,10 +4750,10 @@ var sidebarLinkIcons = document.querySelectorAll(".ff-sidebar-container .sidebar
                                 <a class="ff-button size-small shape-rounded bg-accent text-white shadow-hard pull-right">SAVE</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
-                <div class="portion two-thirds">
+                <div class="portion half">
                     <pre class="margin-top-fixed"><code class="language-markup">&lt;div class="ff-card shape-rounded shadow-soft">
     &lt;img class="horizontally-center-this margin-bottom-tiny" src="images/round-profile.png">
     &lt;h5 class="text-center no-margin-bottom">Caterina Murino&lt;/h5>
