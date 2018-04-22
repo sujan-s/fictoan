@@ -4,57 +4,35 @@
     display       : flex;
     flex-wrap     : wrap;
     align-items   : flex-start;
-    margin-bottom : 2vmax;
+    margin-bottom : 0;
 }
 
 //  Basics for the portions
 .row > .portion,
 .box > .portion {
-    flex          : 1 1 0;
-    min-height    : $measureFixed;
-    padding-left  : $measureFixed*3;
-    padding-right : $measureFixed*3;
+    flex       : 1 1 0;
+    min-height : $measureFixed;
+    padding    : $measureFixed*3;
 }
+
 
 //  Use 'box' class to have portions that add up
 //  to more than 100% width
 .box > .portion { margin-bottom: $measureFixed*2; }
 
-//  Remove the padding for nested portions
-.portion > .row {
-    margin-left  : -$measureFixed*3;
-    margin-right : -$measureFixed*3;
-}
-
 @media all and (max-width : 1200px) {
     .row > .portion,
-    .box > .portion {
-        padding-left  : $measureFixed*2;
-        padding-right : $measureFixed*2;
-    }
-
-    .portion > .row {
-        margin-left  : -$measureFixed*2;
-        margin-right : -$measureFixed*2;
-    }
+    .box > .portion { padding : $measureFixed*2; }
 }
 
 @media all and (max-width : 900px) {
     .row > .portion,
-    .box > .portion {
-        padding-left  : $measureFixed*1;
-        padding-right : $measureFixed*1;
-    }
-
-    .portion > .row {
-        margin-left  : -$measureFixed*1;
-        margin-right : -$measureFixed*1;
-    }
+    .box > .portion { padding : $measureFixed*1; }
 }
 
 @media all and (max-width : 600px) {
     .row { padding : 0 2vmin; } 
-    
+
     .portion { padding : 0 !important; }
 
     .ff-card[class*="padding"] { padding : 4vmin; }
@@ -82,8 +60,12 @@
 }
 
 //  Remove portion-padding as card itself has padding
-.ff-card .row[class^='retain-layout'] > .portion:first-of-type { padding-left: 0; }
-.ff-card .row[class^='retain-layout'] > .portion:last-of-type  { padding-right: 0; }
+.ff-card .row[class*="retain-layout"] > .portion:first-of-type { padding-left  : 0; }
+.ff-card .row[class*="retain-layout"] > .portion:last-of-type  { padding-right : 0; }
+
+//  Elements within cards  ====================================================
+// .ff-card .row .portion:first-of-type { padding-left  : 0; }
+// .ff-card .row .portion:last-of-type  { padding-right : 0; }
 
 //  Explicit widths
 .portion.whole            { width : 100%; }

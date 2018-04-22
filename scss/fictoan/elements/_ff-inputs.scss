@@ -1,22 +1,14 @@
 //  INPUT UNIT  ===============================================================
 .ff-form-unit { position : relative; }
 
-.ff-form-unit:only-of-type,
-.ff-form-unit:not(:last-child) { margin-bottom: 40px; }
+.ff-form .ff-form-unit,
+.ff-form .ff-form-unit:not(:last-child) { margin-bottom: 40px; }
 
-.row.ff-form-multi-unit,
-.ff-form-multi-unit .portion { margin-bottom: 0; }
+.ff-form > .ff-form-unit:last-child { margin-bottom: 0; }
 
-.ff-form-multi-unit > .portion:first-of-type { padding-left: 0; }
-.ff-form-multi-unit > .portion:last-of-type  { padding-right: 0; }
-
-@media all and (max-width : 600px) {
-    .row.ff-form-multi-unit { padding : 0; }
-}
-
-.ff-form-unit .portion {
-    padding-left: 0;
-    padding-right: 0;
+.ff-form .portion {
+    padding-top    : 0;
+    padding-bottom : 0;
 }
 
 @media all and (max-width : 600px) {

@@ -26,6 +26,11 @@ img {
 
 a { text-decoration : none; }
 
+p:only-of-type:only-child {
+    margin-top    : 0;
+    margin-bottom : 0;
+}
+
 button { vertical-align : baseline; }
 
 //  Input fields  =============================================================
@@ -37,7 +42,6 @@ input { outline : none; }
 input[type="number"] {
     -webkit-appearance : none;
        -moz-appearance : none;
-            appearance : none;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -45,21 +49,28 @@ input[type="number"]::-webkit-inner-spin-button {
     margin             : 0;
     -webkit-appearance : none;
        -moz-appearance : none;
-            appearance : none;
 }
 
-input:-webkit-autofill { -webkit-box-shadow : 0 0 0 5000px white inset; }
+input:-webkit-autofill { box-shadow : 0 0 0 5000px white inset; }
 
 input[type="date"]::-webkit-inner-spin-button { display : none; }
 
 input[type="date"]::-webkit-calendar-picker-indicator { opacity : 0; }
+
+progress[value],
+progress::-webkit-progress-value,
+progress[value]::-webkit-progress-bar {
+    border             : none;
+    -webkit-appearance : none;
+       -moz-appearance : none;
+}
+
 
 //  Option select  ============================================================
 select {
     border-radius      : 0;
     -webkit-appearance : none;
        -moz-appearance : none;
-            appearance : none;
 }
 
 
@@ -81,7 +92,10 @@ pre, code { margin : 0; }
 //  Tables  ===================================================================
 table { border-collapse : collapse; }
 
-th { text-align : unset; }
+th {
+	font-weight: unset;
+	text-align : unset;
+}
 
 //  Reset for custom elements =================================================
 .ff-input,
@@ -97,19 +111,3 @@ th { text-align : unset; }
 .ff-button { user-select : none; }
 
 .ff-button:not([class*='border']) { border : none; }
-
-.ff-card .row:last-of-type { margin-bottom : 0; }
-
-p:only-child {
-    margin-top    : 0;
-    margin-bottom : 0;
-}
-
-progress[value],
-progress::-webkit-progress-value,
-progress[value]::-webkit-progress-bar {
-    border             : none;
-    -webkit-appearance : none;
-       -moz-appearance : none;
-            appearance : none;
-}
