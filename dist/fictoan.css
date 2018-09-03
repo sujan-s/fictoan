@@ -7113,8 +7113,8 @@ input::-moz-focus-outer {
   padding: 8px 16px;
 }
 
-.ff-table.padding-small th,
-.ff-table.padding-small td {
+.ff-table.padding-medium th,
+.ff-table.padding-medium td {
   padding: 16px 24px;
 }
 
