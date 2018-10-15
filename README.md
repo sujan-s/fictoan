@@ -1,5 +1,5 @@
 ## FICTOAN
-### <span style="#ccc">2.24.1</span>
+### <span style="#ccc">2.25.0</span>
 
 ---
 
