@@ -1,0 +1,220 @@
+// Power function - for setting heading sizes  ================================
+@function pow($number, $exponent) {
+    $value : 1;
+
+    @if $exponent > 0 {
+        @for $i from 1 through $exponent {
+            $value: $value * $number;
+        }
+    } @else if $exponent < 0 {
+        @for $i from 1 through -$exponent {
+            $value: $value / $number;
+        }
+    }
+
+    @return $value;
+}
+
+//  Colours  ==================================================================
+
+//  Neutrals
+$colorBlack         : hsl(   0,   0%,   0%);
+$colorWhite         : hsl(   0,   0%, 100%);
+
+$colorGrey          : hsl(   0,   0%,  34%);
+$colorGrey-90       : hsl(   0,   0%,  41%);
+$colorGrey-80       : hsl(   0,   0%,  48%);
+$colorGrey-70       : hsl(   0,   0%,  55%);
+$colorGrey-60       : hsl(   0,   0%,  62%);
+$colorGrey-50       : hsl(   0,   0%,  69%);
+$colorGrey-40       : hsl(   0,   0%,  76%);
+$colorGrey-30       : hsl(   0,   0%,  83%);
+$colorGrey-20       : hsl(   0,   0%,  90%);
+$colorGrey-10       : hsl(   0,   0%,  97%);
+
+$colorSlate         : hsl( 209,  12%,  50%);
+$colorSlate-90      : hsl( 210,  12%,  55%);
+$colorSlate-80      : hsl( 209,  12%,  60%);
+$colorSlate-70      : hsl( 207,  12%,  65%);
+$colorSlate-60      : hsl( 210,  12%,  70%);
+$colorSlate-50      : hsl( 210,  12%,  75%);
+$colorSlate-40      : hsl( 208,  13%,  80%);
+$colorSlate-30      : hsl( 213,  12%,  85%);
+$colorSlate-20      : hsl( 210,  12%,  90%);
+$colorSlate-10      : hsl( 200,  11%,  95%);
+
+$colorRed           : hsl(   0,  84%,  60%);
+$colorRed-90        : hsl(   0,  84%,  64%);
+$colorRed-80        : hsl(   0,  84%,  68%);
+$colorRed-70        : hsl(   0,  84%,  72%);
+$colorRed-60        : hsl(   0,  84%,  76%);
+$colorRed-50        : hsl(   0,  84%,  80%);
+$colorRed-40        : hsl(   0,  84%,  84%);
+$colorRed-30        : hsl(   0,  84%,  88%);
+$colorRed-20        : hsl(   0,  84%,  92%);
+$colorRed-10        : hsl(   0,  84%,  96%);
+
+$colorOrange        : hsl(  23,  91%,  62%);
+$colorOrange-90     : hsl(  23,  91%,  66%);
+$colorOrange-80     : hsl(  23,  91%,  70%);
+$colorOrange-70     : hsl(  23,  91%,  74%);
+$colorOrange-60     : hsl(  23,  91%,  77%);
+$colorOrange-50     : hsl(  23,  91%,  81%);
+$colorOrange-40     : hsl(  23,  91%,  85%);
+$colorOrange-30     : hsl(  23,  91%,  89%);
+$colorOrange-20     : hsl(  23,  91%,  93%);
+$colorOrange-10     : hsl(  23,  91%,  97%);
+
+$colorAmber         : hsl(  39,  97%,  61%);
+$colorAmber-90      : hsl(  39,  97%,  65%);
+$colorAmber-80      : hsl(  39,  96%,  69%);
+$colorAmber-70      : hsl(  40,  96%,  72%);
+$colorAmber-60      : hsl(  39,  97%,  76%);
+$colorAmber-50      : hsl(  39,  96%,  80%);
+$colorAmber-40      : hsl(  40,  95%,  84%);
+$colorAmber-30      : hsl(  39,  97%,  88%);
+$colorAmber-20      : hsl(  40,  95%,  92%);
+$colorAmber-10      : hsl(  41,  90%,  96%);
+
+$colorYellow        : hsl(  50, 100%,  52%);
+$colorYellow-90     : hsl(  50, 100%,  57%);
+$colorYellow-80     : hsl(  50, 100%,  62%);
+$colorYellow-70     : hsl(  50, 100%,  67%);
+$colorYellow-60     : hsl(  50, 100%,  72%);
+$colorYellow-50     : hsl(  50, 100%,  77%);
+$colorYellow-40     : hsl(  50, 100%,  82%);
+$colorYellow-30     : hsl(  50, 100%,  87%);
+$colorYellow-20     : hsl(  50, 100%,  92%);
+$colorYellow-10     : hsl(  50, 100%,  97%);
+
+$colorPistachio     : hsl(  78,  54%,  52%);
+$colorPistachio-90  : hsl(  78,  54%,  57%);
+$colorPistachio-80  : hsl(  78,  54%,  62%);
+$colorPistachio-70  : hsl(  78,  54%,  67%);
+$colorPistachio-60  : hsl(  78,  54%,  72%);
+$colorPistachio-50  : hsl(  78,  54%,  77%);
+$colorPistachio-40  : hsl(  78,  54%,  82%);
+$colorPistachio-30  : hsl(  78,  54%,  87%);
+$colorPistachio-20  : hsl(  78,  54%,  92%);
+$colorPistachio-10  : hsl(  78,  54%,  97%);
+
+$colorGreen         : hsl( 148,  50%,  42%);
+$colorGreen-90      : hsl( 148,  39%,  48%);
+$colorGreen-80      : hsl( 148,  36%,  54%);
+$colorGreen-70      : hsl( 148,  36%,  59%);
+$colorGreen-60      : hsl( 148,  36%,  65%);
+$colorGreen-50      : hsl( 148,  36%,  71%);
+$colorGreen-40      : hsl( 148,  36%,  77%);
+$colorGreen-30      : hsl( 148,  36%,  82%);
+$colorGreen-20      : hsl( 148,  37%,  88%);
+$colorGreen-10      : hsl( 148,  35%,  94%);
+
+$colorTeal          : hsl( 174,  62%,  48%);
+$colorTeal-90       : hsl( 174,  58%,  53%);
+$colorTeal-80       : hsl( 174,  58%,  58%);
+$colorTeal-70       : hsl( 174,  57%,  63%);
+$colorTeal-60       : hsl( 174,  58%,  69%);
+$colorTeal-50       : hsl( 174,  58%,  74%);
+$colorTeal-40       : hsl( 174,  57%,  79%);
+$colorTeal-30       : hsl( 173,  58%,  84%);
+$colorTeal-20       : hsl( 174,  56%,  89%);
+$colorTeal-10       : hsl( 172,  56%,  95%);
+
+$colorCyan          : hsl( 176,  78%,  55%);
+$colorCyan-90       : hsl( 176,  77%,  59%);
+$colorCyan-80       : hsl( 176,  77%,  64%);
+$colorCyan-70       : hsl( 176,  77%,  68%);
+$colorCyan-60       : hsl( 176,  77%,  73%);
+$colorCyan-50       : hsl( 176,  78%,  77%);
+$colorCyan-40       : hsl( 176,  77%,  82%);
+$colorCyan-30       : hsl( 176,  77%,  86%);
+$colorCyan-20       : hsl( 177,  75%,  91%);
+$colorCyan-10       : hsl( 177,  75%,  95%);
+
+$colorSky           : hsl( 194,  97%,  72%);
+$colorSky-90        : hsl( 194,  97%,  75%);
+$colorSky-80        : hsl( 194,  97%,  77%);
+$colorSky-70        : hsl( 194,  96%,  80%);
+$colorSky-60        : hsl( 194,  95%,  83%);
+$colorSky-50        : hsl( 194,  97%,  86%);
+$colorSky-40        : hsl( 194,  97%,  89%);
+$colorSky-30        : hsl( 194,  95%,  91%);
+$colorSky-20        : hsl( 193,  93%,  94%);
+$colorSky-10        : hsl( 193,  88%,  97%);
+
+$colorBlue          : hsl( 212, 100%,  42%);
+$colorBlue-90       : hsl( 212, 100%,  48%);
+$colorBlue-80       : hsl( 212, 100%,  54%);
+$colorBlue-70       : hsl( 212, 100%,  59%);
+$colorBlue-60       : hsl( 212, 100%,  65%);
+$colorBlue-50       : hsl( 212, 100%,  71%);
+$colorBlue-40       : hsl( 212, 100%,  77%);
+$colorBlue-30       : hsl( 212, 100%,  83%);
+$colorBlue-20       : hsl( 212, 100%,  89%);
+$colorBlue-10       : hsl( 212, 100%,  95%);
+
+$colorIndigo        : hsl( 237,  66%,  53%);
+$colorIndigo-90     : hsl( 237,  66%,  57%);
+$colorIndigo-80     : hsl( 237,  66%,  62%);
+$colorIndigo-70     : hsl( 237,  66%,  67%);
+$colorIndigo-60     : hsl( 237,  66%,  72%);
+$colorIndigo-50     : hsl( 237,  65%,  76%);
+$colorIndigo-40     : hsl( 237,  65%,  81%);
+$colorIndigo-30     : hsl( 237,  64%,  86%);
+$colorIndigo-20     : hsl( 238,  63%,  90%);
+$colorIndigo-10     : hsl( 240,  60%,  95%);
+
+$colorViolet        : hsl( 258,  55%,  58%);
+$colorViolet-90     : hsl( 259,  55%,  62%);
+$colorViolet-80     : hsl( 259,  55%,  66%);
+$colorViolet-70     : hsl( 259,  55%,  70%);
+$colorViolet-60     : hsl( 259,  55%,  75%);
+$colorViolet-50     : hsl( 258,  55%,  79%);
+$colorViolet-40     : hsl( 259,  54%,  83%);
+$colorViolet-30     : hsl( 259,  54%,  87%);
+$colorViolet-20     : hsl( 260,  55%,  91%);
+$colorViolet-10     : hsl( 260,  55%,  96%);
+
+$colorPurple        : hsl( 311,  47%,  55%);
+$colorPurple-90     : hsl( 311,  47%,  60%);
+$colorPurple-80     : hsl( 311,  47%,  64%);
+$colorPurple-70     : hsl( 311,  47%,  69%);
+$colorPurple-60     : hsl( 311,  47%,  73%);
+$colorPurple-50     : hsl( 311,  47%,  78%);
+$colorPurple-40     : hsl( 311,  47%,  82%);
+$colorPurple-30     : hsl( 311,  48%,  86%);
+$colorPurple-20     : hsl( 311,  48%,  91%);
+$colorPurple-10     : hsl( 311,  48%,  95%);
+
+$colorPink          : hsl( 336,  96%,  72%);
+$colorPink-90       : hsl( 336,  95%,  75%);
+$colorPink-80       : hsl( 336,  95%,  78%);
+$colorPink-70       : hsl( 336,  94%,  80%);
+$colorPink-60       : hsl( 336,  95%,  83%);
+$colorPink-50       : hsl( 336,  94%,  86%);
+$colorPink-40       : hsl( 336,  93%,  89%);
+$colorPink-30       : hsl( 337,  95%,  92%);
+$colorPink-20       : hsl( 336,  93%,  94%);
+$colorPink-10       : hsl( 337,  87%,  97%);
+
+$colorCrimson       : hsl( 340,  64%,  42%);
+$colorCrimson-90    : hsl( 340,  64%,  48%);
+$colorCrimson-80    : hsl( 340,  64%,  54%);
+$colorCrimson-70    : hsl( 340,  64%,  59%);
+$colorCrimson-60    : hsl( 340,  64%,  65%);
+$colorCrimson-50    : hsl( 340,  64%,  71%);
+$colorCrimson-40    : hsl( 340,  64%,  77%);
+$colorCrimson-30    : hsl( 340,  64%,  82%);
+$colorCrimson-20    : hsl( 340,  64%,  88%);
+$colorCrimson-10    : hsl( 340,  64%,  94%);
+
+$colorBrown         : hsl(  24,  34%,  42%);
+$colorBrown-90      : hsl(  24,  27%,  48%);
+$colorBrown-80      : hsl(  24,  25%,  54%);
+$colorBrown-70      : hsl(  24,  25%,  60%);
+$colorBrown-60      : hsl(  24,  25%,  65%);
+$colorBrown-50      : hsl(  24,  25%,  71%);
+$colorBrown-40      : hsl(  24,  25%,  77%);
+$colorBrown-30      : hsl(  23,  26%,  83%);
+$colorBrown-20      : hsl(  24,  25%,  88%);
+$colorBrown-10      : hsl(  22,  27%,  94%);

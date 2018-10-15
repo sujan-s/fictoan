@@ -1,0 +1,134 @@
+//  Global sizing values  =====================================================
+$measureFixed   : 8px !default;
+$measureDynamic : 2vmax !default;
+
+//  Colours  ==================================================================
+$colorHue      :            $colorBlue-80 !default;
+$colorTint     :    lighten($colorBlue-80, 44%) !default;
+$colorShade    :     darken($colorBlue-80, 40%) !default;
+$colorAnalogue : complement($colorBlue-80) !default;
+$colorAccent   : adjust-hue($colorBlue-80, -32deg) !default;
+
+
+//  Body basics  ==============================================================
+$bodyBgColor : $colorWhite !default;
+
+//  Fonts
+$fontSans  : "Work Sans", sans-serif !default;
+$fontSerif : "Eczar", serif !default;
+$fontMono  : "Space Mono", monospace !default;
+
+//  Paragraph-specific variables
+$baseFontSize : 1em !default;
+$scaleFactor  : 1.24 !default;
+
+//  Variables for text
+$bodyFontSize  : 1em !default;
+$bodyFontColor : $colorShade !default;
+
+$bodyLineHeight    : 1.6 !default;
+$headingLineHeight : 1.2 !default;
+$headingFontWeight : 600 !default;
+
+$linkColor      : $colorHue !default;
+$linkHoverColor : rgba($colorHue, 0.64) !default;
+
+//  Inline code
+$fontCode            : $fontMono !default;
+$inlineCodeBGColor   : $colorRed-10 !default;
+$inlineCodeTextColor : $colorRed !default;
+
+//  Selection highlight
+$textHighlightBG    : $colorHue !default;
+$textHighlightColor : $colorWhite !default;
+
+
+//  Gradient button  ==========================================================
+$buttonGradientStartColour : $colorHue !default;
+$buttonGradientEndColour   : $colorAnalogue !default;
+
+//  Inputs  ===================================================================
+$inputBGColor          : rgba($colorSlate-10, 0.4) !default;
+$inputBorderColor      : $colorSlate-10 !default;
+$inputBorderFocusColor : $colorSlate-40 !default;
+
+$inputHelpColor : $colorShade !default;
+$inputHelpErrorColor : $colorRed !default;
+
+$inputIconFillColor : $colorSlate-30 !default;
+$inputFocusIconFillColor : $colorHue !default;
+
+$spinnerBorder : $colorWhite !default;
+
+//  Progress bar  =============================================================
+$progressBarBG   : $colorTint !default;
+$progressBarFill : $colorHue !default;
+
+
+//  Header  ===================================================================
+$headerLinkBG : $colorGrey-10 !default;
+
+$headerLinkColor      : $colorShade !default;
+$headerLinkHoverColor : $colorHue !default;
+
+$navItemBorderColor : 1px solid $colorGrey-20 !default;
+
+
+//  Tabs  =====================================================================
+$activeTabLabelBG          : $colorWhite !default;
+$activeTabLabelTextColor   : $colorShade !default;
+
+$inactiveTabLabelBG        : $colorSlate-20 !default;
+$inactiveTabLabelHoverBG   : $colorSlate-10 !default;
+$inactiveTabLabelTextColor : $colorSlate-70 !default;
+
+$tabsBorderColor           : $colorSlate-30 !default;
+
+
+//  Sidebar  ==================================================================
+$sideBarBG     : $colorHue !default;
+$sideBarLogoBG : $colorSlate-10 !default;
+
+//  Links
+$sideBarLinkBG        : $colorSlate-10 !default;
+$sideBarLinkBGOnHover : $colorSlate-20 !default;
+
+//  For line icons
+$sideBarLinkIconStrokeColor        : $colorShade !default;
+$sideBarLinkIconStrokeColorOnHover : $colorShade !default;
+
+//  For fill icons
+$sideBarLinkIconFillColor        : $colorShade !default;
+$sideBarLinkIconFillColorOnHover : $colorHue !default;
+
+//  Text styling
+$sidebarTextColor        : $colorShade !default;
+$sidebarSmallTextColor   : $colorSlate-60 !default;
+$sidebarTextColorOnHover : $colorHue !default;
+
+//  The chevron
+$sideBarLinkChevronBG           : $colorSlate-20 !default;
+$sideBarLinkChevronColor        : $colorSlate-40 !default;
+$sideBarLinkChevronBGOnHover    : $colorHue !default;
+$sideBarLinkChevronColorOnHover : $colorWhite !default;
+
+// Floating labels when collapsed
+$sidebBarCollapsedLabelBG        : $colorHue !default;
+$sidebBarCollapsedLabelTextColor : $colorWhite !default;
+
+
+//  Table  ====================================================================
+$tableBG        : $colorWhite !default;
+$tableTextColor : $colorShade !default;
+
+$tableBorderColor : $colorSlate-40 !default;
+
+$tableStripedHeaderBG : $colorHue !default;
+$tableStripedCellBG   : $colorSlate-20 !default;
+
+$tableHoverableBG        : $colorAmber-20 !default;
+$tableHoverableTextColor : $colorShade !default;
+
+
+//  Modal  ====================================================================
+$modalOverlayBG : rgba($colorHue, 0.64) !default;

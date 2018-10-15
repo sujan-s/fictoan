@@ -1,0 +1,12 @@
+.ff-card {
+    position : relative;
+    width    : 100%;
+    height   : auto;
+    border   : 1px solid hsla(0, 0%, 0%, 0.04);
+}
+
+.ff-card.padding-tiny   { padding : 8px; }
+.ff-card.padding-small  { padding : 16px; }
+.ff-card.padding-medium { padding : 24px; }
+.ff-card.padding-large  { padding : 32px; }
+.ff-card.padding-huge   { padding : 48px; }

@@ -1,0 +1,11 @@
+# IDE project files
+.idea
+.idea/
+.vscode
+.vscode/
+*.iml
+
+# Other miscellaneous files
+.DS_Store
+.sass-cache
+node_modules

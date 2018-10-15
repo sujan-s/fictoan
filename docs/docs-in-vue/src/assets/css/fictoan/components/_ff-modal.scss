@@ -1,0 +1,68 @@
+.ff-modal-overlay {
+    position         : fixed;
+    display          : flex;
+    align-items      : flex-start;
+    justify-content  : center;
+    top              : 0;
+    left             : 0;
+    width            : 100%;
+    height           : 100%;
+    max-height       : 100%;
+    background-color : $modalOverlayBG;
+    z-index          : 8000;
+    opacity          : 0;
+    visibility       : hidden;
+    transition       : all 0.4s;
+    overflow-y       : scroll;
+}
+
+.ff-modal-wrapper.active .ff-modal-overlay {
+    opacity    : 1;
+    visibility : visible;
+}
+
+.ff-modal-content {
+    display         : flex;
+    align-items     : flex-start;
+    justify-content : center;
+    position        : relative;
+    top             : 12vh;
+    margin          : 0 auto;
+    width           : 600px;
+    max-width       : 96vw;
+    padding         : 32px;
+    opacity         : 0;
+    overflow-y      : scroll;
+    visibility      : hidden;
+    z-index         : 9000;
+
+    .ff-modal-wrapper.active & {
+        opacity    : 1;
+        visibility : visible;
+    }
+
+    .close-modal {
+        position   : absolute;
+        cursor     : pointer;
+        top        : 16px;
+        right      : 16px;
+        width      : 24px;
+        height     : 24px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+
+    .ff-modal-content {
+        position    : fixed;
+        top         : 20vh;
+        left        : 0;
+        right       : 0;
+        width       : 100%;
+        height      : 100%;
+        max-height  : 98%;
+        padding     : 4vw;
+        align-items : flex-start;
+    }
+
+}

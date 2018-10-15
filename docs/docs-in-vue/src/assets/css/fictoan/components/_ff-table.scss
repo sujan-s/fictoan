@@ -1,0 +1,53 @@
+//  Plain table  ==============================================================
+.ff-table {
+    background-color : $tableBG;
+    color            : $tableTextColor;
+}
+
+
+//  Bordered table  ===========================================================
+.ff-table.bordered-rows td,
+.ff-table.bordered-rows th {
+    border              : 0 solid $tableBorderColor;
+    border-bottom-width : 1px;
+}
+
+.ff-table.bordered-columns td,
+.ff-table.bordered-columns th {
+    border             : 0 solid $tableBorderColor;
+    border-right-width : 1px;
+}
+
+.ff-table.bordered-all td,
+.ff-table.bordered-all th { border : 1px solid $tableBorderColor; }
+
+
+//  Padded table  =============================================================
+.ff-table.padding-tiny  th,
+.ff-table.padding-tiny  td  { padding : 4px 8px; }
+
+.ff-table.padding-small th,
+.ff-table.padding-small td  { padding : 8px 16px; }
+
+.ff-table.padding-small th,
+.ff-table.padding-small td  { padding : 16px 24px; }
+
+.ff-table.padding-large th,
+.ff-table.padding-large td  { padding : 24px 32px; }
+
+.ff-table.padding-huge  th,
+.ff-table.padding-huge  td  { padding : 32px 40px; }
+
+
+//  Striped table  ============================================================
+.ff-table.striped thead tr { background-color : $tableStripedHeaderBG; }
+
+.ff-table.striped tbody tr:not(.is-selected):nth-child(even) { background-color : $tableStripedCellBG; }
+
+
+//  Hoverable table  ==========================================================
+.ff-table.hoverable tbody tr:hover {
+    background-color : $tableHoverableBG !important;
+    color            : $tableHoverableTextColor;
+    transition       : all 0.2s;
+}

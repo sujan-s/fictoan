@@ -1,0 +1,56 @@
+//  Import and transpile all the necessary files into
+//  CSS in a particular order.
+
+
+//  Normalize first ///////////////////////////////////////////////////////////
+@import "vendor/normalize";
+@import "vendor/prism";
+
+
+//  Variables next ////////////////////////////////////////////////////////////
+//  Default variables
+@import "fictoan/theme/ff-variables";
+
+
+//  Variables of current project - rename accordingly
+//  THIS WILL OVER-RIDE ASSIGNMENTS IN ff-theme
+//  PUT YOUR CUSTOM VARIABLES HERE
+// @import "";
+
+//  Variable assignments
+@import "fictoan/theme/ff-theme";
+
+
+//  The meat of the matter ////////////////////////////////////////////////////
+//  Opinionated baseline rules
+@import "fictoan/base/ff-reset";
+
+//  Basics
+@import "fictoan/base/ff-layout";
+@import "fictoan/base/ff-utilities";
+@import "fictoan/base/ff-responsive";
+
+@import "fictoan/design/ff-colours";
+@import "fictoan/design/ff-typography";
+
+//  Forms
+@import "fictoan/form/ff-form";
+
+//  Components
+@import "fictoan/components/ff-header";
+@import "fictoan/components/ff-sidebar";
+@import "fictoan/components/ff-card";
+@import "fictoan/components/ff-table";
+@import "fictoan/components/ff-tabs";
+@import "fictoan/components/ff-modal";
+
+//  Code styles
+@import "fictoan/design/ff-code";
+
+
+//  Other small plugins ///////////////////////////////////////////////////////
+
+
+//  Project-specific styling //////////////////////////////////////////////////
+//  PUT YOUR STYLE FILE HERE
+// @import "";
