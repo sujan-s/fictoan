@@ -39,6 +39,7 @@
     .ff-modal-wrapper.active & {
         opacity    : 1;
         visibility : visible;
+        overflow: hidden;
     }
 
     .close-modal {
