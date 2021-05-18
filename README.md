@@ -1,3 +1,5 @@
+## This project is now archived, checkout https://github.com/fictoan for a later version
+
 ## FICTOAN
 ### <span style="#ccc">2.25.0</span>
 
